@@ -62,3 +62,108 @@ if (heroSection) {
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
 });
+
+// Trakt API Integration
+const TRAKT_CONFIG = {
+    clientId: '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d', // Replace with your Trakt API Client ID
+    username: 'sourpatchdad'   // Replace with your Trakt username
+};
+
+// Function to fetch recently watched from Trakt
+async function fetchRecentlyWatched() {
+    const feedContainer = document.getElementById('trakt-feed');
+
+    // Check if configuration is set
+    if (TRAKT_CONFIG.clientId === 'YOUR_TRAKT_CLIENT_ID' ||
+        TRAKT_CONFIG.username === 'YOUR_TRAKT_USERNAME') {
+        feedContainer.innerHTML = `
+            <div class="error-message">
+                <p>To display your recently watched content, please configure your Trakt API credentials.</p>
+                <p>Update the TRAKT_CONFIG in script.js with your Client ID and username.</p>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const response = await fetch(
+            `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': TRAKT_CONFIG.clientId
+                }
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        displayTraktItems(data);
+    } catch (error) {
+        console.error('Error fetching Trakt data:', error);
+        feedContainer.innerHTML = `
+            <div class="error-message">
+                <p>Unable to load recently watched content.</p>
+                <p>Please check your Trakt API credentials and try again.</p>
+            </div>
+        `;
+    }
+}
+
+// Function to display Trakt items
+function displayTraktItems(items) {
+    const feedContainer = document.getElementById('trakt-feed');
+
+    if (!items || items.length === 0) {
+        feedContainer.innerHTML = '<div class="loading">No recently watched content found.</div>';
+        return;
+    }
+
+    feedContainer.innerHTML = items.map(item => {
+        const media = item.type === 'movie' ? item.movie : item.show;
+        const title = media.title;
+        const year = media.year;
+        const type = item.type === 'movie' ? 'Movie' :
+                     item.episode ? `S${item.episode.season}E${item.episode.number}` : 'TV Show';
+
+        // Construct TMDB poster URL (if available)
+        const posterUrl = media.ids?.tmdb
+            ? `https://image.tmdb.org/t/p/w500${getPosterPath(media.ids.tmdb, item.type)}`
+            : 'https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster';
+
+        // Create Trakt URL
+        const traktUrl = item.type === 'movie'
+            ? `https://trakt.tv/movies/${media.ids.slug}`
+            : `https://trakt.tv/shows/${media.ids.slug}`;
+
+        return `
+            <div class="trakt-item" onclick="window.open('${traktUrl}', '_blank')">
+                <img src="${posterUrl}" alt="${title}" class="trakt-poster"
+                     onerror="this.src='https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster'">
+                <div class="trakt-info">
+                    <div class="trakt-title">${title}</div>
+                    <div class="trakt-meta">
+                        <span class="trakt-type">${type}</span>
+                        <span>${year}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Helper function to get poster path (placeholder - would need TMDB API for actual posters)
+function getPosterPath(tmdbId, type) {
+    // This is a placeholder - you would need to integrate TMDB API for actual poster paths
+    // For now, return empty string which will trigger the onerror fallback
+    return '';
+}
+
+// Load Trakt feed when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    fetchRecentlyWatched();
+});
