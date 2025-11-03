@@ -164,6 +164,9 @@ function getPosterPath(tmdbId, type) {
 }
 
 // Load Trakt feed when page loads
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fetchRecentlyWatched);
+} else {
+    // DOM is already loaded, run immediately
     fetchRecentlyWatched();
-});
+}
