@@ -58,6 +58,13 @@ if (heroSection) {
     heroSection.style.transform = 'translateY(0)';
 }
 
+// Make sure recently-watched section is visible for loading state
+const recentlyWatchedSection = document.querySelector('.recently-watched');
+if (recentlyWatchedSection) {
+    recentlyWatchedSection.style.opacity = '1';
+    recentlyWatchedSection.style.transform = 'translateY(0)';
+}
+
 // Image lazy loading fallback
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
@@ -71,7 +78,13 @@ const TRAKT_CONFIG = {
 
 // Function to fetch recently watched from Trakt
 async function fetchRecentlyWatched() {
+    console.log('fetchRecentlyWatched called');
     const feedContainer = document.getElementById('trakt-feed');
+
+    if (!feedContainer) {
+        console.error('Trakt feed container not found!');
+        return;
+    }
 
     // Check if configuration is set
     if (TRAKT_CONFIG.clientId === 'YOUR_TRAKT_CLIENT_ID' ||
@@ -85,6 +98,8 @@ async function fetchRecentlyWatched() {
         return;
     }
 
+    console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
+
     try {
         const response = await fetch(
             `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`,
@@ -97,18 +112,21 @@ async function fetchRecentlyWatched() {
             }
         );
 
+        console.log('Response status:', response.status);
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
+        console.log('Data received:', data.length, 'items');
         displayTraktItems(data);
     } catch (error) {
         console.error('Error fetching Trakt data:', error);
         feedContainer.innerHTML = `
             <div class="error-message">
                 <p>Unable to load recently watched content.</p>
-                <p>Please check your Trakt API credentials and try again.</p>
+                <p>Error: ${error.message}</p>
             </div>
         `;
     }
@@ -116,6 +134,7 @@ async function fetchRecentlyWatched() {
 
 // Function to display Trakt items
 function displayTraktItems(items) {
+    console.log('displayTraktItems called with', items);
     const feedContainer = document.getElementById('trakt-feed');
 
     if (!items || items.length === 0) {
