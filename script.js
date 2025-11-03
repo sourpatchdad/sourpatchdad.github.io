@@ -65,8 +65,8 @@ document.querySelectorAll('img').forEach(img => {
 
 // Trakt API Integration
 const TRAKT_CONFIG = {
-    clientId: 'YOUR_TRAKT_CLIENT_ID', // Replace with your Trakt API Client ID
-    username: 'YOUR_TRAKT_USERNAME'   // Replace with your Trakt username
+    clientId: '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d', // Replace with your Trakt API Client ID
+    username: 'sourpatchdad'   // Replace with your Trakt username
 };
 
 // Function to fetch recently watched from Trakt
