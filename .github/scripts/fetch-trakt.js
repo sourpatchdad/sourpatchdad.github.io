@@ -36,7 +36,7 @@ async function fetchTraktData() {
         console.log('Fetching Trakt history for:', TRAKT_CONFIG.username);
 
         const response = await fetch(
-            `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=8`,
+            `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`,
             {
                 headers: {
                     'Content-Type': 'application/json',
