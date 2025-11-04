@@ -46,42 +46,32 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
+// Observe all sections except hero and recently-watched (they need to be visible immediately)
 document.querySelectorAll('section').forEach(section => {
+    // Skip animation for hero and recently-watched sections
+    if (section.classList.contains('hero') || section.classList.contains('recently-watched')) {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        return;
+    }
+
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
 
-// Don't animate the hero section on load
-const heroSection = document.querySelector('.hero');
-if (heroSection) {
-    heroSection.style.opacity = '1';
-    heroSection.style.transform = 'translateY(0)';
-}
-
-// Make sure recently-watched section is visible for loading state
-const recentlyWatchedSection = document.querySelector('.recently-watched');
-if (recentlyWatchedSection) {
-    recentlyWatchedSection.style.opacity = '1';
-    recentlyWatchedSection.style.transform = 'translateY(0)';
-}
-
 // Image lazy loading fallback
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
 });
 
-// Trakt API Integration
-const TRAKT_CONFIG = {
-    clientId: '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d', // Replace with your Trakt API Client ID
-    username: 'sourpatchdad'   // Replace with your Trakt username
-};
+// Trakt API Integration (via Netlify Functions to avoid CORS)
+// No need to expose credentials in frontend anymore - they're in the serverless function
 
 // Function to fetch recently watched from Trakt
 async function fetchRecentlyWatched() {
-    console.log('fetchRecentlyWatched called');
+    console.log('✅ fetchRecentlyWatched called - Version 20250104001');
     const feedContainer = document.getElementById('trakt-feed');
 
     if (!feedContainer) {
@@ -89,50 +79,18 @@ async function fetchRecentlyWatched() {
         return;
     }
 
-    console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
-
-    // First, verify the user exists
-    const userUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}`;
-    console.log('Checking user profile:', userUrl);
+    console.log('Fetching from Netlify Function...');
 
     try {
-        // Check if user exists
-        const userCheck = await fetch(userUrl, {
-            headers: {
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': TRAKT_CONFIG.clientId
-            }
-        });
+        // Call our Netlify serverless function instead of Trakt API directly
+        const response = await fetch('/.netlify/functions/trakt');
 
-        console.log('User check status:', userCheck.status);
-
-        if (userCheck.status === 404) {
-            throw new Error(`User "${TRAKT_CONFIG.username}" not found on Trakt. Please verify your username.`);
-        }
-
-        if (!userCheck.ok) {
-            throw new Error(`User profile error: ${userCheck.status}`);
-        }
-
-        // Now fetch watch history
-        const apiUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`;
-        console.log('Fetching history from:', apiUrl);
-
-        const response = await fetch(apiUrl, {
-            headers: {
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': TRAKT_CONFIG.clientId
-            }
-        });
-
-        console.log('History response status:', response.status);
+        console.log('Response status:', response.status);
 
         if (!response.ok) {
-            const errorText = await response.text();
-            console.log('Error response:', errorText);
-            throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
+            const errorData = await response.json();
+            console.error('Error response:', errorData);
+            throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
@@ -144,7 +102,7 @@ async function fetchRecentlyWatched() {
             <div class="error-message">
                 <p>Unable to load recently watched content.</p>
                 <p>Error: ${error.message}</p>
-                <p>Check the console (F12) for more details.</p>
+                <p>Note: This feature requires deployment to Netlify for serverless functions.</p>
             </div>
         `;
     }
@@ -164,13 +122,22 @@ function displayTraktItems(items) {
         const media = item.type === 'movie' ? item.movie : item.show;
         const title = media.title;
         const year = media.year;
-        const type = item.type === 'movie' ? 'Movie' :
-                     item.episode ? `S${item.episode.season}E${item.episode.number}` : 'TV Show';
 
-        // Construct TMDB poster URL (if available)
-        const posterUrl = media.ids?.tmdb
-            ? `https://image.tmdb.org/t/p/w500${getPosterPath(media.ids.tmdb, item.type)}`
-            : 'https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster';
+        // For TV shows, include episode info and title
+        let episodeInfo = '';
+        let type = 'Movie';
+
+        if (item.type !== 'movie' && item.episode) {
+            type = `S${item.episode.season}E${item.episode.number}`;
+            if (item.episode.title) {
+                episodeInfo = `<div class="trakt-episode-title">${item.episode.title}</div>`;
+            }
+        } else if (item.type !== 'movie') {
+            type = 'TV Show';
+        }
+
+        // Use posterUrl from backend if available, otherwise use placeholder
+        const posterUrl = item.posterUrl || 'https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=' + encodeURIComponent(title);
 
         // Create Trakt URL
         const traktUrl = item.type === 'movie'
@@ -179,10 +146,11 @@ function displayTraktItems(items) {
 
         return `
             <div class="trakt-item" onclick="window.open('${traktUrl}', '_blank')">
-                <img src="${posterUrl}" alt="${title}" class="trakt-poster"
-                     onerror="this.src='https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster'">
+                <img src="${posterUrl}" alt="${title}" class="trakt-poster" loading="lazy"
+                     onerror="this.src='https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=${encodeURIComponent(title)}'">
                 <div class="trakt-info">
                     <div class="trakt-title">${title}</div>
+                    ${episodeInfo}
                     <div class="trakt-meta">
                         <span class="trakt-type">${type}</span>
                         <span>${year}</span>
@@ -191,13 +159,6 @@ function displayTraktItems(items) {
             </div>
         `;
     }).join('');
-}
-
-// Helper function to get poster path (placeholder - would need TMDB API for actual posters)
-function getPosterPath(tmdbId, type) {
-    // This is a placeholder - you would need to integrate TMDB API for actual poster paths
-    // For now, return empty string which will trigger the onerror fallback
-    return '';
 }
 
 // Load Trakt feed when page loads

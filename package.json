@@ -1,0 +1,8 @@
+{
+  "name": "sourpatchdad-github-io",
+  "version": "1.0.0",
+  "description": "Personal website with Trakt integration",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
