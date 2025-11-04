@@ -58,6 +58,13 @@ if (heroSection) {
     heroSection.style.transform = 'translateY(0)';
 }
 
+// Make sure recently-watched section is visible for loading state
+const recentlyWatchedSection = document.querySelector('.recently-watched');
+if (recentlyWatchedSection) {
+    recentlyWatchedSection.style.opacity = '1';
+    recentlyWatchedSection.style.transform = 'translateY(0)';
+}
+
 // Image lazy loading fallback
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
@@ -71,7 +78,13 @@ const TRAKT_CONFIG = {
 
 // Function to fetch recently watched from Trakt
 async function fetchRecentlyWatched() {
+    console.log('fetchRecentlyWatched called');
     const feedContainer = document.getElementById('trakt-feed');
+
+    if (!feedContainer) {
+        console.error('Trakt feed container not found!');
+        return;
+    }
 
     // Check if configuration is set
     if (TRAKT_CONFIG.clientId === '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d' ||
@@ -85,30 +98,62 @@ async function fetchRecentlyWatched() {
         return;
     }
 
+    console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
+
+    // First, verify the user exists
+    const userUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}`;
+    console.log('Checking user profile:', userUrl);
+
     try {
-        const response = await fetch(
-            `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`,
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'trakt-api-version': '2',
-                    'trakt-api-key': TRAKT_CONFIG.clientId
-                }
+        // Check if user exists
+        const userCheck = await fetch(userUrl, {
+            headers: {
+                'Content-Type': 'application/json',
+                'trakt-api-version': '2',
+                'trakt-api-key': TRAKT_CONFIG.clientId
             }
-        );
+        });
+
+        console.log('User check status:', userCheck.status);
+
+        if (userCheck.status === 404) {
+            throw new Error(`User "${TRAKT_CONFIG.username}" not found on Trakt. Please verify your username.`);
+        }
+
+        if (!userCheck.ok) {
+            throw new Error(`User profile error: ${userCheck.status}`);
+        }
+
+        // Now fetch watch history
+        const apiUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`;
+        console.log('Fetching history from:', apiUrl);
+
+        const response = await fetch(apiUrl, {
+            headers: {
+                'Content-Type': 'application/json',
+                'trakt-api-version': '2',
+                'trakt-api-key': TRAKT_CONFIG.clientId
+            }
+        });
+
+        console.log('History response status:', response.status);
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorText = await response.text();
+            console.log('Error response:', errorText);
+            throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
         }
 
         const data = await response.json();
+        console.log('Data received:', data.length, 'items');
         displayTraktItems(data);
     } catch (error) {
         console.error('Error fetching Trakt data:', error);
         feedContainer.innerHTML = `
             <div class="error-message">
                 <p>Unable to load recently watched content.</p>
-                <p>Please check your Trakt API credentials and try again.</p>
+                <p>Error: ${error.message}</p>
+                <p>Check the console (F12) for more details.</p>
             </div>
         `;
     }
@@ -116,6 +161,7 @@ async function fetchRecentlyWatched() {
 
 // Function to display Trakt items
 function displayTraktItems(items) {
+    console.log('displayTraktItems called with', items);
     const feedContainer = document.getElementById('trakt-feed');
 
     if (!items || items.length === 0) {
@@ -164,6 +210,9 @@ function getPosterPath(tmdbId, type) {
 }
 
 // Load Trakt feed when page loads
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fetchRecentlyWatched);
+} else {
+    // DOM is already loaded, run immediately
     fetchRecentlyWatched();
-});
+}
