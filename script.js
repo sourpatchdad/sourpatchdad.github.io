@@ -46,27 +46,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
+// Observe all sections except hero and recently-watched (they need to be visible immediately)
 document.querySelectorAll('section').forEach(section => {
+    // Skip animation for hero and recently-watched sections
+    if (section.classList.contains('hero') || section.classList.contains('recently-watched')) {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        return;
+    }
+
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
-
-// Don't animate the hero section on load
-const heroSection = document.querySelector('.hero');
-if (heroSection) {
-    heroSection.style.opacity = '1';
-    heroSection.style.transform = 'translateY(0)';
-}
-
-// Make sure recently-watched section is visible for loading state
-const recentlyWatchedSection = document.querySelector('.recently-watched');
-if (recentlyWatchedSection) {
-    recentlyWatchedSection.style.opacity = '1';
-    recentlyWatchedSection.style.transform = 'translateY(0)';
-}
 
 // Image lazy loading fallback
 document.querySelectorAll('img').forEach(img => {
@@ -132,10 +125,8 @@ function displayTraktItems(items) {
         const type = item.type === 'movie' ? 'Movie' :
                      item.episode ? `S${item.episode.season}E${item.episode.number}` : 'TV Show';
 
-        // Construct TMDB poster URL (if available)
-        const posterUrl = media.ids?.tmdb
-            ? `https://image.tmdb.org/t/p/w500${getPosterPath(media.ids.tmdb, item.type)}`
-            : 'https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster';
+        // Use posterUrl from backend if available, otherwise use placeholder
+        const posterUrl = item.posterUrl || 'https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=' + encodeURIComponent(title);
 
         // Create Trakt URL
         const traktUrl = item.type === 'movie'
@@ -144,8 +135,8 @@ function displayTraktItems(items) {
 
         return `
             <div class="trakt-item" onclick="window.open('${traktUrl}', '_blank')">
-                <img src="${posterUrl}" alt="${title}" class="trakt-poster"
-                     onerror="this.src='https://via.placeholder.com/300x450/cccccc/666666?text=No+Poster'">
+                <img src="${posterUrl}" alt="${title}" class="trakt-poster" loading="lazy"
+                     onerror="this.src='https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=${encodeURIComponent(title)}'">
                 <div class="trakt-info">
                     <div class="trakt-title">${title}</div>
                     <div class="trakt-meta">
@@ -156,13 +147,6 @@ function displayTraktItems(items) {
             </div>
         `;
     }).join('');
-}
-
-// Helper function to get poster path (placeholder - would need TMDB API for actual posters)
-function getPosterPath(tmdbId, type) {
-    // This is a placeholder - you would need to integrate TMDB API for actual poster paths
-    // For now, return empty string which will trigger the onerror fallback
-    return '';
 }
 
 // Load Trakt feed when page loads

@@ -5,6 +5,31 @@ const TRAKT_CONFIG = {
     username: 'sourpatchdad'
 };
 
+// TMDB API key - Get free key at https://www.themoviedb.org/settings/api
+const TMDB_API_KEY = process.env.TMDB_API_KEY || 'YOUR_TMDB_API_KEY';
+const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+
+async function getTMDBPoster(tmdbId, type) {
+    if (!tmdbId || TMDB_API_KEY === 'YOUR_TMDB_API_KEY') {
+        return null;
+    }
+
+    try {
+        const endpoint = type === 'movie' ? 'movie' : 'tv';
+        const response = await fetch(
+            `https://api.themoviedb.org/3/${endpoint}/${tmdbId}?api_key=${TMDB_API_KEY}`
+        );
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.poster_path ? `${TMDB_IMAGE_BASE}${data.poster_path}` : null;
+    } catch (error) {
+        console.error('Error fetching TMDB poster:', error);
+        return null;
+    }
+}
+
 exports.handler = async function(event, context) {
     // Only allow GET requests
     if (event.httpMethod !== 'GET') {
@@ -43,11 +68,38 @@ exports.handler = async function(event, context) {
         const data = await response.json();
         console.log('Successfully fetched', data.length, 'items');
 
+        // Enrich with TMDB poster URLs if API key is configured
+        if (TMDB_API_KEY !== 'YOUR_TMDB_API_KEY') {
+            const enriched = await Promise.all(
+                data.map(async (item) => {
+                    const media = item.type === 'movie' ? item.movie : item.show;
+                    if (media.ids?.tmdb) {
+                        const posterUrl = await getTMDBPoster(media.ids.tmdb, item.type);
+                        return {
+                            ...item,
+                            posterUrl
+                        };
+                    }
+                    return item;
+                })
+            );
+
+            return {
+                statusCode: 200,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Cache-Control': 'public, max-age=300'
+                },
+                body: JSON.stringify(enriched)
+            };
+        }
+
+        // Return without poster URLs if TMDB key not configured
         return {
             statusCode: 200,
             headers: {
                 'Content-Type': 'application/json',
-                'Cache-Control': 'public, max-age=300' // Cache for 5 minutes
+                'Cache-Control': 'public, max-age=300'
             },
             body: JSON.stringify(data)
         };
