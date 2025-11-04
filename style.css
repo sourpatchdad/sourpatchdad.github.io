@@ -123,7 +123,6 @@ nav .container {
 .theme-toggle {
     background: none;
     border: none;
-    color: var(--text-color);
     font-size: 1.3rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -136,7 +135,6 @@ nav .container {
 }
 
 .theme-toggle:hover {
-    color: var(--accent-color);
     transform: scale(1.1);
 }
 
@@ -144,18 +142,27 @@ nav .container {
 .theme-toggle i {
     position: relative;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 0px transparent);
+    z-index: 2;
 }
 
 /* Light mode - bulb is "off" (default/dim) */
-[data-theme="light"] .theme-toggle i {
-    color: var(--text-color);
+.theme-toggle i {
+    color: var(--text-color) !important;
+    filter: drop-shadow(0 0 0px transparent);
 }
 
 /* Dark mode - bulb is "on" and glowing */
 [data-theme="dark"] .theme-toggle i {
-    color: #ffd700;
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+    color: #ffd700 !important;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) !important;
+}
+
+.theme-toggle:hover i {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .theme-toggle:hover i {
+    color: #ffed4e !important;
 }
 
 /* Rays effect for dark mode (when light is "shining") */
@@ -168,6 +175,7 @@ nav .container {
     height: 200%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    z-index: 1;
     background:
         linear-gradient(0deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%),
         linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%),
@@ -187,6 +195,7 @@ nav .container {
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
     pointer-events: none;
+    z-index: 1;
     animation: pulse-glow 3s ease-in-out infinite;
 }
 
