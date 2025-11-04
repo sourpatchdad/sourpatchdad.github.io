@@ -89,18 +89,6 @@ async function fetchRecentlyWatched() {
         return;
     }
 
-    // Check if configuration is set
-    if (TRAKT_CONFIG.clientId === '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d' ||
-        TRAKT_CONFIG.username === 'sourpatchdad') {
-        feedContainer.innerHTML = `
-            <div class="error-message">
-                <p>To display your recently watched content, please configure your Trakt API credentials.</p>
-                <p>Update the TRAKT_CONFIG in script.js with your Client ID and username.</p>
-            </div>
-        `;
-        return;
-    }
-
     console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
 
     // First, verify the user exists
