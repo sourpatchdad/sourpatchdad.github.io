@@ -122,8 +122,19 @@ function displayTraktItems(items) {
         const media = item.type === 'movie' ? item.movie : item.show;
         const title = media.title;
         const year = media.year;
-        const type = item.type === 'movie' ? 'Movie' :
-                     item.episode ? `S${item.episode.season}E${item.episode.number}` : 'TV Show';
+
+        // For TV shows, include episode info and title
+        let episodeInfo = '';
+        let type = 'Movie';
+
+        if (item.type !== 'movie' && item.episode) {
+            type = `S${item.episode.season}E${item.episode.number}`;
+            if (item.episode.title) {
+                episodeInfo = `<div class="trakt-episode-title">${item.episode.title}</div>`;
+            }
+        } else if (item.type !== 'movie') {
+            type = 'TV Show';
+        }
 
         // Use posterUrl from backend if available, otherwise use placeholder
         const posterUrl = item.posterUrl || 'https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=' + encodeURIComponent(title);
@@ -139,6 +150,7 @@ function displayTraktItems(items) {
                      onerror="this.src='https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=${encodeURIComponent(title)}'">
                 <div class="trakt-info">
                     <div class="trakt-title">${title}</div>
+                    ${episodeInfo}
                     <div class="trakt-meta">
                         <span class="trakt-type">${type}</span>
                         <span>${year}</span>
