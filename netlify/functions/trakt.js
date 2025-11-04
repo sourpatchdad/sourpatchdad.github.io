@@ -6,11 +6,11 @@ const TRAKT_CONFIG = {
 };
 
 // TMDB API key - Get free key at https://www.themoviedb.org/settings/api
-const TMDB_API_KEY = process.env.TMDB_API_KEY || 'YOUR_TMDB_API_KEY';
+const TMDB_API_KEY = process.env.TMDB_API_KEY || 'f8ca8528b52ea7d24ad9175f4aff5dc4';
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
 async function getTMDBPoster(tmdbId, type) {
-    if (!tmdbId || TMDB_API_KEY === 'YOUR_TMDB_API_KEY') {
+    if (!tmdbId || !TMDB_API_KEY) {
         return null;
     }
 
@@ -69,7 +69,7 @@ exports.handler = async function(event, context) {
         console.log('Successfully fetched', data.length, 'items');
 
         // Enrich with TMDB poster URLs if API key is configured
-        if (TMDB_API_KEY !== 'YOUR_TMDB_API_KEY') {
+        if (TMDB_API_KEY) {
             const enriched = await Promise.all(
                 data.map(async (item) => {
                     const media = item.type === 'movie' ? item.movie : item.show;
