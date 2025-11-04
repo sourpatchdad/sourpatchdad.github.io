@@ -3,11 +3,11 @@ const path = require('path');
 
 // Configuration
 const TRAKT_CONFIG = {
-    clientId: process.env.TRAKT_CLIENT_ID || '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d',
+    clientId: process.env.TRAKT_CLIENT_ID,
     username: 'sourpatchdad'
 };
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || 'f8ca8528b52ea7d24ad9175f4aff5dc4';
+const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
 async function getTMDBPoster(tmdbId, type) {

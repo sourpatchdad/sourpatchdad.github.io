@@ -189,6 +189,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    pointer-events: none;
 }
 
 .project-card:hover .project-image-container {
