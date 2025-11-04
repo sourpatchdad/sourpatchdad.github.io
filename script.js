@@ -100,22 +100,48 @@ async function fetchRecentlyWatched() {
 
     console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
 
-    try {
-        const response = await fetch(
-            `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`,
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'trakt-api-version': '2',
-                    'trakt-api-key': TRAKT_CONFIG.clientId
-                }
-            }
-        );
+    // First, verify the user exists
+    const userUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}`;
+    console.log('Checking user profile:', userUrl);
 
-        console.log('Response status:', response.status);
+    try {
+        // Check if user exists
+        const userCheck = await fetch(userUrl, {
+            headers: {
+                'Content-Type': 'application/json',
+                'trakt-api-version': '2',
+                'trakt-api-key': TRAKT_CONFIG.clientId
+            }
+        });
+
+        console.log('User check status:', userCheck.status);
+
+        if (userCheck.status === 404) {
+            throw new Error(`User "${TRAKT_CONFIG.username}" not found on Trakt. Please verify your username.`);
+        }
+
+        if (!userCheck.ok) {
+            throw new Error(`User profile error: ${userCheck.status}`);
+        }
+
+        // Now fetch watch history
+        const apiUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`;
+        console.log('Fetching history from:', apiUrl);
+
+        const response = await fetch(apiUrl, {
+            headers: {
+                'Content-Type': 'application/json',
+                'trakt-api-version': '2',
+                'trakt-api-key': TRAKT_CONFIG.clientId
+            }
+        });
+
+        console.log('History response status:', response.status);
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorText = await response.text();
+            console.log('Error response:', errorText);
+            throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
         }
 
         const data = await response.json();
@@ -127,6 +153,7 @@ async function fetchRecentlyWatched() {
             <div class="error-message">
                 <p>Unable to load recently watched content.</p>
                 <p>Error: ${error.message}</p>
+                <p>Check the console (F12) for more details.</p>
             </div>
         `;
     }
