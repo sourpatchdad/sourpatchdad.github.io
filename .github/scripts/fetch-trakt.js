@@ -1,11 +1,12 @@
-const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
 
+// Configuration
 const TRAKT_CONFIG = {
-    clientId: '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d',
+    clientId: process.env.TRAKT_CLIENT_ID || '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d',
     username: 'sourpatchdad'
 };
 
-// TMDB API key - Get free key at https://www.themoviedb.org/settings/api
 const TMDB_API_KEY = process.env.TMDB_API_KEY || 'f8ca8528b52ea7d24ad9175f4aff5dc4';
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
@@ -30,15 +31,7 @@ async function getTMDBPoster(tmdbId, type) {
     }
 }
 
-exports.handler = async function(event, context) {
-    // Only allow GET requests
-    if (event.httpMethod !== 'GET') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ error: 'Method not allowed' })
-        };
-    }
-
+async function fetchTraktData() {
     try {
         console.log('Fetching Trakt history for:', TRAKT_CONFIG.username);
 
@@ -56,13 +49,7 @@ exports.handler = async function(event, context) {
         if (!response.ok) {
             const errorText = await response.text();
             console.error('Trakt API error:', response.status, errorText);
-            return {
-                statusCode: response.status,
-                body: JSON.stringify({
-                    error: `Trakt API error: ${response.status}`,
-                    details: errorText
-                })
-            };
+            throw new Error(`Trakt API error: ${response.status}`);
         }
 
         const data = await response.json();
@@ -70,6 +57,7 @@ exports.handler = async function(event, context) {
 
         // Enrich with TMDB poster URLs if API key is configured
         if (TMDB_API_KEY) {
+            console.log('Enriching with TMDB poster URLs...');
             const enriched = await Promise.all(
                 data.map(async (item) => {
                     const media = item.type === 'movie' ? item.movie : item.show;
@@ -83,34 +71,37 @@ exports.handler = async function(event, context) {
                     return item;
                 })
             );
-
-            return {
-                statusCode: 200,
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Cache-Control': 'public, max-age=300'
-                },
-                body: JSON.stringify(enriched)
-            };
+            console.log('Enrichment complete!');
+            return enriched;
         }
 
-        // Return without poster URLs if TMDB key not configured
-        return {
-            statusCode: 200,
-            headers: {
-                'Content-Type': 'application/json',
-                'Cache-Control': 'public, max-age=300'
-            },
-            body: JSON.stringify(data)
-        };
+        return data;
     } catch (error) {
-        console.error('Error in Trakt function:', error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({
-                error: 'Failed to fetch Trakt data',
-                message: error.message
-            })
-        };
+        console.error('Error fetching Trakt data:', error);
+        throw error;
     }
-};
+}
+
+async function main() {
+    try {
+        const data = await fetchTraktData();
+
+        // Create data directory if it doesn't exist
+        const dataDir = path.join(process.cwd(), 'data');
+        if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+            console.log('Created data directory');
+        }
+
+        // Write data to file
+        const outputPath = path.join(dataDir, 'trakt.json');
+        fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+        console.log('Successfully wrote data to', outputPath);
+        console.log('Total items:', data.length);
+    } catch (error) {
+        console.error('Failed to update Trakt data:', error);
+        process.exit(1);
+    }
+}
+
+main();
