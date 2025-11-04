@@ -106,6 +106,38 @@ async function fetchRecentlyWatched() {
     }
 }
 
+// Function to format watched date
+function formatWatchedDate(watchedAt) {
+    if (!watchedAt) return '';
+
+    const date = new Date(watchedAt);
+    const now = new Date();
+    const diffTime = Math.abs(now - date);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    // If watched today
+    if (diffDays === 0) {
+        const hours = Math.floor(diffTime / (1000 * 60 * 60));
+        if (hours === 0) {
+            const minutes = Math.floor(diffTime / (1000 * 60));
+            return minutes <= 1 ? 'Just now' : `${minutes}m ago`;
+        }
+        return hours === 1 ? '1h ago' : `${hours}h ago`;
+    }
+
+    // If watched within the last week
+    if (diffDays < 7) {
+        return diffDays === 1 ? 'Yesterday' : `${diffDays}d ago`;
+    }
+
+    // Otherwise show the date
+    const options = { month: 'short', day: 'numeric' };
+    if (date.getFullYear() !== now.getFullYear()) {
+        options.year = 'numeric';
+    }
+    return date.toLocaleDateString('en-US', options);
+}
+
 // Function to display Trakt items
 function displayTraktItems(items) {
     console.log('displayTraktItems called with', items);
@@ -134,6 +166,9 @@ function displayTraktItems(items) {
             type = 'TV Show';
         }
 
+        // Format the watched date
+        const watchedDate = formatWatchedDate(item.watched_at);
+
         // Use posterUrl from backend if available, otherwise use placeholder
         const posterUrl = item.posterUrl || 'https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=' + encodeURIComponent(title);
 
@@ -153,6 +188,7 @@ function displayTraktItems(items) {
                         <span class="trakt-type">${type}</span>
                         <span>${year}</span>
                     </div>
+                    <div class="trakt-watched-date">${watchedDate}</div>
                 </div>
             </div>
         `;
