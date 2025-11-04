@@ -1,5 +1,5 @@
-// Script version 2 - Trakt Integration with debugging
-console.log('Script loaded - Version 2');
+// Script version 20250104001 - Trakt Integration with debugging
+console.log('✅ Script loaded - Version 20250104001 ✅');
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
