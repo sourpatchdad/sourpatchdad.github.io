@@ -1,3 +1,6 @@
+// Script version 2 - Trakt Integration with debugging
+console.log('Script loaded - Version 2');
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
