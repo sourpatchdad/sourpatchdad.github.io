@@ -1,1 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Specs - Nathan Nicholas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Nathan Nicholas</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#recently-watched">Trakt</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Server Specs Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="server-header">
+                <i class="fa-solid fa-server server-icon"></i>
+                <h1>TrueNAS Server Build</h1>
+                <p class="server-subtitle">Custom Home Media & Storage Server</p>
+            </div>
+
+            <div class="specs-container">
+                <!-- Hardware Specs -->
+                <div class="specs-section">
+                    <h2><i class="fa-solid fa-microchip"></i> Hardware Specifications</h2>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">CPU</span>
+                            <span class="spec-value">Intel Core i5-12500 (6P+0E cores, 12 threads)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Motherboard</span>
+                            <span class="spec-value">ASRock B660M-HDV</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">RAM</span>
+                            <span class="spec-value">32GB DDR4-3200 (2x16GB)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Storage</span>
+                            <span class="spec-value">2x 8TB WD Red Plus (Mirrored ZFS Pool)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Boot Drive</span>
+                            <span class="spec-value">256GB NVMe SSD</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">PSU</span>
+                            <span class="spec-value">EVGA 500W 80+ Bronze</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Case</span>
+                            <span class="spec-value">Fractal Design Node 804 (MicroATX)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Network</span>
+                            <span class="spec-value">Intel i219-V Gigabit Ethernet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software & Services -->
+                <div class="specs-section">
+                    <h2><i class="fa-solid fa-code"></i> Software & Services</h2>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">OS</span>
+                            <span class="spec-value">TrueNAS SCALE</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">File System</span>
+                            <span class="spec-value">ZFS (Mirror RAID1)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Media Server</span>
+                            <span class="spec-value">Plex (Hardware Transcoding Enabled)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Download Client</span>
+                            <span class="spec-value">qBittorrent + Mullvad VPN</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Remote Access</span>
+                            <span class="spec-value">Tailscale (Zero-trust Mesh VPN)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Backups</span>
+                            <span class="spec-value">Automated ZFS Snapshots</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Container Platform</span>
+                            <span class="spec-value">Docker / TrueNAS Apps</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Monitoring</span>
+                            <span class="spec-value">Grafana + Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Stats -->
+                <div class="specs-section">
+                    <h2><i class="fa-solid fa-gauge-high"></i> Performance Capabilities</h2>
+                    <div class="performance-grid">
+                        <div class="performance-card">
+                            <i class="fa-solid fa-film"></i>
+                            <h3>4K Transcoding</h3>
+                            <p>Hardware-accelerated with Intel Quick Sync Video</p>
+                        </div>
+                        <div class="performance-card">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>8TB Usable</h3>
+                            <p>Mirrored for redundancy, expandable to 16TB+</p>
+                        </div>
+                        <div class="performance-card">
+                            <i class="fa-solid fa-users"></i>
+                            <h3>Multiple Streams</h3>
+                            <p>Supports 5+ simultaneous Plex streams</p>
+                        </div>
+                        <div class="performance-card">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h3>Low Power</h3>
+                            <p>~40W idle, 80W under load</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Migration Details -->
+                <div class="specs-section">
+                    <h2><i class="fa-solid fa-arrow-right-arrow-left"></i> Migration from Synology DS124</h2>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th class="old-spec">DS124</th>
+                                    <th class="new-spec">TrueNAS Build</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CPU</td>
+                                    <td class="old-spec">2-core ARM (1.7GHz)</td>
+                                    <td class="new-spec">6-core Intel i5-12500</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td class="old-spec">1GB (Non-upgradable)</td>
+                                    <td class="new-spec">32GB DDR4</td>
+                                </tr>
+                                <tr>
+                                    <td>Transcoding</td>
+                                    <td class="old-spec"><i class="fa-solid fa-xmark"></i> None</td>
+                                    <td class="new-spec"><i class="fa-solid fa-check"></i> Intel QuickSync</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage</td>
+                                    <td class="old-spec">Single 8TB drive</td>
+                                    <td class="new-spec">2x 8TB Mirrored</td>
+                                </tr>
+                                <tr>
+                                    <td>Expandability</td>
+                                    <td class="old-spec">1 Bay (Maxed out)</td>
+                                    <td class="new-spec">8 Bays (Room to grow)</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Usage</td>
+                                    <td class="old-spec">~15W</td>
+                                    <td class="new-spec">~40W</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Use Cases -->
+                <div class="specs-section">
+                    <h2><i class="fa-solid fa-list-check"></i> Primary Use Cases</h2>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Plex Media Server:</strong> Stream movies & TV shows with 4K transcoding support</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Secure Downloads:</strong> VPN-protected torrenting via Mullvad</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Network Storage:</strong> Centralized file storage for all devices</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Docker Hosting:</strong> Self-hosted services and applications</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Data Redundancy:</strong> ZFS mirroring protects against drive failure</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Remote Access:</strong> Secure access from anywhere via Tailscale</li>
+                    </ul>
+                </div>
+
+                <!-- Back Button -->
+                <div class="back-button-container">
+                    <a href="projects.html" class="btn"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=20250104001"></script>
+</body>
+</html>
