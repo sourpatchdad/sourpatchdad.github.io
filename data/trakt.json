@@ -176,5 +176,129 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/3ndAx3weG6KDkJIRMCi5vXX6Dyb.jpg"
+  },
+  {
+    "id": 11508108240,
+    "watched_at": "2025-10-29T04:54:01.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 6,
+      "title": "Scars",
+      "ids": {
+        "trakt": 13189756,
+        "tvdb": 11175988,
+        "imdb": "tt30842032",
+        "tmdb": 6284968,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Slow Horses",
+      "year": 2022,
+      "ids": {
+        "trakt": 155534,
+        "slug": "slow-horses",
+        "tvdb": 372264,
+        "imdb": "tt5875444",
+        "tmdb": 95480,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dnpatlJrEPiDSn5fzgzvxtiSnMo.jpg"
+  },
+  {
+    "id": 11507815604,
+    "watched_at": "2025-10-29T03:00:59.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 9,
+      "number": 9,
+      "title": "Ghosts of Pods Past",
+      "ids": {
+        "trakt": 13505592,
+        "tvdb": null,
+        "imdb": "tt38494847",
+        "tmdb": 6521688,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Love is Blind",
+      "year": 2020,
+      "ids": {
+        "trakt": 157822,
+        "slug": "love-is-blind",
+        "tvdb": 376459,
+        "imdb": "tt11704040",
+        "tmdb": 99353,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8XhV6ke8ltRYoG4SYmibF2bGwrC.jpg"
+  },
+  {
+    "id": 11507615081,
+    "watched_at": "2025-10-29T02:10:37.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 9,
+      "number": 8,
+      "title": "Stripping the Veil",
+      "ids": {
+        "trakt": 13505591,
+        "tvdb": null,
+        "imdb": "tt38494846",
+        "tmdb": 6521687,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Love is Blind",
+      "year": 2020,
+      "ids": {
+        "trakt": 157822,
+        "slug": "love-is-blind",
+        "tvdb": 376459,
+        "imdb": "tt11704040",
+        "tmdb": 99353,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8XhV6ke8ltRYoG4SYmibF2bGwrC.jpg"
+  },
+  {
+    "id": 11504902525,
+    "watched_at": "2025-10-28T02:03:54.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 9,
+      "number": 7,
+      "title": "Unknown Factors",
+      "ids": {
+        "trakt": 13505590,
+        "tvdb": null,
+        "imdb": "tt38494845",
+        "tmdb": 6521686,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Love is Blind",
+      "year": 2020,
+      "ids": {
+        "trakt": 157822,
+        "slug": "love-is-blind",
+        "tvdb": 376459,
+        "imdb": "tt11704040",
+        "tmdb": 99353,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8XhV6ke8ltRYoG4SYmibF2bGwrC.jpg"
   }
 ]
