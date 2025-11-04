@@ -1,3 +1,6 @@
+// Script version 20250104001 - Trakt Integration with debugging
+console.log('✅ Script loaded - Version 20250104001 ✅');
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
