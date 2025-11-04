@@ -73,15 +73,12 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
 });
 
-// Trakt API Integration
-const TRAKT_CONFIG = {
-    clientId: '92e0c311e18ec187627337bad034f1bc74a5274706090696caaa385ddc21fa8d', // Replace with your Trakt API Client ID
-    username: 'sourpatchdad'   // Replace with your Trakt username
-};
+// Trakt API Integration (via Netlify Functions to avoid CORS)
+// No need to expose credentials in frontend anymore - they're in the serverless function
 
 // Function to fetch recently watched from Trakt
 async function fetchRecentlyWatched() {
-    console.log('fetchRecentlyWatched called');
+    console.log('✅ fetchRecentlyWatched called - Version 20250104001');
     const feedContainer = document.getElementById('trakt-feed');
 
     if (!feedContainer) {
@@ -89,62 +86,18 @@ async function fetchRecentlyWatched() {
         return;
     }
 
-    // Check if configuration is set
-    if (TRAKT_CONFIG.clientId === 'YOUR_TRAKT_CLIENT_ID' ||
-        TRAKT_CONFIG.username === 'YOUR_TRAKT_USERNAME') {
-        feedContainer.innerHTML = `
-            <div class="error-message">
-                <p>To display your recently watched content, please configure your Trakt API credentials.</p>
-                <p>Update the TRAKT_CONFIG in script.js with your Client ID and username.</p>
-            </div>
-        `;
-        return;
-    }
-
-    console.log('Fetching from Trakt API...', TRAKT_CONFIG.username);
-
-    // First, verify the user exists
-    const userUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}`;
-    console.log('Checking user profile:', userUrl);
+    console.log('Fetching from Netlify Function...');
 
     try {
-        // Check if user exists
-        const userCheck = await fetch(userUrl, {
-            headers: {
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': TRAKT_CONFIG.clientId
-            }
-        });
+        // Call our Netlify serverless function instead of Trakt API directly
+        const response = await fetch('/.netlify/functions/trakt');
 
-        console.log('User check status:', userCheck.status);
-
-        if (userCheck.status === 404) {
-            throw new Error(`User "${TRAKT_CONFIG.username}" not found on Trakt. Please verify your username.`);
-        }
-
-        if (!userCheck.ok) {
-            throw new Error(`User profile error: ${userCheck.status}`);
-        }
-
-        // Now fetch watch history
-        const apiUrl = `https://api.trakt.tv/users/${TRAKT_CONFIG.username}/history?limit=12`;
-        console.log('Fetching history from:', apiUrl);
-
-        const response = await fetch(apiUrl, {
-            headers: {
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': TRAKT_CONFIG.clientId
-            }
-        });
-
-        console.log('History response status:', response.status);
+        console.log('Response status:', response.status);
 
         if (!response.ok) {
-            const errorText = await response.text();
-            console.log('Error response:', errorText);
-            throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
+            const errorData = await response.json();
+            console.error('Error response:', errorData);
+            throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
@@ -156,7 +109,7 @@ async function fetchRecentlyWatched() {
             <div class="error-message">
                 <p>Unable to load recently watched content.</p>
                 <p>Error: ${error.message}</p>
-                <p>Check the console (F12) for more details.</p>
+                <p>Note: This feature requires deployment to Netlify for serverless functions.</p>
             </div>
         `;
     }
