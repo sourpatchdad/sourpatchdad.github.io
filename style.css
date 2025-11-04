@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
@@ -265,7 +278,7 @@ h2 {
 
 .trakt-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-top: 2rem;
 }
@@ -442,7 +455,7 @@ footer {
     }
 
     .trakt-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
@@ -490,6 +503,11 @@ footer {
     .photo-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+
+    .trakt-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     section {
@@ -649,6 +667,17 @@ footer {
 
 .comparison-table .new-spec {
     background: rgba(46, 213, 115, 0.1);
+}
+
+/* Fix contrast for colored column headers */
+.comparison-table th.old-spec {
+    background: rgba(231, 76, 60, 0.8);
+    color: var(--white);
+}
+
+.comparison-table th.new-spec {
+    background: rgba(46, 213, 115, 0.8);
+    color: var(--white);
 }
 
 .comparison-table tbody tr:hover {

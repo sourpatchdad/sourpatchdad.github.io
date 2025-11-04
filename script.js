@@ -148,7 +148,10 @@ function displayTraktItems(items) {
         return;
     }
 
-    feedContainer.innerHTML = items.map(item => {
+    // Limit to 10 most recent items for 2x5 grid on desktop
+    const limitedItems = items.slice(0, 10);
+
+    feedContainer.innerHTML = limitedItems.map(item => {
         const media = item.type === 'movie' ? item.movie : item.show;
         const title = media.title;
         const year = media.year;

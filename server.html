@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="#home" class="logo-link"><img src="images/NN.svg" alt="Nathan Nicholas" class="logo-img"></a>
+            <a href="index.html" class="logo-link"><img src="images/NN.svg" alt="Nathan Nicholas" class="logo-img"></a>
             <div class="nav-links">
                 <a href="index.html#about">About</a>
                 <a href="projects.html">Projects</a>
@@ -22,18 +22,19 @@
     </nav>
 
     <!-- Server Specs Content -->
+    <main>
     <section class="page-content">
         <div class="container">
             <div class="server-header">
-                <i class="fa-solid fa-server server-icon"></i>
+                <i class="fa-solid fa-server server-icon" aria-hidden="true"></i>
                 <h1>TrueNAS Server Build</h1>
                 <p class="server-subtitle">Custom Home Media & Storage Server</p>
             </div>
 
             <div class="specs-container">
                 <!-- Hardware Specs -->
-                <div class="specs-section">
-                    <h2><i class="fa-solid fa-microchip"></i> Hardware Specifications</h2>
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hardware Specifications</h2>
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">CPU</span>
@@ -72,11 +73,11 @@
                             <span class="spec-value">Fractal Design Define 7 (6x 3.5" bays, sound-dampened)</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Software & Services -->
-                <div class="specs-section">
-                    <h2><i class="fa-solid fa-code"></i> Software & Services</h2>
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Software & Services</h2>
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">OS</span>
@@ -115,45 +116,46 @@
                             <span class="spec-value">Grafana + Prometheus (Planned)</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Performance Stats -->
-                <div class="specs-section">
-    <h2><i class="fa-solid fa-gauge-high"></i> Performance Capabilities</h2>
+                <section class="specs-section">
+    <h2><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Performance Capabilities</h2>
     <div class="performance-grid">
         <div class="performance-card">
-            <i class="fa-solid fa-film"></i>
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
             <h3>4K Transcoding</h3>
             <p>15+ simultaneous streams with Intel UHD 770 Quick Sync</p>
         </div>
         <div class="performance-card">
-            <i class="fa-solid fa-database"></i>
+            <i class="fa-solid fa-database" aria-hidden="true"></i>
             <h3>8TB Usable</h3>
             <p>ZFS mirrored RAID1, expandable to 48TB+</p>
         </div>
         <div class="performance-card">
-            <i class="fa-solid fa-users"></i>
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
             <h3>Hardware Acceleration</h3>
             <p>i5-12500 with 6 cores, 12 threads at 3.0-4.6GHz</p>
         </div>
         <div class="performance-card">
-            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
             <h3>Low Power</h3>
             <p>~50W idle, ~65W under load (~$53/year)</p>
         </div>
     </div>
-</div>
+</section>
 
                 <!-- Migration Details -->
-                <div class="specs-section">
-                    <h2><i class="fa-solid fa-arrow-right-arrow-left"></i> Migration from Synology DS124</h2>
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Migration from Synology DS124</h2>
                     <div class="comparison-table">
                         <table>
+                            <caption class="sr-only">Hardware and performance comparison between Synology DS124 and TrueNAS custom build</caption>
                             <thead>
                                 <tr>
-                                    <th>Feature</th>
-                                    <th class="old-spec">DS124</th>
-                                    <th class="new-spec">TrueNAS Build</th>
+                                    <th scope="col">Feature</th>
+                                    <th scope="col" class="old-spec">DS124</th>
+                                    <th scope="col" class="new-spec">TrueNAS Build</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -169,8 +171,8 @@
                                 </tr>
                                 <tr>
                                     <td>Transcoding</td>
-                                    <td class="old-spec"><i class="fa-solid fa-xmark"></i> None</td>
-                                    <td class="new-spec"><i class="fa-solid fa-check"></i> Intel QuickSync</td>
+                                    <td class="old-spec"><i class="fa-solid fa-xmark" aria-hidden="true"></i> None</td>
+                                    <td class="new-spec"><i class="fa-solid fa-check" aria-hidden="true"></i> Intel QuickSync</td>
                                 </tr>
                                 <tr>
                                     <td>Storage</td>
@@ -190,28 +192,29 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </section>
 
                 <!-- Use Cases -->
-                <div class="specs-section">
-                    <h2><i class="fa-solid fa-list-check"></i> Primary Use Cases</h2>
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> Primary Use Cases</h2>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Plex Media Server:</strong> Stream movies & TV shows with 4K transcoding support</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Secure Downloads:</strong> VPN-protected torrenting via Mullvad</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Network Storage:</strong> Centralized file storage for all devices</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Docker Hosting:</strong> Self-hosted services and applications</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Data Redundancy:</strong> ZFS mirroring protects against drive failure</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Remote Access:</strong> Secure access from anywhere via Tailscale</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Plex Media Server:</strong> Stream movies & TV shows with 4K transcoding support</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Secure Downloads:</strong> VPN-protected torrenting via Mullvad</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Network Storage:</strong> Centralized file storage for all devices</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Docker Hosting:</strong> Self-hosted services and applications</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Data Redundancy:</strong> ZFS mirroring protects against drive failure</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Remote Access:</strong> Secure access from anywhere via Tailscale</li>
                     </ul>
-                </div>
+                </section>
 
                 <!-- Back Button -->
                 <div class="back-button-container">
-                    <a href="projects.html" class="btn"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                    <a href="projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
