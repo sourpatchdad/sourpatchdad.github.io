@@ -1,5 +1,36 @@
 [
   {
+    "id": 11584067518,
+    "watched_at": "2025-11-05T05:03:08.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 2,
+      "title": "A Very Robust Personal Life",
+      "ids": {
+        "trakt": 12100029,
+        "tvdb": 10585063,
+        "imdb": "tt32622826",
+        "tmdb": 5467606,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "St. Denis Medical",
+      "year": 2024,
+      "ids": {
+        "trakt": 235514,
+        "slug": "st-denis-medical",
+        "tvdb": 435916,
+        "imdb": "tt21433690",
+        "tmdb": 251941,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
+  },
+  {
     "id": 11583928358,
     "watched_at": "2025-11-05T04:40:48.000Z",
     "action": "checkin",
@@ -269,36 +300,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/dnpatlJrEPiDSn5fzgzvxtiSnMo.jpg"
-  },
-  {
-    "id": 11507815604,
-    "watched_at": "2025-10-29T03:00:59.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 9,
-      "number": 9,
-      "title": "Ghosts of Pods Past",
-      "ids": {
-        "trakt": 13505592,
-        "tvdb": null,
-        "imdb": "tt38494847",
-        "tmdb": 6521688,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Love is Blind",
-      "year": 2020,
-      "ids": {
-        "trakt": 157822,
-        "slug": "love-is-blind",
-        "tvdb": 376459,
-        "imdb": "tt11704040",
-        "tmdb": 99353,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8XhV6ke8ltRYoG4SYmibF2bGwrC.jpg"
   }
 ]
