@@ -273,8 +273,22 @@ function displayMusicItems(albums) {
         return;
     }
 
+    // Sort by year (descending - newest first), then by artist (alphabetically)
+    const sortedAlbums = [...albums].sort((a, b) => {
+        const yearA = parseInt(a.year) || 0;
+        const yearB = parseInt(b.year) || 0;
+
+        // Primary sort: by year (descending)
+        if (yearB !== yearA) {
+            return yearB - yearA;
+        }
+
+        // Secondary sort: by artist name (alphabetically)
+        return a.artist.localeCompare(b.artist);
+    });
+
     // Limit to 4-5 most recent albums
-    const limitedAlbums = albums.slice(0, 5);
+    const limitedAlbums = sortedAlbums.slice(0, 5);
 
     feedContainer.innerHTML = limitedAlbums.map(album => {
         // Generate artwork path from album name
