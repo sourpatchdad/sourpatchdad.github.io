@@ -34,17 +34,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navigation
+// Add scroll effect to navigation and hero section
 let lastScroll = 0;
 const nav = document.querySelector('nav');
+const heroContainer = document.querySelector('.hero .container');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
+    // Navigation shadow effect
     if (currentScroll <= 0) {
         nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     } else {
         nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+    }
+
+    // Hero section scale animation
+    if (heroContainer) {
+        // Get the height of the viewport
+        const viewportHeight = window.innerHeight;
+
+        // Calculate how far down we've scrolled (0 to 1 range)
+        // We want the effect to happen in the first viewport height of scrolling
+        const scrollProgress = Math.min(currentScroll / viewportHeight, 1);
+
+        // Scale from 1.0 to 1.15 as we scroll down
+        const scale = 1 + (scrollProgress * 0.15);
+
+        // Apply the transform
+        heroContainer.style.transform = `scale(${scale})`;
+
+        // Optional: Add slight fade effect
+        const opacity = 1 - (scrollProgress * 0.3);
+        heroContainer.style.opacity = opacity;
     }
 
     lastScroll = currentScroll;

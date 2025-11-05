@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wide Connected Node Network Banner Design -->
+
+  <!-- Background subtle line -->
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#ecf0f1" stroke-width="1" opacity="0.3"/>
+
+  <!-- Connection lines - creating a network across the banner -->
+  <line x1="100" y1="40" x2="200" y2="20" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+  <line x1="200" y1="20" x2="300" y2="50" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+  <line x1="300" y1="50" x2="400" y2="30" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+  <line x1="400" y1="30" x2="500" y2="55" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+  <line x1="500" y1="55" x2="600" y2="25" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+  <line x1="600" y1="25" x2="700" y2="40" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+
+  <!-- Additional connecting lines for density -->
+  <line x1="100" y1="40" x2="300" y2="50" stroke="#3498db" stroke-width="1.5" opacity="0.3"/>
+  <line x1="200" y1="20" x2="400" y2="30" stroke="#3498db" stroke-width="1.5" opacity="0.3"/>
+  <line x1="300" y1="50" x2="500" y2="55" stroke="#3498db" stroke-width="1.5" opacity="0.3"/>
+  <line x1="400" y1="30" x2="600" y2="25" stroke="#3498db" stroke-width="1.5" opacity="0.3"/>
+  <line x1="500" y1="55" x2="700" y2="40" stroke="#3498db" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Nodes along the network -->
+  <!-- Left end node -->
+  <circle cx="100" cy="40" r="7" fill="#2c3e50"/>
+  <circle cx="100" cy="40" r="7" fill="#3498db" opacity="0.3"/>
+
+  <!-- Node 2 -->
+  <circle cx="200" cy="20" r="8" fill="#34495e"/>
+  <circle cx="200" cy="20" r="8" fill="#3498db" opacity="0.4"/>
+
+  <!-- Node 3 -->
+  <circle cx="300" cy="50" r="6" fill="#2c3e50"/>
+  <circle cx="300" cy="50" r="6" fill="#3498db" opacity="0.4"/>
+
+  <!-- Center node - largest -->
+  <circle cx="400" cy="30" r="10" fill="#2c3e50"/>
+  <circle cx="400" cy="30" r="10" fill="#3498db" opacity="0.5"/>
+  <circle cx="400" cy="30" r="15" fill="none" stroke="#3498db" stroke-width="1" opacity="0.3"/>
+
+  <!-- Node 5 -->
+  <circle cx="500" cy="55" r="7" fill="#34495e"/>
+  <circle cx="500" cy="55" r="7" fill="#3498db" opacity="0.4"/>
+
+  <!-- Node 6 -->
+  <circle cx="600" cy="25" r="8" fill="#2c3e50"/>
+  <circle cx="600" cy="25" r="8" fill="#3498db" opacity="0.4"/>
+
+  <!-- Right end node -->
+  <circle cx="700" cy="40" r="7" fill="#34495e"/>
+  <circle cx="700" cy="40" r="7" fill="#3498db" opacity="0.3"/>
+
+  <!-- Additional small accent nodes -->
+  <circle cx="150" cy="35" r="4" fill="#3498db" opacity="0.6"/>
+  <circle cx="250" cy="40" r="4" fill="#3498db" opacity="0.6"/>
+  <circle cx="350" cy="45" r="4" fill="#3498db" opacity="0.6"/>
+  <circle cx="450" cy="38" r="4" fill="#3498db" opacity="0.6"/>
+  <circle cx="550" cy="42" r="4" fill="#3498db" opacity="0.6"/>
+  <circle cx="650" cy="35" r="4" fill="#3498db" opacity="0.6"/>
+</svg>
