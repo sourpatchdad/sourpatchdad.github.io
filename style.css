@@ -146,10 +146,9 @@ nav .container {
     color: var(--text-color);
 }
 
-/* Dark mode - bulb is "on" and glowing */
+/* Dark mode - bulb is "on" */
 [data-theme="dark"] .theme-toggle i {
     color: #ffd700 !important;
-    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
 }
 
 .theme-toggle:hover i {
@@ -158,60 +157,6 @@ nav .container {
 
 [data-theme="dark"] .theme-toggle:hover i {
     color: #ffed4e !important;
-}
-
-/* Rays effect for dark mode - on the BUTTON, not the icon */
-[data-theme="dark"] .theme-toggle::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 180%;
-    height: 180%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 1;
-    background:
-        linear-gradient(0deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
-        linear-gradient(45deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
-        linear-gradient(90deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
-        linear-gradient(135deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%);
-    animation: rotate-rays 30s linear infinite;
-}
-
-/* Subtle glow pulse in dark mode */
-[data-theme="dark"] .theme-toggle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 140%;
-    height: 140%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 2;
-    animation: pulse-glow 4s ease-in-out infinite;
-}
-
-@keyframes rotate-rays {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes pulse-glow {
-    0%, 100% {
-        opacity: 0.3;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: 0.6;
-        transform: translate(-50%, -50%) scale(1.05);
-    }
 }
 
 /* Hero Section */
@@ -489,6 +434,84 @@ h2 {
     margin-bottom: 2rem;
 }
 
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: none;
+}
+
+.form-status.success {
+    background-color: rgba(46, 213, 115, 0.1);
+    color: #27ae60;
+    border: 1px solid #27ae60;
+    display: block;
+}
+
+.form-status.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    display: block;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -574,6 +597,14 @@ footer {
     .trakt-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
+    }
+
+    .contact-content {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
     }
 
     .contact-links {
