@@ -50,7 +50,7 @@
                 <section class="detail-section">
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Overview</h2>
                     <p>Bitty 2.0 is a complete rewrite of my Bitcoin price notification system, migrating from a Home Assistant integration to a standalone Python bot running serverless on GitHub Actions. The migration fixed critical timing issues, eliminated duplicate notifications, and resolved baseline logic problems that plagued the original implementation.</p>
-                    <p>The bot runs completely serverless, executing every 5 minutes via scheduled GitHub Actions workflows. It sends Telegram notifications for significant Bitcoin price movements with configurable alert thresholds and automatic spam prevention.</p>
+                    <p>The bot runs completely serverless, executing every 5 minutes via scheduled GitHub Actions workflows. It sends Discord notifications for significant Bitcoin price movements with configurable alert thresholds and automatic spam prevention.</p>
                 </section>
 
                 <!-- Key Features -->
@@ -112,7 +112,7 @@
                         </div>
                         <div class="tech-item">
                             <span class="tech-label">Notifications</span>
-                            <span class="tech-value">Telegram Bot API</span>
+                            <span class="tech-value">Discord Webook API</span>
                         </div>
                         <div class="tech-item">
                             <span class="tech-label">State Storage</span>
@@ -139,9 +139,6 @@
                             <strong>Baseline Logic Problems:</strong> Rewrote percentage calculation logic to properly handle daily baselines and prevent false positives.
                         </li>
                         <li>
-                            <strong>Timezone Confusion:</strong> Implemented proper US/Central timezone handling with DST awareness for accurate midnight resets.
-                        </li>
-                        <li>
                             <strong>Alert Fatigue:</strong> Added smart cooldown system that prevents spam while ensuring important price movements aren't missed.
                         </li>
                     </ul>
@@ -152,7 +149,7 @@
                     <h2><i class="fa-solid fa-question-circle" aria-hidden="true"></i> Why Rewrite?</h2>
                     <p>The original Bitty bot was tightly coupled to Home Assistant, which created several limitations:</p>
                     <ul class="reason-list">
-                        <li>Home Assistant automations are difficult to debug and version control</li>
+                        <li>Home Assistant is tied to my home network so any network or electric outages prevent functionality and reliability</li>
                         <li>YAML-based logic became unwieldy for complex price tracking algorithms</li>
                         <li>Testing required full Home Assistant restart cycles</li>
                         <li>State management in Home Assistant was unreliable for financial data</li>
