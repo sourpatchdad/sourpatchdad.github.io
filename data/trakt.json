@@ -1,5 +1,22 @@
 [
   {
+    "id": 11589855144,
+    "watched_at": "2025-11-05T20:19:59.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "A House of Dynamite",
+      "year": 2025,
+      "ids": {
+        "trakt": 1049823,
+        "slug": "a-house-of-dynamite-2025",
+        "imdb": "tt32376165",
+        "tmdb": 1290159
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg"
+  },
+  {
     "id": 11585045109,
     "watched_at": "2025-11-05T05:25:38.000Z",
     "action": "watch",
@@ -283,22 +300,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg"
-  },
-  {
-    "id": 11511104211,
-    "watched_at": "2025-10-30T03:48:02.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Martian",
-      "year": 2015,
-      "ids": {
-        "trakt": 183371,
-        "slug": "the-martian-2015",
-        "imdb": "tt3659388",
-        "tmdb": 286217
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/3ndAx3weG6KDkJIRMCi5vXX6Dyb.jpg"
   }
 ]
