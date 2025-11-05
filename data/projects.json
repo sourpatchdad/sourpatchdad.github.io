@@ -2,7 +2,7 @@
   {
     "id": "home-assistant",
     "title": "Home Assistant Smart Home",
-    "shortDescription": "Comprehensive home automation system with 7 custom dashboards, 50+ automations, financial tracking, Tesla integration, and real-time monitoring of climate, security, and investments.",
+    "shortDescription": "Self-hosting journey from zero coding experience to 8 custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system running on HA Green ($99 hardware, no recurring costs).",
     "tags": ["Home Assistant", "Smart Home", "IoT", "Automation", "YAML"],
     "date": "2024-2025",
     "detailPage": "projects/home-assistant.html",
