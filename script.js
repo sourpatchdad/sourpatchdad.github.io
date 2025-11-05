@@ -34,10 +34,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navigation and hero section
+// Add scroll effect to navigation
 let lastScroll = 0;
 const nav = document.querySelector('nav');
-const heroContainer = document.querySelector('.hero .container');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -47,26 +46,6 @@ window.addEventListener('scroll', () => {
         nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     } else {
         nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-    }
-
-    // Hero section intense scale animation
-    if (heroContainer) {
-        // Get the height of the viewport
-        const viewportHeight = window.innerHeight;
-
-        // Calculate how far down we've scrolled (0 to 1 range)
-        // We want the effect to happen over 1.2 viewport heights for smoother transition
-        const scrollProgress = Math.min(currentScroll / (viewportHeight * 1.2), 1);
-
-        // Scale from 1.0 to 2.5 as we scroll down - MUCH more intense!
-        const scale = 1 + (scrollProgress * 1.5);
-
-        // Apply the transform
-        heroContainer.style.transform = `scale(${scale})`;
-
-        // Fade out as it gets really large
-        const opacity = 1 - (scrollProgress * 0.7);
-        heroContainer.style.opacity = opacity;
     }
 
     lastScroll = currentScroll;
