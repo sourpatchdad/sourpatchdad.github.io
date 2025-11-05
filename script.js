@@ -224,3 +224,63 @@ if (document.readyState === 'loading') {
     // DOM is already loaded, run immediately
     fetchRecentlyWatched();
 }
+
+// Contact Form Handling
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message')
+        };
+
+        // Show loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        try {
+            // Use Formspree to handle form submission
+            // Replace YOUR_FORM_ID with your actual Formspree form ID
+            // Sign up at https://formspree.io/ and create a new form
+            const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // Success
+                formStatus.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
+            } else {
+                // Error
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            formStatus.textContent = 'Sorry, there was an error sending your message. Please try again or contact me via LinkedIn.';
+            formStatus.className = 'form-status error';
+        } finally {
+            // Reset button
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+
+            // Hide status message after 5 seconds
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+            }, 5000);
+        }
+    });
+}
