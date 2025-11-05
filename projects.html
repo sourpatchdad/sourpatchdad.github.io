@@ -30,32 +30,11 @@
     <section class="page-content">
         <div class="container">
             <h1>My Projects</h1>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Bitty 2.0</h3>
-                    <p>Migrated Bitcoin price notifications from Home Assistant to standalone Python bot on GitHub Actions. Fixed timing issues, duplicate notifications, and baseline logic problems. Runs serverless every 5 minutes with daily midnight baseline resets, spam prevention, proper CST/CDT timezone handling, 5%/10%/15% price bands, ATH alerts, and weekly/monthly summaries.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/sourpatchdad/bitty" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically from data/projects.json -->
+                <div class="loading-state">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Loading projects...
                 </div>
-
-                <div class="project-card">
-                    <h3>Synology to TrueNAS Migration</h3>
-                    <p>Migrating from underpowered Synology DS124 (1GB RAM, no transcoding) to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives. Enables hardware-accelerated 4K Plex transcoding, VPN-protected torrenting via Mullvad, expandable storage, and secure remote access through Tailscale.</p>
-                    <div class="project-links">
-                        <a href="server.html" class="btn"><i class="fa-solid fa-server"></i> View Specs</a>
-                    </div>
-                </div>
-
-               <!-- <div class="project-card">
-                    <h2>Project 3</h2>
-                    <p>Your third project description. What did you build? What did you learn? What technologies did you use?</p>
-                    <div class="project-links">
-                        <a href="#" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-                        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div><-->
             </div>
         </div>
     </section>
@@ -68,5 +47,57 @@
     </footer>
 
     <script src="script.js?v=20250104001"></script>
+    <script>
+        // Load and render projects from JSON
+        async function loadProjects() {
+            const projectsGrid = document.getElementById('projects-grid');
+
+            try {
+                const response = await fetch('data/projects.json');
+                if (!response.ok) throw new Error('Failed to load projects');
+
+                const projects = await response.json();
+
+                // Clear loading state
+                projectsGrid.innerHTML = '';
+
+                // Render each project
+                projects.forEach(project => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'project-card';
+
+                    // Build project links HTML
+                    let linksHTML = '<div class="project-links">';
+
+                    // Add detail page link
+                    linksHTML += `<a href="${project.detailPage}" class="btn"><i class="fa-solid fa-book" aria-hidden="true"></i> View Details</a>`;
+
+                    // Add external link if available
+                    if (project.externalLink) {
+                        const iconClass = project.iconType === 'github' ? 'fab fa-github' : project.icon;
+                        const linkText = project.iconType === 'github' ? 'View on GitHub' : 'External Link';
+                        linksHTML += `<a href="${project.externalLink}" class="btn" target="_blank" rel="noopener noreferrer"><i class="${iconClass}" aria-hidden="true"></i> ${linkText}</a>`;
+                    }
+
+                    linksHTML += '</div>';
+
+                    // Build project card HTML
+                    projectCard.innerHTML = `
+                        <h3>${project.title}</h3>
+                        <p>${project.shortDescription}</p>
+                        ${linksHTML}
+                    `;
+
+                    projectsGrid.appendChild(projectCard);
+                });
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                projectsGrid.innerHTML = '<div class="error-state"><i class="fa-solid fa-exclamation-triangle"></i> Failed to load projects. Please refresh the page.</div>';
+            }
+        }
+
+        // Load projects when page loads
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
 </body>
 </html>

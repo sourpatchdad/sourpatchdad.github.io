@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitty 2.0 - Nathan Nicholas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/NN.svg" alt="Nathan Nicholas" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../index.html#recently-watched">Trakt</a>
+                <a href="../index.html#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <main>
+    <section class="page-content">
+        <div class="container">
+            <div class="project-detail-header">
+                <i class="fab fa-bitcoin project-icon" aria-hidden="true"></i>
+                <h1>Bitty 2.0</h1>
+                <p class="project-subtitle">Serverless Bitcoin Price Alert Bot</p>
+                <div class="project-meta">
+                    <span class="meta-item"><i class="fa-solid fa-calendar" aria-hidden="true"></i> 2024</span>
+                    <span class="meta-item"><i class="fa-solid fa-tag" aria-hidden="true"></i> Python, GitHub Actions</span>
+                </div>
+                <div class="project-links-header">
+                    <a href="https://github.com/sourpatchdad/bitty" class="btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <!-- Overview -->
+                <section class="detail-section">
+                    <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Overview</h2>
+                    <p>Bitty 2.0 is a complete rewrite of my Bitcoin price notification system, migrating from a Home Assistant integration to a standalone Python bot running serverless on GitHub Actions. The migration fixed critical timing issues, eliminated duplicate notifications, and resolved baseline logic problems that plagued the original implementation.</p>
+                    <p>The bot runs completely serverless, executing every 5 minutes via scheduled GitHub Actions workflows. It sends Telegram notifications for significant Bitcoin price movements with configurable alert thresholds and automatic spam prevention.</p>
+                </section>
+
+                <!-- Key Features -->
+                <section class="detail-section">
+                    <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <h3>Smart Timing</h3>
+                            <p>Runs every 5 minutes with daily midnight baseline resets in proper CST/CDT timezone handling</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            <h3>Tiered Alerts</h3>
+                            <p>Configurable price bands (5%, 10%, 15%) with escalating notification urgency</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <h3>Spam Prevention</h3>
+                            <p>Intelligent cooldown system prevents duplicate notifications within the same price band</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                            <h3>ATH Tracking</h3>
+                            <p>Automatic all-time high detection and alerts with celebratory notifications</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            <h3>Summary Reports</h3>
+                            <p>Weekly and monthly performance summaries with price statistics and percentage changes</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-server" aria-hidden="true"></i>
+                            <h3>Serverless</h3>
+                            <p>Zero infrastructure costs - runs entirely on GitHub Actions free tier</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Details -->
+                <section class="detail-section">
+                    <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Technical Details</h2>
+                    <div class="tech-specs">
+                        <div class="tech-item">
+                            <span class="tech-label">Language</span>
+                            <span class="tech-value">Python 3.11+</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">Platform</span>
+                            <span class="tech-value">GitHub Actions (ubuntu-latest)</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">Schedule</span>
+                            <span class="tech-value">Cron: */5 * * * * (Every 5 minutes)</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">Price API</span>
+                            <span class="tech-value">CoinGecko API (Free Tier)</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">Notifications</span>
+                            <span class="tech-value">Telegram Bot API</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">State Storage</span>
+                            <span class="tech-value">GitHub Repository Secrets & Files</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-label">Timezone</span>
+                            <span class="tech-value">US/Central (CST/CDT aware)</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Problems Solved -->
+                <section class="detail-section">
+                    <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Problems Solved</h2>
+                    <ul class="problem-list">
+                        <li>
+                            <strong>Timing Issues:</strong> Home Assistant's automation timing was unreliable. Migration to GitHub Actions cron ensures consistent 5-minute intervals.
+                        </li>
+                        <li>
+                            <strong>Duplicate Notifications:</strong> Fixed baseline reset logic to properly trigger at midnight CST/CDT, eliminating duplicate alerts.
+                        </li>
+                        <li>
+                            <strong>Baseline Logic Problems:</strong> Rewrote percentage calculation logic to properly handle daily baselines and prevent false positives.
+                        </li>
+                        <li>
+                            <strong>Timezone Confusion:</strong> Implemented proper US/Central timezone handling with DST awareness for accurate midnight resets.
+                        </li>
+                        <li>
+                            <strong>Alert Fatigue:</strong> Added smart cooldown system that prevents spam while ensuring important price movements aren't missed.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Why Rewrite? -->
+                <section class="detail-section">
+                    <h2><i class="fa-solid fa-question-circle" aria-hidden="true"></i> Why Rewrite?</h2>
+                    <p>The original Bitty bot was tightly coupled to Home Assistant, which created several limitations:</p>
+                    <ul class="reason-list">
+                        <li>Home Assistant automations are difficult to debug and version control</li>
+                        <li>YAML-based logic became unwieldy for complex price tracking algorithms</li>
+                        <li>Testing required full Home Assistant restart cycles</li>
+                        <li>State management in Home Assistant was unreliable for financial data</li>
+                        <li>Limited observability into what the bot was actually doing</li>
+                    </ul>
+                    <p>Moving to standalone Python with GitHub Actions provided:</p>
+                    <ul class="reason-list">
+                        <li>Proper version control with Git</li>
+                        <li>Easy local testing and debugging</li>
+                        <li>Complete control over timing and execution</li>
+                        <li>GitHub Actions logs for full observability</li>
+                        <li>Zero hosting costs (GitHub Actions free tier)</li>
+                    </ul>
+                </section>
+
+                <!-- Back Button -->
+                <div class="back-button-container">
+                    <a href="../projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20250104001"></script>
+</body>
+</html>

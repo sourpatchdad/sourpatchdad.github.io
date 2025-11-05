@@ -1,0 +1,24 @@
+[
+  {
+    "id": "bitty-2",
+    "title": "Bitty 2.0",
+    "shortDescription": "Migrated Bitcoin price notifications from Home Assistant to standalone Python bot on GitHub Actions. Fixed timing issues, duplicate notifications, and baseline logic problems.",
+    "tags": ["Python", "GitHub Actions", "Automation", "Cryptocurrency"],
+    "date": "2024",
+    "detailPage": "projects/bitty-2.html",
+    "icon": "fab fa-github",
+    "iconType": "github",
+    "externalLink": "https://github.com/sourpatchdad/bitty"
+  },
+  {
+    "id": "truenas-migration",
+    "title": "Synology to TrueNAS Migration",
+    "shortDescription": "Migrating from underpowered Synology DS124 to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives for 4K Plex transcoding and more.",
+    "tags": ["TrueNAS", "Plex", "Homelab", "Infrastructure"],
+    "date": "2024-2025",
+    "detailPage": "server.html",
+    "icon": "fa-solid fa-server",
+    "iconType": "server",
+    "externalLink": null
+  }
+]
