@@ -182,16 +182,17 @@ nav .container {
 }
 
 .hero-logo {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
     transition: var(--transition);
 }
 
 .hero-logo:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+    transform: scale(1.02);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
 }
 
 .hero-title {
@@ -602,8 +603,7 @@ footer {
     }
 
     .hero-logo {
-        width: 120px;
-        height: 120px;
+        max-width: 500px;
     }
 
     .hero-title {
@@ -670,8 +670,7 @@ footer {
     }
 
     .hero-logo {
-        width: 100px;
-        height: 100px;
+        max-width: 350px;
     }
 
     .hero-title {
