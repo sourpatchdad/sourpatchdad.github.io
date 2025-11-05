@@ -17,7 +17,7 @@
             <div class="nav-links">
                 <a href="index.html#about">About</a>
                 <a href="projects.html">Projects</a>
-                <a href="index.html#recently-watched">Trakt</a>
+                <a href="index.html#recently-watched">Media</a>
                 <a href="index.html#contact">Contact</a>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                     <i class="fa-solid fa-lightbulb"></i>
@@ -57,6 +57,17 @@
                 if (!response.ok) throw new Error('Failed to load projects');
 
                 const projects = await response.json();
+
+                // Sort projects by date (newest first)
+                projects.sort((a, b) => {
+                    // Extract the most recent year from date strings like "2024" or "2024-2025"
+                    const getLatestYear = (dateStr) => {
+                        const years = dateStr.match(/\d{4}/g);
+                        return years ? Math.max(...years.map(y => parseInt(y))) : 0;
+                    };
+
+                    return getLatestYear(b.date) - getLatestYear(a.date);
+                });
 
                 // Clear loading state
                 projectsGrid.innerHTML = '';
