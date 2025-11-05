@@ -1,34 +1,22 @@
 [
   {
-    "id": "1",
-    "album": "Album Name 1",
-    "artist": "Artist Name",
-    "year": "2024",
-    "artwork": "images/albums/album1.jpg",
-    "addedDate": "2025-01-05"
+    "album": "GNX",
+    "artist": "Kendrick Lamar",
+    "year": "2024"
   },
   {
-    "id": "2",
     "album": "Album Name 2",
     "artist": "Artist Name",
-    "year": "2023",
-    "artwork": "images/albums/album2.jpg",
-    "addedDate": "2025-01-04"
+    "year": "2023"
   },
   {
-    "id": "3",
     "album": "Album Name 3",
     "artist": "Artist Name",
-    "year": "2024",
-    "artwork": "images/albums/album3.jpg",
-    "addedDate": "2025-01-03"
+    "year": "2024"
   },
   {
-    "id": "4",
     "album": "Album Name 4",
     "artist": "Artist Name",
-    "year": "2023",
-    "artwork": "images/albums/album4.jpg",
-    "addedDate": "2025-01-02"
+    "year": "2023"
   }
 ]

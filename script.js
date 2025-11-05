@@ -256,6 +256,21 @@ async function fetchMusicFeed() {
     }
 }
 
+// Function to generate artwork path from album name
+function getArtworkPath(albumName) {
+    // Sanitize album name for filename (remove special chars, keep alphanumeric and hyphens)
+    const sanitized = albumName
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-')          // Replace spaces with hyphens
+        .replace(/-+/g, '-')           // Replace multiple hyphens with single
+        .trim();
+
+    // Try common extensions in order: jpg, png, webp
+    // The browser will fall back to placeholder if none exist
+    return `images/albums/${sanitized}.jpg`;
+}
+
 // Function to display music items
 function displayMusicItems(albums) {
     console.log('displayMusicItems called with', albums);
@@ -270,12 +285,22 @@ function displayMusicItems(albums) {
     const limitedAlbums = albums.slice(0, 5);
 
     feedContainer.innerHTML = limitedAlbums.map(album => {
+        // Generate artwork path from album name
+        const artworkPath = album.artwork || getArtworkPath(album.album);
+
+        // Try alternative extensions if primary fails
+        const fallbackPaths = [
+            artworkPath.replace('.jpg', '.png'),
+            artworkPath.replace('.jpg', '.webp'),
+            'images/placeholder-album.jpg'
+        ].join("','");
+
         return `
             <div class="album-item">
-                <img src="${album.artwork}"
+                <img src="${artworkPath}"
                      alt="${album.album} by ${album.artist}"
                      class="album-artwork"
-                     onerror="this.src='images/placeholder-album.jpg'">
+                     onerror="this.onerror=null; let paths=['${fallbackPaths}'].filter(p => p !== this.src); if(paths.length > 0) this.src = paths[0];">
                 <div class="album-info">
                     <div class="album-name">${album.album}</div>
                     <div class="album-artist">${album.artist}</div>
