@@ -347,6 +347,24 @@
                     </div>
                 </section>
 
+                <!-- Journey -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-route" aria-hidden="true"></i> The Journey</h2>
+                    <p><strong>Background:</strong> Starting in August 2024 with zero programming or coding experience, this project began as a "new hobby" exploring self-hosting to move away from third-party cloud services (Apple iCloud, Google Nest, etc.) and consolidate multiple apps into one unified platform.</p>
+
+                    <p><strong>From NAS to Home Assistant Green:</strong> Initially ran Home Assistant Core on a Synology NAS (version 2023.7.3), but quickly hit systematic limitations compared to Home Assistant OS. After extensive research on Reddit forums, consulting with ChatGPT for workarounds, and advice from friends, made the jump to Home Assistant Green ($99 hardware purchase with no recurring cloud storage costs).</p>
+
+                    <p><strong>The Goal:</strong> Replace multiple apps and services with a single, self-hosted solution:</p>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Notion</strong> → HA for banking info, expenses, to-do lists, and shared family notes</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Copilot Money</strong> → HA for mobile budget viewing and financial tracking</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Multiple smart home apps</strong> (Daikin, Dreo, Google Home, Kasa, myQ, Rachio) → HA unified control</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Letterboxd, JustWatch, Hobi</strong> → Trakt integration with cleaner UI</li>
+                    </ul>
+
+                    <p><strong>Philosophy:</strong> Learning YAML through trial and error, with the mindset of "I'm doing it because I can..." Custom icons for every plant and institution? Absolutely unnecessary. But adorable and fun? Absolutely yes. This is never a "finished product"—just continuous tinkering and improvement.</p>
+                </section>
+
                 <!-- System Stats -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-line" aria-hidden="true"></i> System Statistics</h2>
@@ -381,7 +399,11 @@
                 <!-- Dashboard 1: Main Control Center -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-home" aria-hidden="true"></i> Dashboard 1: Main Control Center</h2>
-                    <p>Real-time location tracking for family members with custom avatars, plant watering schedules with visual indicators for 11 houseplants, and temperature monitoring across 5 rooms with waterfall history cards showing weekly trends.</p>
+                    <p><strong>Family Location Tracking:</strong> Location states use Home Assistant mobile app phone tracking for parents, time-based automations for daughter (e.g., arrives at school zone 7-9am → status set to "School"), and a creative AirTag workaround for the dog (iPhone automation screenshots Find My app, parses text, sends to input.text entity in HA).</p>
+
+                    <p><strong>Plant Care System:</strong> 11 houseplants (Albus, Babies, Betty, Billie, Cobie, Luna, Miles, Pearl, and more) with custom illustrations meticulously matched to the actual plants. Button-triggered timestamps record watering dates, automations notify when certain number of days pass. "Necessary? No. Adorable? Yes."</p>
+
+                    <p><strong>Additional Features:</strong> Budget run-rate tracking (% month passed vs. % spent), automated Bitcoin price via CoinGecko API with cold wallet USD valuation, NAS temperature monitoring with alerts if temperature exceeds 115°F, and quick Tesla Sentry mode toggle.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -435,7 +457,9 @@
                 <!-- Dashboard 2: Plant Care -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-seedling" aria-hidden="true"></i> Dashboard 2: Plant Care Tracker</h2>
-                    <p>Dedicated plant watering tracker with button-triggered timestamps. Each plant displays days since last watered with visual indicators. Features 11 different plants including Albus, Babies, Betty, Billie, Cobie, Luna, Miles, and Pearl.</p>
+                    <p><strong>Most Requested Feature:</strong> This "past weekend's project" became the most popular when posted to r/homeassistant. Simple button interface updates the date last watered, automations trigger notifications when moisture levels should be checked. Also includes fertilizing date automations (less frequent, so not displayed on main glance cards).</p>
+
+                    <p><strong>The Details:</strong> Spent more time than necessary creating custom plant illustrations that match the actual houseplants. The most time-consuming part was the icons, but the visual result makes it worth it. A perfect example of the project philosophy: unnecessary customization, but fun and engaging.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -465,7 +489,9 @@
                 <!-- Dashboard 3: Security Cameras -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-video" aria-hidden="true"></i> Dashboard 3: Security Camera Grid</h2>
-                    <p>Live feeds from 4 Nest cameras providing comprehensive home security coverage: Front Yard, Doorbell, Garage, and Office. Motion detection alerts integrated with Home Assistant automation system for real-time notifications.</p>
+                    <p><strong>Current Setup:</strong> Live feeds from 4 Nest cameras (Front Yard, Doorbell, Garage, Office). Required setting up Google Cloud project to gain API access to live feeds. Initial project broke when transitioning to HA Green, but got it working again with proper integration.</p>
+
+                    <p><strong>Future Goal:</strong> Complete migration off Google/Nest platform to store all video clips locally on NAS and eliminate monthly Nest Aware subscription costs. This represents the broader philosophy of self-hosting and eliminating third-party dependencies.</p>
 
                     <div class="device-showcase">
                         <h3>Mobile View</h3>
@@ -485,7 +511,11 @@
                 <!-- Dashboard 4: Financial Overview -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Dashboard 4: Financial Overview</h2>
-                    <p>Month progress tracking with custom bar-card showing spending percentage vs. month completion. Multi-level collapsible account structure using fold-entity-row cards for banks, investment accounts, credit cards, and savings. Features ApexCharts pie chart showing 12+ asset categories with real-time values.</p>
+                    <p><strong>The Most Difficult Build:</strong> This dashboard took the longest to create. Previously, family financial information was stored in shared Notion notes (account locations, contribution schedules, bills, credit card strategies to maximize points, income info). The goal was to house everything in Home Assistant to eliminate third-party dependency on Notion.</p>
+
+                    <p><strong>Technical Challenge:</strong> Nested lists with collapsible fields (using fold-entity-row cards from HACS) required extensive trial and error. Custom icons for every institution and bill? "Absolutely not" necessary, but the completionist mindset kicked in. Quickly realized it was "way more than I could chew" and caused major headaches, but the learning process was invaluable.</p>
+
+                    <p><strong>Data Integration:</strong> Most account values automatically feed from Excel using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (though December always "cooks us" between holidays and multiple birthdays). Mad money balances and short-term savings update automatically.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -585,7 +615,11 @@
                 <!-- Dashboard 6: Historical Charts -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-area" aria-hidden="true"></i> Dashboard 6: Historical Account Growth</h2>
-                    <p>Mini-graph cards showing 65-week historical trends for all major accounts. Includes Assets, Net Worth, College Savings, Retirement accounts, 401(k)s, IRAs, Emergency Savings, Long-Term Savings, HSA, Bitcoin, and Robinhood. Each chart features custom gradient fills and color-coded growth indicators.</p>
+                    <p><strong>The Favorite Card:</strong> Uses mini-graph-card (hands down the favorite custom card discovered). Super customizable with coded transition points based on states—for example, Bitcoin chart shows green when >$100k and red when <$100k. Combined with multiple-entity-row cards using vertical-stack-in-card for clean presentation.</p>
+
+                    <p><strong>Data Limitations:</strong> Charts are limited to the timeframe since sensor creation in HA. "Retirement" sensor shows flat for 28 days, then variability for 2-3 days (even though underlying entities aren't new). Didn't want to load historical values manually, so charts will look better "over time" as more data accumulates. Home value uses Redfin integration—when value changes, automation inputs the new value to avoid Redfin API breaking and skewing data.</p>
+
+                    <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation, but that's okay.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -601,7 +635,9 @@
                 <!-- Dashboard 7: Grocery & Budget -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Dashboard 7: Grocery & Budget Tracking</h2>
-                    <p>Three custom bar-card budget trackers for Entertainment ($400 budget), Groceries ($1,150 budget), and Shopping ($400 budget). Each bar uses color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for shopping list management.</p>
+                    <p><strong>Replacing Notion:</strong> Previously used Notion religiously for shared grocery and shopping lists, but noticed syncing issues and laggy updates that became frustrating over time. This dashboard pulls in remaining Entertainment, Groceries, and Shopping budget amounts automatically from Excel, giving the family a quick way to check balances without opening Excel or Copilot Money (which has delays on data updates, especially with Target).</p>
+
+                    <p><strong>Features:</strong> Three bar-card budget trackers with color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for real-time shopping list management accessible from mobile.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -631,7 +667,11 @@
                 <!-- Dashboard 8: Tesla -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Dashboard 8: Tesla Vehicle Control</h2>
-                    <p>Real-time Tesla integration showing battery percentage with custom bar-card, range and battery level mini-graphs with 7-day history, internal and external temperature tracking, and tire pressure monitoring for all four tires. Climate control integration allows remote temperature adjustment.</p>
+                    <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire recently.</p>
+
+                    <p><strong>Data Quirk:</strong> Tire pressure readings aren't constantly updated—they report from when the car was last turned off. Winter tires inflated to 45 PSI can read ~50 PSI after a hot commute since that's when the car turns off and reports. Summer tires use 42 PSI. Still fine-tuning this feature.</p>
+
+                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds 110°F and exterior exceeds 95°F.</p>
 
                     <div class="device-showcase">
                         <h3>Desktop View</h3>
@@ -806,15 +846,63 @@
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Implementation Highlights</h2>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Advanced Templating:</strong> Custom Jinja2 templates for dynamic styling and calculations</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs (financial, weather, IoT)</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Historical Tracking:</strong> 365-day retention with 65-week trend graphs</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Complex Visualizations:</strong> Sankey diagrams, ApexCharts, waterfall histories</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>User-Based Views:</strong> Conditional visibility for different users</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Custom Sensors:</strong> Template sensors for spending %, days since watered, etc.</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Voice Control:</strong> Google Assistant SDK for hands-free door locking</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>iOS Notifications:</strong> Push alerts for location, garage status, events</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Smart Integration:</strong> 18+ switches, 4 cameras, 5 sensors, garage controller</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Advanced Templating:</strong> Custom Jinja2 templates for dynamic styling and calculations (learned YAML through trial and error)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Excel VBA Integration:</strong> Automated financial data feed from Excel to HA using VBA scripts</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs (CoinGecko, Yahoo Finance, Redfin, OpenWeatherMap, Trakt)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Complex Visualizations:</strong> Sankey diagrams, ApexCharts, mini-graph cards with color-coded thresholds</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Desktop + Mobile Optimization:</strong> Responsive layouts tested for desktop/tablet (primary interaction) and mobile (wife's primary method)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Custom Sensors:</strong> Template sensors for budget run-rate %, days since watered, Bitcoin cold wallet USD value</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Multiple-Entity-Row Discovery:</strong> Cleaned up entity display drastically for better mobile experience</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>State-Based Visibility:</strong> Conditional card display (e.g., package cameras only show when deliveries present)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>HACS Custom Cards:</strong> Mushroom Cards, Mini Graph, Bar Card, ApexCharts, Sankey, Waterfall History, Fold Entity Row, Bubble Card</li>
+                    </ul>
+                </section>
+
+                <!-- Challenges & Future Projects -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-tools" aria-hidden="true"></i> Current Challenges & Ongoing Work</h2>
+
+                    <h3>Solved Challenges</h3>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> myQ Smart Garage Door doesn't integrate with anything (very stingy with API). <strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong> Initial Google Cloud project broke when transitioning to HA Green. <strong>SOLVED:</strong> Rebuilt integration properly for live feeds.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong> Figuring out proper YAML build to trigger green when stock price > previous day and red when below. <strong>SOLVED:</strong> Using mini-graph-card transition points.</li>
+                    </ul>
+
+                    <h3>Ongoing Work</h3>
+                    <ul class="automation-list">
+                        <li>
+                            <i class="fas fa-lock"></i>
+                            <strong>Nest x Yale Lock:</strong> Doesn't integrate with HA. Working on text-to-speech command via Google Assistant SDK to instruct door to lock when "leaving home" script runs.
+                        </li>
+                        <li>
+                            <i class="fas fa-dog"></i>
+                            <strong>Dog Location Tracking:</strong> AirTag workaround functional but complex (iPhone automation → screenshot Find My → parse text → send to HA). Still refining reliability.
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <strong>Historical Financial Charts:</strong> Limited to sensor creation dates. Waiting for more data accumulation rather than manually loading historical values.
+                        </li>
+                        <li>
+                            <i class="fas fa-cloud"></i>
+                            <strong>Move Off Nest Platform:</strong> Long-term goal to store all camera clips locally on NAS and eliminate Nest Aware subscription.
+                        </li>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <strong>API Access Waiting:</strong> Several financial institutions' Developer Portals still pending for full automation (currently 65% automated, 35% manual).
+                        </li>
+                        <li>
+                            <i class="fas fa-tire"></i>
+                            <strong>Tesla Tire Pressure Accuracy:</strong> Fine-tuning since readings only update when car is off (showing hot air pressure after commute).
+                        </li>
+                    </ul>
+
+                    <h3>Future Project Ideas</h3>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-lightbulb"></i> Explore more Bubble Card capabilities for media controls</li>
+                        <li><i class="fa-solid fa-lightbulb"></i> Expand Trakt integration features and recommendations</li>
+                        <li><i class="fa-solid fa-lightbulb"></i> Add more automation-triggered notifications for anomalies</li>
+                        <li><i class="fa-solid fa-lightbulb"></i> Consider Music Assistant enhancements for Apple Music casting</li>
                     </ul>
                 </section>
 
