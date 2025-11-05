@@ -260,7 +260,7 @@ async function fetchMusicFeed() {
 function getArtworkPath(albumName) {
     // Use the exact album name as the filename (preserves case and spaces)
     // Try common extensions in order: jpg, png, webp
-    return `images/${albumName}.jpg`;
+    return `images/albums/${albumName}.jpg`;
 }
 
 // Function to display music items
