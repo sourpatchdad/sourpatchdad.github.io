@@ -226,6 +226,74 @@ if (document.readyState === 'loading') {
     fetchRecentlyWatched();
 }
 
+// Music Feed Functions
+async function fetchMusicFeed() {
+    console.log('Fetching music feed...');
+    const feedContainer = document.getElementById('music-feed');
+
+    if (!feedContainer) {
+        console.error('Music feed container not found!');
+        return;
+    }
+
+    try {
+        const response = await fetch('/data/music.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Music data received:', data.length, 'albums');
+        displayMusicItems(data);
+    } catch (error) {
+        console.error('Error fetching music data:', error);
+        feedContainer.innerHTML = `
+            <div class="error-message">
+                <p>Unable to load currently listening albums.</p>
+            </div>
+        `;
+    }
+}
+
+// Function to display music items
+function displayMusicItems(albums) {
+    console.log('displayMusicItems called with', albums);
+    const feedContainer = document.getElementById('music-feed');
+
+    if (!albums || albums.length === 0) {
+        feedContainer.innerHTML = '<div class="loading">No albums found.</div>';
+        return;
+    }
+
+    // Limit to 4-5 most recent albums
+    const limitedAlbums = albums.slice(0, 5);
+
+    feedContainer.innerHTML = limitedAlbums.map(album => {
+        return `
+            <div class="album-item">
+                <img src="${album.artwork}"
+                     alt="${album.album} by ${album.artist}"
+                     class="album-artwork"
+                     onerror="this.src='images/placeholder-album.jpg'">
+                <div class="album-info">
+                    <div class="album-name">${album.album}</div>
+                    <div class="album-artist">${album.artist}</div>
+                    <div class="album-year">${album.year}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Load music feed when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fetchMusicFeed);
+} else {
+    // DOM is already loaded, run immediately
+    fetchMusicFeed();
+}
+
 // Contact Form Handling
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');

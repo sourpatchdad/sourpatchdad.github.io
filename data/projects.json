@@ -16,7 +16,7 @@
     "shortDescription": "Migrating from underpowered Synology DS124 to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives for 4K Plex transcoding and more.",
     "tags": ["TrueNAS", "Plex", "Homelab", "Infrastructure"],
     "date": "2024-2025",
-    "detailPage": "server.html",
+    "detailPage": "projects/truenas-migration.html",
     "icon": "fa-solid fa-server",
     "iconType": "server",
     "externalLink": null
