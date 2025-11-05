@@ -1,5 +1,16 @@
 [
   {
+    "id": "home-assistant",
+    "title": "Home Assistant Smart Home",
+    "shortDescription": "Comprehensive home automation system with 7 custom dashboards, 50+ automations, financial tracking, Tesla integration, and real-time monitoring of climate, security, and investments.",
+    "tags": ["Home Assistant", "Smart Home", "IoT", "Automation", "YAML"],
+    "date": "2024-2025",
+    "detailPage": "projects/home-assistant.html",
+    "icon": "fa-solid fa-house-signal",
+    "iconType": "home-automation",
+    "externalLink": null
+  },
+  {
     "id": "bitty-2",
     "title": "Bitty 2.0",
     "shortDescription": "Migrated Bitcoin price notifications from Home Assistant to standalone Python bot on GitHub Actions. Fixed timing issues, duplicate notifications, and baseline logic problems.",
