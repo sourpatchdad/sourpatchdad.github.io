@@ -172,7 +172,7 @@ nav .container {
 
 
 .hero-icon {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     animation: fadeInUp 1s ease;
 }
 
@@ -194,7 +194,7 @@ nav .container {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     animation: fadeInUp 1s ease 0.2s backwards;
 }
 
