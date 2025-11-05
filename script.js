@@ -258,17 +258,9 @@ async function fetchMusicFeed() {
 
 // Function to generate artwork path from album name
 function getArtworkPath(albumName) {
-    // Sanitize album name for filename (remove special chars, keep alphanumeric and hyphens)
-    const sanitized = albumName
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-        .replace(/\s+/g, '-')          // Replace spaces with hyphens
-        .replace(/-+/g, '-')           // Replace multiple hyphens with single
-        .trim();
-
+    // Use the exact album name as the filename (preserves case and spaces)
     // Try common extensions in order: jpg, png, webp
-    // The browser will fall back to placeholder if none exist
-    return `images/albums/${sanitized}.jpg`;
+    return `images/albums/${albumName}.jpg`;
 }
 
 // Function to display music items
