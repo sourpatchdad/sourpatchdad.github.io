@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Assistant Smart Home - Nathan Nicholas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .ha-demo {
+            background: var(--card-bg, #1c1c1c);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid var(--border-color, #333);
+        }
+
+        .ha-card {
+            background: var(--card-bg-secondary, #252525);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+            border: 1px solid var(--border-color, #333);
+        }
+
+        .ha-entity-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 4px 0;
+            background: var(--row-bg, #2a2a2a);
+        }
+
+        .ha-entity-row:hover {
+            background: var(--row-hover, #333);
+        }
+
+        .entity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .entity-icon.on {
+            background: rgba(255, 213, 79, 0.2);
+            color: #ffd54f;
+        }
+
+        .entity-icon.off {
+            background: rgba(255, 255, 255, 0.1);
+            color: #999;
+        }
+
+        .entity-icon.temp {
+            background: rgba(3, 169, 244, 0.2);
+            color: #03a9f4;
+        }
+
+        .entity-icon.green {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .entity-info {
+            flex: 1;
+        }
+
+        .entity-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .entity-state {
+            color: var(--text-secondary, #999);
+            font-size: 0.9em;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .chart-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 120px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-placeholder::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: rgba(255, 255, 255, 0.1);
+            clip-path: polygon(0 60%, 10% 50%, 20% 55%, 30% 45%, 40% 48%, 50% 40%, 60% 45%, 70% 35%, 80% 38%, 90% 30%, 100% 35%, 100% 100%, 0 100%);
+        }
+
+        .chart-value {
+            position: relative;
+            z-index: 1;
+            font-size: 1.5em;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg, #1c1c1c);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color, #333);
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin: 12px 0 8px 0;
+            font-size: 1.2em;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background: var(--primary-color, #03a9f4);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .automation-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .automation-list li {
+            background: var(--card-bg-secondary, #252525);
+            padding: 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color, #03a9f4);
+        }
+
+        .automation-list li i {
+            margin-right: 12px;
+            color: var(--primary-color, #03a9f4);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: var(--card-bg-secondary, #252525);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color, #03a9f4);
+        }
+
+        .stat-label {
+            color: var(--text-secondary, #999);
+            margin-top: 8px;
+            font-size: 0.9em;
+        }
+
+        .dashboard-preview {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #333;
+        }
+
+        .dashboard-title {
+            color: var(--primary-color, #03a9f4);
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .dashboard-title i {
+            margin-right: 12px;
+        }
+
+        .bar-progress {
+            background: rgba(255, 255, 255, 0.1);
+            height: 40px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            color: white;
+            font-weight: 500;
+            transition: width 0.3s ease;
+        }
+
+        .bar-fill.warning {
+            background: linear-gradient(90deg, #ff9800, #ffc107);
+        }
+
+        .bar-fill.danger {
+            background: linear-gradient(90deg, #f44336, #e91e63);
+        }
+
+        .camera-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .camera-feed {
+            background: #000;
+            border-radius: 8px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 3em;
+            border: 1px solid #333;
+        }
+
+        .screenshot-note {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #ff9800;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .screenshot-note i {
+            color: #ff9800;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/NN.svg" alt="Nathan Nicholas" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../index.html#recently-watched">Media</a>
+                <a href="../index.html#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <main>
+    <section class="page-content">
+        <div class="container">
+            <div class="server-header">
+                <i class="fa-solid fa-house-signal server-icon" aria-hidden="true"></i>
+                <h1>Home Assistant Smart Home</h1>
+                <p class="server-subtitle">Comprehensive Home Automation & Monitoring System</p>
+            </div>
+
+            <div class="specs-container">
+                <!-- Overview -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
+                    <p>A comprehensive Home Assistant installation managing every aspect of a smart home, from climate control and lighting to financial tracking and Tesla integration. The system features 7 custom dashboards, 50+ automations, and integrations with 20+ services including cryptocurrency tracking, NAS monitoring, security cameras, and advanced data visualization.</p>
+
+                    <div class="screenshot-note">
+                        <i class="fas fa-shield-alt"></i>
+                        <strong>Privacy Note:</strong> All sensitive data in this demo (financial amounts, addresses, device IDs, personal names) has been sanitized while maintaining the structure and functionality showcase of the actual system.
+                    </div>
+                </section>
+
+                <!-- System Stats -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-chart-line" aria-hidden="true"></i> System Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Custom Dashboards</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Automations</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Entities</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Integrations</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Security Cameras</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Climate Sensors</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 1: Home -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-home" aria-hidden="true"></i> Dashboard 1: Home Control Center</h2>
+                    <p>The main dashboard provides at-a-glance status of family members, climate control, smart devices, and system monitoring.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-home"></i> Home
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Family Status</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-user"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">User 1</div>
+                                    <div class="entity-state">Home</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-user"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">User 2</div>
+                                    <div class="entity-state">Home</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-child"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Kid 1</div>
+                                    <div class="entity-state">School</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Climate Control</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Living Room</div>
+                                    <div class="entity-state">72°F</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Bedroom</div>
+                                    <div class="entity-state">70°F</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Office</div>
+                                    <div class="entity-state">71°F</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Outside</div>
+                                    <div class="entity-state">68°F</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Smart Devices</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon on"><i class="fas fa-lightbulb"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Living Room Lights</div>
+                                    <div class="entity-state">On</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon off"><i class="fas fa-lightbulb"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Bedroom Lights</div>
+                                    <div class="entity-state">Off</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-warehouse"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Garage Door</div>
+                                    <div class="entity-state">Closed</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon on"><i class="fas fa-camera"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Security Cameras</div>
+                                    <div class="entity-state">4 Active</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>System Monitoring</h4>
+                            <div class="chart-placeholder">
+                                <div class="chart-value">NAS Server: 42% Used</div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-server"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">CPU Usage</div>
+                                    <div class="entity-state">25%</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-memory"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">RAM Usage</div>
+                                    <div class="entity-state">48%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 2: Financial Tracking -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Dashboard 2: Financial Tracking</h2>
+                    <p>Comprehensive financial dashboard tracking spending, budgets, accounts, investments, and net worth with real-time updates and visualizations.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-dollar-sign"></i> Finance
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Monthly Budget Tracking</h4>
+                            <div class="bar-progress">
+                                <div class="bar-fill" style="width: 65%;">
+                                    <span>Spending: 65% of Month</span>
+                                </div>
+                            </div>
+                            <div class="bar-progress">
+                                <div class="bar-fill warning" style="width: 70%;">
+                                    <span>Month Progress: 70%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Account Overview</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-piggy-bank"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Short-Term Savings</div>
+                                    <div class="entity-state">$X,XXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-wallet"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">User 1 Budget</div>
+                                    <div class="entity-state">$XXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-wallet"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">User 2 Budget</div>
+                                    <div class="entity-state">$XXX.XX</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Asset Allocation</h4>
+                            <div class="chart-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 200px;">
+                                <div class="chart-value">Pie Chart: 12 Asset Categories</div>
+                            </div>
+                            <div style="margin-top: 12px; color: #999; font-size: 0.9em;">
+                                <p><i class="fas fa-circle" style="color: #4caf50;"></i> Retirement (XX%)</p>
+                                <p><i class="fas fa-circle" style="color: #03a9f4;"></i> Investments (XX%)</p>
+                                <p><i class="fas fa-circle" style="color: #ff9800;"></i> Savings (XX%)</p>
+                                <p><i class="fas fa-circle" style="color: #f7931a;"></i> Cryptocurrency (XX%)</p>
+                                <p><i class="fas fa-circle" style="color: #9c27b0;"></i> Real Estate (XX%)</p>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Net Worth Flow (Sankey Diagram)</h4>
+                            <div class="chart-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 250px;">
+                                <div class="chart-value">Assets → Categories → Details</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 3: Cryptocurrency & Stocks -->
+                <section class="specs-section">
+                    <h2><i class="fa-brands fa-bitcoin" aria-hidden="true"></i> Dashboard 3: Crypto & Stock Tracking</h2>
+                    <p>Real-time cryptocurrency and stock market tracking with price alerts, portfolio values, and historical charts.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fab fa-bitcoin"></i> Investments
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Bitcoin Portfolio</h4>
+                            <div class="chart-placeholder" style="background: linear-gradient(135deg, #f7931a 0%, #ff9800 100%);">
+                                <div class="chart-value">$XX,XXX.XX</div>
+                            </div>
+                            <div class="ha-entity-row" style="margin-top: 12px;">
+                                <div class="entity-info">
+                                    <div class="entity-name">Current Price</div>
+                                    <div class="entity-state">$XX,XXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-info">
+                                    <div class="entity-name">Holdings</div>
+                                    <div class="entity-state">X.XXXXXXXX BTC</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-info">
+                                    <div class="entity-name">24h Change</div>
+                                    <div class="entity-state" style="color: #4caf50;">+X.XX%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Stock Portfolio</h4>
+                            <div class="chart-placeholder" style="background: linear-gradient(135deg, #23c736 0%, #4caf50 100%);">
+                                <div class="chart-value">$X,XXX.XX</div>
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <div class="ha-entity-row">
+                                    <div class="entity-info">
+                                        <div class="entity-name">AAPL</div>
+                                        <div class="entity-state">$XXX.XX</div>
+                                    </div>
+                                </div>
+                                <div class="ha-entity-row">
+                                    <div class="entity-info">
+                                        <div class="entity-name">TSLA</div>
+                                        <div class="entity-state">$XXX.XX</div>
+                                    </div>
+                                </div>
+                                <div class="ha-entity-row">
+                                    <div class="entity-info">
+                                        <div class="entity-name">NVDA</div>
+                                        <div class="entity-state">$XXX.XX</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 4: Tesla Integration -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Dashboard 4: Tesla Vehicle Control</h2>
+                    <p>Complete Tesla integration for monitoring and controlling vehicle status, climate, charging, and more.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-car"></i> Tesla
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Battery & Range</h4>
+                            <div class="bar-progress">
+                                <div class="bar-fill" style="width: 85%;">
+                                    <span>Battery: 85%</span>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-route"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Estimated Range</div>
+                                    <div class="entity-state">245 miles</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon on"><i class="fas fa-charging-station"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Charging Status</div>
+                                    <div class="entity-state">Charging (45 min to full)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Climate Control</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-temperature-high"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Inside Temperature</div>
+                                    <div class="entity-state">72°F</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon temp"><i class="fas fa-temperature-low"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Outside Temperature</div>
+                                    <div class="entity-state">85°F</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Tire Pressure</h4>
+                            <div class="dashboard-grid">
+                                <div class="ha-entity-row">
+                                    <div class="entity-icon green"><i class="fas fa-circle"></i></div>
+                                    <div class="entity-info">
+                                        <div class="entity-name">Front Left</div>
+                                        <div class="entity-state">42 PSI</div>
+                                    </div>
+                                </div>
+                                <div class="ha-entity-row">
+                                    <div class="entity-icon green"><i class="fas fa-circle"></i></div>
+                                    <div class="entity-info">
+                                        <div class="entity-name">Front Right</div>
+                                        <div class="entity-state">42 PSI</div>
+                                    </div>
+                                </div>
+                                <div class="ha-entity-row">
+                                    <div class="entity-icon green"><i class="fas fa-circle"></i></div>
+                                    <div class="entity-info">
+                                        <div class="entity-name">Rear Left</div>
+                                        <div class="entity-state">40 PSI</div>
+                                    </div>
+                                </div>
+                                <div class="ha-entity-row">
+                                    <div class="entity-icon green"><i class="fas fa-circle"></i></div>
+                                    <div class="entity-info">
+                                        <div class="entity-name">Rear Right</div>
+                                        <div class="entity-state">40 PSI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 5: Plants & Pets -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-leaf" aria-hidden="true"></i> Dashboard 5: Plant & Pet Care</h2>
+                    <p>Track watering schedules for houseplants and monitor pet feeding times with automated reminders.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-seedling"></i> Plants & Pets
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Plant Watering Tracker</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-seedling"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Plant 1</div>
+                                    <div class="entity-state">Watered 2 days ago</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-seedling"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Plant 2</div>
+                                    <div class="entity-state">Watered 1 day ago</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon" style="background: rgba(255, 152, 0, 0.2); color: #ff9800;"><i class="fas fa-seedling"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Plant 3</div>
+                                    <div class="entity-state">Watered 5 days ago</div>
+                                </div>
+                            </div>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-seedling"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Plant 4</div>
+                                    <div class="entity-state">Watered 3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ha-card">
+                            <h4>Pet Care</h4>
+                            <div class="ha-entity-row">
+                                <div class="entity-icon green"><i class="fas fa-paw"></i></div>
+                                <div class="entity-info">
+                                    <div class="entity-name">Last Feeding</div>
+                                    <div class="entity-state">2 hours ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard 6: Security Cameras -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-camera" aria-hidden="true"></i> Dashboard 6: Security Cameras</h2>
+                    <p>Live feeds from 4 security cameras covering all entry points and key areas of the property.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-video"></i> Cameras
+                        </div>
+
+                        <div class="camera-grid">
+                            <div class="camera-feed">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="camera-feed">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="camera-feed">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="camera-feed">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <p style="text-align: center; color: #999; margin-top: 12px;">
+                            Front Yard • Doorbell • Garage • Office
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Dashboard 7: Charts & Analytics -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Dashboard 7: Historical Analytics</h2>
+                    <p>Long-term tracking and visualization of financial growth, temperature trends, and system performance.</p>
+
+                    <div class="dashboard-preview">
+                        <div class="dashboard-title">
+                            <i class="fas fa-chart-area"></i> Charts
+                        </div>
+
+                        <div class="dashboard-grid">
+                            <div class="ha-card">
+                                <h4>Net Worth (12 months)</h4>
+                                <div class="chart-placeholder" style="background: linear-gradient(135deg, #ffc729 0%, #ffa000 100%);">
+                                    <div class="chart-value">↗ +XX%</div>
+                                </div>
+                            </div>
+
+                            <div class="ha-card">
+                                <h4>Assets (12 months)</h4>
+                                <div class="chart-placeholder" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                                    <div class="chart-value">↗ +XX%</div>
+                                </div>
+                            </div>
+
+                            <div class="ha-card">
+                                <h4>Retirement (12 months)</h4>
+                                <div class="chart-placeholder" style="background: linear-gradient(135deg, #db5c05 0%, #c34400 100%);">
+                                    <div class="chart-value">↗ +XX%</div>
+                                </div>
+                            </div>
+
+                            <div class="ha-card">
+                                <h4>Bitcoin (30 days)</h4>
+                                <div class="chart-placeholder" style="background: linear-gradient(135deg, #f7931a 0%, #d97706 100%);">
+                                    <div class="chart-value">↗ +XX%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Features -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Key Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-home" style="color: #03a9f4;"></i>
+                            <h3>Smart Home Control</h3>
+                            <p>Lights, climate, garage, cameras, and more—all controlled from one interface</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-dollar-sign" style="color: #4caf50;"></i>
+                            <h3>Financial Tracking</h3>
+                            <p>Real-time budget monitoring, account tracking, and net worth visualization</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fab fa-bitcoin" style="color: #f7931a;"></i>
+                            <h3>Crypto & Stocks</h3>
+                            <p>Live price tracking with historical charts and portfolio management</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-car" style="color: #e91e63;"></i>
+                            <h3>Tesla Integration</h3>
+                            <p>Monitor battery, control climate, check tire pressure, and more</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-video" style="color: #9c27b0;"></i>
+                            <h3>Security System</h3>
+                            <p>4 camera feeds with motion detection and automated alerts</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-robot" style="color: #ff9800;"></i>
+                            <h3>50+ Automations</h3>
+                            <p>Automated lighting, garage control, notifications, and schedules</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-server" style="color: #607d8b;"></i>
+                            <h3>NAS Monitoring</h3>
+                            <p>Track CPU, RAM, storage, and temperature of home server</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-chart-pie" style="color: #e91e63;"></i>
+                            <h3>Data Visualization</h3>
+                            <p>Custom charts, graphs, and Sankey diagrams for insights</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Automations -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-robot" aria-hidden="true"></i> Sample Automations</h2>
+                    <ul class="automation-list">
+                        <li>
+                            <i class="fas fa-warehouse"></i>
+                            <strong>Smart Arrival:</strong> Automatically opens garage and turns on entry lights when family members arrive home
+                        </li>
+                        <li>
+                            <i class="fas fa-moon"></i>
+                            <strong>Midnight Routine:</strong> Turns off all lights, locks doors via voice command, and sets security mode at 2 AM
+                        </li>
+                        <li>
+                            <i class="fas fa-sun"></i>
+                            <strong>Sunrise/Sunset:</strong> Automatically controls outdoor lighting based on sun position
+                        </li>
+                        <li>
+                            <i class="fas fa-bell"></i>
+                            <strong>Location Notifications:</strong> Sends arrival/departure alerts when family members leave work, school, or gym
+                        </li>
+                        <li>
+                            <i class="fas fa-warehouse"></i>
+                            <strong>Garage Safety:</strong> Auto-closes garage at scheduled times (10 PM, midnight, 2 AM) if left open
+                        </li>
+                        <li>
+                            <i class="fas fa-tv"></i>
+                            <strong>Bias Lighting:</strong> Automatically controls TV backlight when TV turns on/off
+                        </li>
+                        <li>
+                            <i class="fas fa-car"></i>
+                            <strong>Tesla Climate:</strong> Opens vent windows if interior temperature exceeds 110°F while parked
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar"></i>
+                            <strong>Financial Updates:</strong> Records midnight snapshots of Bitcoin price and portfolio values for tracking
+                        </li>
+                        <li>
+                            <i class="fas fa-seedling"></i>
+                            <strong>Plant Care:</strong> Timestamps plant watering events when buttons are pressed
+                        </li>
+                        <li>
+                            <i class="fas fa-paw"></i>
+                            <strong>Pet Feeding:</strong> Logs automatic feeder activations with timestamps
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Technical Stack -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Technical Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Home Assistant Core</span>
+                        <span class="tech-badge">YAML Configuration</span>
+                        <span class="tech-badge">Lovelace UI</span>
+                        <span class="tech-badge">Custom Cards</span>
+                        <span class="tech-badge">HACS</span>
+                        <span class="tech-badge">Node-RED</span>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">Custom Frontend Cards</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Mushroom Cards</span>
+                        <span class="tech-badge">Mini Graph Card</span>
+                        <span class="tech-badge">Bar Card</span>
+                        <span class="tech-badge">ApexCharts</span>
+                        <span class="tech-badge">Sankey Chart</span>
+                        <span class="tech-badge">Waterfall History</span>
+                        <span class="tech-badge">Multiple Entity Row</span>
+                        <span class="tech-badge">Fold Entity Row</span>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">Integrations</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Tesla</span>
+                        <span class="tech-badge">Nest</span>
+                        <span class="tech-badge">Google Assistant</span>
+                        <span class="tech-badge">OpenWeatherMap</span>
+                        <span class="tech-badge">CoinGecko</span>
+                        <span class="tech-badge">Yahoo Finance</span>
+                        <span class="tech-badge">TrueNAS</span>
+                        <span class="tech-badge">Rachio</span>
+                        <span class="tech-badge">Transmission</span>
+                        <span class="tech-badge">Mobile App (iOS)</span>
+                    </div>
+                </section>
+
+                <!-- Implementation Highlights -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Implementation Highlights</h2>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Advanced Templating:</strong> Custom Jinja2 templates for dynamic card styling and conditional formatting</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs including financial, weather, and IoT services</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Historical Tracking:</strong> 365-day data retention for long-term trend analysis</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Responsive Design:</strong> Optimized layouts for desktop, tablet, and mobile devices</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>User-Based Views:</strong> Conditional visibility based on logged-in user</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Custom Sensors:</strong> Template sensors for calculated values and data transformations</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Voice Control:</strong> Google Assistant integration for hands-free operation</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Notification System:</strong> iOS push notifications for critical events</li>
+                    </ul>
+                </section>
+
+                <!-- Back Button -->
+                <div class="back-button-container">
+                    <a href="../projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20250104001"></script>
+</body>
+</html>
