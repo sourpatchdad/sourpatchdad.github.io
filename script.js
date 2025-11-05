@@ -68,8 +68,10 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all sections except hero and recently-watched (they need to be visible immediately)
 document.querySelectorAll('section').forEach(section => {
-    // Skip animation for hero and recently-watched sections
-    if (section.classList.contains('hero') || section.classList.contains('recently-watched')) {
+    // Skip animation for hero, recently-watched, and page-content sections
+    if (section.classList.contains('hero') ||
+        section.classList.contains('recently-watched') ||
+        section.classList.contains('page-content')) {
         section.style.opacity = '1';
         section.style.transform = 'translateY(0)';
         return;
