@@ -138,35 +138,30 @@ nav .container {
     transform: scale(1.1);
 }
 
-/* Lightbulb icon container */
+/* Lightbulb icon */
 .theme-toggle i {
     position: relative;
     transition: all 0.3s ease;
-    z-index: 2;
-}
-
-/* Light mode - bulb is "off" (default/dim) */
-.theme-toggle i {
-    color: var(--text-color) !important;
-    filter: drop-shadow(0 0 0px transparent);
+    z-index: 3;
+    color: var(--text-color);
 }
 
 /* Dark mode - bulb is "on" and glowing */
 [data-theme="dark"] .theme-toggle i {
     color: #ffd700 !important;
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
 }
 
 .theme-toggle:hover i {
-    color: var(--accent-color) !important;
+    color: var(--accent-color);
 }
 
 [data-theme="dark"] .theme-toggle:hover i {
     color: #ffed4e !important;
 }
 
-/* Rays effect for dark mode (when light is "shining") */
-[data-theme="dark"] .theme-toggle i::before {
+/* Rays effect for dark mode - on the BUTTON, not the icon */
+[data-theme="dark"] .theme-toggle::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -185,7 +180,7 @@ nav .container {
 }
 
 /* Subtle glow pulse in dark mode */
-[data-theme="dark"] .theme-toggle i::after {
+[data-theme="dark"] .theme-toggle::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -195,7 +190,7 @@ nav .container {
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
     animation: pulse-glow 3s ease-in-out infinite;
 }
 
