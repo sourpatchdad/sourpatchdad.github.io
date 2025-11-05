@@ -1,5 +1,36 @@
 [
   {
+    "id": 11585045109,
+    "watched_at": "2025-11-05T05:25:38.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 3,
+      "title": "Weird Stuff You Can't Explain",
+      "ids": {
+        "trakt": 12242577,
+        "tvdb": null,
+        "imdb": "tt32622823",
+        "tmdb": 5563338,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "St. Denis Medical",
+      "year": 2024,
+      "ids": {
+        "trakt": 235514,
+        "slug": "st-denis-medical",
+        "tvdb": 435916,
+        "imdb": "tt21433690",
+        "tmdb": 251941,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
+  },
+  {
     "id": 11584067518,
     "watched_at": "2025-11-05T05:03:08.000Z",
     "action": "watch",
@@ -269,36 +300,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/3ndAx3weG6KDkJIRMCi5vXX6Dyb.jpg"
-  },
-  {
-    "id": 11508108240,
-    "watched_at": "2025-10-29T04:54:01.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 6,
-      "title": "Scars",
-      "ids": {
-        "trakt": 13189756,
-        "tvdb": 11175988,
-        "imdb": "tt30842032",
-        "tmdb": 6284968,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Slow Horses",
-      "year": 2022,
-      "ids": {
-        "trakt": 155534,
-        "slug": "slow-horses",
-        "tvdb": 372264,
-        "imdb": "tt5875444",
-        "tmdb": 95480,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/dnpatlJrEPiDSn5fzgzvxtiSnMo.jpg"
   }
 ]
