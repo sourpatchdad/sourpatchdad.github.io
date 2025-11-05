@@ -1,34 +1,22 @@
 [
   {
-    "id": "1",
-    "album": "BORN PINK",
-    "artist": "BLACKPINK",
-    "year": "2022",
-    "artwork": "images/albums/album1.jpg",
-    "addedDate": "2025-01-05"
-  },
-  {
-    "id": "2",
-    "album": "Ego Death At A Bachelorette Party",
-    "artist": "Hayley Williams",
-    "year": "2025",
-    "artwork": "images/albums/album2.jpg",
-    "addedDate": "2025-01-04"
-  },
-  {
-    "id": "3",
-    "album": "don't hold me accountable",
-    "artist": "Cil",
-    "year": "2023",
-    "artwork": "images/albums/album3.jpg",
-    "addedDate": "2025-01-03"
-  },
-  {
-    "id": "4",
     "album": "GNX",
     "artist": "Kendrick Lamar",
-    "year": "2024",
-    "artwork": "images/albums/album4.jpg",
-    "addedDate": "2025-01-02"
+    "year": "2024"
+  },
+  {
+    "album": "Album Name 2",
+    "artist": "Artist Name",
+    "year": "2023"
+  },
+  {
+    "album": "Album Name 3",
+    "artist": "Artist Name",
+    "year": "2024"
+  },
+  {
+    "album": "Album Name 4",
+    "artist": "Artist Name",
+    "year": "2023"
   }
 ]
