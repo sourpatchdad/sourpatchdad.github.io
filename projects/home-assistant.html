@@ -7,41 +7,307 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .screenshot-container {
-            background: var(--card-bg, #1c1c1c);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px 0;
-            border: 1px solid var(--border-color, #333);
+        /* Override any problematic theme colors */
+        .page-content {
+            background: #f5f5f5;
+            color: #333;
         }
 
-        .screenshot-container h3 {
-            color: var(--primary-color, #03a9f4);
-            margin-bottom: 12px;
+        .server-header {
+            margin-bottom: 30px;
+        }
+
+        .specs-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: #333;
+        }
+
+        .specs-section h2 {
+            color: #03a9f4;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .specs-section h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .specs-section p, .specs-section li {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Home Assistant mockup styles */
+        .ha-mockup-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .ha-mockup-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ha-mockup {
+            background: #f0f0f0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .ha-header {
+            background: linear-gradient(135deg, #03a9f4, #0288d1);
+            color: white;
+            padding: 16px 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
 
-        .screenshot-container p {
-            color: var(--text-secondary, #999);
-            margin-bottom: 20px;
-            line-height: 1.6;
+        .ha-header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        .screenshot-img {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid var(--border-color, #333);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        .ha-header-title {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .ha-nav-icon {
+            font-size: 1.3em;
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
-        .screenshot-img:hover {
-            transform: scale(1.02);
+        .ha-body {
+            background: white;
+            padding: 20px;
+            min-height: 400px;
         }
 
+        .ha-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .ha-card-title {
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .ha-entity-row {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            margin: 8px 0;
+            gap: 12px;
+        }
+
+        .ha-entity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .ha-entity-icon.on {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffa000;
+        }
+
+        .ha-entity-icon.off {
+            background: rgba(158, 158, 158, 0.2);
+            color: #757575;
+        }
+
+        .ha-entity-icon.temp {
+            background: rgba(3, 169, 244, 0.2);
+            color: #03a9f4;
+        }
+
+        .ha-entity-icon.green {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .ha-entity-icon.plant {
+            background: rgba(139, 195, 74, 0.2);
+            color: #7cb342;
+        }
+
+        .ha-entity-info {
+            flex: 1;
+        }
+
+        .ha-entity-name {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .ha-entity-state {
+            color: #757575;
+            font-size: 0.9em;
+        }
+
+        /* Chart mockups */
+        .ha-chart {
+            background: linear-gradient(180deg, rgba(3, 169, 244, 0.1) 0%, rgba(3, 169, 244, 0) 100%);
+            height: 120px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .ha-chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70%;
+            background: linear-gradient(to bottom, transparent 30%, rgba(3, 169, 244, 0.3) 100%);
+            clip-path: polygon(0 60%, 5% 55%, 10% 58%, 15% 52%, 20% 48%, 25% 45%, 30% 50%, 35% 42%, 40% 38%, 45% 40%, 50% 35%, 55% 32%, 60% 35%, 65% 30%, 70% 28%, 75% 32%, 80% 25%, 85% 22%, 90% 25%, 95% 20%, 100% 18%, 100% 100%, 0 100%);
+        }
+
+        .ha-chart-value {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            color: #333;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .ha-chart-label {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            color: #757575;
+            font-size: 0.9em;
+        }
+
+        /* Bar card */
+        .ha-bar-container {
+            background: #e0e0e0;
+            height: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            margin: 12px 0;
+        }
+
+        .ha-bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: width 0.3s ease;
+        }
+
+        .ha-bar-fill.green {
+            background: linear-gradient(90deg, #66bb6a, #81c784);
+        }
+
+        .ha-bar-fill.orange {
+            background: linear-gradient(90deg, #ffa726, #ffb74d);
+        }
+
+        .ha-bar-fill.red {
+            background: linear-gradient(90deg, #ef5350, #e57373);
+        }
+
+        /* Person avatars */
+        .ha-person-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .ha-person-card {
+            text-align: center;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .ha-person-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 8px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .ha-person-name {
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95em;
+            margin-bottom: 4px;
+        }
+
+        .ha-person-location {
+            color: #757575;
+            font-size: 0.85em;
+        }
+
+        /* Mobile mockup specific styles */
+        .ha-mockup.mobile {
+            max-width: 375px;
+            margin: 0 auto;
+        }
+
+        .ha-mockup.mobile .ha-body {
+            padding: 12px;
+        }
+
+        .ha-mockup.mobile .ha-entity-row {
+            padding: 10px;
+        }
+
+        .ha-mockup.mobile .ha-card {
+            padding: 12px;
+        }
+
+        .view-label {
+            text-align: center;
+            color: #757575;
+            font-weight: 500;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        /* Feature cards */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -50,11 +316,11 @@
         }
 
         .feature-card {
-            background: var(--card-bg, #1c1c1c);
+            background: #f8f9fa;
             padding: 24px;
             border-radius: 12px;
-            border: 1px solid var(--border-color, #333);
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .feature-card i {
@@ -64,26 +330,17 @@
         }
 
         .feature-card h3 {
+            color: #333;
             margin: 12px 0 8px 0;
             font-size: 1.2em;
         }
 
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
         }
 
-        .tech-badge {
-            background: var(--primary-color, #03a9f4);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
+        /* Stats grid */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -92,42 +349,63 @@
         }
 
         .stat-box {
-            background: var(--card-bg-secondary, #252525);
+            background: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .stat-number {
             font-size: 2.5em;
             font-weight: bold;
-            color: var(--primary-color, #03a9f4);
+            color: #03a9f4;
         }
 
         .stat-label {
-            color: var(--text-secondary, #999);
+            color: #757575;
             margin-top: 8px;
             font-size: 0.9em;
         }
 
+        /* Tech badges */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background: #03a9f4;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        /* Automation list */
         .automation-list {
             list-style: none;
             padding: 0;
         }
 
         .automation-list li {
-            background: var(--card-bg-secondary, #252525);
+            background: #f8f9fa;
             padding: 16px;
             margin: 8px 0;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-color, #03a9f4);
+            border-left: 4px solid #03a9f4;
+            color: #333;
         }
 
         .automation-list li i {
             margin-right: 12px;
-            color: var(--primary-color, #03a9f4);
+            color: #03a9f4;
         }
 
+        /* Use cases list */
         .use-cases {
             list-style: none;
             padding: 0;
@@ -135,7 +413,8 @@
 
         .use-cases li {
             padding: 12px 0;
-            border-bottom: 1px solid var(--border-color, #333);
+            border-bottom: 1px solid #e0e0e0;
+            color: #666;
         }
 
         .use-cases li:last-child {
@@ -143,72 +422,49 @@
         }
 
         .use-cases li i {
-            color: var(--primary-color, #03a9f4);
+            color: #03a9f4;
             margin-right: 12px;
         }
 
-        .screenshot-note {
+        /* Info note */
+        .info-note {
             background: rgba(3, 169, 244, 0.1);
             border-left: 4px solid #03a9f4;
             padding: 16px;
             border-radius: 8px;
             margin: 20px 0;
+            color: #333;
         }
 
-        .screenshot-note i {
+        .info-note i {
             color: #03a9f4;
             margin-right: 8px;
         }
 
-        .dashboard-tabs {
+        /* Sankey mockup */
+        .sankey-mockup {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+            height: 300px;
+            border-radius: 12px;
             display: flex;
-            gap: 10px;
-            margin: 20px 0;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-size: 1.2em;
+            position: relative;
+            overflow: hidden;
         }
 
-        .tab-button {
-            background: var(--card-bg-secondary, #252525);
-            border: 1px solid var(--border-color, #333);
-            color: var(--text-color, #fff);
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tab-button:hover,
-        .tab-button.active {
-            background: var(--primary-color, #03a9f4);
-            border-color: var(--primary-color, #03a9f4);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
+        .sankey-flow {
+            position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
+            opacity: 0.3;
         }
 
-        .modal img {
-            max-width: 95%;
-            max-height: 95%;
-            border-radius: 8px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            cursor: pointer;
+        .sankey-flow svg {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -236,9 +492,9 @@
     <section class="page-content">
         <div class="container">
             <div class="server-header">
-                <i class="fa-solid fa-house-signal server-icon" aria-hidden="true"></i>
-                <h1>Home Assistant Smart Home</h1>
-                <p class="server-subtitle">Comprehensive Home Automation & Financial Tracking System</p>
+                <i class="fa-solid fa-house-signal server-icon" aria-hidden="true" style="color: #03a9f4;"></i>
+                <h1 style="color: #333;">Home Assistant Smart Home</h1>
+                <p class="server-subtitle" style="color: #666;">Comprehensive Home Automation & Financial Tracking System</p>
             </div>
 
             <div class="specs-container">
@@ -247,9 +503,9 @@
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
                     <p>A comprehensive Home Assistant installation managing every aspect of a smart home, from climate control and lighting to financial tracking and Tesla integration. The system features 7 custom dashboards, 50+ automations, and integrations with 20+ services including cryptocurrency tracking, NAS monitoring, security cameras, and advanced data visualization.</p>
 
-                    <div class="screenshot-note">
+                    <div class="info-note">
                         <i class="fas fa-info-circle"></i>
-                        <strong>Live Dashboard Screenshots:</strong> All screenshots below are from the actual production Home Assistant instance. Click any image to view full size.
+                        <strong>Live System Mockups:</strong> The dashboard visualizations below recreate the actual production Home Assistant interface, shown in both desktop and mobile views.
                     </div>
                 </section>
 
@@ -287,83 +543,392 @@
                 <!-- Dashboard 1: Main Control Center -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-home" aria-hidden="true"></i> Main Control Center Dashboard</h2>
+                    <p>Real-time location tracking for family members, plant watering schedules, temperature monitoring across 5 rooms, smart device control, and system monitoring for NAS server.</p>
 
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-users"></i> Family & Plant Tracking</h3>
-                        <p>Real-time location tracking for family members with custom avatars, plus plant watering schedules with visual indicators for 11 houseplants. The waterfall history card shows temperature trends across 5 rooms over the past week.</p>
-                        <img src="../images/screenshots/01 main dashboard 01.png"
-                             alt="Main Dashboard - Family tracking, plant watering schedules, and temperature monitoring"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
-                    </div>
+                    <div class="ha-mockup-container">
+                        <!-- Desktop View -->
+                        <div>
+                            <div class="view-label">Desktop View</div>
+                            <div class="ha-mockup">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Home</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-plus ha-nav-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <!-- Family Status -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Family Status</div>
+                                        <div class="ha-person-grid">
+                                            <div class="ha-person-card">
+                                                <div class="ha-person-avatar"><i class="fas fa-user"></i></div>
+                                                <div class="ha-person-name">Nathan</div>
+                                                <div class="ha-person-location">Work</div>
+                                            </div>
+                                            <div class="ha-person-card">
+                                                <div class="ha-person-avatar"><i class="fas fa-user"></i></div>
+                                                <div class="ha-person-name">Megan</div>
+                                                <div class="ha-person-location">Home</div>
+                                            </div>
+                                            <div class="ha-person-card">
+                                                <div class="ha-person-avatar"><i class="fas fa-child"></i></div>
+                                                <div class="ha-person-name">Hadden</div>
+                                                <div class="ha-person-location">School</div>
+                                            </div>
+                                            <div class="ha-person-card">
+                                                <div class="ha-person-avatar"><i class="fas fa-dog"></i></div>
+                                                <div class="ha-person-name">Cooper</div>
+                                                <div class="ha-person-location">Home</div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-seedling"></i> Plant Care Dashboard</h3>
-                        <p>Dedicated plant watering tracker with button-triggered timestamps. Each plant displays days since last watered with visual indicators. Features 11 different plants including Albus, Babies, Betty, Billie, Cobie, Luna, Miles, and Pearl.</p>
-                        <img src="../images/screenshots/02 main dashboard 02.png"
-                             alt="Plant Care Dashboard - Watering schedule tracker for 11 houseplants"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
+                                    <!-- Plants -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Plant Watering</div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon plant"><i class="fas fa-seedling"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Albus</div>
+                                                <div class="ha-entity-state">33 days ago</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon plant"><i class="fas fa-seedling"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Luna</div>
+                                                <div class="ha-entity-state">33 days ago</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon plant"><i class="fas fa-seedling"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Miles</div>
+                                                <div class="ha-entity-state">33 days ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Smart Devices -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Smart Devices</div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon on"><i class="fas fa-lightbulb"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Living Room Lights</div>
+                                                <div class="ha-entity-state">On</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon green"><i class="fas fa-warehouse"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Garage Door</div>
+                                                <div class="ha-entity-state">Closed</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Living Room</div>
+                                                <div class="ha-entity-state">72°F</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile View -->
+                        <div>
+                            <div class="view-label">Mobile View</div>
+                            <div class="ha-mockup mobile">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Home</span>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <div class="ha-card">
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon plant"><i class="fas fa-seedling"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Albus</div>
+                                                <div class="ha-entity-state">33 days</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon on"><i class="fas fa-lightbulb"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Lights</div>
+                                                <div class="ha-entity-state">On</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Living Room</div>
+                                                <div class="ha-entity-state">72°F</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Dashboard 2: Financial Tracking -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Financial Dashboard</h2>
+                    <p>Comprehensive financial tracking with budget monitoring, account balances, asset allocation visualization, and net worth Sankey diagram showing complete financial flow.</p>
 
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-wallet"></i> Budget Overview & Asset Allocation</h3>
-                        <p>Month progress tracking with custom bar-card showing spending percentage vs. month completion. Multi-level collapsible account structure using fold-entity-row cards for banks, investment accounts, credit cards, and savings. Features ApexCharts pie chart showing 12+ asset categories with real-time values.</p>
-                        <img src="../images/screenshots/02 financial dashboard 01.png"
-                             alt="Financial Dashboard - Budget tracking and asset allocation pie chart"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
+                    <div class="ha-mockup-container">
+                        <!-- Desktop View -->
+                        <div>
+                            <div class="view-label">Desktop View</div>
+                            <div class="ha-mockup">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Finance</span>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <!-- Budget Tracking -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Monthly Budget</div>
+                                        <div style="margin: 8px 0; color: #757575; font-size: 0.9em;">Spending: 65%</div>
+                                        <div class="ha-bar-container">
+                                            <div class="ha-bar-fill green" style="width: 65%;">
+                                                On Track
+                                            </div>
+                                        </div>
+                                        <div style="margin: 8px 0; color: #757575; font-size: 0.9em;">Month Progress: 70%</div>
+                                        <div class="ha-bar-container">
+                                            <div class="ha-bar-fill orange" style="width: 70%;">
+                                                70% Complete
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Account Overview -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Accounts</div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon green"><i class="fas fa-piggy-bank"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Savings</div>
+                                                <div class="ha-entity-state">$XX,XXX</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon" style="background: rgba(247, 147, 26, 0.2); color: #f7931a;"><i class="fab fa-bitcoin"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Bitcoin</div>
+                                                <div class="ha-entity-state">$XX,XXX</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon" style="background: rgba(219, 92, 5, 0.2); color: #db5c05;"><i class="fas fa-chart-line"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Retirement</div>
+                                                <div class="ha-entity-state">$XXX,XXX</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Charts -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Net Worth</div>
+                                        <div class="ha-chart">
+                                            <div class="ha-chart-value">$XXX,XXX</div>
+                                            <div class="ha-chart-label">+X.X%</div>
+                                            <div class="ha-chart-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile View -->
+                        <div>
+                            <div class="view-label">Mobile View</div>
+                            <div class="ha-mockup mobile">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Finance</span>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Budget</div>
+                                        <div class="ha-bar-container">
+                                            <div class="ha-bar-fill green" style="width: 65%;">
+                                                65%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ha-card">
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon green"><i class="fas fa-piggy-bank"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Savings</div>
+                                                <div class="ha-entity-state">$XX,XXX</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ha-card">
+                                        <div class="ha-chart">
+                                            <div class="ha-chart-value">$XXX,XXX</div>
+                                            <div class="ha-chart-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-chart-network"></i> Net Worth Flow (Sankey Diagram)</h3>
-                        <p>Custom Sankey diagram visualizing complete financial structure. Shows flow from Net Worth through Assets and Debt categories, breaking down into Liquid Assets, Non-Liquid Assets, Retirement accounts, College Savings, and Mortgage. Each stream is color-coded and sized proportionally to value.</p>
-                        <img src="../images/screenshots/02 financial dashboard 02.png"
-                             alt="Financial Sankey Diagram - Complete net worth flow visualization"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
-                    </div>
-
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-chart-area"></i> Historical Account Growth</h3>
-                        <p>Mini-graph cards showing 65-week historical trends for all major accounts. Includes Assets, Net Worth, College Savings, Retirement accounts, 401(k)s, IRAs, Emergency Savings, Long-Term Savings, HSA, Bitcoin, and Robinhood. Each chart features custom gradient fills and color-coded growth indicators.</p>
-                        <img src="../images/screenshots/03 financial dashboard 03.png"
-                             alt="Financial Charts - Historical growth tracking for all accounts"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
+                    <!-- Sankey Diagram -->
+                    <div style="margin-top: 30px;">
+                        <h3>Net Worth Flow Visualization</h3>
+                        <p>Custom Sankey diagram showing complete financial structure from Net Worth through Assets and Debt, breaking down into Liquid Assets, Non-Liquid Assets, Retirement, College Savings, and individual accounts.</p>
+                        <div class="sankey-mockup">
+                            <div style="text-align: center; z-index: 1; position: relative;">
+                                <i class="fas fa-chart-network" style="font-size: 3em; color: #03a9f4; margin-bottom: 16px;"></i>
+                                <div>Sankey Flow Diagram</div>
+                                <div style="font-size: 0.9em; margin-top: 8px;">Assets → Categories → Accounts</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Dashboard 3: Grocery & Budget Tracking -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Grocery & Budget Dashboard</h2>
-
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-receipt"></i> Category Budget Tracking</h3>
-                        <p>Three custom bar-card budget trackers for Entertainment ($400 budget), Groceries ($1,150 budget), and Shopping ($400 budget). Each bar uses color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for shopping list management.</p>
-                        <img src="../images/screenshots/04 groceries 01.png"
-                             alt="Grocery Dashboard - Budget tracking and shopping list"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
-                    </div>
-                </section>
-
-                <!-- Dashboard 4: Tesla Integration -->
+                <!-- Dashboard 3: Tesla -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Tesla Dashboard</h2>
+                    <p>Real-time vehicle monitoring with battery status, range tracking, climate control, and tire pressure for all four wheels with historical trend graphs.</p>
 
-                    <div class="screenshot-container">
-                        <h3><i class="fas fa-charging-station"></i> Battery, Climate & Tire Monitoring</h3>
-                        <p>Real-time Tesla integration showing battery percentage with custom bar-card, range and battery level mini-graphs with 7-day history, internal and external temperature tracking, and tire pressure monitoring for all four tires. Climate control integration allows remote temperature adjustment.</p>
-                        <img src="../images/screenshots/05 tesla 01.png"
-                             alt="Tesla Dashboard - Battery, climate control, and tire pressure monitoring"
-                             class="screenshot-img"
-                             onclick="openModal(this.src)">
+                    <div class="ha-mockup-container">
+                        <!-- Desktop View -->
+                        <div>
+                            <div class="view-label">Desktop View</div>
+                            <div class="ha-mockup">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Tesla</span>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <!-- Battery -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Battery</div>
+                                        <div style="margin: 8px 0; color: #757575; font-size: 0.9em;">77%</div>
+                                        <div class="ha-bar-container">
+                                            <div class="ha-bar-fill green" style="width: 77%;">
+                                                Battery Level
+                                            </div>
+                                        </div>
+                                        <div class="ha-chart">
+                                            <div class="ha-chart-value">200 mi</div>
+                                            <div class="ha-chart-label">Range</div>
+                                            <div class="ha-chart-line"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Climate -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Climate</div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon temp"><i class="fas fa-temperature-high"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Interior</div>
+                                                <div class="ha-entity-state">84°F</div>
+                                            </div>
+                                        </div>
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon temp"><i class="fas fa-temperature-low"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Exterior</div>
+                                                <div class="ha-entity-state">75°F</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tire Pressure -->
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Tire Pressure</div>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                            <div class="ha-entity-row">
+                                                <div class="ha-entity-icon green"><i class="fas fa-circle"></i></div>
+                                                <div class="ha-entity-info">
+                                                    <div class="ha-entity-name">FL</div>
+                                                    <div class="ha-entity-state">42 PSI</div>
+                                                </div>
+                                            </div>
+                                            <div class="ha-entity-row">
+                                                <div class="ha-entity-icon green"><i class="fas fa-circle"></i></div>
+                                                <div class="ha-entity-info">
+                                                    <div class="ha-entity-name">FR</div>
+                                                    <div class="ha-entity-state">42 PSI</div>
+                                                </div>
+                                            </div>
+                                            <div class="ha-entity-row">
+                                                <div class="ha-entity-icon green"><i class="fas fa-circle"></i></div>
+                                                <div class="ha-entity-info">
+                                                    <div class="ha-entity-name">RL</div>
+                                                    <div class="ha-entity-state">40 PSI</div>
+                                                </div>
+                                            </div>
+                                            <div class="ha-entity-row">
+                                                <div class="ha-entity-icon green"><i class="fas fa-circle"></i></div>
+                                                <div class="ha-entity-info">
+                                                    <div class="ha-entity-name">RR</div>
+                                                    <div class="ha-entity-state">40 PSI</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile View -->
+                        <div>
+                            <div class="view-label">Mobile View</div>
+                            <div class="ha-mockup mobile">
+                                <div class="ha-header">
+                                    <div class="ha-header-left">
+                                        <i class="fa-solid fa-bars ha-nav-icon"></i>
+                                        <span class="ha-header-title">Tesla</span>
+                                    </div>
+                                </div>
+                                <div class="ha-body">
+                                    <div class="ha-card">
+                                        <div class="ha-card-title">Battery: 77%</div>
+                                        <div class="ha-bar-container">
+                                            <div class="ha-bar-fill green" style="width: 77%;">
+                                                200 mi
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ha-card">
+                                        <div class="ha-entity-row">
+                                            <div class="ha-entity-icon temp"><i class="fas fa-thermometer-half"></i></div>
+                                            <div class="ha-entity-info">
+                                                <div class="ha-entity-name">Interior</div>
+                                                <div class="ha-entity-state">84°F</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -384,32 +949,32 @@
                         <div class="feature-card">
                             <i class="fab fa-bitcoin" style="color: #f7931a;"></i>
                             <h3>Crypto & Stocks</h3>
-                            <p>Live Bitcoin price tracking via CoinGecko, Yahoo Finance stock integration (AAPL, TSLA, NVDA, etc.)</p>
+                            <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-car" style="color: #e91e63;"></i>
                             <h3>Tesla Integration</h3>
-                            <p>Battery monitoring, climate control, tire pressure, sentry mode, and lock control</p>
+                            <p>Battery monitoring, climate control, tire pressure, sentry mode, lock control</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-video" style="color: #9c27b0;"></i>
                             <h3>Security System</h3>
-                            <p>4 Nest camera feeds (Front Yard, Doorbell, Garage, Office) with motion detection</p>
+                            <p>4 Nest cameras (Front, Doorbell, Garage, Office) with motion detection</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-robot" style="color: #ff9800;"></i>
                             <h3>50+ Automations</h3>
-                            <p>Automated lighting, garage control, location-based notifications, and schedules</p>
+                            <p>Automated lighting, garage control, location notifications, schedules</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-server" style="color: #607d8b;"></i>
                             <h3>NAS Monitoring</h3>
-                            <p>TrueNAS SCALE integration tracking CPU, RAM, storage, drive temperature, and uptime</p>
+                            <p>TrueNAS SCALE tracking CPU, RAM, storage, temperature, uptime</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-seedling" style="color: #8bc34a;"></i>
-                            <h3>Plant Care Tracker</h3>
-                            <p>11 plant watering schedules with button-triggered timestamps and day counters</p>
+                            <h3>Plant Care</h3>
+                            <p>11 plant watering schedules with button timestamps and day counters</p>
                         </div>
                     </div>
                 </section>
@@ -420,51 +985,51 @@
                     <ul class="automation-list">
                         <li>
                             <i class="fas fa-warehouse"></i>
-                            <strong>Smart Arrival:</strong> Automatically opens garage and turns on entry lights (Front Door Light + Entryway Lights) when family members arrive home
+                            <strong>Smart Arrival:</strong> Opens garage and turns on entry lights when family arrives home
                         </li>
                         <li>
                             <i class="fas fa-moon"></i>
-                            <strong>Midnight Routine:</strong> Turns off 17 different lights/switches at 2 AM, locks front door via Google Assistant voice command
+                            <strong>Midnight Routine:</strong> Turns off 17 lights at 2 AM, locks doors via Google Assistant
                         </li>
                         <li>
                             <i class="fas fa-sun"></i>
-                            <strong>Sunrise/Sunset:</strong> Automatically controls Front Door Light and Back Door Light based on sun position
+                            <strong>Sunrise/Sunset:</strong> Controls outdoor lighting based on sun position
                         </li>
                         <li>
                             <i class="fas fa-bell"></i>
-                            <strong>Location Notifications:</strong> Sends iOS push notifications when family members arrive/leave work, school, gym, or church
+                            <strong>Location Notifications:</strong> iOS push notifications for arrivals/departures
                         </li>
                         <li>
                             <i class="fas fa-warehouse"></i>
-                            <strong>Garage Safety:</strong> Auto-closes garage at 10 PM, 11 PM (Wed), midnight, and 2 AM if left open
+                            <strong>Garage Safety:</strong> Auto-closes garage at scheduled times if left open
                         </li>
                         <li>
                             <i class="fas fa-tv"></i>
-                            <strong>Bias Lighting:</strong> Automatically turns on/off TV backlight when Living Room TV powers on/off
+                            <strong>Bias Lighting:</strong> TV backlight syncs with TV power state
                         </li>
                         <li>
                             <i class="fas fa-car"></i>
-                            <strong>Tesla Climate Protection:</strong> Opens vent windows if interior temperature exceeds 110°F and exterior is above 95°F while away from vehicle
+                            <strong>Tesla Climate:</strong> Opens vents if interior >110°F and exterior >95°F
                         </li>
                         <li>
                             <i class="fas fa-calendar"></i>
-                            <strong>Financial Snapshots:</strong> Records midnight snapshots of Bitcoin price and portfolio values for historical tracking
+                            <strong>Financial Snapshots:</strong> Records midnight Bitcoin and portfolio values
                         </li>
                         <li>
                             <i class="fas fa-seedling"></i>
-                            <strong>Plant Care Logging:</strong> Timestamps plant watering events when buttons are pressed for 11 different plants
+                            <strong>Plant Care:</strong> Timestamps watering events for 11 plants
                         </li>
                         <li>
                             <i class="fas fa-paw"></i>
-                            <strong>Pet Feeding Tracker:</strong> Logs automatic Wi-Fi pet feeder activations with timestamps
+                            <strong>Pet Feeding:</strong> Logs automatic feeder activations
                         </li>
                         <li>
                             <i class="fas fa-lightbulb"></i>
-                            <strong>Room Light Groups:</strong> Button-triggered automation groups for Bedroom (3 lights), Kid Room (2 lamps), and Dining Room (2 lights)
+                            <strong>Room Groups:</strong> Button-triggered groups for Bedroom, Kid Room, Dining
                         </li>
                         <li>
                             <i class="fas fa-book"></i>
-                            <strong>Book Club Preparation:</strong> Opens garage door automatically at 7:55 PM every Wednesday for weekly book club
+                            <strong>Book Club:</strong> Opens garage at 7:55 PM every Wednesday
                         </li>
                     </ul>
                 </section>
@@ -479,35 +1044,35 @@
                         <span class="tech-badge">HACS</span>
                     </div>
 
-                    <h3 style="margin-top: 30px;">Custom Frontend Cards</h3>
+                    <h3>Custom Frontend Cards</h3>
                     <div class="tech-stack">
                         <span class="tech-badge">Mushroom Cards</span>
                         <span class="tech-badge">Mini Graph Card</span>
                         <span class="tech-badge">Bar Card</span>
                         <span class="tech-badge">ApexCharts</span>
                         <span class="tech-badge">Sankey Chart</span>
-                        <span class="tech-badge">Waterfall History Card</span>
+                        <span class="tech-badge">Waterfall History</span>
                         <span class="tech-badge">Multiple Entity Row</span>
                         <span class="tech-badge">Fold Entity Row</span>
                         <span class="tech-badge">Vertical Stack in Card</span>
                     </div>
 
-                    <h3 style="margin-top: 30px;">Integrations & Services</h3>
+                    <h3>Integrations & Services</h3>
                     <div class="tech-stack">
                         <span class="tech-badge">Tesla</span>
                         <span class="tech-badge">Nest Cameras (4x)</span>
                         <span class="tech-badge">Google Assistant SDK</span>
                         <span class="tech-badge">OpenWeatherMap</span>
-                        <span class="tech-badge">CoinGecko (Bitcoin)</span>
-                        <span class="tech-badge">Yahoo Finance (Stocks)</span>
+                        <span class="tech-badge">CoinGecko</span>
+                        <span class="tech-badge">Yahoo Finance</span>
                         <span class="tech-badge">TrueNAS SCALE</span>
                         <span class="tech-badge">Rachio Sprinklers</span>
-                        <span class="tech-badge">Transmission (NAS)</span>
+                        <span class="tech-badge">Transmission</span>
                         <span class="tech-badge">Eero Router</span>
-                        <span class="tech-badge">Mobile App (iOS)</span>
+                        <span class="tech-badge">iOS Mobile App</span>
                         <span class="tech-badge">Smart Garage Door</span>
                         <span class="tech-badge">Aqara Pet Feeder</span>
-                        <span class="tech-badge">BitAxe Bitcoin Miner</span>
+                        <span class="tech-badge">BitAxe Miner</span>
                     </div>
                 </section>
 
@@ -515,32 +1080,26 @@
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Implementation Highlights</h2>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Advanced Templating:</strong> Custom Jinja2 templates for dynamic card styling, conditional formatting, and calculated values</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs including financial (CoinGecko, Yahoo Finance), weather, and IoT services</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Historical Tracking:</strong> 365-day data retention with mini-graph cards showing trends up to 65 weeks</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Complex Visualizations:</strong> Sankey diagram for financial flow, ApexCharts for asset allocation, waterfall history for temperature</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>User-Based Views:</strong> Conditional visibility based on logged-in user (financial dashboards restricted to specific users)</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Custom Sensors:</strong> Template sensors for calculations like spending percentage, month progress, days since plant watered</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Voice Control:</strong> Google Assistant SDK integration for hands-free door locking via voice commands</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Notification System:</strong> iOS push notifications for location events, garage status, and arrivals/departures</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Smart Device Integration:</strong> 18+ smart switches/lights, 4 cameras, 5 temperature sensors, 1 garage door controller</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Advanced Templating:</strong> Custom Jinja2 templates for dynamic styling and calculations</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs (financial, weather, IoT)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Historical Tracking:</strong> 365-day retention with 65-week trend graphs</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Complex Visualizations:</strong> Sankey diagrams, ApexCharts, waterfall histories</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>User-Based Views:</strong> Conditional visibility for different users</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Custom Sensors:</strong> Template sensors for spending %, days since watered, etc.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Voice Control:</strong> Google Assistant SDK for hands-free door locking</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>iOS Notifications:</strong> Push alerts for location, garage status, events</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Smart Integration:</strong> 18+ switches, 4 cameras, 5 sensors, garage controller</li>
                     </ul>
                 </section>
 
                 <!-- Back Button -->
                 <div class="back-button-container">
-                    <a href="../projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                    <a href="../projects.html" class="btn" style="background: #03a9f4; color: white;"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
                 </div>
             </div>
         </div>
     </section>
     </main>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="modal-close">&times;</span>
-        <img id="modalImage" src="" alt="Full size screenshot">
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -550,24 +1109,5 @@
     </footer>
 
     <script src="../script.js?v=20250104001"></script>
-    <script>
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImg.src = src;
-        }
-
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
 </body>
 </html>
