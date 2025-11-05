@@ -149,7 +149,7 @@ nav .container {
 /* Dark mode - bulb is "on" and glowing */
 [data-theme="dark"] .theme-toggle i {
     color: #ffd700 !important;
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
 }
 
 .theme-toggle:hover i {
@@ -166,17 +166,17 @@ nav .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 200%;
-    height: 200%;
+    width: 180%;
+    height: 180%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 1;
     background:
-        linear-gradient(0deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%),
-        linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%),
-        linear-gradient(90deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%),
-        linear-gradient(135deg, transparent 40%, rgba(255, 215, 0, 0.3) 48%, rgba(255, 215, 0, 0.3) 52%, transparent 60%);
-    animation: rotate-rays 12s linear infinite;
+        linear-gradient(0deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
+        linear-gradient(45deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
+        linear-gradient(90deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%),
+        linear-gradient(135deg, transparent 45%, rgba(255, 215, 0, 0.1) 49%, rgba(255, 215, 0, 0.1) 51%, transparent 55%);
+    animation: rotate-rays 30s linear infinite;
 }
 
 /* Subtle glow pulse in dark mode */
@@ -185,13 +185,13 @@ nav .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 120%;
-    height: 120%;
+    width: 140%;
+    height: 140%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
     pointer-events: none;
     z-index: 2;
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: pulse-glow 4s ease-in-out infinite;
 }
 
 @keyframes rotate-rays {
@@ -205,12 +205,12 @@ nav .container {
 
 @keyframes pulse-glow {
     0%, 100% {
-        opacity: 0.5;
+        opacity: 0.3;
         transform: translate(-50%, -50%) scale(1);
     }
     50% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.05);
     }
 }
 
