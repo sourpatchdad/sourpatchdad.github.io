@@ -362,17 +362,12 @@
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Letterboxd, JustWatch, Hobi</strong> → Trakt integration with cleaner UI</li>
                     </ul>
 
-                    <p><strong>Philosophy:</strong> Learning YAML through trial and error, with the mindset of "I'm doing it because I can..." Custom icons for every plant and institution? Absolutely unnecessary. But adorable and fun? Absolutely yes. This is never a "finished product"—just continuous tinkering and improvement.</p>
                 </section>
 
                 <!-- System Stats -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-line" aria-hidden="true"></i> System Statistics</h2>
                     <div class="stats-grid">
-                        <div class="stat-box">
-                            <div class="stat-number">8</div>
-                            <div class="stat-label">Custom Dashboards</div>
-                        </div>
                         <div class="stat-box">
                             <div class="stat-number">50+</div>
                             <div class="stat-label">Automations</div>
@@ -385,28 +380,14 @@
                             <div class="stat-number">20+</div>
                             <div class="stat-label">Integrations</div>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Security Cameras</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number">11</div>
-                            <div class="stat-label">Plants Tracked</div>
-                        </div>
                     </div>
                 </section>
 
                 <!-- Dashboard 1: Main Control Center -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-home" aria-hidden="true"></i> Dashboard 1: Main Control Center</h2>
-                    <p><strong>Family Location Tracking:</strong> Location states use Home Assistant mobile app phone tracking for parents, time-based automations for daughter (e.g., arrives at school zone 7-9am → status set to "School"), and a creative AirTag workaround for the dog (iPhone automation screenshots Find My app, parses text, sends to input.text entity in HA).</p>
-
-                    <p><strong>Plant Care System:</strong> 11 houseplants (Albus, Babies, Betty, Billie, Cobie, Luna, Miles, Pearl, and more) with custom illustrations meticulously matched to the actual plants. Button-triggered timestamps record watering dates, automations notify when certain number of days pass. "Necessary? No. Adorable? Yes."</p>
-
-                    <p><strong>Additional Features:</strong> Budget run-rate tracking (% month passed vs. % spent), automated Bitcoin price via CoinGecko API with cold wallet USD valuation, NAS temperature monitoring with alerts if temperature exceeds 115°F, and quick Tesla Sentry mode toggle.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
                         <div class="device-label">Desktop Monitor</div>
                         <div class="device-frame desktop">
                             <div class="device-screen">
@@ -416,7 +397,6 @@
                     </div>
 
                     <div class="device-showcase">
-                        <h3>Mobile Views</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -457,22 +437,9 @@
                 <!-- Dashboard 2: Plant Care -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-seedling" aria-hidden="true"></i> Dashboard 2: Plant Care Tracker</h2>
-                    <p><strong>Most Requested Feature:</strong> This "past weekend's project" became the most popular when posted to r/homeassistant. Simple button interface updates the date last watered, automations trigger notifications when moisture levels should be checked. Also includes fertilizing date automations (less frequent, so not displayed on main glance cards).</p>
-
-                    <p><strong>The Details:</strong> Spent more time than necessary creating custom plant illustrations that match the actual houseplants. The most time-consuming part was the icons, but the visual result makes it worth it. A perfect example of the project philosophy: unnecessary customization, but fun and engaging.</p>
+                    <p>Spent more time than necessary creating custom plant illustrations that match the actual houseplants. The most time-consuming part was the icons, but the visual result makes it worth it. A perfect example of the project philosophy: unnecessary customization, but fun and engaging.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
-                        <div class="device-label">Desktop Monitor</div>
-                        <div class="device-frame desktop">
-                            <div class="device-screen">
-                                <img src="../images/screenshots/02 main dashboard 02.png" alt="Plant Dashboard Desktop">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="device-showcase">
-                        <h3>Mobile View</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -494,7 +461,6 @@
                     <p><strong>Future Goal:</strong> Complete migration off Google/Nest platform to store all video clips locally on NAS and eliminate monthly Nest Aware subscription costs. This represents the broader philosophy of self-hosting and eliminating third-party dependencies.</p>
 
                     <div class="device-showcase">
-                        <h3>Mobile View</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -518,7 +484,6 @@
                     <p><strong>Data Integration:</strong> Most account values automatically feed from Excel using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (though December always "cooks us" between holidays and multiple birthdays). Mad money balances and short-term savings update automatically.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
                         <div class="device-label">Desktop Monitor</div>
                         <div class="device-frame desktop">
                             <div class="device-screen">
@@ -528,7 +493,6 @@
                     </div>
 
                     <div class="device-showcase">
-                        <h3>Mobile Views</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -562,14 +526,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="device-label">iPhone</div>
-                                <div class="device-frame iphone">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/02-mobile financial dashboard 01-05.png" alt="Financial Dashboard Mobile 5">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -580,33 +536,10 @@
                     <p>Custom Sankey diagram visualizing complete financial structure. Shows flow from Net Worth through Assets and Debt categories, breaking down into Liquid Assets, Non-Liquid Assets, Retirement accounts, College Savings, and Mortgage. Each stream is color-coded and sized proportionally to value.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
                         <div class="device-label">Desktop Monitor</div>
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/02 financial dashboard 02.png" alt="Sankey Diagram Desktop">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="device-showcase">
-                        <h3>Mobile Views</h3>
-                        <div class="device-row">
-                            <div>
-                                <div class="device-label">iPhone</div>
-                                <div class="device-frame iphone">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/02-mobile financial dashboard 02-01.png" alt="Sankey Mobile 1">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="device-label">iPhone</div>
-                                <div class="device-frame iphone">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/02-mobile financial dashboard 02-02.png" alt="Sankey Mobile 2">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -617,16 +550,34 @@
                     <h2><i class="fa-solid fa-chart-area" aria-hidden="true"></i> Dashboard 6: Historical Account Growth</h2>
                     <p><strong>The Favorite Card:</strong> Uses mini-graph-card (hands down the favorite custom card discovered). Super customizable with coded transition points based on states—for example, Bitcoin chart shows green when >$100k and red when <$100k. Combined with multiple-entity-row cards using vertical-stack-in-card for clean presentation.</p>
 
-                    <p><strong>Data Limitations:</strong> Charts are limited to the timeframe since sensor creation in HA. "Retirement" sensor shows flat for 28 days, then variability for 2-3 days (even though underlying entities aren't new). Didn't want to load historical values manually, so charts will look better "over time" as more data accumulates. Home value uses Redfin integration—when value changes, automation inputs the new value to avoid Redfin API breaking and skewing data.</p>
-
                     <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation, but that's okay.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
                         <div class="device-label">Desktop Monitor</div>
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/03 financial dashboard 03.png" alt="Charts Dashboard Desktop">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="device-showcase">
+                        <div class="device-row">
+                            <div>
+                                <div class="device-label">iPhone</div>
+                                <div class="device-frame iphone">
+                                    <div class="device-screen">
+                                        <img src="../images/screenshots/02-mobile financial dashboard 02-01.png" alt="Charts Mobile 1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="device-label">iPhone</div>
+                                <div class="device-frame iphone">
+                                    <div class="device-screen">
+                                        <img src="../images/screenshots/02-mobile financial dashboard 02-02.png" alt="Charts Mobile 2">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -640,17 +591,6 @@
                     <p><strong>Features:</strong> Three bar-card budget trackers with color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for real-time shopping list management accessible from mobile.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
-                        <div class="device-label">Desktop Monitor</div>
-                        <div class="device-frame desktop">
-                            <div class="device-screen">
-                                <img src="../images/screenshots/04 groceries 01.png" alt="Grocery Dashboard Desktop">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="device-showcase">
-                        <h3>Mobile View</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -669,12 +609,11 @@
                     <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Dashboard 8: Tesla Vehicle Control</h2>
                     <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire recently.</p>
 
-                    <p><strong>Data Quirk:</strong> Tire pressure readings aren't constantly updated—they report from when the car was last turned off. Winter tires inflated to 45 PSI can read ~50 PSI after a hot commute since that's when the car turns off and reports. Summer tires use 42 PSI. Still fine-tuning this feature.</p>
+                    <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car was last turned off, not real-time. Winter tires (45 PSI) can read ~50 PSI after a hot commute, while summer tires use 42 PSI.</p>
 
                     <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds 110°F and exterior exceeds 95°F.</p>
 
                     <div class="device-showcase">
-                        <h3>Desktop View</h3>
                         <div class="device-label">Desktop Monitor</div>
                         <div class="device-frame desktop">
                             <div class="device-screen">
@@ -684,7 +623,6 @@
                     </div>
 
                     <div class="device-showcase">
-                        <h3>Mobile View</h3>
                         <div class="device-row">
                             <div>
                                 <div class="device-label">iPhone</div>
@@ -795,7 +733,7 @@
                         </li>
                         <li>
                             <i class="fas fa-book"></i>
-                            <strong>Book Club:</strong> Opens garage at 7:55 PM every Wednesday
+                            <strong>Book Club:</strong> Opens garage at 7:55 PM every Wednesday for wifey's book club
                         </li>
                     </ul>
                 </section>
@@ -864,9 +802,18 @@
 
                     <h3>Solved Challenges</h3>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> myQ Smart Garage Door doesn't integrate with anything (very stingy with API). <strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong> Initial Google Cloud project broke when transitioning to HA Green. <strong>SOLVED:</strong> Rebuilt integration properly for live feeds.</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong> Figuring out proper YAML build to trigger green when stock price > previous day and red when below. <strong>SOLVED:</strong> Using mini-graph-card transition points.</li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> myQ Smart Garage Door doesn't integrate with anything (very stingy with API).
+                            <br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong> Initial Google Cloud project broke when transitioning to HA Green.
+                            <br><strong>SOLVED:</strong> Rebuilt integration properly for live feeds.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong> Figuring out proper YAML build to trigger green when stock price > previous day and red when below.
+                            <br><strong>SOLVED:</strong> Using mini-graph-card transition points.
+                        </li>
                     </ul>
 
                     <h3>Ongoing Work</h3>
@@ -891,18 +838,6 @@
                             <i class="fas fa-code"></i>
                             <strong>API Access Waiting:</strong> Several financial institutions' Developer Portals still pending for full automation (currently 65% automated, 35% manual).
                         </li>
-                        <li>
-                            <i class="fas fa-tire"></i>
-                            <strong>Tesla Tire Pressure Accuracy:</strong> Fine-tuning since readings only update when car is off (showing hot air pressure after commute).
-                        </li>
-                    </ul>
-
-                    <h3>Future Project Ideas</h3>
-                    <ul class="use-cases">
-                        <li><i class="fa-solid fa-lightbulb"></i> Explore more Bubble Card capabilities for media controls</li>
-                        <li><i class="fa-solid fa-lightbulb"></i> Expand Trakt integration features and recommendations</li>
-                        <li><i class="fa-solid fa-lightbulb"></i> Add more automation-triggered notifications for anomalies</li>
-                        <li><i class="fa-solid fa-lightbulb"></i> Consider Music Assistant enhancements for Apple Music casting</li>
                     </ul>
                 </section>
 
