@@ -58,13 +58,23 @@
             position: relative;
             max-width: 100%;
             margin: 0 auto;
+            display: inline-block;
+        }
+
+        .device-frame.desktop::before {
+            content: '';
+            display: block;
+            padding-top: 62.5%; /* 16:10 aspect ratio */
         }
 
         .device-frame.desktop .device-screen {
+            position: absolute;
+            top: 4.5%;
+            left: 13%;
+            right: 13%;
+            bottom: 7.5%;
             overflow: hidden;
-            position: relative;
-            border-radius: 8px;
-            aspect-ratio: 16 / 10; /* MacBook typical aspect ratio */
+            border-radius: 6px;
         }
 
         .device-frame.desktop::after {
@@ -75,9 +85,9 @@
             right: 0;
             bottom: 0;
             background: url('../images/frames/macbook.png') no-repeat center center;
-            background-size: contain;
+            background-size: 100% 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: 2;
         }
 
         /* iPad frame */
@@ -115,13 +125,23 @@
             position: relative;
             max-width: 375px;
             margin: 0 auto;
+            display: inline-block;
+        }
+
+        .device-frame.iphone::before {
+            content: '';
+            display: block;
+            padding-top: 216%; /* Tall phone aspect ratio ~9:19.5 */
         }
 
         .device-frame.iphone .device-screen {
+            position: absolute;
+            top: 2.5%;
+            left: 3.5%;
+            right: 3.5%;
+            bottom: 2.5%;
             overflow: hidden;
-            position: relative;
-            border-radius: 40px;
-            aspect-ratio: 9 / 19.5; /* iPhone typical aspect ratio */
+            border-radius: 32px;
         }
 
         .device-frame.iphone::after {
@@ -132,9 +152,9 @@
             right: 0;
             bottom: 0;
             background: url('../images/frames/iphone.png') no-repeat center center;
-            background-size: contain;
+            background-size: 100% 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: 2;
         }
 
         .device-screen img {
