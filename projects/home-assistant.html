@@ -332,14 +332,13 @@
             <div class="server-header">
                 <img src="../images/images/home assistant.svg" alt="Home Assistant" style="width: 48px; height: 48px;">
                 <h1 style="color: #333;">Home Assistant Smart Home</h1>
-                <p class="server-subtitle" style="color: #666;">Comprehensive Home Automation & Financial Tracking System</p>
             </div>
 
             <div class="specs-container">
                 <!-- Overview -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
-                    <p>A comprehensive Home Assistant installation managing every aspect of a smart home, from climate control and lighting to financial tracking and Tesla integration. The system features 8 custom dashboards, 50+ automations, and integrations with 20+ services including cryptocurrency tracking, NAS monitoring, security cameras, and advanced data visualization.</p>
+                    <p>A comprehensive Home Assistant installation managing every aspect of a smart home, from climate control and lighting to financial tracking and Tesla integration. The system features custom dashboards, 50+ automations, and integrations with 20+ services including cryptocurrency tracking, NAS monitoring, security cameras, and advanced data visualization.</p>
 
                     <div class="info-note">
                         <i class="fas fa-shield-alt"></i>
@@ -352,15 +351,17 @@
                     <h2><i class="fa-solid fa-route" aria-hidden="true"></i> The Journey</h2>
                     <p><strong>Background:</strong> Starting in August 2024 with zero programming or coding experience, this project began as a "new hobby" exploring self-hosting to move away from third-party cloud services (Apple iCloud, Google Nest, etc.) and consolidate multiple apps into one unified platform.</p>
 
-                    <p><strong>From NAS to Home Assistant Green:</strong> Initially ran Home Assistant Core on a Synology NAS (version 2023.7.3), but quickly hit systematic limitations compared to Home Assistant OS. After extensive research on Reddit forums, consulting with ChatGPT for workarounds, and advice from friends, made the jump to Home Assistant Green ($99 hardware purchase with no recurring cloud storage costs).</p>
+                    <p><strong>From NAS to Home Assistant Green:</strong> Initially ran Home Assistant Core on a Synology NAS (version 2023.7.3), but quickly hit systematic limitations compared to Home Assistant OS. After extensive research on Reddit, consulting with ChatGPT for workarounds, and advice, made the jump to Home Assistant Green ($99 hardware purchase with no recurring costs).</p>
 
-                    <p><strong>The Goal:</strong> Replace multiple apps and services with a single, self-hosted solution:</p>
+        <!-- The Goal -->
+                    
+                    <!--<p><strong>The Goal:</strong> Replace multiple apps and services with a single, self-hosted solution:</p>
                     <ul class="use-cases">
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Notion</strong> → HA for banking info, expenses, to-do lists, and shared family notes</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Copilot Money</strong> → HA for mobile budget viewing and financial tracking</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Multiple smart home apps</strong> (Daikin, Dreo, Google Home, Kasa, myQ, Rachio) → HA unified control</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Letterboxd, JustWatch, Hobi</strong> → Trakt integration with cleaner UI</li>
-                    </ul>
+                    </ul></-->
 
                 </section>
 
@@ -388,7 +389,7 @@
                     <h2><i class="fa-solid fa-home" aria-hidden="true"></i> Dashboard 1: Main Control Center</h2>
 
                     <div class="device-showcase">
-                        <div class="device-label">Desktop Monitor</div>
+                        
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/01 main dashboard 01.png" alt="Main Dashboard Desktop">
@@ -399,7 +400,7 @@
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 01-01.png" alt="Main Dashboard Mobile 1">
@@ -407,7 +408,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 01-02.png" alt="Main Dashboard Mobile 2">
@@ -415,7 +416,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 01-03.png" alt="Main Dashboard Mobile 3">
@@ -423,7 +424,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 01-04.png" alt="Main Dashboard Mobile 4">
@@ -437,12 +438,12 @@
                 <!-- Dashboard 2: Plant Care -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-seedling" aria-hidden="true"></i> Dashboard 2: Plant Care Tracker</h2>
-                    <p>Spent more time than necessary creating custom plant illustrations that match the actual houseplants. The most time-consuming part was the icons, but the visual result makes it worth it. A perfect example of the project philosophy: unnecessary customization, but fun and engaging.</p>
+                    <p>Spent more time than necessary creating custom plant illustrations that match the actual houseplants.</p>
 
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 02-01.png" alt="Plant Dashboard Mobile">
@@ -456,14 +457,14 @@
                 <!-- Dashboard 3: Security Cameras -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-video" aria-hidden="true"></i> Dashboard 3: Security Camera Grid</h2>
-                    <p><strong>Current Setup:</strong> Live feeds from 4 Nest cameras (Front Yard, Doorbell, Garage, Office). Required setting up Google Cloud project to gain API access to live feeds. Initial project broke when transitioning to HA Green, but got it working again with proper integration.</p>
+                    <p><strong>Current Setup:</strong> Live feeds from four Google Nest cameras (Front Yard, Doorbell, Garage, Office). Required setting up Google Cloud project to gain API access to live feeds. Initial project broke when transitioning to HA Green, but got it working again with proper integration.</p>
 
-                    <p><strong>Future Goal:</strong> Complete migration off Google/Nest platform to store all video clips locally on NAS and eliminate monthly Nest Aware subscription costs. This represents the broader philosophy of self-hosting and eliminating third-party dependencies.</p>
+                    <p><strong>Future Goal:</strong> Complete migration off Google Nest platform to store all video clips locally on NAS and eliminate monthly Nest Aware subscription costs.</p>
 
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile main dashboard 03-01.png" alt="Camera Dashboard Mobile">
@@ -476,15 +477,15 @@
 
                 <!-- Dashboard 4: Financial Overview -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Dashboard 4: Financial Overview</h2>
+                    <h2><i class="fa-solid fa-money-bill" aria-hidden="true"></i> Dashboard 4: Financial Overview</h2>
                     <p><strong>The Most Difficult Build:</strong> This dashboard took the longest to create. Previously, family financial information was stored in shared Notion notes (account locations, contribution schedules, bills, credit card strategies to maximize points, income info). The goal was to house everything in Home Assistant to eliminate third-party dependency on Notion.</p>
 
-                    <p><strong>Technical Challenge:</strong> Nested lists with collapsible fields (using fold-entity-row cards from HACS) required extensive trial and error. Custom icons for every institution and bill? "Absolutely not" necessary, but the completionist mindset kicked in. Quickly realized it was "way more than I could chew" and caused major headaches, but the learning process was invaluable.</p>
+                    <p><strong>Technical Challenge:</strong> Nested lists with collapsible fields (using fold-entity-row cards from HACS) required extensive trial and error. Custom icons for every institution and bill? "Absolutely not" necessary.</p>
 
-                    <p><strong>Data Integration:</strong> Most account values automatically feed from Excel using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (though December always "cooks us" between holidays and multiple birthdays). Mad money balances and short-term savings update automatically.</p>
+                    <p><strong>Data Integration:</strong> Most account values automatically feed from Excel using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (automatically updates based on actual month).</p>
 
                     <div class="device-showcase">
-                        <div class="device-label">Desktop Monitor</div>
+                        
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/02 financial dashboard 01.png" alt="Financial Dashboard Desktop">
@@ -495,7 +496,7 @@
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/02-mobile financial dashboard 01-01.png" alt="Financial Dashboard Mobile 1">
@@ -503,7 +504,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/02-mobile financial dashboard 01-02.png" alt="Financial Dashboard Mobile 2">
@@ -511,7 +512,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/02-mobile financial dashboard 01-03.png" alt="Financial Dashboard Mobile 3">
@@ -519,7 +520,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/02-mobile financial dashboard 01-04.png" alt="Financial Dashboard Mobile 4">
@@ -532,11 +533,11 @@
 
                 <!-- Dashboard 5: Sankey Diagram -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-chart-network" aria-hidden="true"></i> Dashboard 5: Net Worth Flow (Sankey)</h2>
-                    <p>Custom Sankey diagram visualizing complete financial structure. Shows flow from Net Worth through Assets and Debt categories, breaking down into Liquid Assets, Non-Liquid Assets, Retirement accounts, College Savings, and Mortgage. Each stream is color-coded and sized proportionally to value.</p>
+                    <h2><i class="fa-solid fa-chart-diagram" aria-hidden="true"></i> Dashboard 5: Net Worth Flow (Sankey Diagram)</h2>
+                    <p>Custom Sankey diagram visualizing complete financial structure. Shows flow from Net Worth through Assets and Debt categories, breaking down into Liquid Assets, Non-Liquid Assets, Retirement accounts, College Savings, and Mortgage. Each stream is color-coded and sized proportionally to value. Honestly, Sankey diagrams are my favorite.</p>
 
                     <div class="device-showcase">
-                        <div class="device-label">Desktop Monitor</div>
+                        
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/02 financial dashboard 02.png" alt="Sankey Diagram Desktop">
@@ -553,26 +554,14 @@
                     <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation, but that's okay.</p>
 
                     <div class="device-showcase">
-                        <div class="device-label">Desktop Monitor</div>
+                        
                         <div class="device-frame desktop">
                             <div class="device-screen">
-                                <img src="../images/screenshots/03 financial dashboard 03.png" alt="Charts Dashboard Desktop">
+                                <img src="../images/screenshots/02 financial dashboard 03.png" alt="Charts Dashboard Desktop">
                             </div>
                         </div>
                     </div>
-
-                    <div class="device-showcase">
-                        <div class="device-row">
-                            <div>
-                                <div class="device-label">iPhone</div>
-                                <div class="device-frame iphone">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/02-mobile financial dashboard 02-01.png" alt="Charts Mobile 1">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/02-mobile financial dashboard 02-02.png" alt="Charts Mobile 2">
@@ -586,14 +575,14 @@
                 <!-- Dashboard 7: Grocery & Budget -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Dashboard 7: Grocery & Budget Tracking</h2>
-                    <p><strong>Replacing Notion:</strong> Previously used Notion religiously for shared grocery and shopping lists, but noticed syncing issues and laggy updates that became frustrating over time. This dashboard pulls in remaining Entertainment, Groceries, and Shopping budget amounts automatically from Excel, giving the family a quick way to check balances without opening Excel or Copilot Money (which has delays on data updates, especially with Target).</p>
+                    <p><strong>Replacing Notion:</strong> Previously used Notion religiously for shared grocery and shopping lists, but noticed syncing issues and laggy updates that became frustrating over time. This dashboard pulls in remaining Entertainment, Groceries, and Shopping budget amounts automatically from Excel, giving the family a quick way to check balances.</p>
 
                     <p><strong>Features:</strong> Three bar-card budget trackers with color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for real-time shopping list management accessible from mobile.</p>
 
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/03-mobile grocery dashboard 01-01.png" alt="Grocery Dashboard Mobile">
@@ -609,12 +598,12 @@
                     <h2><img src="../images/images/tesla.svg" alt="" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;"> Dashboard 8: Tesla Vehicle Control</h2>
                     <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
 
-                    <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car was last turned off, not real-time. Winter tires (45 PSI) can read ~50 PSI after a hot commute, while summer tires use 42 PSI.</p>
+                    <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
 
-                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds 110°F and exterior exceeds 95°F.</p>
+                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x°F and exterior exceeds x°F.</p>
 
                     <div class="device-showcase">
-                        <div class="device-label">Desktop Monitor</div>
+                        
                         <div class="device-frame desktop">
                             <div class="device-screen">
                                 <img src="../images/screenshots/05 tesla 01.png" alt="Tesla Dashboard Desktop">
@@ -625,7 +614,7 @@
                     <div class="device-showcase">
                         <div class="device-row">
                             <div>
-                                <div class="device-label">iPhone</div>
+                                
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
                                         <img src="../images/screenshots/01-mobile tesla dashboard 01-01.png" alt="Tesla Dashboard Mobile">
@@ -643,7 +632,7 @@
                         <div class="feature-card">
                             <i class="fas fa-home" style="color: #03a9f4;"></i>
                             <h3>Smart Home Control</h3>
-                            <p>18+ smart switches, climate control, garage door, cameras, and thermostats</p>
+                            <p>18+ smart switches, climate control, garage door, cameras, and thermostat</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-dollar-sign" style="color: #4caf50;"></i>
@@ -652,7 +641,7 @@
                         </div>
                         <div class="feature-card">
                             <i class="fab fa-bitcoin" style="color: #f7931a;"></i>
-                            <h3>Crypto & Stocks</h3>
+                            <h3>Bitcoin & Stocks</h3>
                             <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
                         </div>
                         <div class="feature-card">
@@ -663,7 +652,7 @@
                         <div class="feature-card">
                             <i class="fas fa-video" style="color: #9c27b0;"></i>
                             <h3>Security System</h3>
-                            <p>4 Nest cameras (Front, Doorbell, Garage, Office) with motion detection</p>
+                            <p>Four cameras (Front, Doorbell, Garage, Office) with motion detection</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-robot" style="color: #ff9800;"></i>
@@ -693,7 +682,7 @@
                         </li>
                         <li>
                             <i class="fas fa-moon"></i>
-                            <strong>Midnight Routine:</strong> Turns off 17 lights at 2 AM, locks doors via Google Assistant
+                            <strong>Midnight Routine:</strong> Turns off 17 lights at 12 AM, locks doors via Google Assistant
                         </li>
                         <li>
                             <i class="fas fa-sun"></i>
