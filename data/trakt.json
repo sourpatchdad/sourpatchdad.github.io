@@ -1,5 +1,22 @@
 [
   {
+    "id": 11591016859,
+    "watched_at": "2025-11-06T04:05:46.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "BLACKPINK: Light Up the Sky",
+      "year": 2020,
+      "ids": {
+        "trakt": 581942,
+        "slug": "blackpink-light-up-the-sky-2020",
+        "imdb": "tt13058290",
+        "tmdb": 740996
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wwrvjmcgkDyB2RbCbIVLXZf82pl.jpg"
+  },
+  {
     "id": 11589855144,
     "watched_at": "2025-11-05T20:19:59.000Z",
     "action": "watch",
@@ -283,22 +300,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg"
-  },
-  {
-    "id": 11511299057,
-    "watched_at": "2025-10-30T05:46:37.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "A House of Dynamite",
-      "year": 2025,
-      "ids": {
-        "trakt": 1049823,
-        "slug": "a-house-of-dynamite-2025",
-        "imdb": "tt32376165",
-        "tmdb": 1290159
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg"
   }
 ]
