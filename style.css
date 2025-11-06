@@ -27,6 +27,9 @@
     --white: #ffffff;
     --background-color: #ffffff;
     --card-background: #ffffff;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --disabled-color: #95a5a6;
     --transition: all 0.3s ease;
 }
 
@@ -40,6 +43,9 @@
     --white: #121212;
     --background-color: #1a1a1a;
     --card-background: #2a2a2a;
+    --error-color: #ff6b6b;
+    --success-color: #51cf66;
+    --disabled-color: #6c757d;
 }
 
 html {
@@ -303,7 +309,7 @@ section {
 }
 
 .error-state {
-    color: #e74c3c;
+    color: var(--error-color);
 }
 
 /* Project Detail Pages */
@@ -489,7 +495,7 @@ section {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #27ae60;
+    color: var(--success-color);
     font-weight: bold;
 }
 
@@ -751,7 +757,7 @@ h2 {
 
 .trakt-watched-date {
     font-size: 0.75rem;
-    color: #95a5a6;
+    color: var(--disabled-color);
     margin-top: 8px;
     font-style: italic;
 }
@@ -816,7 +822,7 @@ h2 {
 
 .album-year {
     font-size: 0.85rem;
-    color: #95a5a6;
+    color: var(--disabled-color);
     font-style: italic;
 }
 
@@ -831,7 +837,7 @@ h2 {
     text-align: center;
     padding: 40px;
     font-size: 1.1rem;
-    color: #e74c3c;
+    color: var(--error-color);
 }
 
 /* Contact Section */
@@ -912,15 +918,15 @@ h2 {
 
 .form-status.success {
     background-color: rgba(46, 213, 115, 0.1);
-    color: #27ae60;
-    border: 1px solid #27ae60;
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
     display: block;
 }
 
 .form-status.error {
     background-color: rgba(231, 76, 60, 0.1);
-    color: #e74c3c;
-    border: 1px solid #e74c3c;
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
     display: block;
 }
 
