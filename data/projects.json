@@ -1,7 +1,7 @@
 [
   {
     "id": "bitaxe",
-    "title": "BitAxe Bitcoin Miner",
+    "title": "BitAxe",
     "shortDescription": "Running a BitAxe solo Bitcoin miner integrated with Home Assistant for monitoring hashrate, temperature, and power consumption. Learning about Bitcoin mining while participating in the lottery for finding a block.",
     "tags": ["Bitcoin", "Mining", "Hardware", "Home Assistant Integration"],
     "date": "2025",
@@ -12,7 +12,7 @@
   },
   {
     "id": "home-assistant",
-    "title": "Home Assistant Smart Home",
+    "title": "Home Assistant",
     "shortDescription": "Self-hosting journey from zero coding experience to 8 custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system running on HA Green ($99 hardware, no recurring costs).",
     "tags": ["Home Assistant", "Smart Home", "IoT", "Automation", "YAML"],
     "date": "2024-2025",
@@ -34,7 +34,7 @@
   },
   {
     "id": "truenas-migration",
-    "title": "Synology to TrueNAS Migration",
+    "title": "TrueNAS Migration",
     "shortDescription": "Migrating from underpowered Synology DS124 to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives for 4K Plex transcoding and more.",
     "tags": ["TrueNAS", "Plex", "Homelab", "Infrastructure"],
     "date": "2025",
