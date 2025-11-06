@@ -9,17 +9,17 @@
     <style>
         /* Page styling with proper contrast */
         .page-content {
-            background: #f5f5f5;
-            color: #333;
+            background: var(--light-gray);
+            color: var(--text-color);
         }
 
         .specs-section {
-            background: white;
+            background: var(--card-background);
             padding: 30px;
             border-radius: 12px;
             margin: 30px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            color: #333;
+            color: var(--text-color);
         }
 
         .specs-section h2 {
@@ -29,12 +29,13 @@
         }
 
         .specs-section h3 {
-            color: #333;
+            color: var(--text-color);
             margin: 25px 0 15px 0;
         }
 
         .specs-section p {
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.8;
             line-height: 1.8;
         }
 
@@ -156,7 +157,8 @@
         /* Device labels */
         .device-label {
             text-align: center;
-            color: #757575;
+            color: var(--text-color);
+            opacity: 0.6;
             font-weight: 600;
             margin-bottom: 15px;
             font-size: 1.1em;
@@ -171,7 +173,7 @@
             padding: 16px;
             border-radius: 8px;
             margin: 20px 0;
-            color: #333;
+            color: var(--text-color);
         }
 
         .info-note i {
@@ -188,7 +190,7 @@
         }
 
         .stat-box {
-            background: #f8f9fa;
+            background: var(--background-color);
             padding: 20px;
             border-radius: 8px;
             text-align: center;
@@ -202,7 +204,8 @@
         }
 
         .stat-label {
-            color: #757575;
+            color: var(--text-color);
+            opacity: 0.6;
             margin-top: 8px;
             font-size: 0.9em;
         }
@@ -216,7 +219,7 @@
         }
 
         .feature-card {
-            background: #f8f9fa;
+            background: var(--background-color);
             padding: 24px;
             border-radius: 12px;
             text-align: center;
@@ -230,13 +233,14 @@
         }
 
         .feature-card h3 {
-            color: #333;
+            color: var(--text-color);
             margin: 12px 0 8px 0;
             font-size: 1.2em;
         }
 
         .feature-card p {
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.8;
             line-height: 1.6;
         }
 
@@ -264,12 +268,12 @@
         }
 
         .automation-list li {
-            background: #f8f9fa;
+            background: var(--background-color);
             padding: 16px;
             margin: 8px 0;
             border-radius: 8px;
             border-left: 4px solid #03a9f4;
-            color: #333;
+            color: var(--text-color);
         }
 
         .automation-list li i {
@@ -285,8 +289,10 @@
 
         .use-cases li {
             padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
-            color: #666;
+            border-bottom: 1px solid var(--text-color);
+            border-bottom-opacity: 0.2;
+            color: var(--text-color);
+            opacity: 0.8;
         }
 
         .use-cases li:last-child {
@@ -296,6 +302,12 @@
         .use-cases li i {
             color: #03a9f4;
             margin-right: 12px;
+        }
+
+        /* Challenge sections */
+        .challenge-text {
+            color: var(--text-color);
+            opacity: 0.8;
         }
 
         /* Responsive */
@@ -331,7 +343,7 @@
         <div class="container">
             <div class="server-header">
                 <img src="../images/images/home assistant.svg" alt="Home Assistant" style="width: 48px; height: 48px;">
-                <h1 style="color: #333;">Home Assistant Smart Home</h1>
+                <h1>Home Assistant Smart Home</h1>
             </div>
 
             <div class="specs-container">
@@ -793,18 +805,18 @@
                     <ul class="use-cases">
                         <li>
                             <div style="display: block; width: 100%; margin-bottom: 8px;"><i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong></div>
-                            <div style="display: block; width: 100%; padding-left: 24px; color: #666;">myQ Smart Garage Door doesn't integrate with anything (very stingy with API).</div>
-                            <div style="display: block; width: 100%; padding-left: 24px; margin-top: 8px; color: #666;"><strong style="color: #4caf50;">SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px;">myQ Smart Garage Door doesn't integrate with anything (very stingy with API).</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px; margin-top: 8px;"><strong style="color: #4caf50;">SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</div>
                         </li>
                         <li>
                             <div style="display: block; width: 100%; margin-bottom: 8px;"><i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong></div>
-                            <div style="display: block; width: 100%; padding-left: 24px; color: #666;">Initial Google Cloud project broke when transitioning to HA Green.</div>
-                            <div style="display: block; width: 100%; padding-left: 24px; margin-top: 8px; color: #666;"><strong style="color: #4caf50;">SOLVED:</strong> Rebuilt integration properly for live feeds.</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px;">Initial Google Cloud project broke when transitioning to HA Green.</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px; margin-top: 8px;"><strong style="color: #4caf50;">SOLVED:</strong> Rebuilt integration properly for live feeds.</div>
                         </li>
                         <li>
                             <div style="display: block; width: 100%; margin-bottom: 8px;"><i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong></div>
-                            <div style="display: block; width: 100%; padding-left: 24px; color: #666;">Figuring out proper YAML build to trigger green when stock price > previous day and red when below.</div>
-                            <div style="display: block; width: 100%; padding-left: 24px; margin-top: 8px; color: #666;"><strong style="color: #4caf50;">SOLVED:</strong> Using mini-graph-card transition points.</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px;">Figuring out proper YAML build to trigger green when stock price > previous day and red when below.</div>
+                            <div class="challenge-text" style="display: block; width: 100%; padding-left: 24px; margin-top: 8px;"><strong style="color: #4caf50;">SOLVED:</strong> Using mini-graph-card transition points.</div>
                         </li>
                     </ul>
 
