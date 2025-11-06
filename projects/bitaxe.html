@@ -96,20 +96,20 @@
 
         .btc-metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
             margin-top: 25px;
         }
 
         .btc-metric-card {
             background: var(--background-color);
-            padding: 20px;
+            padding: 16px;
             border-radius: 8px;
             border-left: 4px solid #f7931a;
         }
 
         .btc-metric-label {
-            font-size: 0.85em;
+            font-size: 0.75em;
             color: var(--text-color);
             opacity: 0.7;
             margin-bottom: 8px;
@@ -118,9 +118,10 @@
         }
 
         .btc-metric-value {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: bold;
             color: var(--text-color);
+            word-break: break-word;
         }
 
         .btc-metric-subtext {
@@ -145,6 +146,12 @@
             opacity: 0.6;
         }
 
+        @media (max-width: 1200px) {
+            .btc-metrics-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .btc-price-header {
                 flex-direction: column;
@@ -157,11 +164,17 @@
             }
 
             .btc-metrics-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .btc-chart-container {
                 height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btc-metrics-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -445,8 +458,8 @@
 
                     <div class="btc-metric-card">
                         <div class="btc-metric-label">BitAxe Earnings</div>
-                        <div class="btc-metric-value">$${earnings.perDay.toFixed(2)}/day</div>
-                        <div class="btc-metric-subtext">${earnings.satsPerDay.toFixed(0)} sats/day (theoretical)</div>
+                        <div class="btc-metric-value">${earnings.perDay > 0 ? '$' + earnings.perDay.toFixed(2) + '/day' : 'Calculating...'}</div>
+                        <div class="btc-metric-subtext">${earnings.satsPerDay > 0 ? earnings.satsPerDay.toFixed(0) + ' sats/day (theoretical)' : 'Loading data...'}</div>
                     </div>
 
                     <div class="btc-metric-card">
@@ -574,7 +587,11 @@
             const blockReward = 3.125;
             const blocksPerDay = 144;
 
-            if (networkHashrate === 0) {
+            if (!networkHashrate || networkHashrate === 0 || isNaN(networkHashrate)) {
+                return { perDay: 0, satsPerDay: 0 };
+            }
+
+            if (!btcPrice || btcPrice === 0 || isNaN(btcPrice)) {
                 return { perDay: 0, satsPerDay: 0 };
             }
 
@@ -588,6 +605,11 @@
             const usdPerDay = btcPerDay * btcPrice;
             const satsPerDay = btcPerDay * 100000000;
 
+            // Validate results
+            if (isNaN(usdPerDay) || isNaN(satsPerDay)) {
+                return { perDay: 0, satsPerDay: 0 };
+            }
+
             return {
                 perDay: usdPerDay,
                 satsPerDay: satsPerDay
@@ -595,7 +617,7 @@
         }
 
         function calculateTimeToBlock(difficulty) {
-            if (difficulty === 0) {
+            if (!difficulty || difficulty === 0 || isNaN(difficulty)) {
                 return { days: 0, display: 'Calculating...' };
             }
 
@@ -605,6 +627,11 @@
             const secondsToBlock = (difficulty * Math.pow(2, 32)) / hashrateInHs;
             const daysToBlock = secondsToBlock / 86400;
             const yearsToBlock = daysToBlock / 365.25;
+
+            // Check for invalid calculations
+            if (isNaN(daysToBlock) || isNaN(yearsToBlock)) {
+                return { days: 0, display: 'Calculating...' };
+            }
 
             let display;
             if (yearsToBlock > 1000) {
@@ -623,12 +650,18 @@
         }
 
         function formatHashrate(hashrate) {
+            if (!hashrate || hashrate === 0 || isNaN(hashrate)) {
+                return 'Loading...';
+            }
             // Convert TH/s to EH/s for display
             const eh = hashrate / 1000000;
             return `${eh.toFixed(2)} EH/s`;
         }
 
         function formatDifficulty(difficulty) {
+            if (!difficulty || difficulty === 0 || isNaN(difficulty)) {
+                return 'Loading...';
+            }
             // Format difficulty in trillions
             const t = difficulty / 1e12;
             return `${t.toFixed(2)}T`;
