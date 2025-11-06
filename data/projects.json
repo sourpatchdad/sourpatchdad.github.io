@@ -13,7 +13,7 @@
   {
     "id": "home-assistant",
     "title": "Home Assistant",
-    "shortDescription": "Self-hosting journey from zero coding experience to 8 custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system running on HA Green ($99 hardware, no recurring costs).",
+    "shortDescription": "Self-hosting journey from zero coding experience to custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system.",
     "tags": ["Home Assistant", "Smart Home", "IoT", "Automation", "YAML"],
     "date": "2024-2025",
     "detailPage": "projects/home-assistant.html",
