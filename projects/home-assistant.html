@@ -55,16 +55,32 @@
 
         /* Desktop frame */
         .device-frame.desktop {
-            background: url('../images/frames/macbook.png') no-repeat center center;
-            background-size: contain;
-            padding: 6% 17% 10% 17%;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px 20px 40px 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 1200px;
+            margin: 0 auto;
             position: relative;
         }
 
+        .device-frame.desktop::before {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: #333;
+            border-radius: 3px;
+        }
+
         .device-frame.desktop .device-screen {
+            background: white;
+            border-radius: 4px;
             overflow: hidden;
             position: relative;
-            border-radius: 2px;
         }
 
         .device-frame.desktop .device-screen img {
@@ -105,18 +121,33 @@
 
         /* iPhone frame */
         .device-frame.iphone {
-            background: url('../images/frames/iphone.png') no-repeat center center;
-            background-size: contain;
-            padding: 11% 4% 11% 4%;
+            background: #1a1a1a;
+            border-radius: 36px;
+            padding: 50px 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             max-width: 375px;
             margin: 0 auto;
             position: relative;
         }
 
+        .device-frame.iphone::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            z-index: 2;
+        }
+
         .device-frame.iphone .device-screen {
+            background: white;
+            border-radius: 28px;
             overflow: hidden;
             position: relative;
-            border-radius: 28px;
         }
 
         .device-frame.iphone .device-screen img {
