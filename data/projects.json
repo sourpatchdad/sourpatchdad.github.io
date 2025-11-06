@@ -6,6 +6,7 @@
     "tags": ["TrueNAS", "Plex", "Homelab", "Infrastructure"],
     "date": "2025",
     "detailPage": "projects/truenas-migration.html",
+    "headerImage": "images/custom-icons/true-nas.svg",
     "icon": "fa-solid fa-server",
     "iconType": "server",
     "externalLink": null
@@ -17,6 +18,7 @@
     "tags": ["Python", "GitHub Actions", "Automation", "Cryptocurrency"],
     "date": "2025",
     "detailPage": "projects/bitty-2.html",
+    "headerImage": "images/custom-icons/discord.svg",
     "icon": "fab fa-github",
     "iconType": "github",
     "externalLink": "https://github.com/sourpatchdad/bitty"
@@ -28,6 +30,7 @@
     "tags": ["Bitcoin", "Mining", "Hardware", "Home Assistant Integration"],
     "date": "2025",
     "detailPage": "projects/bitaxe.html",
+    "headerImage": "images/custom-icons/bitaxe.svg",
     "icon": "fab fa-bitcoin",
     "iconType": "bitcoin",
     "externalLink": null
@@ -39,6 +42,7 @@
     "tags": ["Home Assistant", "Smart Home", "IoT", "Automation", "YAML"],
     "date": "2024-2025",
     "detailPage": "projects/home-assistant.html",
+    "headerImage": "images/custom-icons/home-assistant.svg",
     "icon": "fa-solid fa-house-signal",
     "iconType": "home-automation",
     "externalLink": null
