@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitAxe - Nathan Nicholas</title>
+    <link rel="icon" type="image/svg+xml" href="../images/NN.svg">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -19,7 +20,7 @@
 
         .btc-dashboard h2 {
             color: #f7931a;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             font-size: 1.8em;
             display: flex;
             align-items: center;
@@ -68,7 +69,7 @@
         .btc-timeframe-btn {
             padding: 8px 16px;
             background: var(--background-color);
-            border: 2px solid var(--accent-color);
+            border: 2px solid #f7931a;
             border-radius: 6px;
             color: var(--text-color);
             cursor: pointer;
@@ -78,7 +79,7 @@
         }
 
         .btc-timeframe-btn:hover {
-            background: var(--accent-color);
+            background: #f7931a;
             color: white;
         }
 
@@ -288,7 +289,7 @@
         const ELECTRICITY_COST = 0.12; // USD per kWh (adjust as needed)
 
         let btcChart = null;
-        let currentTimeframe = '4'; // Default to 1 year
+        let currentTimeframe = '30'; // Default to 30 days
 
         // Initialize dashboard on page load
         document.addEventListener('DOMContentLoaded', async function() {

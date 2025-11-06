@@ -303,6 +303,19 @@ function displayMusicItems(albums) {
             'images/placeholder-album.jpg'
         ].join("','");
 
+        // Generate music service links
+        let musicLinks = '';
+        if (album.appleMusic || album.spotify) {
+            musicLinks = '<div class="music-links">';
+            if (album.appleMusic) {
+                musicLinks += `<a href="${album.appleMusic}" target="_blank" rel="noopener noreferrer" class="music-link apple-music" title="Listen on Apple Music"><i class="fab fa-apple"></i></a>`;
+            }
+            if (album.spotify) {
+                musicLinks += `<a href="${album.spotify}" target="_blank" rel="noopener noreferrer" class="music-link spotify" title="Listen on Spotify"><i class="fab fa-spotify"></i></a>`;
+            }
+            musicLinks += '</div>';
+        }
+
         return `
             <div class="album-item">
                 <img src="${artworkPath}"
@@ -313,6 +326,7 @@ function displayMusicItems(albums) {
                     <div class="album-name">${album.album}</div>
                     <div class="album-artist">${album.artist}</div>
                     <div class="album-year">${album.year}</div>
+                    ${musicLinks}
                 </div>
             </div>
         `;

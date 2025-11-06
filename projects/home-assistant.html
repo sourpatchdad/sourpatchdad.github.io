@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Assistant - Nathan Nicholas</title>
+    <link rel="icon" type="image/svg+xml" href="../images/NN.svg">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -49,6 +50,35 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin: 30px 0;
+        }
+
+        /* Side-by-side layout for one desktop and one mobile */
+        .device-row-sidebyside {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+            align-items: start;
+        }
+
+        .device-row-sidebyside .device-frame.desktop {
+            max-width: 100%;
+        }
+
+        .device-row-sidebyside .device-frame.iphone {
+            max-width: 320px;
+            justify-self: start;
+        }
+
+        @media (max-width: 1024px) {
+            .device-row-sidebyside {
+                grid-template-columns: 1fr;
+            }
+
+            .device-row-sidebyside .device-frame.desktop,
+            .device-row-sidebyside .device-frame.iphone {
+                max-width: 100%;
+            }
         }
 
         /* Desktop frame */
@@ -343,7 +373,7 @@
     <section class="page-content">
         <div class="container">
             <div class="server-header">
-                <img src="../images/images/home assistant.svg" alt="Home Assistant" style="width: 48px; height: 48px;">
+                <img src="../images/custom-icons/home-assistant.svg" alt="Home Assistant" style="width: 48px; height: 48px;">
                 <h1>Home Assistant</h1>
                 <div class="project-meta" style="margin-top: 16px;">
                 </div>
@@ -685,6 +715,11 @@
                             <i class="fas fa-seedling" style="color: #8bc34a;"></i>
                             <h3>Plant Care</h3>
                             <p>11 plant watering schedules with button timestamps and day counters</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-chart-bar" style="color: #00bcd4;"></i>
+                            <h3>Budget Dashboard</h3>
+                            <p>Grocery, shopping, and entertainment budget tracking with color-coded alerts</p>
                         </div>
                     </div>
                 </section>
