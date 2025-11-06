@@ -1,9 +1,8 @@
 [
   {
-    "name": "Example Service",
-    "logo": "images/referrals/example-logo.png",
-    "description": "This is an example referral service. Replace this with your actual service description.",
-    "offer": "Get $10 off your first purchase",
-    "link": "https://example.com/referral/your-code"
+    "name": "River Financial",
+    "logo": "images/referrals/river.png",
+    "offer": "Earn up to $100 in Bitcoin",
+    "link": "https://river.com/invite?r=SND6I5WG"
   }
 ]
