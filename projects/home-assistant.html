@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Assistant - Nathan Nicholas</title>
-    <link rel="icon" type="image/svg+xml" href="../images/NN.svg">
+    <link rel="icon" type="image/svg+xml" href="../images/NN-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="../images/NN-dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -52,90 +53,18 @@
             margin: 30px 0;
         }
 
-        /* Side-by-side layout for one desktop and one mobile */
-        .device-row-sidebyside {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-            align-items: stretch;
-        }
-
-        .device-row-sidebyside > div {
-            display: flex;
-            align-items: stretch;
-        }
-
-        .device-row-sidebyside .device-frame.desktop {
-            max-width: 100%;
-            width: 100%;
-        }
-
-        .device-row-sidebyside .device-frame.iphone {
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .device-row-sidebyside .device-frame.iphone .device-screen {
-            flex: 1;
-            display: flex;
-        }
-
-        .device-row-sidebyside .device-frame.iphone .device-screen img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 1024px) {
-            .device-row-sidebyside {
-                grid-template-columns: 1fr;
-            }
-
-            .device-row-sidebyside .device-frame.desktop,
-            .device-row-sidebyside .device-frame.iphone {
-                max-width: 100%;
-            }
-        }
-
         /* Desktop frame */
         .device-frame.desktop {
-            background: #1a1a1a;
-            border-radius: 12px 12px 0 0;
-            padding: 30px 20px 0 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            background: url('../images/frames/macbook.png') no-repeat center center;
+            background-size: contain;
+            padding: 6% 17% 10% 17%;
             position: relative;
-        }
-
-        .device-frame.desktop::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #444;
         }
 
         .device-frame.desktop .device-screen {
-            background: white;
-            border-radius: 4px 4px 0 0;
             overflow: hidden;
             position: relative;
-        }
-
-        .device-frame.desktop::after {
-            content: '';
-            display: block;
-            height: 30px;
-            background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
-            border-radius: 0 0 12px 12px;
-            margin: 0 -20px;
+            border-radius: 2px;
         }
 
         /* iPad frame */
@@ -170,33 +99,18 @@
 
         /* iPhone frame */
         .device-frame.iphone {
-            background: #1a1a1a;
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            background: url('../images/frames/iphone.png') no-repeat center center;
+            background-size: contain;
+            padding: 11% 4% 11% 4%;
             max-width: 375px;
             margin: 0 auto;
             position: relative;
         }
 
-        .device-frame.iphone::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 25px;
-            background: #1a1a1a;
-            border-radius: 0 0 20px 20px;
-            z-index: 10;
-        }
-
         .device-frame.iphone .device-screen {
-            background: white;
-            border-radius: 32px;
             overflow: hidden;
             position: relative;
+            border-radius: 28px;
         }
 
         .device-screen img {
@@ -373,7 +287,7 @@
     <nav>
         <div class="container">
             <a href="../index.html" class="logo-link">
-                <img src="../images/NN.svg" alt="Nathan Nicholas" class="logo-img">
+                <img src="../images/NN-light.svg" alt="Nathan Nicholas" class="logo-img">
             </a>
             <div class="nav-links">
                 <a href="../index.html#about">About</a>
@@ -619,14 +533,15 @@
                     <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation, but that's okay.</p>
 
                     <div class="device-showcase">
-                        <div class="device-row-sidebyside">
-                            <div>
-                                <div class="device-frame desktop">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/02 financial dashboard 03.png" alt="Charts Dashboard Desktop">
-                                    </div>
-                                </div>
+                        <div class="device-frame desktop">
+                            <div class="device-screen">
+                                <img src="../images/screenshots/02 financial dashboard 03.png" alt="Charts Dashboard Desktop">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="device-showcase">
+                        <div class="device-row">
                             <div>
                                 <div class="device-frame iphone">
                                     <div class="device-screen">
@@ -669,14 +584,15 @@
                     <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x°F and exterior exceeds x°F.</p>
 
                     <div class="device-showcase">
-                        <div class="device-row-sidebyside">
-                            <div>
-                                <div class="device-frame desktop">
-                                    <div class="device-screen">
-                                        <img src="../images/screenshots/05 tesla 01.png" alt="Tesla Dashboard Desktop">
-                                    </div>
-                                </div>
+                        <div class="device-frame desktop">
+                            <div class="device-screen">
+                                <img src="../images/screenshots/05 tesla 01.png" alt="Tesla Dashboard Desktop">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="device-showcase">
+                        <div class="device-row">
                             <div>
                                 <div class="device-frame iphone">
                                     <div class="device-screen">

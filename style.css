@@ -103,6 +103,15 @@ nav .container {
     transition: var(--transition);
 }
 
+/* Theme-aware logo switching */
+[data-theme="light"] .logo-img {
+    content: url('images/NN-light.svg');
+}
+
+[data-theme="dark"] .logo-img {
+    content: url('images/NN-dark.svg');
+}
+
 .logo-img:hover {
     opacity: 0.8;
 }
@@ -189,6 +198,15 @@ nav .container {
     object-fit: contain;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
     transition: var(--transition);
+}
+
+/* Theme-aware hero logo switching */
+[data-theme="light"] .hero-logo {
+    content: url('images/NN-light.svg');
+}
+
+[data-theme="dark"] .hero-logo {
+    content: url('images/NN-dark.svg');
 }
 
 .hero-logo:hover {
