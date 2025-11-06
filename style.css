@@ -831,6 +831,9 @@ h2 {
 
 .album-info {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 145px;
 }
 
 .album-name {
@@ -859,7 +862,7 @@ h2 {
 .music-links {
     display: flex;
     gap: 12px;
-    margin-top: 10px;
+    margin-top: auto;
     align-items: center;
     justify-content: center;
 }
