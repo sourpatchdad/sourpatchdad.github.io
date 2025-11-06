@@ -379,6 +379,7 @@ if (contactForm) {
                 // Success
                 formStatus.textContent = 'Thank you for your message! I\'ll get back to you soon.';
                 formStatus.className = 'form-status success';
+                formStatus.style.display = 'block';
                 contactForm.reset();
             } else {
                 // Error
@@ -388,6 +389,7 @@ if (contactForm) {
             console.error('Error sending message:', error);
             formStatus.textContent = 'Sorry, there was an error sending your message. Please try again or contact me via LinkedIn.';
             formStatus.className = 'form-status error';
+            formStatus.style.display = 'block';
         } finally {
             // Reset button
             submitButton.textContent = originalButtonText;

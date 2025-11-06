@@ -1,0 +1,18 @@
+# robots.txt for nbnstack.com
+# Nathan Nicholas Portfolio Website
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of data files (they're dynamic and change frequently)
+Disallow: /data/
+
+# Disallow crawling of template files (they're not production pages)
+Disallow: /templates/
+
+# Sitemap location
+Sitemap: https://nbnstack.com/sitemap.xml
+
+# Crawl-delay (polite crawling - optional, helps with server load)
+Crawl-delay: 1
