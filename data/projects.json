@@ -1,5 +1,16 @@
 [
   {
+    "id": "bitaxe",
+    "title": "BitAxe Bitcoin Miner",
+    "shortDescription": "Running a BitAxe solo Bitcoin miner integrated with Home Assistant for monitoring hashrate, temperature, and power consumption. Learning about Bitcoin mining while participating in the lottery for finding a block.",
+    "tags": ["Bitcoin", "Mining", "Hardware", "Home Assistant Integration"],
+    "date": "2025",
+    "detailPage": "projects/bitaxe.html",
+    "icon": "fab fa-bitcoin",
+    "iconType": "bitcoin",
+    "externalLink": null
+  },
+  {
     "id": "home-assistant",
     "title": "Home Assistant Smart Home",
     "shortDescription": "Self-hosting journey from zero coding experience to 8 custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system running on HA Green ($99 hardware, no recurring costs).",

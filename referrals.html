@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referrals - Nathan Nicholas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .referrals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .referral-card {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .referral-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .referral-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        .referral-card h3 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .referral-description {
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .referral-offer {
+            background: rgba(3, 169, 244, 0.1);
+            border-left: 4px solid #03a9f4;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            width: 100%;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        .referral-offer strong {
+            color: #03a9f4;
+        }
+
+        .referral-link {
+            display: inline-block;
+            background: #03a9f4;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .referral-link:hover {
+            background: #0288d1;
+        }
+
+        .referral-link i {
+            margin-right: 8px;
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-color);
+            opacity: 0.6;
+        }
+
+        .loading-state i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/NN.svg" alt="Nathan Nicholas" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#recently-watched">Media</a>
+                <a href="referrals.html">Referrals</a>
+                <a href="index.html#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Referrals Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1>Referral Links</h1>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--text-color); opacity: 0.8;">
+                These are services and products I use and recommend. Using these referral links helps support me while you get great deals!
+            </p>
+            <div class="referrals-grid" id="referrals-grid">
+                <!-- Referrals will be loaded dynamically from data/referrals.json -->
+                <div class="loading-state">
+                    <i class="fa-solid fa-spinner fa-spin"></i><br>Loading referrals...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=20250104001"></script>
+    <script>
+        // Load and render referrals from JSON
+        async function loadReferrals() {
+            const referralsGrid = document.getElementById('referrals-grid');
+
+            try {
+                const response = await fetch('data/referrals.json');
+                if (!response.ok) throw new Error('Failed to load referrals');
+
+                const referrals = await response.json();
+
+                // Clear loading state
+                referralsGrid.innerHTML = '';
+
+                // Render each referral
+                referrals.forEach(referral => {
+                    const referralCard = document.createElement('div');
+                    referralCard.className = 'referral-card';
+
+                    referralCard.innerHTML = `
+                        <img src="${referral.logo}" alt="${referral.name}" class="referral-logo">
+                        <h3>${referral.name}</h3>
+                        <p class="referral-description">${referral.description}</p>
+                        <div class="referral-offer">
+                            <strong>Offer:</strong> ${referral.offer}
+                        </div>
+                        <a href="${referral.link}" class="referral-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-external-link-alt"></i> Get Started
+                        </a>
+                    `;
+
+                    referralsGrid.appendChild(referralCard);
+                });
+
+            } catch (error) {
+                console.error('Error loading referrals:', error);
+                referralsGrid.innerHTML = '<p style="text-align: center; color: var(--text-color); opacity: 0.6;">Failed to load referrals. Please try again later.</p>';
+            }
+        }
+
+        // Load referrals when page loads
+        document.addEventListener('DOMContentLoaded', loadReferrals);
+    </script>
+</body>
+</html>
