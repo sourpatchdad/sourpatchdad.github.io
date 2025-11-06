@@ -595,7 +595,7 @@
 
                 <!-- Dashboard 8: Tesla -->
                 <section class="specs-section">
-                    <h2><img src="../images/images/tesla.svg" alt="" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;"> Dashboard 8: Tesla Vehicle Control</h2>
+                    <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Dashboard 8: Tesla Vehicle Control</h2>
                     <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
 
                     <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
@@ -645,7 +645,7 @@
                             <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
                         </div>
                         <div class="feature-card">
-                            <img src="../images/images/tesla.svg" alt="" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
+                            <i class="fas fa-car" style="color: #e91e63;"></i>
                             <h3>Tesla Integration</h3>
                             <p>Battery monitoring, climate control, tire pressure, sentry mode, lock control</p>
                         </div>
@@ -792,19 +792,19 @@
                     <h3>Solved Challenges</h3>
                     <ul class="use-cases">
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong>
-                            <br>myQ Smart Garage Door doesn't integrate with anything (very stingy with API).
-                            <br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).
+                            <div><i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong></div>
+                            <div style="margin-top: 8px; margin-left: 24px;">myQ Smart Garage Door doesn't integrate with anything (very stingy with API).</div>
+                            <div style="margin-top: 8px; margin-left: 24px;"><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong>
-                            <br>Initial Google Cloud project broke when transitioning to HA Green.
-                            <br><strong>SOLVED:</strong> Rebuilt integration properly for live feeds.
+                            <div><i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong></div>
+                            <div style="margin-top: 8px; margin-left: 24px;">Initial Google Cloud project broke when transitioning to HA Green.</div>
+                            <div style="margin-top: 8px; margin-left: 24px;"><strong>SOLVED:</strong> Rebuilt integration properly for live feeds.</div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong>
-                            <br>Figuring out proper YAML build to trigger green when stock price > previous day and red when below.
-                            <br><strong>SOLVED:</strong> Using mini-graph-card transition points.
+                            <div><i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong></div>
+                            <div style="margin-top: 8px; margin-left: 24px;">Figuring out proper YAML build to trigger green when stock price > previous day and red when below.</div>
+                            <div style="margin-top: 8px; margin-left: 24px;"><strong>SOLVED:</strong> Using mini-graph-card transition points.</div>
                         </li>
                     </ul>
 
