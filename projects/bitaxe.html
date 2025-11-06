@@ -40,78 +40,60 @@
                 <!-- Overview -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
-                    <p>Running a BitAxe solo Bitcoin miner as both an educational project and a tiny lottery ticket. While the odds of finding a block are astronomical, it's a hands-on way to learn about Bitcoin mining, proof-of-work, and network difficulty.</p>
+                    <p>Running a BitAxe Gamma solo Bitcoin miner as both an educational project and a tiny lottery ticket. While the odds of finding a block are astronomical, it's a hands-on way to learn about Bitcoin mining, proof-of-work, and network difficulty.</p>
 
-                    <p>The BitAxe is integrated into Home Assistant for real-time monitoring of hashrate, temperature, power consumption, and uptime. It's fascinating to watch it contribute to the Bitcoin network, even if the financial return is... well, let's call it "optimistic."</p>
+                    <p>The BitAxe contributes to the Bitcoin network, providing real-world experience with mining operations. It's fascinating to watch it contribute hashes to the global network in real-time.</p>
                 </section>
 
                 <!-- Hardware Specs -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hardware Specifications</h2>
                     <ul class="specs-list">
-                        <li><strong>Model:</strong> BitAxe [Add your model here - e.g., BitAxe Ultra, BitAxe Supra, etc.]</li>
-                        <li><strong>Hashrate:</strong> [Add hashrate - e.g., 500 GH/s]</li>
-                        <li><strong>Power Consumption:</strong> [Add wattage - e.g., 15W]</li>
-                        <li><strong>Chip:</strong> [Add chip info - e.g., BM1397 ASIC]</li>
-                        <li><strong>Cooling:</strong> [Add cooling info - passive heatsink, fan, etc.]</li>
-                        <li><strong>Connectivity:</strong> Wi-Fi / Ethernet</li>
+                        <li><strong>Model:</strong> BitAxe Gamma</li>
+                        <li><strong>Hashrate:</strong> 978 GH/s (Average: 981 GH/s)</li>
+                        <li><strong>Expected Hashrate:</strong> 1.12 TH/s</li>
+                        <li><strong>Power Consumption:</strong> 20W</li>
+                        <li><strong>Input Voltage:</strong> 5.1V (5V nominal)</li>
+                        <li><strong>Efficiency:</strong> 20.45 J/TH (Average: 20.42 J/TH)</li>
+                        <li><strong>ASIC Frequency:</strong> 550 MHz</li>
+                        <li><strong>ASIC Voltage:</strong> 1.15V (measured)</li>
+                        <li><strong>ASIC Temperature:</strong> 59.9°C</li>
+                        <li><strong>VR Temperature:</strong> 69°C</li>
+                        <li><strong>Fan Speed:</strong> 38% (4,358 RPM)</li>
                     </ul>
-                </section>
-
-                <!-- Home Assistant Integration -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-house-signal" aria-hidden="true"></i> Home Assistant Integration</h2>
-                    <p><strong>Monitoring:</strong> The BitAxe is integrated into Home Assistant for real-time monitoring. Sensors track hashrate, accepted shares, temperature, uptime, and power consumption.</p>
-
-                    <p><strong>Notifications:</strong> [Add info about any automations - e.g., "Automated alerts if temperature exceeds threshold or hashrate drops significantly."]</p>
-
-                    <p><strong>Dashboard:</strong> Custom HA dashboard displays mining stats alongside other home metrics, making it easy to keep an eye on performance at a glance.</p>
                 </section>
 
                 <!-- Mining Stats -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Mining Statistics</h2>
-                    <p><em>[Add your actual mining stats here]</em></p>
                     <ul class="specs-list">
-                        <li><strong>Pool:</strong> Solo mining / [Add pool name if using one]</li>
-                        <li><strong>Uptime:</strong> [Add uptime stats]</li>
-                        <li><strong>Best Share:</strong> [Add your best share difficulty]</li>
-                        <li><strong>Daily Power Cost:</strong> [Calculate based on your local electricity rate]</li>
-                        <li><strong>Estimated Time to Block:</strong> Several thousand years (but who's counting?)</li>
+                        <li><strong>Pool:</strong> public-pool.io (Port 21496)</li>
+                        <li><strong>Total Shares:</strong> 17,562</li>
+                        <li><strong>Job Not Found:</strong> 21 (0.12%)</li>
+                        <li><strong>Difficulty Too Low:</strong> 6 (0.03%)</li>
+                        <li><strong>Best Share (All-Time):</strong> 27.7G</li>
+                        <li><strong>Best Share (Current Boot):</strong> 354M</li>
+                        <li><strong>Uptime:</strong> 3 weeks, 4 days, 11 hours, 20 minutes</li>
                     </ul>
                 </section>
 
                 <!-- The Philosophy -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Why Run a BitAxe?</h2>
-                    <p><strong>Education First:</strong> Running a BitAxe isn't about profitability—it's about understanding how Bitcoin mining actually works. It's one thing to read about proof-of-work and network difficulty; it's another to watch your miner contribute hashes to the global network in real-time.</p>
+                    <p>Running a BitAxe is about contributing to the Bitcoin network's security and decentralization. Every hash helps secure the blockchain and strengthens the overall network.</p>
 
-                    <p><strong>The Lottery Ticket:</strong> Sure, the odds of solo mining a block are astronomically low. But someone has to win the lottery, right? It's a fun "what if" scenario, and the BitAxe makes it actually possible (however unlikely).</p>
+                    <p>It's also an educational tool—hands-on experience with proof-of-work mining provides real understanding of how Bitcoin actually works, beyond just theory.</p>
 
-                    <p><strong>Supporting the Network:</strong> Every hash contributes to Bitcoin's decentralization and security. Even a tiny miner like the BitAxe helps strengthen the network.</p>
-
-                    <p><strong>Conversation Starter:</strong> It's a physical, tangible way to engage with Bitcoin beyond just holding it. When people ask "what's that orange box doing?" you get to explain Bitcoin mining.</p>
-                </section>
-
-                <!-- Lessons Learned -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Lessons Learned</h2>
-                    <ul class="specs-list">
-                        <li><strong>Network Difficulty is Real:</strong> Watching the difficulty adjust every ~2 weeks gives you deep respect for industrial-scale mining operations.</li>
-                        <li><strong>Heat Management:</strong> Even small miners generate heat. Proper placement and cooling matter.</li>
-                        <li><strong>Power Awareness:</strong> Monitoring power consumption makes you think about energy efficiency in mining.</li>
-                        <li><strong>Patience:</strong> Solo mining requires accepting that you're playing an incredibly long-odds game—but that's part of the fun.</li>
-                    </ul>
+                    <p>Plus, there's the lottery aspect: while the odds are extremely low, solo mining means there's always a chance of finding a block.</p>
                 </section>
 
                 <!-- Future Plans -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-road" aria-hidden="true"></i> Future Plans</h2>
                     <ul class="specs-list">
-                        <li>Expand Home Assistant integration with more detailed analytics and historical tracking</li>
-                        <li>Experiment with overclocking (carefully) to squeeze out more hashrate</li>
-                        <li>Consider adding a second BitAxe to double my lottery tickets</li>
-                        <li>Track long-term stats: total hashes, best shares, cumulative uptime</li>
+                        <li>Consider adding a second or third BitAxe to increase hashrate</li>
+                        <li>Point the miner to my own Bitcoin node running on TrueNAS SCALE server</li>
+                        <li>Track long-term statistics: total hashes, best shares, cumulative uptime</li>
                     </ul>
                 </section>
 
