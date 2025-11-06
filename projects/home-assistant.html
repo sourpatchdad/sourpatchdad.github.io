@@ -595,12 +595,12 @@
 
                 <!-- Dashboard 8: Tesla -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-car-battery" aria-hidden="true"></i> Dashboard 8: Tesla Vehicle Control</h2>
-                    <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire recently.</p>
+                    <h2><img src="../images/images/tesla.svg" class="custom-icon" style="width: 48px; height: 48px;"> Dashboard 8: Tesla Vehicle Control</h2>
+                    <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
 
-                    <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car was last turned off, not real-time. Winter tires (45 PSI) can read ~50 PSI after a hot commute, while summer tires use 42 PSI.</p>
+                    <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
 
-                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds 110°F and exterior exceeds 95°F.</p>
+                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x°F and exterior exceeds x°F.</p>
 
                     <div class="device-showcase">
                         
@@ -632,7 +632,7 @@
                         <div class="feature-card">
                             <i class="fas fa-home" style="color: #03a9f4;"></i>
                             <h3>Smart Home Control</h3>
-                            <p>18+ smart switches, climate control, garage door, cameras, and thermostats</p>
+                            <p>18+ smart switches, climate control, garage door, cameras, and thermostat</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-dollar-sign" style="color: #4caf50;"></i>
@@ -641,18 +641,18 @@
                         </div>
                         <div class="feature-card">
                             <i class="fab fa-bitcoin" style="color: #f7931a;"></i>
-                            <h3>Crypto & Stocks</h3>
+                            <h3>Bitcoin & Stocks</h3>
                             <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-car" style="color: #e91e63;"></i>
+                            <img src="../images/images/tesla.svg" alt="" class="custom-icon" style="width: 48px; height: 48px; color: #E31937;">
                             <h3>Tesla Integration</h3>
                             <p>Battery monitoring, climate control, tire pressure, sentry mode, lock control</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-video" style="color: #9c27b0;"></i>
                             <h3>Security System</h3>
-                            <p>4 Nest cameras (Front, Doorbell, Garage, Office) with motion detection</p>
+                            <p>Four cameras (Front, Doorbell, Garage, Office) with motion detection</p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-robot" style="color: #ff9800;"></i>
@@ -682,7 +682,7 @@
                         </li>
                         <li>
                             <i class="fas fa-moon"></i>
-                            <strong>Midnight Routine:</strong> Turns off 17 lights at 2 AM, locks doors via Google Assistant
+                            <strong>Midnight Routine:</strong> Turns off 17 lights at 12 AM, locks doors via Google Assistant
                         </li>
                         <li>
                             <i class="fas fa-sun"></i>
@@ -792,8 +792,8 @@
                     <h3>Solved Challenges</h3>
                     <ul class="use-cases">
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> myQ Smart Garage Door doesn't integrate with anything (very stingy with API).
-                            <br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).
+                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> <li>myQ Smart Garage Door doesn't integrate with anything (very stingy with API).</li>
+                            <li><br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</li>
                         </li>
                         <li>
                             <i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong> Initial Google Cloud project broke when transitioning to HA Green.
