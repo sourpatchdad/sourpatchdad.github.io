@@ -5,16 +5,38 @@
     "offer": "Earn $3",
     "link": "https://join.honeygain.com/NATHA134A4"
   }
-  {
-    "name": "River Financial",
-    "logo": "images/referrals/river.png",
-    "offer": "Earn up to $100 in Bitcoin",
-    "link": "https://river.com/invite?r=SND6I5WG"
+{
+    "name": "Monarch Money",
+    "logo": "images/referrals/monarch.png",
+    "offer": "Get 50% Off First Year",
+    "link": "https://monarch.com/referral/mjtzlh80r7?r_source=copy"
   }
   {
     "name": "Ownwell",
     "logo": "images/referrals/ownwell.png",
     "offer": "Get $20 Credit",
     "link": "https://www.ownwell.com/referral?owl=4C73FZ898"
+  }  
+  {
+    "name": "River Financial",
+    "logo": "images/referrals/river.png",
+    "offer": "Earn up to $100 in Bitcoin",
+    "link": "https://river.com/invite?r=SND6I5WG"
+  }
+{
+    "name": "Tessie",
+    "logo": "images/referrals/tessie.png",
+    "link": "https://share.tessie.com/bMs0HDsEPHb"
+  }
+  {
+    "name": "Trakt",
+    "logo": "images/referrals/trakt-tv.png",
+    "offer": "1 Free Month of VIP",
+    "link": "https://trakt.tv/vip/referral/4f742d4d643b63eaa9f843efd057844c"
+  }
+{
+    "name": "US Mobile",
+    "logo": "images/referrals/us-mobile.png",
+    "link": "https://www.usmobile.com/referrals?referrer=615AD8EF&name=Nathan&utm_campaign=monster_referral"
   }
 ]
