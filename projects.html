@@ -94,8 +94,15 @@
 
                     linksHTML += '</div>';
 
+                    // Build header image HTML
+                    let headerImageHTML = '';
+                    if (project.headerImage) {
+                        headerImageHTML = `<img src="${project.headerImage}" alt="${project.title}" class="project-header-image">`;
+                    }
+
                     // Build project card HTML
                     projectCard.innerHTML = `
+                        ${headerImageHTML}
                         <h3>${project.title}</h3>
                         <p>${project.shortDescription}</p>
                         ${linksHTML}
