@@ -330,7 +330,7 @@
     <section class="page-content">
         <div class="container">
             <div class="server-header">
-                <img src="../images/images/home assistant.svg" alt="" class="custom-icon" style="width: 48px; height: 48px; color: #03a9f4;">
+                <img src="../images/images/home assistant.svg" alt="Home Assistant" style="width: 48px; height: 48px;">
                 <h1 style="color: #333;">Home Assistant Smart Home</h1>
             </div>
 
@@ -595,10 +595,7 @@
 
                 <!-- Dashboard 8: Tesla -->
                 <section class="specs-section">
-                   
-                    <h2><svg class="custom-icon" style="width: 48px; height: 48px; fill: #03a9f4;" viewBox="0 0 24 24">
-    <path d="../images/images/tesla.svg"/>
-</svg> Dashboard 8: Tesla Vehicle Control</h2>
+                    <h2><img src="../images/images/tesla.svg" alt="" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;"> Dashboard 8: Tesla Vehicle Control</h2>
                     <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
 
                     <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
@@ -648,9 +645,7 @@
                             <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
                         </div>
                         <div class="feature-card">
-                            <svg class="custom-icon" style="width: 48px; height: 48px; fill: #E31937;" viewBox="0 0 24 24">
-    <path d="../images/images/tesla.svg"/>
-</svg>
+                            <img src="../images/images/tesla.svg" alt="" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
                             <h3>Tesla Integration</h3>
                             <p>Battery monitoring, climate control, tire pressure, sentry mode, lock control</p>
                         </div>
@@ -797,15 +792,18 @@
                     <h3>Solved Challenges</h3>
                     <ul class="use-cases">
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong> <li>myQ Smart Garage Door doesn't integrate with anything (very stingy with API).</li>
-                            <li><br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).</li>
+                            <i class="fa-solid fa-check-circle"></i> <strong>Garage Door Controller:</strong>
+                            <br>myQ Smart Garage Door doesn't integrate with anything (very stingy with API).
+                            <br><strong>SOLVED:</strong> Purchased Meross MSG100 garage controller with proper HA integration and state icons (closed, open, opening, closing).
                         </li>
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong> Initial Google Cloud project broke when transitioning to HA Green.
+                            <i class="fa-solid fa-check-circle"></i> <strong>Google Nest Cameras:</strong>
+                            <br>Initial Google Cloud project broke when transitioning to HA Green.
                             <br><strong>SOLVED:</strong> Rebuilt integration properly for live feeds.
                         </li>
                         <li>
-                            <i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong> Figuring out proper YAML build to trigger green when stock price > previous day and red when below.
+                            <i class="fa-solid fa-check-circle"></i> <strong>Stock Chart Color Coding:</strong>
+                            <br>Figuring out proper YAML build to trigger green when stock price > previous day and red when below.
                             <br><strong>SOLVED:</strong> Using mini-graph-card transition points.
                         </li>
                     </ul>
