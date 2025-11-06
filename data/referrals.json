@@ -1,42 +1,51 @@
 [
   {
     "name": "Honeygain",
-    "logo": "images/referrals/honeygain.avif",
+    "logo": "images/referrals/Honeygain.avif",
+    "description": "Earn passive income by sharing your unused internet bandwidth.",
     "offer": "Earn $3",
     "link": "https://join.honeygain.com/NATHA134A4"
-  }
-{
+  },
+  {
     "name": "Monarch Money",
     "logo": "images/referrals/monarch.png",
+    "description": "Personal finance app for tracking spending, budgets, and net worth.",
     "offer": "Get 50% Off First Year",
     "link": "https://monarch.com/referral/mjtzlh80r7?r_source=copy"
-  }
+  },
   {
     "name": "Ownwell",
     "logo": "images/referrals/ownwell.png",
+    "description": "Property tax reduction service that finds savings on your home taxes.",
     "offer": "Get $20 Credit",
     "link": "https://www.ownwell.com/referral?owl=4C73FZ898"
-  }  
+  },
   {
     "name": "River Financial",
     "logo": "images/referrals/river.png",
+    "description": "Bitcoin-only financial services with zero-fee buying.",
     "offer": "Earn up to $100 in Bitcoin",
     "link": "https://river.com/invite?r=SND6I5WG"
-  }
-{
+  },
+  {
     "name": "Tessie",
     "logo": "images/referrals/tessie.png",
+    "description": "Premium app for Tesla owners with advanced features and controls.",
+    "offer": "Try Tessie Premium",
     "link": "https://share.tessie.com/bMs0HDsEPHb"
-  }
+  },
   {
     "name": "Trakt",
     "logo": "images/referrals/trakt-tv.png",
+    "description": "Track what you watch and discover new shows and movies.",
     "offer": "1 Free Month of VIP",
     "link": "https://trakt.tv/vip/referral/4f742d4d643b63eaa9f843efd057844c"
-  }
-{
+  },
+  {
     "name": "US Mobile",
     "logo": "images/referrals/us-mobile.png",
+    "description": "Affordable wireless service with customizable plans.",
+    "offer": "Get service credit",
     "link": "https://www.usmobile.com/referrals?referrer=615AD8EF&name=Nathan&utm_campaign=monster_referral"
   }
 ]
