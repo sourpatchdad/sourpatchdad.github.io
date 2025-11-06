@@ -649,9 +649,9 @@
         }
 
         // Update chart colors when theme changes
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', function() {
+        const btcThemeToggle = document.getElementById('theme-toggle');
+        if (btcThemeToggle) {
+            btcThemeToggle.addEventListener('click', function() {
                 // Wait for theme to update, then re-render chart
                 setTimeout(() => {
                     if (btcChart) {
