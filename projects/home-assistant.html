@@ -55,16 +55,29 @@
 
         /* Desktop frame */
         .device-frame.desktop {
-            background: url('../images/frames/macbook.png') no-repeat center center;
-            background-size: contain;
-            padding: 6% 17% 10% 17%;
             position: relative;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         .device-frame.desktop .device-screen {
             overflow: hidden;
             position: relative;
-            border-radius: 2px;
+            border-radius: 8px;
+            aspect-ratio: 16 / 10; /* MacBook typical aspect ratio */
+        }
+
+        .device-frame.desktop::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/frames/macbook.png') no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* iPad frame */
@@ -99,23 +112,36 @@
 
         /* iPhone frame */
         .device-frame.iphone {
-            background: url('../images/frames/iphone.png') no-repeat center center;
-            background-size: contain;
-            padding: 11% 4% 11% 4%;
+            position: relative;
             max-width: 375px;
             margin: 0 auto;
-            position: relative;
         }
 
         .device-frame.iphone .device-screen {
             overflow: hidden;
             position: relative;
-            border-radius: 28px;
+            border-radius: 40px;
+            aspect-ratio: 9 / 19.5; /* iPhone typical aspect ratio */
+        }
+
+        .device-frame.iphone::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/frames/iphone.png') no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .device-screen img {
             width: 100%;
+            height: 100%;
             display: block;
+            object-fit: cover;
         }
 
         /* Device labels */
