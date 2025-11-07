@@ -802,9 +802,23 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-top: 2rem;
-    max-width: 900px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Desktop view - 5 albums in one row */
+@media (min-width: 1200px) {
+    .music-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Tablet view - 3-4 albums per row */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .music-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
 }
 
 .album-item {
