@@ -1,5 +1,36 @@
 [
   {
+    "id": 11602182882,
+    "watched_at": "2025-11-08T04:52:31.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 6,
+      "title": "No Phones",
+      "ids": {
+        "trakt": 13596458,
+        "tvdb": 11391211,
+        "imdb": "tt38090233",
+        "tmdb": 6582613,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Abbott Elementary",
+      "year": 2021,
+      "ids": {
+        "trakt": 180675,
+        "slug": "abbott-elementary",
+        "tvdb": 402910,
+        "imdb": "tt14218830",
+        "tmdb": 125935,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg"
+  },
+  {
     "id": 11594146868,
     "watched_at": "2025-11-06T06:09:21.000Z",
     "action": "watch",
@@ -283,22 +314,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg"
-  },
-  {
-    "id": 11521552502,
-    "watched_at": "2025-10-31T02:20:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Twilight Saga: New Moon",
-      "year": 2009,
-      "ids": {
-        "trakt": 11164,
-        "slug": "the-twilight-saga-new-moon-2009",
-        "imdb": "tt1259571",
-        "tmdb": 18239
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/k2qTooPlHffgNABNWxeJdGMglPK.jpg"
   }
 ]
