@@ -105,11 +105,11 @@ nav .container {
 
 /* Theme-aware logo switching */
 [data-theme="light"] .logo-img {
-    content: url('images/NN-light.svg');
+    content: url('images/branding/NN-light.svg');
 }
 
 [data-theme="dark"] .logo-img {
-    content: url('images/NN-dark.svg');
+    content: url('images/branding/NN-dark.svg');
 }
 
 .logo-img:hover {
@@ -202,11 +202,11 @@ nav .container {
 
 /* Theme-aware hero logo switching */
 [data-theme="light"] .hero-logo {
-    content: url('images/NN-light.svg');
+    content: url('images/branding/NN-light.svg');
 }
 
 [data-theme="dark"] .hero-logo {
-    content: url('images/NN-dark.svg');
+    content: url('images/branding/NN-dark.svg');
 }
 
 .hero-logo:hover {
