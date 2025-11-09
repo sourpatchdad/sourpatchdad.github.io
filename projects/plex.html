@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plex Media Server - Nathan Nicholas</title>
+    <link rel="icon" type="image/svg+xml" href="../images/branding/NN-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="../images/branding/NN-dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z268T69R9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8Z268T69R9');
+    </script>
+
+    <style>
+        .pending-notice {
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #e5a00d;
+            text-align: center;
+        }
+
+        .pending-notice i {
+            font-size: 3em;
+            color: #e5a00d;
+            margin-bottom: 20px;
+        }
+
+        .pending-notice h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .pending-notice p {
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/branding/NN-light.svg" alt="Nathan Nicholas" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../index.html#recently-watched">Media</a>
+                <a href="../referrals.html">Referrals</a>
+                <a href="../uses.html">Uses</a>
+                <a href="../index.html#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <main>
+    <section class="page-content">
+        <div class="container">
+            <div class="server-header">
+                <i class="fa-solid fa-film server-icon" aria-hidden="true" style="color: #e5a00d;"></i>
+                <h1>Plex Media Server</h1>
+                <div class="project-meta" style="margin-top: 16px;">
+                    <span class="badge" style="background: #e5a00d;">Pending Details</span>
+                </div>
+            </div>
+
+            <div class="specs-container">
+                <!-- Pending Notice -->
+                <section class="pending-notice">
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                    <h2>Coming Soon</h2>
+                    <p>Full project details, screenshots, and integration architecture are being prepared.</p>
+                    <p style="margin-top: 15px;">Check back soon for the complete Plex + *arr suite integration story!</p>
+                </section>
+
+                <!-- Overview -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
+                    <p>Self-hosted 4K media streaming solution running on TrueNAS server. Fully automated media management pipeline using Sonarr, Radarr, Prowlarr, and Transmission, with Trakt integration for watch history tracking and automated syncing to the homepage.</p>
+                </section>
+
+                <!-- Key Components (Placeholder) -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Key Components</h2>
+                    <ul class="specs-list">
+                        <li><strong>Plex Media Server:</strong> 4K streaming with hardware transcoding</li>
+                        <li><strong>Sonarr:</strong> Automated TV show management and monitoring</li>
+                        <li><strong>Radarr:</strong> Automated movie management and monitoring</li>
+                        <li><strong>Prowlarr:</strong> Unified indexer management for Sonarr and Radarr</li>
+                        <li><strong>Transmission:</strong> Download client with VPN protection</li>
+                        <li><strong>Trakt:</strong> Watch history tracking and homepage integration via GitHub Actions</li>
+                    </ul>
+                </section>
+
+                <!-- What to Expect -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-road" aria-hidden="true"></i> What to Expect</h2>
+                    <p>The full project page will include:</p>
+                    <ul class="specs-list">
+                        <li>Detailed architecture diagram showing how all services interact</li>
+                        <li>TrueNAS configuration and jail/container setup</li>
+                        <li>Screenshots of Plex, Sonarr, Radarr, Prowlarr, and Transmission dashboards</li>
+                        <li>Automation workflows and quality profiles</li>
+                        <li>Trakt integration details and GitHub Actions workflow</li>
+                        <li>Storage management strategy and backup approach</li>
+                        <li>Future enhancement plans (potential migration to Jellyfin, additional quality tiers)</li>
+                    </ul>
+                </section>
+
+                <!-- Back Button -->
+                <div class="back-button-container">
+                    <a href="../projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=20250104001"></script>
+</body>
+</html>
