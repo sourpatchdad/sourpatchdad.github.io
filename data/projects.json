@@ -6,7 +6,7 @@
     "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
     "date": "2025",
     "detailPage": "projects/plex.html",
-    "headerImage": "images/custom-icons/plex.png",
+    "headerImage": "images/custom-icons/plex.jpg",
     "icon": "fa-solid fa-film",
     "iconType": "media",
     "externalLink": null
