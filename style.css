@@ -851,7 +851,7 @@ h2 {
 }
 
 .album-name {
-    font-size: 0.9rem;
+    font-size: 0.65rem;
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 5px;
@@ -862,13 +862,13 @@ h2 {
 }
 
 .album-artist {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: var(--secondary-color);
     margin-bottom: 5px;
 }
 
 .album-year {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
     color: var(--disabled-color);
     font-style: italic;
 }
