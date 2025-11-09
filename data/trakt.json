@@ -1,5 +1,36 @@
 [
   {
+    "id": 11609195511,
+    "watched_at": "2025-11-09T23:02:48.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 2025,
+      "number": 111,
+      "title": "Formula 1 MSC Cruises Grande Prêmio De São Paulo 2025 - Race",
+      "ids": {
+        "trakt": 12840517,
+        "tvdb": 10974810,
+        "imdb": null,
+        "tmdb": null,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Formula 1",
+      "year": 1950,
+      "ids": {
+        "trakt": 165874,
+        "slug": "formula-1",
+        "tvdb": 387219,
+        "imdb": "tt6758316",
+        "tmdb": 300959,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9jVWo6S6hQM1TYjE89eJbrcwshb.jpg"
+  },
+  {
     "id": 11602182882,
     "watched_at": "2025-11-08T04:52:31.000Z",
     "action": "watch",
@@ -283,36 +314,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg"
-  },
-  {
-    "id": 11565621054,
-    "watched_at": "2025-11-02T05:01:06.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 28,
-      "number": 2,
-      "title": "The Woman in the Hat",
-      "ids": {
-        "trakt": 13352066,
-        "tvdb": 11256176,
-        "imdb": "tt38043390",
-        "tmdb": 6606754,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "South Park",
-      "year": 1997,
-      "ids": {
-        "trakt": 2177,
-        "slug": "south-park",
-        "tvdb": 75897,
-        "imdb": "tt0121955",
-        "tmdb": 2190,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg"
   }
 ]
