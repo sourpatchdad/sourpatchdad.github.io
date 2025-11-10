@@ -1,29 +1,5 @@
 [
   {
-    "id": "plex",
-    "title": "Plex Media Server",
-    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission. Integrated with Trakt for watch history tracking and homepage display via GitHub Actions.",
-    "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
-    "date": "2025",
-    "detailPage": "projects/plex.html",
-    "headerImage": "images/custom-icons/plex.jpg",
-    "icon": "fa-solid fa-film",
-    "iconType": "media",
-    "externalLink": null
-  },
-  {
-    "id": "tessie",
-    "title": "Tessie Integration",
-    "shortDescription": "Advanced Tesla control and monitoring integrated with Home Assistant. Remote climate control, charging management, location tracking, and smart automations based on vehicle state.",
-    "tags": ["Tesla", "Tessie", "Home Assistant", "Vehicle Integration", "Smart Automations"],
-    "date": "2025",
-    "detailPage": "projects/tessie.html",
-    "headerImage": "images/custom-icons/tessie.png",
-    "icon": "fa-solid fa-car",
-    "iconType": "vehicle",
-    "externalLink": null
-  },
-  {
     "id": "truenas-migration",
     "title": "TrueNAS Migration",
     "shortDescription": "Migrating from underpowered Synology DS124 to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives for 4K Plex transcoding and more.",
@@ -60,6 +36,18 @@
     "externalLink": null
   },
   {
+    "id": "plex",
+    "title": "Plex Media Server",
+    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission. Integrated with Trakt for watch history tracking and homepage display via GitHub Actions.",
+    "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
+    "date": "2024",
+    "detailPage": "projects/plex.html",
+    "headerImage": "images/custom-icons/plex.png",
+    "icon": "fa-solid fa-film",
+    "iconType": "media",
+    "externalLink": null
+  },
+  {
     "id": "home-assistant",
     "title": "Home Assistant",
     "shortDescription": "Self-hosting journey from zero coding experience to custom dashboards consolidating financial tracking, plant care, Tesla control, and security cameras. Replaced Notion, Google Nest, and multiple apps with one unified system.",
@@ -69,6 +57,18 @@
     "headerImage": "images/custom-icons/home-assistant.svg",
     "icon": "fa-solid fa-house-signal",
     "iconType": "home-automation",
+    "externalLink": null
+  },
+  {
+    "id": "tessie",
+    "title": "Tessie Integration",
+    "shortDescription": "Advanced Tesla control and monitoring integrated with Home Assistant. Remote climate control, charging management, location tracking, and smart automations based on vehicle state.",
+    "tags": ["Tesla", "Tessie", "Home Assistant", "Vehicle Integration", "Smart Automations"],
+    "date": "2023",
+    "detailPage": "projects/tessie.html",
+    "headerImage": "images/custom-icons/tessie.png",
+    "icon": "fa-solid fa-car",
+    "iconType": "vehicle",
     "externalLink": null
   }
 ]
