@@ -38,7 +38,7 @@
   {
     "id": "plex",
     "title": "Plex Media Server",
-    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission. Integrated with Trakt for watch history tracking and homepage display via GitHub Actions.",
+    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission.",
     "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
     "date": "2024",
     "detailPage": "projects/plex.html",
