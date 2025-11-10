@@ -322,12 +322,7 @@ function displayMusicItems(albums) {
                      alt="${album.album} by ${album.artist}"
                      class="album-artwork"
                      onerror="this.onerror=null; let paths=['${fallbackPaths}'].filter(p => p !== this.src); if(paths.length > 0) this.src = paths[0];">
-                <div class="album-info">
-                    <div class="album-name">${album.album}</div>
-                    <div class="album-artist">${album.artist}</div>
-                    <div class="album-year">${album.year}</div>
-                    ${musicLinks}
-                </div>
+                ${musicLinks}
             </div>
         `;
     }).join('');
