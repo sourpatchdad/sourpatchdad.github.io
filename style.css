@@ -792,6 +792,65 @@ h2 {
     font-style: italic;
 }
 
+/* Trakt Ratings */
+.trakt-ratings {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+}
+
+.rating-badge.imdb {
+    background: #f5c518;
+    color: #000;
+    border-color: #f5c518;
+}
+
+.rating-badge.rotten-tomatoes {
+    background: #fa320a;
+    color: #fff;
+    border-color: #fa320a;
+}
+
+.rating-badge.metacritic.high {
+    background: #66cc33;
+    color: #fff;
+    border-color: #66cc33;
+}
+
+.rating-badge.metacritic.mid {
+    background: #ffcc33;
+    color: #000;
+    border-color: #ffcc33;
+}
+
+.rating-badge.metacritic.low {
+    background: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+}
+
+.rating-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.rating-value {
+    font-weight: 700;
+}
+
 /* Currently Listening To Section */
 .currently-listening {
     background-color: var(--white);
