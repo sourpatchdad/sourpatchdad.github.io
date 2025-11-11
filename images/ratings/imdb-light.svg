@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 126" width="237" height="126">
+	<defs>
+		<image  width="237" height="126" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO0AAAB+AgMAAAC10X7xAAAAAXNSR0IB2cksfwAAAAlQTFRF5rke////AAAAxLJRDwAAAAN0Uk5T/wD/aewfvgAAATRJREFUeJzt2DsOgkAQANAh0d5C7sMRKOCUYAKFvRYcwVOshf2arOwv/pDFmYgoMwWSZR8wmMDMRkCIiPFccJygZMGYMWPG08HLVA/YfbFzvwd7Xlm1EzNzYAjO4RZrhMftzMFYVo9Y7AhYVgSsSgKGgoLFfhxcZ3isNk/Ynu+XcJH/Cq5TPIbqDutBj3ONkLgdUCUSH9dWofBpdU38bWxCvw7fw/7fA/BJ47BL+iU2uWGxi3/BskkIeJvODovm81hFOHxeMJ4DlktwG8ZfwDeVQRg3CRGLeFo4/PZ8xGVGwCbGwXqGSfQZB7+SPRg8GxHbHoOOe+uwTmybMjruLR+7sOslB+D2waryHrsWOFz1dmHffMcQKNY7cOHWDPRxd9eY1YrcX3gi6ySMGTP+B4wPxvPAFx3aFqw8yhSBAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="img1" href="#img1" x="0" y="0"/>
+</svg>
