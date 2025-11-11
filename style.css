@@ -798,6 +798,7 @@ h2 {
     gap: 8px;
     flex-wrap: wrap;
     margin: 8px 0;
+    justify-content: center;
 }
 
 .rating-badge {
@@ -817,13 +818,13 @@ h2 {
     color: #000;
 }
 
-/* Make IMDb text black in light mode, white in dark mode */
-[data-theme="light"] .rating-badge.imdb svg text {
-    fill: #000 !important;
+/* Theme-aware text color for rating values */
+[data-theme="light"] .rating-value {
+    color: #000;
 }
 
-[data-theme="dark"] .rating-badge.imdb svg text {
-    fill: #fff !important;
+[data-theme="dark"] .rating-value {
+    color: #fff;
 }
 
 .rating-badge.rotten-tomatoes {
@@ -835,12 +836,22 @@ h2 {
     line-height: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .rating-logo {
-    height: 16px;
+    height: 18px;
     width: auto;
     display: block;
+}
+
+/* Make IMDb logo text visible in both themes */
+[data-theme="light"] .rating-badge.imdb .rating-logo {
+    filter: brightness(0);
+}
+
+[data-theme="dark"] .rating-badge.imdb .rating-logo {
+    filter: none;
 }
 
 .rating-value {
