@@ -170,7 +170,7 @@ function generateRatingsHTML(ratings) {
     if (ratings.imdb) {
         ratingBadges.push(`
             <span class="rating-badge imdb">
-                <span class="rating-icon">⭐</span>
+                <span class="rating-icon"><img src="images/ratings/imdb.svg" alt="IMDb" class="rating-logo"></span>
                 <span class="rating-value">${ratings.imdb}</span>
             </span>
         `);
@@ -179,10 +179,11 @@ function generateRatingsHTML(ratings) {
     // Rotten Tomatoes rating
     if (ratings.rottenTomatoes) {
         const rtValue = parseInt(ratings.rottenTomatoes);
-        const rtIcon = rtValue >= 60 ? '🍅' : '🤢';
+        const rtLogo = rtValue >= 60 ? 'rt-fresh.svg' : 'rt-rotten.svg';
+        const rtAlt = rtValue >= 60 ? 'Fresh' : 'Rotten';
         ratingBadges.push(`
             <span class="rating-badge rotten-tomatoes">
-                <span class="rating-icon">${rtIcon}</span>
+                <span class="rating-icon"><img src="images/ratings/${rtLogo}" alt="${rtAlt}" class="rating-logo"></span>
                 <span class="rating-value">${ratings.rottenTomatoes}</span>
             </span>
         `);
@@ -194,7 +195,7 @@ function generateRatingsHTML(ratings) {
         const mcClass = mcValue >= 75 ? 'high' : mcValue >= 50 ? 'mid' : 'low';
         ratingBadges.push(`
             <span class="rating-badge metacritic ${mcClass}">
-                <span class="rating-icon">Ⓜ️</span>
+                <span class="rating-icon"><img src="images/ratings/metacritic.svg" alt="Metacritic" class="rating-logo"></span>
                 <span class="rating-value">${ratings.metacritic}</span>
             </span>
         `);

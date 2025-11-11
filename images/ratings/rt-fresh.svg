@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Fresh Tomato -->
+  <circle cx="12" cy="13" r="9" fill="#FA320A"/>
+  <!-- Stem/Leaf -->
+  <path d="M12 4 L10 7 L14 7 Z" fill="#00A550"/>
+  <!-- Highlight -->
+  <circle cx="9" cy="10" r="2" fill="#FF6347" opacity="0.6"/>
+</svg>

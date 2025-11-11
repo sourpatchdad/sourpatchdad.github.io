@@ -845,6 +845,14 @@ h2 {
 .rating-icon {
     font-size: 0.9rem;
     line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.rating-logo {
+    height: 16px;
+    width: auto;
+    display: block;
 }
 
 .rating-value {
