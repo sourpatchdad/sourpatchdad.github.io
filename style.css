@@ -803,25 +803,22 @@ h2 {
 .rating-badge {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.85rem;
     font-weight: 600;
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
+    background: transparent;
+    border: none;
 }
 
 .rating-badge.imdb {
-    background: #f5c518;
     color: #000;
-    border-color: #f5c518;
 }
 
 .rating-badge.rotten-tomatoes {
-    background: #fff;
     color: #000;
-    border: 2px solid #fa320a;
 }
 
 .rating-icon {
