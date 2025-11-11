@@ -189,18 +189,6 @@ function generateRatingsHTML(ratings) {
         `);
     }
 
-    // Metacritic rating
-    if (ratings.metacritic) {
-        const mcValue = parseInt(ratings.metacritic);
-        const mcClass = mcValue >= 75 ? 'high' : mcValue >= 50 ? 'mid' : 'low';
-        ratingBadges.push(`
-            <span class="rating-badge metacritic ${mcClass}">
-                <span class="rating-icon"><img src="images/ratings/metacritic.svg" alt="Metacritic" class="rating-logo"></span>
-                <span class="rating-value">${ratings.metacritic}</span>
-            </span>
-        `);
-    }
-
     return ratingBadges.length > 0
         ? `<div class="trakt-ratings">${ratingBadges.join('')}</div>`
         : '';

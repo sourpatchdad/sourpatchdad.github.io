@@ -819,27 +819,9 @@ h2 {
 }
 
 .rating-badge.rotten-tomatoes {
-    background: #fa320a;
-    color: #fff;
-    border-color: #fa320a;
-}
-
-.rating-badge.metacritic.high {
-    background: #66cc33;
-    color: #fff;
-    border-color: #66cc33;
-}
-
-.rating-badge.metacritic.mid {
-    background: #ffcc33;
+    background: #fff;
     color: #000;
-    border-color: #ffcc33;
-}
-
-.rating-badge.metacritic.low {
-    background: #ff0000;
-    color: #fff;
-    border-color: #ff0000;
+    border: 2px solid #fa320a;
 }
 
 .rating-icon {
