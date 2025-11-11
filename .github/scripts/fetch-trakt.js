@@ -8,6 +8,7 @@ const TRAKT_CONFIG = {
 };
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
 async function getTMDBPoster(tmdbId, type) {
@@ -27,6 +28,51 @@ async function getTMDBPoster(tmdbId, type) {
         return data.poster_path ? `${TMDB_IMAGE_BASE}${data.poster_path}` : null;
     } catch (error) {
         console.error('Error fetching TMDB poster:', error);
+        return null;
+    }
+}
+
+async function getOMDBRatings(imdbId) {
+    if (!imdbId || !OMDB_API_KEY) {
+        return null;
+    }
+
+    try {
+        const response = await fetch(
+            `https://www.omdbapi.com/?i=${imdbId}&apikey=${OMDB_API_KEY}`
+        );
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+
+        if (data.Response === 'False') {
+            console.log(`OMDb: No data found for ${imdbId}`);
+            return null;
+        }
+
+        // Extract ratings from different sources
+        const ratings = {
+            imdb: data.imdbRating !== 'N/A' ? data.imdbRating : null,
+            imdbVotes: data.imdbVotes !== 'N/A' ? data.imdbVotes : null,
+            rottenTomatoes: null,
+            metacritic: null
+        };
+
+        // Parse Ratings array for RT and Metacritic
+        if (data.Ratings && Array.isArray(data.Ratings)) {
+            data.Ratings.forEach(rating => {
+                if (rating.Source === 'Rotten Tomatoes') {
+                    ratings.rottenTomatoes = rating.Value;
+                } else if (rating.Source === 'Metacritic') {
+                    ratings.metacritic = rating.Value;
+                }
+            });
+        }
+
+        return ratings;
+    } catch (error) {
+        console.error('Error fetching OMDb ratings:', error);
         return null;
     }
 }
@@ -55,27 +101,30 @@ async function fetchTraktData() {
         const data = await response.json();
         console.log('Successfully fetched', data.length, 'items');
 
-        // Enrich with TMDB poster URLs if API key is configured
-        if (TMDB_API_KEY) {
-            console.log('Enriching with TMDB poster URLs...');
-            const enriched = await Promise.all(
-                data.map(async (item) => {
-                    const media = item.type === 'movie' ? item.movie : item.show;
-                    if (media.ids?.tmdb) {
-                        const posterUrl = await getTMDBPoster(media.ids.tmdb, item.type);
-                        return {
-                            ...item,
-                            posterUrl
-                        };
-                    }
-                    return item;
-                })
-            );
-            console.log('Enrichment complete!');
-            return enriched;
-        }
+        // Enrich with TMDB poster URLs and OMDb ratings if API keys are configured
+        console.log('Enriching data with TMDB posters and OMDb ratings...');
+        const enriched = await Promise.all(
+            data.map(async (item) => {
+                const media = item.type === 'movie' ? item.movie : item.show;
+                const enrichedItem = { ...item };
 
-        return data;
+                // Get TMDB poster if available
+                if (TMDB_API_KEY && media.ids?.tmdb) {
+                    const posterUrl = await getTMDBPoster(media.ids.tmdb, item.type);
+                    if (posterUrl) enrichedItem.posterUrl = posterUrl;
+                }
+
+                // Get OMDb ratings if available
+                if (OMDB_API_KEY && media.ids?.imdb) {
+                    const ratings = await getOMDBRatings(media.ids.imdb);
+                    if (ratings) enrichedItem.ratings = ratings;
+                }
+
+                return enrichedItem;
+            })
+        );
+        console.log('Enrichment complete!');
+        return enriched;
     } catch (error) {
         console.error('Error fetching Trakt data:', error);
         throw error;

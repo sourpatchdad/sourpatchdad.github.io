@@ -160,6 +160,51 @@ function formatWatchedDate(watchedAt) {
     return date.toLocaleDateString('en-US', options);
 }
 
+// Function to generate ratings HTML
+function generateRatingsHTML(ratings) {
+    if (!ratings) return '';
+
+    const ratingBadges = [];
+
+    // IMDb rating
+    if (ratings.imdb) {
+        ratingBadges.push(`
+            <span class="rating-badge imdb">
+                <span class="rating-icon">⭐</span>
+                <span class="rating-value">${ratings.imdb}</span>
+            </span>
+        `);
+    }
+
+    // Rotten Tomatoes rating
+    if (ratings.rottenTomatoes) {
+        const rtValue = parseInt(ratings.rottenTomatoes);
+        const rtIcon = rtValue >= 60 ? '🍅' : '🤢';
+        ratingBadges.push(`
+            <span class="rating-badge rotten-tomatoes">
+                <span class="rating-icon">${rtIcon}</span>
+                <span class="rating-value">${ratings.rottenTomatoes}</span>
+            </span>
+        `);
+    }
+
+    // Metacritic rating
+    if (ratings.metacritic) {
+        const mcValue = parseInt(ratings.metacritic);
+        const mcClass = mcValue >= 75 ? 'high' : mcValue >= 50 ? 'mid' : 'low';
+        ratingBadges.push(`
+            <span class="rating-badge metacritic ${mcClass}">
+                <span class="rating-icon">Ⓜ️</span>
+                <span class="rating-value">${ratings.metacritic}</span>
+            </span>
+        `);
+    }
+
+    return ratingBadges.length > 0
+        ? `<div class="trakt-ratings">${ratingBadges.join('')}</div>`
+        : '';
+}
+
 // Function to display Trakt items
 function displayTraktItems(items) {
     console.log('displayTraktItems called with', items);
@@ -197,6 +242,9 @@ function displayTraktItems(items) {
         // Use posterUrl from backend if available, otherwise use placeholder
         const posterUrl = item.posterUrl || 'https://via.placeholder.com/300x450/2c3e50/ecf0f1?text=' + encodeURIComponent(title);
 
+        // Generate ratings HTML
+        const ratingsHTML = generateRatingsHTML(item.ratings);
+
         // Create Trakt URL
         const traktUrl = item.type === 'movie'
             ? `https://trakt.tv/movies/${media.ids.slug}`
@@ -209,6 +257,7 @@ function displayTraktItems(items) {
                 <div class="trakt-info">
                     <div class="trakt-title">${title}</div>
                     ${episodeInfo}
+                    ${ratingsHTML}
                     <div class="trakt-meta">
                         <span class="trakt-type">${type}</span>
                         <span>${year}</span>
