@@ -817,6 +817,15 @@ h2 {
     color: #000;
 }
 
+/* Make IMDb text black in light mode, white in dark mode */
+[data-theme="light"] .rating-badge.imdb svg text {
+    fill: #000 !important;
+}
+
+[data-theme="dark"] .rating-badge.imdb svg text {
+    fill: #fff !important;
+}
+
 .rating-badge.rotten-tomatoes {
     color: #000;
 }
