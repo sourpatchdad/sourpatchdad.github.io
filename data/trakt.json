@@ -1,5 +1,42 @@
 [
   {
+    "id": 11623744182,
+    "watched_at": "2025-11-11T18:29:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 1,
+      "title": "We Is Us",
+      "ids": {
+        "trakt": 11516846,
+        "tvdb": 9860610,
+        "imdb": "tt30759782",
+        "tmdb": 5154192,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11616018451,
     "watched_at": "2025-11-11T04:15:48.000Z",
     "action": "watch",
@@ -342,43 +379,6 @@
       "imdbVotes": "43,072",
       "rottenTomatoes": "77%",
       "metacritic": "59/100"
-    }
-  },
-  {
-    "id": 11570847291,
-    "watched_at": "2025-11-03T02:54:39.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 1,
-      "title": "Welcome to St. Denis",
-      "ids": {
-        "trakt": 11760918,
-        "tvdb": 9838912,
-        "imdb": "tt27132944",
-        "tmdb": 5282164,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "St. Denis Medical",
-      "year": 2024,
-      "ids": {
-        "trakt": 235514,
-        "slug": "st-denis-medical",
-        "tvdb": 435916,
-        "imdb": "tt21433690",
-        "tmdb": 251941,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
-    "ratings": {
-      "imdb": "7.0",
-      "imdbVotes": "4,507",
-      "rottenTomatoes": null,
-      "metacritic": null
     }
   }
 ]
