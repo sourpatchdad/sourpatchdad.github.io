@@ -883,7 +883,6 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     cursor: default;
-    position: relative;
 }
 
 .album-item:hover {
@@ -930,18 +929,11 @@ h2 {
 }
 
 .music-links {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 12px;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    padding: 12px;
 }
 
 .music-link {
