@@ -845,15 +845,6 @@ h2 {
     display: block;
 }
 
-/* Make IMDb logo text visible in both themes */
-[data-theme="light"] .rating-badge.imdb .rating-logo {
-    filter: brightness(0);
-}
-
-[data-theme="dark"] .rating-badge.imdb .rating-logo {
-    filter: none;
-}
-
 .rating-value {
     font-weight: 700;
 }

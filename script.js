@@ -17,6 +17,11 @@ if (themeToggle) {
         localStorage.setItem('theme', newTheme);
 
         console.log(`Theme switched to: ${newTheme}`);
+
+        // Re-render Trakt items with theme-appropriate logos
+        if (traktData) {
+            displayTraktItems(traktData);
+        }
     });
 }
 
@@ -91,6 +96,9 @@ document.querySelectorAll('img').forEach(img => {
 // Trakt API Integration (via GitHub Actions)
 // Data is automatically updated every 3 hours via GitHub Actions workflow
 
+// Store Trakt data globally so we can re-render on theme change
+let traktData = null;
+
 // Function to fetch recently watched from Trakt
 async function fetchRecentlyWatched() {
     console.log('✅ fetchRecentlyWatched called - Version 20250104001');
@@ -115,6 +123,7 @@ async function fetchRecentlyWatched() {
 
         const data = await response.json();
         console.log('Data received:', data.length, 'items');
+        traktData = data; // Store for theme changes
         displayTraktItems(data);
     } catch (error) {
         console.error('Error fetching Trakt data:', error);
@@ -168,9 +177,13 @@ function generateRatingsHTML(ratings) {
 
     // IMDb rating
     if (ratings.imdb) {
+        // Use theme-specific IMDb logo
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const imdbLogo = currentTheme === 'dark' ? 'imdb-dark.svg' : 'imdb-light.svg';
+
         ratingBadges.push(`
             <span class="rating-badge imdb">
-                <span class="rating-icon"><img src="images/ratings/imdb.svg" alt="IMDb" class="rating-logo"></span>
+                <span class="rating-icon"><img src="images/ratings/${imdbLogo}" alt="IMDb" class="rating-logo"></span>
                 <span class="rating-value">${ratings.imdb}</span>
             </span>
         `);
