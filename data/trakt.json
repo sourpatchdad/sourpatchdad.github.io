@@ -1,5 +1,36 @@
 [
   {
+    "id": 11616018451,
+    "watched_at": "2025-11-11T04:15:48.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 1,
+      "title": "We Is Us",
+      "ids": {
+        "trakt": 11516846,
+        "tvdb": 9860610,
+        "imdb": "tt30759782",
+        "tmdb": 5154192,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5TEwh75PYCDQaOXngknP62rpVrg.jpg"
+  },
+  {
     "id": 11609195511,
     "watched_at": "2025-11-09T23:02:48.000Z",
     "action": "watch",
@@ -283,36 +314,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
-  },
-  {
-    "id": 11566161675,
-    "watched_at": "2025-11-02T05:35:13.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 3,
-      "title": "@BrownDerbyHistoricVids Little bit of Hollywood? Okayyy.",
-      "ids": {
-        "trakt": 13495852,
-        "tvdb": 11327949,
-        "imdb": "tt36968185",
-        "tmdb": 6515881,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Chair Company",
-      "year": 2025,
-      "ids": {
-        "trakt": 255718,
-        "slug": "the-chair-company",
-        "tvdb": 454397,
-        "imdb": "tt31987295",
-        "tmdb": 271267,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg"
   }
 ]
