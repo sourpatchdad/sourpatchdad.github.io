@@ -102,7 +102,13 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   },
   {
     "id": 11609195511,
@@ -233,7 +239,13 @@
         "tmdb": 1290159
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg",
+    "ratings": {
+      "imdb": "7.2",
+      "imdbVotes": "922",
+      "rottenTomatoes": "76%",
+      "metacritic": "84/100"
+    }
   },
   {
     "id": 11585045109,
@@ -264,7 +276,13 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
+    "ratings": {
+      "imdb": "7.0",
+      "imdbVotes": "4,507",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   },
   {
     "id": 11584067518,
@@ -295,7 +313,13 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
+    "ratings": {
+      "imdb": "7.0",
+      "imdbVotes": "4,507",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   },
   {
     "id": 11583928358,
@@ -326,7 +350,13 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
+    "ratings": {
+      "imdb": "8.2",
+      "imdbVotes": "47,168",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   },
   {
     "id": 11583927857,
@@ -357,6 +387,12 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   }
 ]
