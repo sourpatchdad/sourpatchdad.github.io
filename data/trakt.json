@@ -1,5 +1,42 @@
 [
   {
+    "id": 11625283745,
+    "watched_at": "2025-11-12T05:42:35.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 2,
+      "title": "Pirate Lady",
+      "ids": {
+        "trakt": 12800266,
+        "tvdb": 11260075,
+        "imdb": "tt32767308",
+        "tmdb": 5964848,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11623744182,
     "watched_at": "2025-11-11T18:29:00.000Z",
     "action": "watch",
@@ -356,29 +393,6 @@
       "imdbVotes": "2,142",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11581853552,
-    "watched_at": "2025-11-04T19:35:21.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Nobody 2",
-      "year": 2025,
-      "ids": {
-        "trakt": 810123,
-        "slug": "nobody-2-2025",
-        "imdb": "tt28996126",
-        "tmdb": 1007734
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xGLoqM9peusKQeuwlSw2Qlhx740.jpg",
-    "ratings": {
-      "imdb": "6.3",
-      "imdbVotes": "43,072",
-      "rottenTomatoes": "77%",
-      "metacritic": "59/100"
     }
   }
 ]
