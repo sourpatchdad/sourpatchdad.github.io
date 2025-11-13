@@ -253,7 +253,13 @@
         "tmdb": 740996
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wwrvjmcgkDyB2RbCbIVLXZf82pl.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wwrvjmcgkDyB2RbCbIVLXZf82pl.jpg",
+    "ratings": {
+      "imdb": "7.3",
+      "imdbVotes": "7,559",
+      "rottenTomatoes": "94%",
+      "metacritic": "66/100"
+    }
   },
   {
     "id": 11589855144,
@@ -344,7 +350,13 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg"
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
+    "ratings": {
+      "imdb": "7.0",
+      "imdbVotes": "4,507",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
   },
   {
     "id": 11583928358,
