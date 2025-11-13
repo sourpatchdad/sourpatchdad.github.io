@@ -1,5 +1,42 @@
 [
   {
+    "id": 11628226671,
+    "watched_at": "2025-11-13T05:10:01.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 5,
+      "title": "I won. Zoom in.",
+      "ids": {
+        "trakt": 13495854,
+        "tvdb": 11327951,
+        "imdb": "tt37356771",
+        "tmdb": 6515883,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11625283745,
     "watched_at": "2025-11-12T05:42:35.000Z",
     "action": "watch",
@@ -354,43 +391,6 @@
     "ratings": {
       "imdb": "8.2",
       "imdbVotes": "47,168",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11583927857,
-    "watched_at": "2025-11-05T04:18:10.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 4,
-      "title": "Bahld Harmon birthplace (disputed)",
-      "ids": {
-        "trakt": 13495853,
-        "tvdb": 11327950,
-        "imdb": "tt37852174",
-        "tmdb": 6515882,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Chair Company",
-      "year": 2025,
-      "ids": {
-        "trakt": 255718,
-        "slug": "the-chair-company",
-        "tvdb": 454397,
-        "imdb": "tt31987295",
-        "tmdb": 271267,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
-    "ratings": {
-      "imdb": "7.8",
-      "imdbVotes": "2,142",
       "rottenTomatoes": null,
       "metacritic": null
     }
