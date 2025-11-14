@@ -78,13 +78,14 @@
                             <span class="spec-value">TrueNAS SCALE 25.10.0</span>
                         </div>
                     </div>
+
                     <div class="note-card">
                         <p><i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
                         <strong> Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p>
                     </div>
                 </section>
 
-                <!-- Network Configuration -->
+                <!-- Remote Access -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Network Configuration</h2>
 
@@ -111,7 +112,7 @@
                 <!-- Media Automation Stack -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-film" aria-hidden="true"></i> Media Automation Stack</h2>
-                    <p>Complete automation pipeline installed as TrueNAS apps with proper storage mounts and VPN protection.</p>
+                    <p>Complete automation pipeline installed as TrueNAS apps with proper storage mounts.</p>
 
                     <div class="comparison-table">
                         <table>
@@ -178,11 +179,7 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Sync Status</span>
-                            <span class="spec-value">100% complete (923,514 blocks)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Initial Sync Time</span>
-                            <span class="spec-value">~48 hours</span>
+                            <span class="spec-value">100% complete (923,514 blocks, ~48 hours initial sync)</span>
                         </div>
                     </div>
 
@@ -240,7 +237,6 @@
                             <span class="spec-value">Auto-upload configured</span>
                         </div>
                     </div>
-                    <p>Self-hosted photo management with ML-powered organization. Overnight mobile backup configured. Privacy-focused alternative to Google Photos.</p>
                 </section>
 
                 <!-- Utility Applications -->
@@ -310,6 +306,45 @@
                         <p><i class="fa-solid fa-sync" aria-hidden="true"></i>
                         <strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</p>
                     </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Home Assistant Backup Integration</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Schedule</span>
+                            <span class="spec-value">Daily at 3:00 AM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Retention</span>
+                            <span class="spec-value">3 local, 14 remote backups</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Storage</span>
+                            <span class="spec-value">/mnt/SourPatchNAS/ha-backups (3GB)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Protocol</span>
+                            <span class="spec-value">SMB/CIFS via Samba Backup Add-on</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> Actual Budget</h3>
+                    <p>Self-hosted budgeting server running in Portainer container with Home Assistant integration for financial tracking.</p>
+
+                    <div class="code-block">
+                        <h4>Account Sensors</h4>
+                        <ul>
+                            <li>All checking/savings accounts</li>
+                            <li>Investment accounts (401k, IRA, Roth IRA)</li>
+                            <li>Cryptocurrency holdings</li>
+                            <li>Vehicle values</li>
+                            <li>Real estate</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p><strong>SharedArrayBuffer Note:</strong> Web UI has CORS header issues. Use desktop app for management; API works perfectly for HA integration.</p>
+                    </div>
                 </section>
 
                 <!-- Permissions & Security -->
@@ -317,11 +352,10 @@
 
                     <h2 style="margin-top: 24px;"><i class="fa-solid fa-shield" aria-hidden="true"></i> Network Security</h2>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong> Default restrictive configuration</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>VPN for Torrenting:</strong> All download traffic through Mullvad WireGuard</li>
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Authentication:</strong> All exposed services password-protected or using Plex SSO</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong> Default restrictive configuration</li>
                     </ul>
                 </section>
 
