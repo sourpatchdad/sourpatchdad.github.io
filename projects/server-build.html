@@ -46,7 +46,7 @@
                 <!-- Overview -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
-                    <p>This is the complete hardware build and infrastructure setup for my TrueNAS server. Built from the ground up with carefully selected components for reliability, performance, and expandability. Overcame initial hardware challenges (defective motherboard RMA) to create a rock-solid foundation for media automation, Bitcoin operations, photo storage, and home automation backup infrastructure.</p>
+                    <p>This is the complete hardware build and infrastructure setup for my TrueNAS server. Built from the ground up with carefully selected components. Overcame initial hardware challenges (defective motherboard RMA) to create a solid foundation for media automation, Bitcoin operations, photo storage, and home automation backup infrastructure.</p>
                 </section>
 
                 <!-- Hardware Build -->
@@ -79,77 +79,31 @@
                         </div>
                     </div>
                     <div class="note-card">
-                        <i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
-                        <p><strong>Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p>
-                    </div>
-                </section>
-
-                <!-- ZFS Storage Architecture -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-database" aria-hidden="true"></i> ZFS Storage Architecture</h2>
-                    <div class="code-block">
-                        <h3>Pool Configuration</h3>
-                        <ul>
-                            <li><strong>Pool Name:</strong> SourPatchNAS</li>
-                            <li><strong>Configuration:</strong> Mirror (RAID 1)</li>
-                            <li><strong>Total Capacity:</strong> 7.18TB usable</li>
-                        </ul>
-                    </div>
-                    <div class="code-block">
-                        <h3>Dataset Structure</h3>
-                        <pre>SourPatchNAS/
-├── appdata/              # Application configurations
-│   ├── plex/
-│   └── filebrowser/
-├── bitcoin/              # Bitcoin Core blockchain (662GB)
-├── downloads/            # Media automation
-│   ├── complete/
-│   │   ├── sonarr/       # TV downloads
-│   │   ├── radarr/       # Movie downloads
-│   │   ├── tv/           # TV library (hardlinks)
-│   │   ├── movies/       # Movie library (hardlinks)
-│   │   └── audiobooks/   # Audiobook downloads
-│   └── incomplete/       # Active downloads
-├── ha-backups/           # Home Assistant backups (3GB)
-├── immich/               # Photo storage (752MB)
-└── actual-budget/        # Budget application data</pre>
-                    </div>
-                    <div class="note-card">
-                        <i class="fa-solid fa-link" aria-hidden="true"></i>
-                        <p><strong>Hardlinks Strategy:</strong> TV/Movie libraries use hardlinks to respective download folders, eliminating duplicate storage while maintaining organization and continued seeding capability.</p>
+                        <p><i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
+                        <strong> Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p>
                     </div>
                 </section>
 
                 <!-- Network Configuration -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Network Configuration</h2>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Router</span>
-                            <span class="spec-value">eero 7</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Timezone</span>
-                            <span class="spec-value">America/Chicago</span>
-                        </div>
-                    </div>
 
                     <h3 style="margin-top: 24px;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Remote Access</h3>
                     <div class="performance-grid">
                         <div class="performance-card">
-                            <i class="fa-brands fa-cloudflare" aria-hidden="true"></i>
+                            <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i>
                             <h4>Tailscale (Primary)</h4>
                             <p>Zero-trust VPN with subnet routing enabled for entire network access. Allows remote BitAxe access via secure mesh networking.</p>
                         </div>
                         <div class="performance-card">
-                            <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                            <i class="fa-brands fa-cloudflare" aria-hidden="true"></i>
                             <h4>Cloudflare Tunnel</h4>
                             <p>Backup access method with host network mode. Routes configured for Overseerr, Radarr, Sonarr, Transmission, Plex, and Immich.</p>
                         </div>
                         <div class="performance-card">
-                            <i class="fa-brands fa-plex" aria-hidden="true"></i>
+                            <i class="fa-solid fa-play" aria-hidden="true"></i>
                             <h4>Plex Direct Access</h4>
-                            <p>Port 32400 (TCP) forwarded on router for direct connections, eliminating relay lag during streaming.</p>
+                            <p>Port forwarded on router for direct connections, eliminating relay lag during streaming.</p>
                         </div>
                     </div>
                 </section>
@@ -165,7 +119,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Service</th>
-                                    <th scope="col">Port</th>
                                     <th scope="col">Purpose</th>
                                     <th scope="col">Configuration</th>
                                 </tr>
@@ -173,49 +126,41 @@
                             <tbody>
                                 <tr>
                                     <td><strong>Transmission</strong></td>
-                                    <td>9091</td>
                                     <td>Download Client</td>
-                                    <td>VPN: Mullvad WireGuard, Authentication required, Preserved seeding sessions from Synology migration</td>
+                                    <td>VPN: Tailscale, Authentication required, Preserved seeding sessions from Synology migration</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Prowlarr</strong></td>
-                                    <td>30050</td>
                                     <td>Indexer Manager</td>
                                     <td>Auto-syncs to Sonarr, Radarr, Readarr. Multiple indexers configured with API rate-limiting awareness</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Sonarr</strong></td>
-                                    <td>30113</td>
                                     <td>TV Automation</td>
                                     <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Radarr</strong></td>
-                                    <td>30025</td>
                                     <td>Movie Automation</td>
                                     <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Readarr</strong></td>
-                                    <td>varies</td>
                                     <td>Audiobook Automation</td>
                                     <td>Root: /downloads/complete/audiobooks, Limited by indexer availability, Transmission category: readarr</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Plex Media Server</strong></td>
-                                    <td>32400</td>
                                     <td>Media Streaming</td>
                                     <td>Libraries: TV & Movies from complete folders, Remote access enabled, Transcoding enabled</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Overseerr</strong></td>
-                                    <td>30105</td>
                                     <td>Request Management</td>
                                     <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Audiobookshelf</strong></td>
-                                    <td>varies</td>
                                     <td>Audiobook Player</td>
                                     <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
                                 </tr>
