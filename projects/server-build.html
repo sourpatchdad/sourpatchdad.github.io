@@ -87,9 +87,7 @@
 
                 <!-- Remote Access -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Network Configuration</h2>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Remote Access</h3>
+                    <h2><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Remote Access</h2>
                     <div class="performance-grid">
                         <div class="performance-card">
                             <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i>
@@ -120,45 +118,53 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Service</th>
+                                    <th scope="col">Port</th>
                                     <th scope="col">Purpose</th>
                                     <th scope="col">Configuration</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Transmission</strong></td>
-                                    <td>Download Client</td>
-                                    <td>VPN: Tailscale, Authentication required, Preserved seeding sessions from Synology migration</td>
+                                    <td><strong>Audiobookshelf</strong></td>
+                                    <td>varies</td>
+                                    <td>Audiobook Player</td>
+                                    <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Prowlarr</strong></td>
-                                    <td>Indexer Manager</td>
-                                    <td>Auto-syncs to Sonarr, Radarr, Readarr. Multiple indexers configured with API rate-limiting awareness</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Sonarr</strong></td>
-                                    <td>TV Automation</td>
-                                    <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Radarr</strong></td>
-                                    <td>Movie Automation</td>
-                                    <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Readarr</strong></td>
-                                    <td>Audiobook Automation</td>
-                                    <td>Root: /downloads/complete/audiobooks, Limited by indexer availability, Transmission category: readarr</td>
+                                    <td><strong>Overseerr</strong></td>
+                                    <td>30105</td>
+                                    <td>Request Management</td>
+                                    <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Plex Media Server</strong></td>
+                                    <td>32400</td>
                                     <td>Media Streaming</td>
                                     <td>Libraries: TV & Movies from complete folders, Remote access enabled, Transcoding enabled</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Overseerr</strong></td>
-                                    <td>Request Management</td>
-                                    <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
+                                    <td><strong>Prowlarr</strong></td>
+                                    <td>30050</td>
+                                    <td>Indexer Manager</td>
+                                    <td>Auto-syncs to Sonarr and Radarr. Multiple indexers configured with API rate-limiting awareness</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Radarr</strong></td>
+                                    <td>30025</td>
+                                    <td>Movie Automation</td>
+                                    <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sonarr</strong></td>
+                                    <td>30113</td>
+                                    <td>TV Automation</td>
+                                    <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Transmission</strong></td>
+                                    <td>9091</td>
+                                    <td>Download Client</td>
+                                    <td>Authentication required, Preserved seeding sessions from Synology migration</td>
                                 </tr>
                             </tbody>
                         </table>
