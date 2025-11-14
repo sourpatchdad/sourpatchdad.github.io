@@ -78,6 +78,7 @@
                             <span class="spec-value">TrueNAS SCALE 25.10.0</span>
                         </div>
                     </div>
+
                     <div class="note-card">
                         <i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
                         <p><strong>Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p>
@@ -120,21 +121,9 @@
                     </div>
                 </section>
 
-                <!-- Network Configuration -->
+                <!-- Remote Access -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Network Configuration</h2>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Router</span>
-                            <span class="spec-value">eero 7</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Timezone</span>
-                            <span class="spec-value">America/Chicago</span>
-                        </div>
-                    </div>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Remote Access</h3>
+                    <h2><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Remote Access</h2>
                     <div class="performance-grid">
                         <div class="performance-card">
                             <i class="fa-brands fa-cloudflare" aria-hidden="true"></i>
@@ -157,7 +146,7 @@
                 <!-- Media Automation Stack -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-film" aria-hidden="true"></i> Media Automation Stack</h2>
-                    <p>Complete automation pipeline installed as TrueNAS apps with proper storage mounts and VPN protection.</p>
+                    <p>Complete automation pipeline installed as TrueNAS apps with proper storage mounts.</p>
 
                     <div class="comparison-table">
                         <table>
@@ -172,40 +161,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Transmission</strong></td>
-                                    <td>9091</td>
-                                    <td>Download Client</td>
-                                    <td>VPN: Mullvad WireGuard, Authentication required, Preserved seeding sessions from Synology migration</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Prowlarr</strong></td>
-                                    <td>30050</td>
-                                    <td>Indexer Manager</td>
-                                    <td>Auto-syncs to Sonarr, Radarr, Readarr. Multiple indexers configured with API rate-limiting awareness</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Sonarr</strong></td>
-                                    <td>30113</td>
-                                    <td>TV Automation</td>
-                                    <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Radarr</strong></td>
-                                    <td>30025</td>
-                                    <td>Movie Automation</td>
-                                    <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Readarr</strong></td>
+                                    <td><strong>Audiobookshelf</strong></td>
                                     <td>varies</td>
-                                    <td>Audiobook Automation</td>
-                                    <td>Root: /downloads/complete/audiobooks, Limited by indexer availability, Transmission category: readarr</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Plex Media Server</strong></td>
-                                    <td>32400</td>
-                                    <td>Media Streaming</td>
-                                    <td>Libraries: TV & Movies from complete folders, Remote access enabled, Transcoding enabled</td>
+                                    <td>Audiobook Player</td>
+                                    <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Overseerr</strong></td>
@@ -214,10 +173,34 @@
                                     <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Audiobookshelf</strong></td>
-                                    <td>varies</td>
-                                    <td>Audiobook Player</td>
-                                    <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
+                                    <td><strong>Plex Media Server</strong></td>
+                                    <td>32400</td>
+                                    <td>Media Streaming</td>
+                                    <td>Libraries: TV & Movies from complete folders, Remote access enabled, Transcoding enabled</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prowlarr</strong></td>
+                                    <td>30050</td>
+                                    <td>Indexer Manager</td>
+                                    <td>Auto-syncs to Sonarr and Radarr. Multiple indexers configured with API rate-limiting awareness</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Radarr</strong></td>
+                                    <td>30025</td>
+                                    <td>Movie Automation</td>
+                                    <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sonarr</strong></td>
+                                    <td>30113</td>
+                                    <td>TV Automation</td>
+                                    <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Transmission</strong></td>
+                                    <td>9091</td>
+                                    <td>Download Client</td>
+                                    <td>Authentication required, Preserved seeding sessions from Synology migration</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -238,11 +221,7 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Sync Status</span>
-                            <span class="spec-value">100% complete (923,514 blocks)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Initial Sync Time</span>
-                            <span class="spec-value">~48 hours</span>
+                            <span class="spec-value">100% complete (923,514 blocks, ~48 hours initial sync)</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">RPC</span>
@@ -253,78 +232,15 @@
                     <h3 style="margin-top: 24px;"><i class="fa-solid fa-hammer" aria-hidden="true"></i> BitAxe Integration</h3>
                     <div class="note-card">
                         <i class="fa-solid fa-microchip" aria-hidden="true"></i>
-                        <p><strong>BitAxe Gamma:</strong> 1366 GH/s solo miner connected to CK Solo Pool (solo.ckpool.org:3333). Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</p>
+                        <p><strong>BitAxe Gamma:</strong> 1366 GH/s solo miner connected to CK Solo Pool (solo.ckpool.org:3333).</p>
+                        <p>Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</p>
                     </div>
+
                     <div class="note-card">
                         <i class="fa-solid fa-flask" aria-hidden="true"></i>
-                        <p><strong>Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining. Challenge was finding compatible proxy for Bitcoin Core RPC interface.</p>
+                        <p><strong>Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining.</p>
+                        <p>Challenge was finding compatible proxy for Bitcoin Core RPC interface.</p>
                     </div>
-                </section>
-
-                <!-- Home Assistant Integration -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-house-signal" aria-hidden="true"></i> Home Assistant Integration</h2>
-
-                    <h3><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Samba Backup Add-on</h3>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Schedule</span>
-                            <span class="spec-value">Daily at 3:00 AM</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Retention</span>
-                            <span class="spec-value">3 local, 14 remote backups</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Storage</span>
-                            <span class="spec-value">/mnt/SourPatchNAS/ha-backups (3GB)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Protocol</span>
-                            <span class="spec-value">SMB/CIFS</span>
-                        </div>
-                    </div>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> Actual Budget Integration</h3>
-                    <p>Self-hosted budgeting server running in Portainer container with Home Assistant integration for financial tracking.</p>
-                    <div class="code-block">
-                        <h4>Account Sensors</h4>
-                        <ul>
-                            <li>All checking/savings accounts</li>
-                            <li>Investment accounts (401k, IRA, Roth IRA)</li>
-                            <li>Cryptocurrency holdings</li>
-                            <li>Vehicle values</li>
-                            <li>Real estate</li>
-                        </ul>
-                    </div>
-                    <div class="note-card">
-                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                        <p><strong>SharedArrayBuffer Note:</strong> Web UI has CORS header issues. Use desktop app for management; API works perfectly for HA integration.</p>
-                    </div>
-                </section>
-
-                <!-- Photo Management -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-images" aria-hidden="true"></i> Photo Management - Immich</h2>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Port</span>
-                            <span class="spec-value">2283</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Storage</span>
-                            <span class="spec-value">/mnt/SourPatchNAS/immich (752MB)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Features</span>
-                            <span class="spec-value">Machine learning, face detection, object recognition</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mobile Apps</span>
-                            <span class="spec-value">Auto-upload configured</span>
-                        </div>
-                    </div>
-                    <p>Self-hosted photo management with ML-powered organization. Overnight mobile backup configured. Privacy-focused alternative to Google Photos.</p>
                 </section>
 
                 <!-- Utility Applications -->
@@ -390,8 +306,11 @@
                         <h3>Migration Data Breakdown</h3>
                         <ul>
                             <li><strong>TV Shows:</strong> 2TB</li>
+
                             <li><strong>Movies:</strong> 75GB (including extras)</li>
+
                             <li><strong>Sonarr Folder:</strong> 73GB</li>
+
                             <li><strong>Radarr Folder:</strong> 75GB</li>
                         </ul>
                     </div>
@@ -399,6 +318,45 @@
                     <div class="note-card">
                         <i class="fa-solid fa-sync" aria-hidden="true"></i>
                         <p><strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</p>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Home Assistant Backup Integration</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Schedule</span>
+                            <span class="spec-value">Daily at 3:00 AM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Retention</span>
+                            <span class="spec-value">3 local, 14 remote backups</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Storage</span>
+                            <span class="spec-value">/mnt/SourPatchNAS/ha-backups (3GB)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Protocol</span>
+                            <span class="spec-value">SMB/CIFS via Samba Backup Add-on</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> Actual Budget</h3>
+                    <p>Self-hosted budgeting server running in Portainer container with Home Assistant integration for financial tracking.</p>
+
+                    <div class="code-block">
+                        <h4>Account Sensors</h4>
+                        <ul>
+                            <li>All checking/savings accounts</li>
+                            <li>Investment accounts (401k, IRA, Roth IRA)</li>
+                            <li>Cryptocurrency holdings</li>
+                            <li>Vehicle values</li>
+                            <li>Real estate</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p><strong>SharedArrayBuffer Note:</strong> Web UI has CORS header issues. Use desktop app for management; API works perfectly for HA integration.</p>
                     </div>
                 </section>
 
@@ -427,11 +385,10 @@
 
                     <h3 style="margin-top: 24px;"><i class="fa-solid fa-shield" aria-hidden="true"></i> Network Security</h3>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong> Default restrictive configuration</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>VPN for Torrenting:</strong> All download traffic through Mullvad WireGuard</li>
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Authentication:</strong> All exposed services password-protected or using Plex SSO</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong> Default restrictive configuration</li>
                     </ul>
                 </section>
 
