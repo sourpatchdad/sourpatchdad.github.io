@@ -1,5 +1,42 @@
 [
   {
+    "id": 11632079943,
+    "watched_at": "2025-11-14T04:23:11.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "The Upset of the Season",
+      "ids": {
+        "trakt": 13689595,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6654716,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "99 to Beat",
+      "year": 2025,
+      "ids": {
+        "trakt": 295132,
+        "slug": "99-to-beat-2025-295132",
+        "tvdb": 463593,
+        "imdb": "tt36933520",
+        "tmdb": 298469,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
+    "ratings": {
+      "imdb": "5.6",
+      "imdbVotes": "77",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11632013689,
     "watched_at": "2025-11-14T03:39:52.000Z",
     "action": "watch",
@@ -356,43 +393,6 @@
       "imdbVotes": "922",
       "rottenTomatoes": "76%",
       "metacritic": "84/100"
-    }
-  },
-  {
-    "id": 11585045109,
-    "watched_at": "2025-11-05T05:25:38.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 3,
-      "title": "Weird Stuff You Can't Explain",
-      "ids": {
-        "trakt": 12242577,
-        "tvdb": null,
-        "imdb": "tt32622823",
-        "tmdb": 5563338,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "St. Denis Medical",
-      "year": 2024,
-      "ids": {
-        "trakt": 235514,
-        "slug": "st-denis-medical",
-        "tvdb": 435916,
-        "imdb": "tt21433690",
-        "tmdb": 251941,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
-    "ratings": {
-      "imdb": "7.0",
-      "imdbVotes": "4,507",
-      "rottenTomatoes": null,
-      "metacritic": null
     }
   }
 ]
