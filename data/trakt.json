@@ -1,5 +1,42 @@
 [
   {
+    "id": 11632013689,
+    "watched_at": "2025-11-14T03:39:52.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 6,
+      "title": "Love Is In The Air",
+      "ids": {
+        "trakt": 13644879,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6620569,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "99 to Beat",
+      "year": 2025,
+      "ids": {
+        "trakt": 295132,
+        "slug": "99-to-beat-2025-295132",
+        "tvdb": 463593,
+        "imdb": "tt36933520",
+        "tmdb": 298469,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
+    "ratings": {
+      "imdb": "5.6",
+      "imdbVotes": "77",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11630016309,
     "watched_at": "2025-11-13T06:06:00.000Z",
     "action": "watch",
@@ -335,43 +372,6 @@
         "tvdb": null,
         "imdb": "tt32622823",
         "tmdb": 5563338,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "St. Denis Medical",
-      "year": 2024,
-      "ids": {
-        "trakt": 235514,
-        "slug": "st-denis-medical",
-        "tvdb": 435916,
-        "imdb": "tt21433690",
-        "tmdb": 251941,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8tUjI21ZcfSynLCk3Zr0Gs5BQwz.jpg",
-    "ratings": {
-      "imdb": "7.0",
-      "imdbVotes": "4,507",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11584067518,
-    "watched_at": "2025-11-05T05:03:08.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 2,
-      "title": "A Very Robust Personal Life",
-      "ids": {
-        "trakt": 12100029,
-        "tvdb": 10585063,
-        "imdb": "tt32622826",
-        "tmdb": 5467606,
         "tvrage": null
       }
     },
