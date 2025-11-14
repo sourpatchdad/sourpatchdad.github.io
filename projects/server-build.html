@@ -80,8 +80,8 @@
                     </div>
 
                     <div class="note-card">
-                        <p><i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
-                        <strong> Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p>
+                        <span><p><i class="fa-solid fa-exclamation-triangle" aria-hidden="true"></i>
+                        <strong> Build Challenge:</strong> First motherboard was DOA (wouldn't POST). Successfully RMA'd and replaced, then completed installation without further issues.</p></span>
                     </div>
                 </section>
 
@@ -118,53 +118,45 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Service</th>
-                                    <th scope="col">Port</th>
                                     <th scope="col">Purpose</th>
                                     <th scope="col">Configuration</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Audiobookshelf</strong></td>
-                                    <td>varies</td>
-                                    <td>Audiobook Player</td>
-                                    <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
-                                </tr>
-                                <tr>
                                     <td><strong>Overseerr</strong></td>
-                                    <td>30105</td>
                                     <td>Request Management</td>
-                                    <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
+                                    <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, family-friendly interface</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Plex Media Server</strong></td>
-                                    <td>32400</td>
                                     <td>Media Streaming</td>
-                                    <td>Libraries: TV & Movies from complete folders, Remote access enabled, Transcoding enabled</td>
+                                    <td>Libraries: TV & Movies from complete folders, remote access enabled, transcoding enabled</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Prowlarr</strong></td>
-                                    <td>30050</td>
                                     <td>Indexer Manager</td>
-                                    <td>Auto-syncs to Sonarr and Radarr. Multiple indexers configured with API rate-limiting awareness</td>
+                                    <td>Auto-syncs to Sonarr and Radarr. Multiple indexers configured</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Radarr</strong></td>
-                                    <td>30025</td>
                                     <td>Movie Automation</td>
-                                    <td>Root: /downloads/complete/movies, Hardlinks to library, Trakt integration, Transmission category: radarr</td>
+                                    <td>Root: /downloads/complete/movies, hardlinks to library, Trakt integration, Transmission category: radarr</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Sonarr</strong></td>
-                                    <td>30113</td>
                                     <td>TV Automation</td>
-                                    <td>Root: /downloads/complete/tv, Hardlinks to library, Trakt integration, Transmission category: sonarr</td>
+                                    <td>Root: /downloads/complete/tv, hardlinks to library, Trakt integration, Transmission category: sonarr</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Trakt</strong></td>
+                                    <td>List Imports</td>
+                                    <td>Radarr and Sonarr automatically import watch list and monitor for releases to grab</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Transmission</strong></td>
-                                    <td>9091</td>
                                     <td>Download Client</td>
-                                    <td>Authentication required, Preserved seeding sessions from Synology migration</td>
+                                    <td>Authentication required, preserved seeding sessions from Synology migration</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -185,18 +177,17 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Sync Status</span>
-                            <span class="spec-value">100% complete (923,514 blocks, ~48 hours initial sync)</span>
+                            <span class="spec-value">100% (923,514 blocks, ~48 hours initial sync)</span>
                         </div>
                     </div>
 
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-hammer" aria-hidden="true"></i> BitAxe Integration</h3>
                     <div class="note-card">
-                        <p><i class="fa-solid fa-microchip" aria-hidden="true"></i>
-                        <strong> BitAxe Gamma:</strong> 1,366 GH/s solo miner connected to CK Solo Pool. Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</p>
+                        <span><i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                        <strong> BitAxe Gamma:</strong> 1,366 GH/s solo miner connected to CK Solo Pool. Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</span>
                     </div>
                     <div class="note-card">
-                        <p><i class="fa-solid fa-flask" aria-hidden="true"></i>
-                        <strong> Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining. Challenge was finding compatible proxy for Bitcoin Core RPC interface.</p>
+                        <span><i class="fa-solid fa-flask" aria-hidden="true"></i>
+                        <strong> Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining. Challenge was finding compatible proxy for Bitcoin Core RPC interface.</span>
                     </div>
                 </section>
 
@@ -218,12 +209,12 @@
                                 <tr>
                                     <td><strong>File Browser</strong></td>
                                     <td>Web-based file management</td>
-                                    <td>HTTPS enabled, User: 3000:3000, Access to /mnt/SourPatchNAS, Not exposed via Cloudflare</td>
+                                    <td>HTTPS enabled, not exposed via Cloudflare</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Portainer</strong></td>
                                     <td>Container management</td>
-                                    <td>Used for custom containers like Actual Budget, Network: bridge mode</td>
+                                    <td>Used for custom containers like Actual Budget, Honeygain,</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Honeygain</strong></td>
@@ -238,12 +229,11 @@
                 <!-- Data Migration -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Synology to TrueNAS Migration</h2>
-                    <p>Complete data migration from Synology DS124 using rsync with auto-retry logic to handle connection interruptions.</p>
 
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">Source</span>
-                            <span class="spec-value">Synology DS124 (/mnt/synology_temp)</span>
+                            <span class="spec-value">Synology DS124</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Total Data</span>
@@ -256,7 +246,7 @@
                     </div>
 
                     <div class="code-block">
-                        <h3>Migration Data Breakdown</h3>
+                        <span><h3>Migration Data Breakdown</h3></span>
                         <ul>
                             <li><strong>TV Shows:</strong> 2TB</li>
                             <li><strong>Movies:</strong> 75GB</li>
@@ -264,59 +254,19 @@
                     </div>
 
                     <div class="note-card">
-                        <p><i class="fa-solid fa-sync" aria-hidden="true"></i>
-                        <strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</p>
+                        <span><i class="fa-solid fa-sync" aria-hidden="true"></i>
+                        <strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</span>
                     </div>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Home Assistant Backup Integration</h3>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Schedule</span>
-                            <span class="spec-value">Daily at 3:00 AM</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Retention</span>
-                            <span class="spec-value">3 local, 14 remote backups</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Storage</span>
-                            <span class="spec-value">/mnt/SourPatchNAS/ha-backups (3GB)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Protocol</span>
-                            <span class="spec-value">SMB/CIFS via Samba Backup Add-on</span>
-                        </div>
-                    </div>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> Actual Budget</h3>
-                    <p>Self-hosted budgeting server running in Portainer container with Home Assistant integration for financial tracking.</p>
-
-                    <div class="code-block">
-                        <h4>Account Sensors</h4>
-                        <ul>
-                            <li>All checking/savings accounts</li>
-                            <li>Investment accounts (401k, IRA, Roth IRA)</li>
-                            <li>Cryptocurrency holdings</li>
-                            <li>Vehicle values</li>
-                            <li>Real estate</li>
-                        </ul>
-                    </div>
-
-                    <div class="note-card">
-                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                        <p><strong>SharedArrayBuffer Note:</strong> Web UI has CORS header issues. Use desktop app for management; API works perfectly for HA integration.</p>
-                    </div>
-                </section>
 
                 <!-- Permissions & Security -->
                 <section class="specs-section">
 
                     <h2 style="margin-top: 24px;"><i class="fa-solid fa-shield" aria-hidden="true"></i> Network Security</h2>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Authentication:</strong> All exposed services password-protected or using Plex SSO</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong> Default restrictive configuration</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Authentication:</strong>All exposed services password-protected or using Plex SSO</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong>Encrypted tunnel without port forwarding (except Plex)</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong>Zero-trust mesh VPN for all remote access</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>TrueNAS Firewall:</strong>Default restrictive configuration</li>
                     </ul>
                 </section>
 
@@ -358,19 +308,18 @@
 
                     <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Planned</h3>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Complete TV migration (remaining ~40%)</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Decommission Synology after verification</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Home automation for garage (ratgdo + quiet belt drive opener)</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Self-hosted cameras (Reolink + Frigate NVR)</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> BIOS auto-power-on configuration</li>
+                        <li>Complete TV migration (remaining ~40%)</li>
+                        <li>Decommission Synology after verification</li>
+                        <li>Home automation for garage (ratgdo + quiet belt drive opener)</li>
+                        <li>Self-hosted cameras (Reolink + Frigate NVR)</li>
+                        <li>BIOS auto-power-on configuration</li>
                     </ul>
 
                     <h3 style="margin-top: 16px;"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Under Consideration</h3>
                     <ul class="use-cases">
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Lightning Network node</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Additional *arr automations</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Enhanced Bitcoin node features</li>
-                        <li><i class="fa-solid fa-circle" aria-hidden="true"></i> River Financial API integration (if available)</li>
+                        <li>Additional *arr automations</li>
+                        <li>Enhanced Bitcoin node features</li>
+                        <li>River Financial API integration (if available)</li>
                     </ul>
                 </section>
 
