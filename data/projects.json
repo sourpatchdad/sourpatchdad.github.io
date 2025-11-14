@@ -1,5 +1,17 @@
 [
   {
+    "id": "server-build",
+    "title": "TrueNAS Server Build",
+    "shortDescription": "Custom-built homelab server with i5-12500, 32GB RAM, and ZFS mirrored storage. Complete infrastructure running media automation, Bitcoin full node, Immich photo management, and Home Assistant integrations.",
+    "tags": ["TrueNAS", "Homelab", "Hardware", "Bitcoin", "Infrastructure"],
+    "date": "2025",
+    "detailPage": "projects/server-build.html",
+    "headerImage": "images/custom-icons/true-nas.svg",
+    "icon": "fa-solid fa-server",
+    "iconType": "server",
+    "externalLink": null
+  },
+  {
     "id": "truenas-migration",
     "title": "TrueNAS Migration",
     "shortDescription": "Migrating from underpowered Synology DS124 to custom TrueNAS server with i5-12500, 32GB RAM, and 2x8TB mirrored drives for 4K Plex transcoding and more.",
