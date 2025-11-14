@@ -159,11 +159,6 @@
                                     <td>Request Management</td>
                                     <td>Integrated with Plex, Sonarr, Radarr. Auto-approval enabled, Family-friendly interface</td>
                                 </tr>
-                                <tr>
-                                    <td><strong>Audiobookshelf</strong></td>
-                                    <td>Audiobook Player</td>
-                                    <td>Library: /downloads/complete/audiobooks, Mobile apps, Auto-scan enabled</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -189,20 +184,16 @@
                             <span class="spec-label">Initial Sync Time</span>
                             <span class="spec-value">~48 hours</span>
                         </div>
-                        <div class="spec-item">
-                            <span class="spec-label">RPC</span>
-                            <span class="spec-value">Enabled (Port 8332)</span>
-                        </div>
                     </div>
 
                     <h3 style="margin-top: 24px;"><i class="fa-solid fa-hammer" aria-hidden="true"></i> BitAxe Integration</h3>
                     <div class="note-card">
-                        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
-                        <p><strong>BitAxe Gamma:</strong> 1366 GH/s solo miner connected to CK Solo Pool (solo.ckpool.org:3333). Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</p>
+                        <p><i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                        <strong> BitAxe Gamma:</strong> 1,366 GH/s solo miner connected to CK Solo Pool. Accessible remotely via Tailscale subnet routing. Attempted local node mining via stratum proxy but ultimately using CK Pool directly while maintaining full node for validation.</p>
                     </div>
                     <div class="note-card">
-                        <i class="fa-solid fa-flask" aria-hidden="true"></i>
-                        <p><strong>Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining. Challenge was finding compatible proxy for Bitcoin Core RPC interface.</p>
+                        <p><i class="fa-solid fa-flask" aria-hidden="true"></i>
+                        <strong> Stratum Experiments:</strong> Tested public-pool, ckpool, and various Docker stratum proxies for local mining. Challenge was finding compatible proxy for Bitcoin Core RPC interface.</p>
                     </div>
                 </section>
 
@@ -232,20 +223,6 @@
 
                     <h3 style="margin-top: 24px;"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> Actual Budget Integration</h3>
                     <p>Self-hosted budgeting server running in Portainer container with Home Assistant integration for financial tracking.</p>
-                    <div class="code-block">
-                        <h4>Account Sensors</h4>
-                        <ul>
-                            <li>All checking/savings accounts</li>
-                            <li>Investment accounts (401k, IRA, Roth IRA)</li>
-                            <li>Cryptocurrency holdings</li>
-                            <li>Vehicle values</li>
-                            <li>Real estate</li>
-                        </ul>
-                    </div>
-                    <div class="note-card">
-                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                        <p><strong>SharedArrayBuffer Note:</strong> Web UI has CORS header issues. Use desktop app for management; API works perfectly for HA integration.</p>
-                    </div>
                 </section>
 
                 <!-- Photo Management -->
@@ -253,12 +230,6 @@
                     <h2><i class="fa-solid fa-images" aria-hidden="true"></i> Photo Management - Immich</h2>
                     <div class="specs-grid">
                         <div class="spec-item">
-                            <span class="spec-label">Port</span>
-                            <span class="spec-value">2283</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Storage</span>
-                            <span class="spec-value">/mnt/SourPatchNAS/immich (752MB)</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Features</span>
@@ -282,7 +253,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Application</th>
-                                    <th scope="col">Port</th>
                                     <th scope="col">Purpose</th>
                                     <th scope="col">Notes</th>
                                 </tr>
@@ -290,21 +260,18 @@
                             <tbody>
                                 <tr>
                                     <td><strong>File Browser</strong></td>
-                                    <td>30051</td>
                                     <td>Web-based file management</td>
                                     <td>HTTPS enabled, User: 3000:3000, Access to /mnt/SourPatchNAS, Not exposed via Cloudflare</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Portainer</strong></td>
-                                    <td>varies</td>
                                     <td>Container management</td>
                                     <td>Used for custom containers like Actual Budget, Network: bridge mode</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Honeygain</strong></td>
-                                    <td>N/A</td>
                                     <td>Passive income</td>
-                                    <td>Version 1.2.14, Do not update via UI (causes crashes), ToU accepted</td>
+                                    <td>Version 1.2.14</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -335,42 +302,20 @@
                         <h3>Migration Data Breakdown</h3>
                         <ul>
                             <li><strong>TV Shows:</strong> 2TB</li>
-                            <li><strong>Movies:</strong> 75GB (including extras)</li>
-                            <li><strong>Sonarr Folder:</strong> 73GB</li>
-                            <li><strong>Radarr Folder:</strong> 75GB</li>
+                            <li><strong>Movies:</strong> 75GB</li>
                         </ul>
                     </div>
 
                     <div class="note-card">
-                        <i class="fa-solid fa-sync" aria-hidden="true"></i>
-                        <p><strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</p>
+                        <p><i class="fa-solid fa-sync" aria-hidden="true"></i>
+                        <strong>Auto-Retry Solution:</strong> Used while loop with rsync to automatically resume transfers after connection suspensions. Preserved Transmission seeding sessions throughout migration.</p>
                     </div>
                 </section>
 
                 <!-- Permissions & Security -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-lock" aria-hidden="true"></i> Security & Permissions</h2>
 
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Media User</span>
-                            <span class="spec-value">UID 3000, GID 3000</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Standard Permissions</span>
-                            <span class="spec-value">775 (rwxrwxr-x)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Transmission User</span>
-                            <span class="spec-value">UID 3000, GID 3000</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">All *arr Apps</span>
-                            <span class="spec-value">UID 3000, GID 3000</span>
-                        </div>
-                    </div>
-
-                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-shield" aria-hidden="true"></i> Network Security</h3>
+                    <h2 style="margin-top: 24px;"><i class="fa-solid fa-shield" aria-hidden="true"></i> Network Security</h2>
                     <ul class="use-cases">
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Tailscale:</strong> Zero-trust mesh VPN for all remote access</li>
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Cloudflare Tunnel:</strong> Encrypted tunnel without port forwarding (except Plex)</li>
@@ -378,51 +323,6 @@
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>VPN for Torrenting:</strong> All download traffic through Mullvad WireGuard</li>
                         <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Authentication:</strong> All exposed services password-protected or using Plex SSO</li>
                     </ul>
-                </section>
-
-                <!-- Troubleshooting & Solutions -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Troubleshooting & Solutions</h2>
-
-                    <div class="comparison-table">
-                        <table>
-                            <caption class="sr-only">Common issues and their solutions</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Issue</th>
-                                    <th scope="col">Problem</th>
-                                    <th scope="col">Solution</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Permission Errors</strong></td>
-                                    <td>Radarr couldn't move files from incomplete to complete</td>
-                                    <td>Recursively set ownership to 3000:3000 and permissions to 775 on downloads directory</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Samba Backup</strong></td>
-                                    <td>"Cannot access share" errors</td>
-                                    <td>SMB service wasn't running; enabled and set to auto-start</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Cloudflared Crashes</strong></td>
-                                    <td>Container starts then immediately stops</td>
-                                    <td>Enable "Host Network" mode in app configuration</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>File Browser HTTPS</strong></td>
-                                    <td>"Client sent HTTP request to HTTPS server"</td>
-                                    <td>Changed Cloudflare route to https:// (ultimately removed from tunnel)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Indexer API Limits</strong></td>
-                                    <td>Connection refused errors from excessive API calls</td>
-                                    <td>Wait 24 hours during ban period; reduce Prowlarr sync frequency</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </section>
 
                 <!-- Performance & Usage -->
@@ -452,23 +352,9 @@
                     </div>
 
                     <div class="note-card">
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                        <p><strong>Expected Final Usage:</strong> ~2.5TB after migration complete. Plenty of room for growth with 4.5TB+ remaining capacity.</p>
+                        <p><i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <strong>Expected Final Usage:</strong> ~2.5TB after migration complete. Plenty of room for growth with 4.5TB+ remaining capacity.</p>
                     </div>
-                </section>
-
-                <!-- Maintenance -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> Regular Maintenance Tasks</h2>
-                    <ul class="use-cases">
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Monitor rsync migration progress</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Verify Bitcoin node sync status</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Check Home Assistant backups</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Review Immich upload status</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Monitor Transmission seeding ratios</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Verify ZFS pool health</li>
-                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Check service listening ports</li>
-                    </ul>
                 </section>
 
                 <!-- Future Enhancements -->
