@@ -349,10 +349,14 @@ section {
     padding: 2rem 0;
 }
 
-.project-icon {
+.project-icon,
+.project-icon img,
+.project-icon .iconify,
+.project-icon .material-symbols-outlined {
     font-size: 4rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
+    display: block;
 }
 
 .project-detail-header h1 {
@@ -456,7 +460,10 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.feature-card i {
+.feature-card i,
+.feature-card img,
+.feature-card .iconify,
+.feature-card .material-symbols-outlined {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
@@ -1260,10 +1267,14 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-.server-icon {
+.server-icon,
+.server-icon img,
+.server-icon .iconify,
+.server-icon .material-symbols-outlined {
     font-size: 4rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    display: block;
 }
 
 .server-subtitle {
@@ -1340,10 +1351,14 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.performance-card i {
+.performance-card i,
+.performance-card img,
+.performance-card .iconify,
+.performance-card .material-symbols-outlined {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    display: block;
 }
 
 .performance-card h3 {
@@ -1427,7 +1442,10 @@ footer {
     gap: 1rem;
 }
 
-.use-cases i {
+.use-cases i,
+.use-cases img,
+.use-cases .iconify,
+.use-cases .material-symbols-outlined {
     color: var(--accent-color);
     margin-top: 0.25rem;
     font-size: 1.2rem;
