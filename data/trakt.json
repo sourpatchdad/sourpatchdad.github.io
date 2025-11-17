@@ -1,5 +1,22 @@
 [
   {
+    "id": 11641452803,
+    "watched_at": "2025-11-16T06:06:30.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "UFC 322: Della Maddalena vs. Makhachev",
+      "year": 2025,
+      "ids": {
+        "trakt": 1272901,
+        "slug": "ufc-322-della-maddalena-vs-makhachev-2025",
+        "imdb": null,
+        "tmdb": 1550517
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9NMA6qNCRSUmIARMVY49bEFGPlx.jpg"
+  },
+  {
     "id": 11632079943,
     "watched_at": "2025-11-14T04:23:11.000Z",
     "action": "watch",
@@ -102,7 +119,7 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/sgVKEUjWvw3pTni7M023MmKNiHx.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
     "ratings": {
       "imdb": "5.5",
       "imdbVotes": "2,637",
@@ -370,29 +387,6 @@
       "imdbVotes": "7,559",
       "rottenTomatoes": "94%",
       "metacritic": "66/100"
-    }
-  },
-  {
-    "id": 11589855144,
-    "watched_at": "2025-11-05T20:19:59.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "A House of Dynamite",
-      "year": 2025,
-      "ids": {
-        "trakt": 1049823,
-        "slug": "a-house-of-dynamite-2025",
-        "imdb": "tt32376165",
-        "tmdb": 1290159
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg",
-    "ratings": {
-      "imdb": "7.2",
-      "imdbVotes": "922",
-      "rottenTomatoes": "76%",
-      "metacritic": "84/100"
     }
   }
 ]
