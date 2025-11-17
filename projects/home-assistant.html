@@ -480,9 +480,9 @@
                 <!-- Dashboard 3: Security Cameras -->
                 <section class="specs-section">
                     <h2><span class="iconify" data-icon="material-symbols-light:speed-camera-rounded" aria-hidden="true"></span> Dashboard 3: Security Camera Grid</h2>
-                    <p><strong>Current Setup:</strong> Live feeds from four Google Nest cameras (Front Yard, Doorbell, Garage, Office). Required setting up Google Cloud project to gain API access to live feeds. Initial project broke when transitioning to HA Green, but got it working again with proper integration.</p>
+                    <p><strong>Current Setup:</strong> Live feeds from four Google Nest cameras (Front Yard, Doorbell, Garage, Office). Required setting up Google Cloud project to gain API access to live feeds.</p>
 
-                    <p><strong>Future Goal:</strong> Complete migration off Google Nest platform to store all video clips locally on NAS and eliminate monthly Nest Aware subscription costs.</p>
+                    <p><strong>Future Goal:</strong> Complete migration off Google Nest (now Google Home Premium) platform to store all video clips locally on NAS and eliminate monthly subscription costs.</p>
 
                     <div class="device-showcase">
                         <div class="device-row">
@@ -501,11 +501,11 @@
                 <!-- Dashboard 4: Financial Overview -->
                 <section class="specs-section">
                     <h2><span class="iconify" data-icon="ix:piechart-filled" aria-hidden="true"></span> Dashboard 4: Financial Overview</h2>
-                    <p><strong>The Most Difficult Build:</strong> This dashboard took the longest to create. Previously, family financial information was stored in shared Notion notes (account locations, contribution schedules, bills, credit card strategies to maximize points, income info). The goal was to house everything in Home Assistant to eliminate third-party dependency on Notion.</p>
-
+                    <p><strong>The Most Difficult Build:</strong> This dashboard took the longest to create. Previously, family financial information was stored in shared Notion notes (account locations, contribution schedules, bills, credit card strategies to maximize points, income info, etc.). The goal was to house everything in Home Assistant to eliminate third-party dependency on Notion.</p>
+                    <br>
                     <p><strong>Technical Challenge:</strong> Nested lists with collapsible fields (using fold-entity-row cards from HACS) required extensive trial and error. Custom icons for every institution and bill? "Absolutely not" necessary.</p>
-
-                    <p><strong>Data Integration:</strong> Most account values automatically feed from Excel using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (automatically updates based on actual month).</p>
+                    <br>
+                    <p><strong>Data Integration:</strong> Most account values automatically feed from two Excel files using VBA. "Run rate tracking" automation compares % of budget spent vs. % of month passed (automatically updates based on actual month and each day).</p>
 
                     <div class="device-showcase">
                         
@@ -572,9 +572,9 @@
                 <!-- Dashboard 6: Historical Charts -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-chart-area" aria-hidden="true"></i> Dashboard 6: Historical Account Growth</h2>
-                    <p><strong>The Favorite Card:</strong> Uses mini-graph-card (hands down the favorite custom card discovered). Super customizable with coded transition points based on states—for example, Bitcoin chart shows green when >$100k and red when <$100k. Combined with multiple-entity-row cards using vertical-stack-in-card for clean presentation.</p>
+                    <p><strong>Favorite Card:</strong> Uses mini-graph-card (hands down my favorite custom card discovered). Super customizable with coded transition points based on states—for example, Bitcoin chart shows green when >$100k and red when <$100k. Combined with multiple-entity-row cards using vertical-stack-in-card for clean presentation.</p>
 
-                    <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation, but that's okay.</p>
+                    <p><strong>Current Status:</strong> About 65% automated, 35% manual input-dependent. Still waiting on API access through Developer Portals for some institutions. May never reach 100% automation.</p>
 
                     <div class="device-showcase">
                         <div class="device-frame desktop">
@@ -601,7 +601,7 @@
                 <section class="specs-section">
                     <h2><span class="iconify" data-icon="material-symbols:grocery" aria-hidden="true"></span> Dashboard 7: Grocery & Budget Tracking</h2>
                     <p><strong>Replacing Notion:</strong> Previously used Notion religiously for shared grocery and shopping lists, but noticed syncing issues and laggy updates that became frustrating over time. This dashboard pulls in remaining Entertainment, Groceries, and Shopping budget amounts automatically from Excel, giving the family a quick way to check balances.</p>
-
+                    <br>
                     <p><strong>Features:</strong> Three bar-card budget trackers with color-coded severity levels (green/orange/red) based on spending thresholds. Integrated with Target Grocery List todo entity for real-time shopping list management accessible from mobile.</p>
 
                     <div class="device-showcase">
@@ -621,11 +621,11 @@
                 <!-- Dashboard 8: Tesla -->
                 <section class="specs-section">
                     <h2><span class="iconify" data-icon="cbi:tesla-door" aria-hidden="true"></span> Dashboard 8: Tesla Vehicle Control</h2>
-                    <p><strong>Practical Integration:</strong> This has become "relatively useful" with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
-
+                    <p><strong>Practical Integration:</strong> This has become very useful with automations tied to vehicle states. Real-time battery percentage, range tracking with 7-day history, internal and external temperature, and tire pressure monitoring for all four tires. Helped identify a slow leak and find a hidden nail in a tire.</p>
+                    <br>
                     <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
-
-                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x°F and exterior exceeds x°F.</p>
+                    <br>
+                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x °F and exterior exceeds x °F.</p>
 
                     <div class="device-showcase">
                         <div class="device-frame desktop">
@@ -653,7 +653,7 @@
                     <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Key Features</h2>
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <i class="fas fa-home" style="color: #03a9f4;"></i>
+                            <span class="iconify" data-icon="mdi:smart-home" style="color: #1EA8EF;"></span>
                             <h3>Smart Home Control</h3>
                             <p>18+ smart switches, climate control, garage door, cameras, and thermostat</p>
                         </div>
@@ -665,7 +665,7 @@
                         <div class="feature-card">
                             <i class="fab fa-bitcoin" style="color: #f7931a;"></i>
                             <h3>Bitcoin & Stocks</h3>
-                            <p>Live Bitcoin price via CoinGecko, Yahoo Finance stocks (AAPL, TSLA, NVDA, etc.)</p>
+                            <p>Live Bitcoin price via CoinGecko and Yahoo Finance</p>
                         </div>
                         <div class="feature-card">
                             <span class="iconify" data-icon="simple-icons:tesla" style="color: #E31937;" aria-hidden="true"></span>
@@ -673,7 +673,7 @@
                             <p>Battery monitoring, climate control, tire pressure, sentry mode, lock control</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-video" style="color: #9c27b0;"></i>
+                            <span class="iconify" data-icon="material-icon-theme:google" aria-hidden="true"></span>
                             <h3>Security System</h3>
                             <p>Four cameras (Front, Doorbell, Garage, Office) with motion detection</p>
                         </div>
@@ -726,10 +726,10 @@
                         </li>
                         <li>
                             <i class="fas fa-tv"></i>
-                            <strong>Bias Lighting:</strong> TV backlight syncs with TV power state
+                            <strong>Bias Lighting:</strong> TV backlight (Govee) syncs with TV power state
                         </li>
                         <li>
-                            <i class="fas fa-car"></i>
+                            <span class="iconify" data-icon="cbi:tesla-defrost"></span>
                             <strong>Tesla Climate:</strong> Opens vents if interior >110°F and exterior >95°F
                         </li>
                         <li>
@@ -750,7 +750,7 @@
                         </li>
                         <li>
                             <i class="fas fa-book"></i>
-                            <strong>Book Club:</strong> Opens garage at 7:55 PM every Wednesday for wifey's book club
+                            <strong>Book Club:</strong> Opens garage at 7:55 PM every Wednesday for wife's book club
                         </li>
                     </ul>
                 </section>
@@ -805,7 +805,7 @@
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Excel VBA Integration:</strong> Automated financial data feed from Excel to HA using VBA scripts</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs (CoinGecko, Yahoo Finance, Redfin, OpenWeatherMap, Trakt)</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Complex Visualizations:</strong> Sankey diagrams, ApexCharts, mini-graph cards with color-coded thresholds</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Desktop + Mobile Optimization:</strong> Responsive layouts tested for desktop/tablet (primary interaction) and mobile (wife's primary method)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>Desktop/Mobile Views:</strong> Responsive layouts tested for desktop/tablet (primary interaction) and mobile (wife's primary method)</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Custom Sensors:</strong> Template sensors for budget run-rate %, days since watered, Bitcoin cold wallet USD value</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Multiple-Entity-Row Discovery:</strong> Cleaned up entity display drastically for better mobile experience</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>State-Based Visibility:</strong> Conditional card display (e.g., package cameras only show when deliveries present)</li>
@@ -839,8 +839,8 @@
                     <h3>Ongoing Work</h3></-->
                     <ul class="automation-list">
                         <li>
-                            <i class="fas fa-lock"></i>
-                            <strong>Nest x Yale Lock:</strong> Doesn't integrate with HA. Working on text-to-speech command via Google Assistant SDK to instruct door to lock when "leaving home" script runs.
+                            <span class="iconify" data-icon="material-symbols:mfg-nest-yale-lock"></span>
+                            <strong>Nest x Yale Lock:</strong> Doesn't integrate with HA. Works on text-to-speech command via Google Assistant SDK to instruct door to lock when "leaving home" script runs.
                         </li>
                         <li>
                             <i class="fas fa-dog"></i>
@@ -856,7 +856,7 @@
                         </li>
                         <li>
                             <i class="fas fa-code"></i>
-                            <strong>API Access Waiting:</strong> Several financial institutions' Developer Portals still pending for full automation (currently 65% automated, 35% manual).
+                            <strong>API Access Waiting:</strong> Several financial institutions' Developer Portals still pending for full automation.
                         </li>
                     </ul>
                 </section>
