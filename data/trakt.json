@@ -1,5 +1,42 @@
 [
   {
+    "id": 11652472929,
+    "watched_at": "2025-11-17T04:32:50.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 3,
+      "title": "Grenade",
+      "ids": {
+        "trakt": 12800268,
+        "tvdb": 11260076,
+        "imdb": "tt32767323",
+        "tmdb": 5964849,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11641452803,
     "watched_at": "2025-11-16T06:06:30.000Z",
     "action": "watch",
@@ -365,28 +402,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/bWlwHhTKyp8hB5OhReV9rCmUSFg.jpg"
-  },
-  {
-    "id": 11591016859,
-    "watched_at": "2025-11-06T04:05:46.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "BLACKPINK: Light Up the Sky",
-      "year": 2020,
-      "ids": {
-        "trakt": 581942,
-        "slug": "blackpink-light-up-the-sky-2020",
-        "imdb": "tt13058290",
-        "tmdb": 740996
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wwrvjmcgkDyB2RbCbIVLXZf82pl.jpg",
-    "ratings": {
-      "imdb": "7.3",
-      "imdbVotes": "7,559",
-      "rottenTomatoes": "94%",
-      "metacritic": "66/100"
-    }
   }
 ]
