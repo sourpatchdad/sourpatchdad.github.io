@@ -1452,6 +1452,34 @@ footer {
     flex-shrink: 0;
 }
 
+/* Automation List - Same as Use Cases */
+.automation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.automation-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.automation-list i,
+.automation-list img,
+.automation-list .iconify,
+.automation-list .material-symbols-outlined {
+    color: var(--accent-color);
+    margin-top: 0.25rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+
 .back-button-container {
     text-align: center;
     margin-top: 3rem;
