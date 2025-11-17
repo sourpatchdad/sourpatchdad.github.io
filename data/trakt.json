@@ -1,5 +1,42 @@
 [
   {
+    "id": 11656543036,
+    "watched_at": "2025-11-17T14:09:39.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 28,
+      "number": 3,
+      "title": "Sora Not Sorry",
+      "ids": {
+        "trakt": 13352067,
+        "tvdb": 11256177,
+        "imdb": "tt38043392",
+        "tmdb": 6606755,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "South Park",
+      "year": 1997,
+      "ids": {
+        "trakt": 2177,
+        "slug": "south-park",
+        "tvdb": 75897,
+        "imdb": "tt0121955",
+        "tmdb": 2190,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
+    "ratings": {
+      "imdb": "8.7",
+      "imdbVotes": "434,985",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11652472929,
     "watched_at": "2025-11-17T04:32:50.000Z",
     "action": "watch",
@@ -385,22 +422,5 @@
       "rottenTomatoes": null,
       "metacritic": null
     }
-  },
-  {
-    "id": 11594146868,
-    "watched_at": "2025-11-06T06:09:21.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Leanne Morgan: Unspeakable Things",
-      "year": 2025,
-      "ids": {
-        "trakt": 1293384,
-        "slug": "leanne-morgan-unspeakable-things-2025",
-        "imdb": "tt38061951",
-        "tmdb": 1567489
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bWlwHhTKyp8hB5OhReV9rCmUSFg.jpg"
   }
 ]
