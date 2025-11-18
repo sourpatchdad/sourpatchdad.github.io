@@ -75,15 +75,6 @@
             color: var(--primary-color);
         }
 
-        .live-stat {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .stat-loading {
-            opacity: 0.6;
-            font-style: italic;
-        }
     </style>
 
     <!-- Structured Data (JSON-LD) -->
@@ -170,11 +161,11 @@
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">Movies</span>
-                            <span class="spec-value"><span id="movie-count" class="live-stat stat-loading">Loading...</span></span>
+                            <span class="spec-value">8 (growing rapidly post-upgrade)</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">TV Shows</span>
-                            <span class="spec-value"><span id="tv-count" class="live-stat stat-loading">Loading...</span></span>
+                            <span class="spec-value">105 (expanding with new server capacity)</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Active Users</span>
@@ -186,7 +177,6 @@
                         </div>
                     </div>
                     <p style="margin-top: 15px;"><strong>Note:</strong> Library is in active growth phase following TrueNAS server upgrade. Previous Synology DS124 limitations (1GB RAM, no transcoding) severely restricted collection size. Now expanding rapidly with proper hardware.</p>
-                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;"><em>Movie and TV show counts update live from Home Assistant (when on local network)</em></p>
                 </section>
 
                 <!-- The Complete Automation Pipeline -->
@@ -486,73 +476,5 @@
     </footer>
 
     <script src="../script.js?v=20250104001"></script>
-
-    <!-- Live Plex Stats from Home Assistant -->
-    <script>
-        // Configuration - Connected to Home Assistant via non-admin 'github' user
-        const HA_URL = 'http://nbn.ddns.net:8123';
-        const HA_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYmM4ZDdhNzFiNTY0MTljOWM4NWU3NTVmOGU0YWY3YiIsImlhdCI6MTc2MzQ4MDg2OCwiZXhwIjoyMDc4ODQwODY4fQ.r1QQVpb9-v2jqto5lDD65nIL5SrJCEExKbjZ8ZvC6C0';
-
-        // Sensor entity IDs
-        const MOVIE_SENSOR = 'sensor.nbn_plex_library_movies';
-        const TV_SENSOR = 'sensor.nbn_plex_library_tv_shows';
-
-        // Fallback values (shown if HA is unreachable)
-        const FALLBACK_MOVIES = '8 (growing rapidly post-upgrade)';
-        const FALLBACK_TV = '105 (expanding with new server capacity)';
-
-        async function fetchPlexStats() {
-            const movieElement = document.getElementById('movie-count');
-            const tvElement = document.getElementById('tv-count');
-
-            try {
-                // Fetch movie count
-                const movieResponse = await fetch(`${HA_URL}/api/states/${MOVIE_SENSOR}`, {
-                    headers: {
-                        'Authorization': `Bearer ${HA_TOKEN}`,
-                        'Content-Type': 'application/json',
-                    },
-                    timeout: 5000
-                });
-
-                // Fetch TV show count
-                const tvResponse = await fetch(`${HA_URL}/api/states/${TV_SENSOR}`, {
-                    headers: {
-                        'Authorization': `Bearer ${HA_TOKEN}`,
-                        'Content-Type': 'application/json',
-                    },
-                    timeout: 5000
-                });
-
-                if (movieResponse.ok && tvResponse.ok) {
-                    const movieData = await movieResponse.json();
-                    const tvData = await tvResponse.json();
-
-                    // Update with live data
-                    movieElement.textContent = `${movieData.state} (growing rapidly post-upgrade)`;
-                    tvElement.textContent = `${tvData.state} (expanding with new server capacity)`;
-
-                    // Remove loading class
-                    movieElement.classList.remove('stat-loading');
-                    tvElement.classList.remove('stat-loading');
-                } else {
-                    throw new Error('HA API request failed');
-                }
-            } catch (error) {
-                // Show fallback values if HA is unreachable (not on local network or token issue)
-                console.log('Home Assistant unavailable, using fallback values');
-                movieElement.textContent = FALLBACK_MOVIES;
-                tvElement.textContent = FALLBACK_TV;
-                movieElement.classList.remove('stat-loading');
-                tvElement.classList.remove('stat-loading');
-            }
-        }
-
-        // Fetch stats on page load
-        window.addEventListener('DOMContentLoaded', fetchPlexStats);
-
-        // Refresh every 5 minutes (if you want live updates)
-        setInterval(fetchPlexStats, 5 * 60 * 1000);
-    </script>
 </body>
 </html>
