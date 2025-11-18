@@ -150,7 +150,7 @@
     <section class="page-content">
         <div class="container">
             <div class="server-header">
-                <i class="fa-solid fa-film server-icon" aria-hidden="true" style="color: #e5a00d;"></i>
+                <span class="iconify" data-icon="mdi:plex" style="color: #e5a00d;"></span>
                 <h1>Plex Media Server</h1>
             </div>
 
@@ -158,7 +158,7 @@
                 <!-- Overview -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Project Overview</h2>
-                    <p>Self-hosted 4K Plex Media Server running on TrueNAS SCALE with a fully automated media management pipeline. The system leverages the *arr suite (Sonarr, Radarr, Prowlarr) for content monitoring, Overseerr for user requests, Transmission for downloads, and Trakt for watch history syncing. Intel Quick Sync hardware transcoding enables smooth 4K streaming to multiple users with Plex Pass for remote access via Tailscale.</p>
+                    <p>Self-hosted 4K Plex Media Server running on TrueNAS SCALE with a fully automated media management pipeline. The system leverages the *arr suite (Sonarr, Radarr, Prowlarr) for content monitoring, Overseerr for user requests, Transmission for downloads, and Trakt for watch history syncing. Intel Quick Sync hardware transcoding enables smooth 4K streaming to multiple users.</p>
                 </section>
 
                 <!-- Current Library Stats -->
@@ -167,19 +167,15 @@
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">Movies</span>
-                            <span class="spec-value">8 (growing rapidly post-upgrade)</span>
+                            <span class="spec-value">8</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">TV Shows</span>
-                            <span class="spec-value">105 (expanding with new server capacity)</span>
+                            <span class="spec-value">105</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Active Users</span>
-                            <span class="spec-value">6 (self, wife, daughter, parents, friend)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Transcoding</span>
-                            <span class="spec-value">Intel Quick Sync (i5-12500)</span>
+                            <span class="spec-value">6</span>
                         </div>
                     </div>
                     <p style="margin-top: 15px;"><strong>Note:</strong> Library is in active growth phase following TrueNAS server upgrade. Previous Synology DS124 limitations (1GB RAM, no transcoding) severely restricted collection size. Now expanding rapidly with proper hardware.</p>
@@ -190,10 +186,10 @@
                     <h2><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> The Complete Automation Pipeline</h2>
                     <p>The media acquisition workflow is fully automated from request to library:</p>
 
-                    <h3>Workflow Diagram</h3>
-                    <ol class="specs-list">
+                    <br><h3>Workflow Diagram</h3>
+                    <br><ol class="specs-list">
                         <li><strong>Trakt Lists →</strong> Monitored watchlists sync to Radarr/Sonarr</li>
-                        <li><strong>Overseerr →</strong> User requests (wife & self) auto-approved and sent to appropriate *arr</li>
+                        <li><strong>Overseerr →</strong> User requests auto-approved and sent to appropriate *arr</li>
                         <li><strong>Sonarr/Radarr →</strong> Monitors for new releases and triggers search</li>
                         <li><strong>Prowlarr →</strong> Unified indexer that searches configured sources</li>
                         <li><strong>Transmission →</strong> Downloads content via TrueNAS app</li>
@@ -213,9 +209,8 @@
 
                         <ul class="specs-list">
                             <li><strong>Baseline Quality:</strong> CAM or TELESYNC (early releases for new content)</li>
-                            <li><strong>Upgrade Target:</strong> BR1080 (Blu-ray 1080p)</li>
-                            <li><strong>Logic:</strong> Grabs early releases immediately, then automatically upgrades when higher quality becomes available</li>
-                            <li><strong>Rationale:</strong> Balance between immediate availability and quality - don't wait months for BR release if we want to watch now</li>
+                            <li><strong>Upgrade Target:</strong> Blu-ray 1080p</li>
+                            <li><strong>Logic:</strong> Grabs early releases immediately then automatically upgrades when higher quality becomes available</li>
                         </ul>
                     </div>
 
@@ -223,7 +218,7 @@
                         <h3><i class="fa-solid fa-tv" aria-hidden="true"></i> TV Show Quality Profiles</h3>
 
                         <ul class="specs-list">
-                            <li><strong>Baseline Quality:</strong> 1080p</li>
+                            <li><strong>Baseline Quality:</strong> Web 1080p</li>
                             <li><strong>Upgrade Target:</strong> None (no automatic upgrading)</li>
                             <li><strong>Logic:</strong> TV shows typically release in good quality initially, so no need for upgrade automation</li>
                             <li><strong>Rationale:</strong> Prevents unnecessary re-downloads and storage churn for minimal quality improvement</li>
@@ -243,7 +238,7 @@
 
                     <div class="subsection-spacer">
                         <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:sonarr" style="color: #007acc;" aria-hidden="true"></span>
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/sonarr.svg">
                             <h3 style="margin: 0;">Sonarr (TV Shows)</h3>
                         </div>
                         <ul class="specs-list">
@@ -256,7 +251,7 @@
 
                     <div class="subsection-spacer">
                         <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:radarr" style="color: #ffc230;" aria-hidden="true"></span>
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/radarr.svg">
                             <h3 style="margin: 0;">Radarr (Movies)</h3>
                         </div>
                         <ul class="specs-list">
@@ -269,7 +264,7 @@
 
                     <div class="subsection-spacer">
                         <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:prowlarr" style="color: #0DCDCD;" aria-hidden="true"></span>
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/prowlarr.svg">
                             <h3 style="margin: 0;">Prowlarr (Indexer Manager)</h3>
                         </div>
                         <ul class="specs-list">
@@ -282,7 +277,7 @@
 
                     <div class="subsection-spacer">
                         <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:transmission" style="color: #F00;" aria-hidden="true"></span>
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/transmission.svg">
                             <h3 style="margin: 0;">Transmission (Download Client)</h3>
                         </div>
                         <ul class="specs-list">
@@ -305,7 +300,6 @@
                     <div class="subsection-spacer">
                         <h3>Features</h3>
                         <ul class="specs-list">
-                            <li><strong>User Access:</strong> Currently configured for self and wife</li>
                             <li><strong>Auto-Approval:</strong> Requests automatically approved and sent to appropriate *arr app</li>
                             <li><strong>Discovery:</strong> Browse trending, popular, and recommended content across movies and TV</li>
                             <li><strong>Integration:</strong> Seamlessly connects to Radarr for movies, Sonarr for TV shows</li>
@@ -346,66 +340,9 @@
                             <li><strong>Plex Scrobbling:</strong> Automatically marks content as watched in Trakt when viewed in Plex</li>
                             <li><strong>Streaming Services:</strong> Also scrobbles from Netflix, Disney+, HBO Max, etc.</li>
                             <li><strong>Cross-Platform:</strong> Unified watch history across all platforms in one place</li>
-                            <li><strong>Homepage Integration:</strong> Recently watched data feeds the homepage "Recently Watched" section</li>
                         </ul>
                     </div>
                 </section>
-
-                <!-- Hardware Transcoding -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hardware Transcoding (Intel Quick Sync)</h2>
-                    <p><strong>Hardware:</strong> Intel i5-12500 with Intel UHD Graphics 770</p>
-
-                    <div class="subsection-spacer">
-                        <h3>Transcoding Capabilities</h3>
-                        <ul class="specs-list">
-                            <li><strong>4K Support:</strong> Yes - handles 4K to 1080p transcoding with ease</li>
-                            <li><strong>Multiple Streams:</strong> Can transcode multiple simultaneous streams without performance degradation</li>
-                            <li><strong>Speed:</strong> "Crazy fast" - near-instantaneous start times, no buffering</li>
-                            <li><strong>CPU Usage:</strong> Minimal - Quick Sync offloads work to integrated GPU</li>
-                            <li><strong>Quality:</strong> Excellent transcoding quality with hardware acceleration</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection-spacer">
-                        <h3>Migration Win</h3>
-                        <p><strong>Before (Synology DS124):</strong> No transcoding capability, 1GB RAM, extremely limited</p>
-                        <p><strong>After (TrueNAS i5-12500):</strong> Hardware transcoding, 32GB RAM, smooth 4K streaming to 6 users</p>
-                        <p><strong>Result:</strong> "Very smooth" migration, "no encoding issues," performance is night and day difference</p>
-                    </div>
-                </section>
-
-                <!-- Remote Access -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-globe" aria-hidden="true"></i> Remote Access</h2>
-
-                    <div class="subsection-spacer">
-                        <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:plex" style="color: #e5a00d;" aria-hidden="true"></span>
-                            <h3 style="margin: 0;">Plex Pass</h3>
-                        </div>
-                        <ul class="specs-list">
-                            <li><strong>Subscription:</strong> Active Plex Pass for remote streaming</li>
-                            <li><strong>Remote Quality:</strong> Adaptive streaming based on bandwidth</li>
-                            <li><strong>User Management:</strong> Managed users for family and friends</li>
-                            <li><strong>Features:</strong> Downloads for offline viewing, skip intro/credits, live TV & DVR support</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection-spacer">
-                        <div class="app-header">
-                            <span class="iconify app-icon" data-icon="simple-icons:tailscale" style="color: #242424;" aria-hidden="true"></span>
-                            <h3 style="margin: 0;">Tailscale VPN</h3>
-                        </div>
-                        <ul class="specs-list">
-                            <li><strong>Purpose:</strong> Secure remote access to entire TrueNAS server (not just Plex)</li>
-                            <li><strong>Use Case:</strong> Manage Sonarr, Radarr, Prowlarr, Transmission remotely</li>
-                            <li><strong>Benefit:</strong> Full admin access without exposing services to public internet</li>
-                            <li><strong>Security:</strong> Zero-trust mesh network with automatic encryption</li>
-                        </ul>
-                    </div>
-                </section>
-
                 <!-- Discord Notifications -->
                 <section class="specs-section">
                     <div class="app-header">
@@ -431,24 +368,6 @@
                             <li><strong>Use Case:</strong> Could feed homepage "Recently Added" section or integrate with other automation</li>
                         </ul>
                     </div>
-                </section>
-
-                <!-- User Management -->
-                <section class="specs-section">
-                    <h2><i class="fa-solid fa-users" aria-hidden="true"></i> User Management & Sharing</h2>
-
-                    <h3>Current Users</h3>
-                    <ul class="specs-list">
-                        <li><strong>Self</strong> - Full admin access</li>
-                        <li><strong>Wife</strong> - Managed user, Overseerr access</li>
-                        <li><strong>Daughter</strong> - Managed user with content restrictions</li>
-                        <li><strong>Parents</strong> - Managed users</li>
-                        <li><strong>Friend</strong> - Managed user</li>
-                    </ul>
-
-                    <h3>Growth Strategy</h3>
-                    <p><strong>Approach:</strong> "Working to distribute more but slowly"</p>
-                    <p><strong>Rationale:</strong> Ensuring server stability and bandwidth capacity before expanding user base. Current 6 users handle well with hardware transcoding, monitoring performance before inviting additional users.</p>
                 </section>
 
                 <!-- Future Enhancements -->

@@ -1,5 +1,116 @@
 [
   {
+    "id": 11659278416,
+    "watched_at": "2025-11-18T06:18:57.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 3,
+      "title": "The Book of Demi",
+      "ids": {
+        "trakt": 13457484,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488391,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11659197782,
+    "watched_at": "2025-11-18T05:26:42.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 2,
+      "title": "The Book of Fidelity",
+      "ids": {
+        "trakt": 13457483,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488390,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11659047649,
+    "watched_at": "2025-11-18T04:33:23.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 6,
+      "title": "Happy Birthday, A Friend.",
+      "ids": {
+        "trakt": 13495855,
+        "tvdb": 11327952,
+        "imdb": "tt37542983",
+        "tmdb": 6515884,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11656543036,
     "watched_at": "2025-11-17T14:09:39.000Z",
     "action": "watch",
@@ -308,117 +419,6 @@
     "ratings": {
       "imdb": null,
       "imdbVotes": null,
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11616018451,
-    "watched_at": "2025-11-11T04:15:48.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 1,
-      "title": "We Is Us",
-      "ids": {
-        "trakt": 11516846,
-        "tvdb": 9860610,
-        "imdb": "tt30759782",
-        "tmdb": 5154192,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": null,
-      "imdbVotes": null,
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11609195511,
-    "watched_at": "2025-11-09T23:02:48.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 2025,
-      "number": 111,
-      "title": "Formula 1 MSC Cruises Grande Prêmio De São Paulo 2025 - Race",
-      "ids": {
-        "trakt": 12840517,
-        "tvdb": 10974810,
-        "imdb": null,
-        "tmdb": null,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Formula 1",
-      "year": 1950,
-      "ids": {
-        "trakt": 165874,
-        "slug": "formula-1",
-        "tvdb": 387219,
-        "imdb": "tt6758316",
-        "tmdb": 300959,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/9jVWo6S6hQM1TYjE89eJbrcwshb.jpg",
-    "ratings": {
-      "imdb": "9.4",
-      "imdbVotes": "3,586",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11602182882,
-    "watched_at": "2025-11-08T04:52:31.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 6,
-      "title": "No Phones",
-      "ids": {
-        "trakt": 13596458,
-        "tvdb": 11391211,
-        "imdb": "tt38090233",
-        "tmdb": 6582613,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Abbott Elementary",
-      "year": 2021,
-      "ids": {
-        "trakt": 180675,
-        "slug": "abbott-elementary",
-        "tvdb": 402910,
-        "imdb": "tt14218830",
-        "tmdb": 125935,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
-    "ratings": {
-      "imdb": "8.2",
-      "imdbVotes": "47,168",
       "rottenTomatoes": null,
       "metacritic": null
     }
