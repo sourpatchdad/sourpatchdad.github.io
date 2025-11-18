@@ -1,5 +1,42 @@
 [
   {
+    "id": 11659047649,
+    "watched_at": "2025-11-18T04:33:23.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 6,
+      "title": "Happy Birthday, A Friend.",
+      "ids": {
+        "trakt": 13495855,
+        "tvdb": 11327952,
+        "imdb": "tt37542983",
+        "tmdb": 6515884,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11656543036,
     "watched_at": "2025-11-17T14:09:39.000Z",
     "action": "watch",
@@ -382,43 +419,6 @@
     "ratings": {
       "imdb": "9.4",
       "imdbVotes": "3,586",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11602182882,
-    "watched_at": "2025-11-08T04:52:31.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 6,
-      "title": "No Phones",
-      "ids": {
-        "trakt": 13596458,
-        "tvdb": 11391211,
-        "imdb": "tt38090233",
-        "tmdb": 6582613,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Abbott Elementary",
-      "year": 2021,
-      "ids": {
-        "trakt": 180675,
-        "slug": "abbott-elementary",
-        "tvdb": 402910,
-        "imdb": "tt14218830",
-        "tmdb": 125935,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
-    "ratings": {
-      "imdb": "8.2",
-      "imdbVotes": "47,168",
       "rottenTomatoes": null,
       "metacritic": null
     }
