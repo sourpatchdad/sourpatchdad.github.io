@@ -489,9 +489,9 @@
 
     <!-- Live Plex Stats from Home Assistant -->
     <script>
-        // Configuration - Update these values
-        const HA_URL = 'http://homeassistant.local:8123'; // or your HA IP: http://192.168.x.x:8123
-        const HA_TOKEN = 'YOUR_LONG_LIVED_ACCESS_TOKEN_HERE'; // Create in HA Profile > Long-Lived Access Tokens
+        // Configuration - Connected to Home Assistant via non-admin 'github' user
+        const HA_URL = 'http://nbn.ddns.net:8123';
+        const HA_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYmM4ZDdhNzFiNTY0MTljOWM4NWU3NTVmOGU0YWY3YiIsImlhdCI6MTc2MzQ4MDg2OCwiZXhwIjoyMDc4ODQwODY4fQ.r1QQVpb9-v2jqto5lDD65nIL5SrJCEExKbjZ8ZvC6C0';
 
         // Sensor entity IDs
         const MOVIE_SENSOR = 'sensor.nbn_plex_library_movies';
