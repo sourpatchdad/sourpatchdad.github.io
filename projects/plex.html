@@ -51,9 +51,29 @@
             margin-bottom: 20px;
         }
 
+        .app-header img {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
         .app-icon {
-            font-size: 2em;
+            font-size: 1.5em;
             line-height: 1;
+            flex-shrink: 0;
+            width: 1.5em;
+            height: 1.5em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header icon sizing */
+        .server-header .iconify {
+            font-size: 3em;
+            width: 1em;
+            height: 1em;
         }
 
         .subsection-spacer {
@@ -286,8 +306,8 @@
                 <!-- Overseerr Request Management -->
                 <section class="specs-section">
                     <div class="app-header">
-                        <img src="<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/transmission.svg">
-                        <h2 style="margin: 0;"> Overseerr Request Management</h2>
+                        <span class="iconify app-icon" data-icon="simple-icons:overseerr" style="color: #5C6AC4;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;">Overseerr Request Management</h2>
                     </div>
                     <p>Overseerr provides a Netflix-style interface for browsing and requesting content:</p>
 
@@ -315,8 +335,8 @@
                 <!-- Trakt Integration -->
                 <section class="specs-section">
                     <div class="app-header">
-                        <img src="<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/trakt.svg">
-                        <h2 style="margin: 0;"> Trakt Integration</h2>
+                        <span class="iconify app-icon" data-icon="simple-icons:trakt" style="color: #ED1C24;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;">Trakt Integration</h2>
                     </div>
 
                     <div class="subsection-spacer">
@@ -341,7 +361,7 @@
                 <section class="specs-section">
                     <div class="app-header">
                         <span class="iconify app-icon" data-icon="simple-icons:discord" style="color: #5865F2;" aria-hidden="true"></span>
-                        <h2 style="margin: 0;"> Discord Webhooks & Notifications</h2>
+                        <h2 style="margin: 0;">Discord Webhooks & Notifications</h2>
                     </div>
 
                     <div class="subsection-spacer">
