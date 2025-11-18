@@ -42,6 +42,50 @@
       gtag('config', 'G-8Z268T69R9');
     </script>
 
+    <style>
+        /* App icon styling */
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .app-icon {
+            font-size: 2em;
+            line-height: 1;
+        }
+
+        .subsection-spacer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.2));
+        }
+
+        .quality-section {
+            background: var(--card-background, rgba(255, 255, 255, 0.05));
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .quality-section h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .live-stat {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-loading {
+            opacity: 0.6;
+            font-style: italic;
+        }
+    </style>
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -126,11 +170,11 @@
                     <div class="specs-grid">
                         <div class="spec-item">
                             <span class="spec-label">Movies</span>
-                            <span class="spec-value">8 (growing rapidly post-upgrade)</span>
+                            <span class="spec-value"><span id="movie-count" class="live-stat stat-loading">Loading...</span></span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">TV Shows</span>
-                            <span class="spec-value">105 (expanding with new server capacity)</span>
+                            <span class="spec-value"><span id="tv-count" class="live-stat stat-loading">Loading...</span></span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Active Users</span>
@@ -142,6 +186,7 @@
                         </div>
                     </div>
                     <p style="margin-top: 15px;"><strong>Note:</strong> Library is in active growth phase following TrueNAS server upgrade. Previous Synology DS124 limitations (1GB RAM, no transcoding) severely restricted collection size. Now expanding rapidly with proper hardware.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;"><em>Movie and TV show counts update live from Home Assistant (when on local network)</em></p>
                 </section>
 
                 <!-- The Complete Automation Pipeline -->
@@ -167,104 +212,147 @@
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-sliders" aria-hidden="true"></i> Quality Management & Upgrade Logic</h2>
 
-                    <h3>Movie Quality Profiles</h3>
-                    <ul class="specs-list">
-                        <li><strong>Baseline Quality:</strong> CAM or TELESYNC (early releases for new content)</li>
-                        <li><strong>Upgrade Target:</strong> BR1080 (Blu-ray 1080p)</li>
-                        <li><strong>Logic:</strong> Grabs early releases immediately, then automatically upgrades when higher quality becomes available</li>
-                        <li><strong>Rationale:</strong> Balance between immediate availability and quality - don't wait months for BR release if we want to watch now</li>
-                    </ul>
+                    <div class="quality-section">
+                        <h3><i class="fa-solid fa-film" aria-hidden="true"></i> Movie Quality Profiles</h3>
 
-                    <h3>TV Show Quality Profiles</h3>
-                    <ul class="specs-list">
-                        <li><strong>Baseline Quality:</strong> 1080p</li>
-                        <li><strong>Upgrade Target:</strong> None (no automatic upgrading)</li>
-                        <li><strong>Logic:</strong> TV shows typically release in good quality initially, so no need for upgrade automation</li>
-                        <li><strong>Rationale:</strong> Prevents unnecessary re-downloads and storage churn for minimal quality improvement</li>
-                    </ul>
+                        <ul class="specs-list">
+                            <li><strong>Baseline Quality:</strong> CAM or TELESYNC (early releases for new content)</li>
+                            <li><strong>Upgrade Target:</strong> BR1080 (Blu-ray 1080p)</li>
+                            <li><strong>Logic:</strong> Grabs early releases immediately, then automatically upgrades when higher quality becomes available</li>
+                            <li><strong>Rationale:</strong> Balance between immediate availability and quality - don't wait months for BR release if we want to watch now</li>
+                        </ul>
+                    </div>
 
-                    <h3>Storage Optimization</h3>
-                    <p><strong>Hard Links:</strong> Used extensively to manage Plex library organization without duplicating files. Same content can appear in multiple categories/playlists while only consuming storage once.</p>
+                    <div class="quality-section">
+                        <h3><i class="fa-solid fa-tv" aria-hidden="true"></i> TV Show Quality Profiles</h3>
+
+                        <ul class="specs-list">
+                            <li><strong>Baseline Quality:</strong> 1080p</li>
+                            <li><strong>Upgrade Target:</strong> None (no automatic upgrading)</li>
+                            <li><strong>Logic:</strong> TV shows typically release in good quality initially, so no need for upgrade automation</li>
+                            <li><strong>Rationale:</strong> Prevents unnecessary re-downloads and storage churn for minimal quality improvement</li>
+                        </ul>
+                    </div>
+
+                    <div class="quality-section">
+                        <h3><i class="fa-solid fa-link" aria-hidden="true"></i> Storage Optimization</h3>
+
+                        <p><strong>Hard Links:</strong> Used extensively to manage Plex library organization without duplicating files. Same content can appear in multiple categories/playlists while only consuming storage once.</p>
+                    </div>
                 </section>
 
                 <!-- The *arr Stack Configuration -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-layer-group" aria-hidden="true"></i> The *arr Stack Configuration</h2>
 
-                    <h3>Sonarr (TV Shows)</h3>
-                    <ul class="specs-list">
-                        <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
-                        <li><strong>Function:</strong> Monitors TV shows, handles season/episode tracking, triggers downloads</li>
-                        <li><strong>Integration:</strong> Connected to Prowlarr for indexers, Transmission for downloads, Plex for library updates</li>
-                        <li><strong>Automation:</strong> Monitors Trakt lists for new shows, automatically searches for new episodes on release</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:sonarr" style="color: #007acc;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Sonarr (TV Shows)</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
+                            <li><strong>Function:</strong> Monitors TV shows, handles season/episode tracking, triggers downloads</li>
+                            <li><strong>Integration:</strong> Connected to Prowlarr for indexers, Transmission for downloads, Plex for library updates</li>
+                            <li><strong>Automation:</strong> Monitors Trakt lists for new shows, automatically searches for new episodes on release</li>
+                        </ul>
+                    </div>
 
-                    <h3>Radarr (Movies)</h3>
-                    <ul class="specs-list">
-                        <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
-                        <li><strong>Function:</strong> Monitors movies, handles release date tracking, manages quality upgrades</li>
-                        <li><strong>Integration:</strong> Connected to Prowlarr for indexers, Transmission for downloads, Plex for library updates</li>
-                        <li><strong>Automation:</strong> Monitors Trakt lists for new movies, searches immediately on release, upgrades quality automatically</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:radarr" style="color: #ffc230;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Radarr (Movies)</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
+                            <li><strong>Function:</strong> Monitors movies, handles release date tracking, manages quality upgrades</li>
+                            <li><strong>Integration:</strong> Connected to Prowlarr for indexers, Transmission for downloads, Plex for library updates</li>
+                            <li><strong>Automation:</strong> Monitors Trakt lists for new movies, searches immediately on release, upgrades quality automatically</li>
+                        </ul>
+                    </div>
 
-                    <h3>Prowlarr (Indexer Manager)</h3>
-                    <ul class="specs-list">
-                        <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
-                        <li><strong>Function:</strong> Centralized indexer management - one place to configure all search sources</li>
-                        <li><strong>Benefit:</strong> Add an indexer once in Prowlarr, automatically syncs to Sonarr and Radarr</li>
-                        <li><strong>Efficiency:</strong> Eliminates need to configure same indexers in multiple *arr apps</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:prowlarr" style="color: #0DCDCD;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Prowlarr (Indexer Manager)</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
+                            <li><strong>Function:</strong> Centralized indexer management - one place to configure all search sources</li>
+                            <li><strong>Benefit:</strong> Add an indexer once in Prowlarr, automatically syncs to Sonarr and Radarr</li>
+                            <li><strong>Efficiency:</strong> Eliminates need to configure same indexers in multiple *arr apps</li>
+                        </ul>
+                    </div>
 
-                    <h3>Transmission (Download Client)</h3>
-                    <ul class="specs-list">
-                        <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
-                        <li><strong>Configuration:</strong> Default settings, no special configuration required</li>
-                        <li><strong>Integration:</strong> Sonarr and Radarr send downloads directly to Transmission</li>
-                        <li><strong>Storage:</strong> Downloads to designated ZFS dataset for organization</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:transmission" style="color: #F00;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Transmission (Download Client)</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Platform:</strong> TrueNAS app (no Docker)</li>
+                            <li><strong>Configuration:</strong> Default settings, no special configuration required</li>
+                            <li><strong>Integration:</strong> Sonarr and Radarr send downloads directly to Transmission</li>
+                            <li><strong>Storage:</strong> Downloads to designated ZFS dataset for organization</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <!-- Overseerr Request Management -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-ticket" aria-hidden="true"></i> Overseerr Request Management</h2>
+                    <div class="app-header">
+                        <span class="iconify app-icon" data-icon="simple-icons:overseerr" style="color: #5C6AC4;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;"><i class="fa-solid fa-ticket" aria-hidden="true"></i> Overseerr Request Management</h2>
+                    </div>
                     <p>Overseerr provides a Netflix-style interface for browsing and requesting content:</p>
 
-                    <h3>Features</h3>
-                    <ul class="specs-list">
-                        <li><strong>User Access:</strong> Currently configured for self and wife</li>
-                        <li><strong>Auto-Approval:</strong> Requests automatically approved and sent to appropriate *arr app</li>
-                        <li><strong>Discovery:</strong> Browse trending, popular, and recommended content across movies and TV</li>
-                        <li><strong>Integration:</strong> Seamlessly connects to Radarr for movies, Sonarr for TV shows</li>
-                        <li><strong>Workflow:</strong> User requests → Auto-approval → Radarr/Sonarr → Prowlarr search → Transmission download → Plex import</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Features</h3>
+                        <ul class="specs-list">
+                            <li><strong>User Access:</strong> Currently configured for self and wife</li>
+                            <li><strong>Auto-Approval:</strong> Requests automatically approved and sent to appropriate *arr app</li>
+                            <li><strong>Discovery:</strong> Browse trending, popular, and recommended content across movies and TV</li>
+                            <li><strong>Integration:</strong> Seamlessly connects to Radarr for movies, Sonarr for TV shows</li>
+                            <li><strong>Workflow:</strong> User requests → Auto-approval → Radarr/Sonarr → Prowlarr search → Transmission download → Plex import</li>
+                        </ul>
+                    </div>
 
-                    <h3>Benefits</h3>
-                    <ul class="specs-list">
-                        <li>Wife can request content without needing to access Radarr/Sonarr directly</li>
-                        <li>Clean, intuitive interface for non-technical users</li>
-                        <li>Shows availability status (already in library, pending, available to request)</li>
-                        <li>Notifications when requested content becomes available in Plex</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Benefits</h3>
+                        <ul class="specs-list">
+                            <li>Wife can request content without needing to access Radarr/Sonarr directly</li>
+                            <li>Clean, intuitive interface for non-technical users</li>
+                            <li>Shows availability status (already in library, pending, available to request)</li>
+                            <li>Notifications when requested content becomes available in Plex</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <!-- Trakt Integration -->
                 <section class="specs-section">
-                    <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> Trakt Integration</h2>
+                    <div class="app-header">
+                        <span class="iconify app-icon" data-icon="simple-icons:trakt" style="color: #ED1C24;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Trakt Integration</h2>
+                    </div>
 
-                    <h3>Watchlist Syncing</h3>
-                    <ul class="specs-list">
-                        <li><strong>Trakt → Radarr/Sonarr:</strong> Syncs specific Trakt lists to monitor for new content</li>
-                        <li><strong>Auto-Discovery:</strong> When new episodes or movies are added to monitored lists, automatically triggers search</li>
-                        <li><strong>Watch History:</strong> Tracks watched status across Plex and other streaming services</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Watchlist Syncing</h3>
+                        <ul class="specs-list">
+                            <li><strong>Trakt → Radarr/Sonarr:</strong> Syncs specific Trakt lists to monitor for new content</li>
+                            <li><strong>Auto-Discovery:</strong> When new episodes or movies are added to monitored lists, automatically triggers search</li>
+                            <li><strong>Watch History:</strong> Tracks watched status across Plex and other streaming services</li>
+                        </ul>
+                    </div>
 
-                    <h3>Auto-Scrobbling</h3>
-                    <ul class="specs-list">
-                        <li><strong>Plex Scrobbling:</strong> Automatically marks content as watched in Trakt when viewed in Plex</li>
-                        <li><strong>Streaming Services:</strong> Also scrobbles from Netflix, Disney+, HBO Max, etc.</li>
-                        <li><strong>Cross-Platform:</strong> Unified watch history across all platforms in one place</li>
-                        <li><strong>Homepage Integration:</strong> Recently watched data feeds the homepage "Recently Watched" section</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Auto-Scrobbling</h3>
+                        <ul class="specs-list">
+                            <li><strong>Plex Scrobbling:</strong> Automatically marks content as watched in Trakt when viewed in Plex</li>
+                            <li><strong>Streaming Services:</strong> Also scrobbles from Netflix, Disney+, HBO Max, etc.</li>
+                            <li><strong>Cross-Platform:</strong> Unified watch history across all platforms in one place</li>
+                            <li><strong>Homepage Integration:</strong> Recently watched data feeds the homepage "Recently Watched" section</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <!-- Hardware Transcoding -->
@@ -272,60 +360,81 @@
                     <h2><i class="fa-solid fa-microchip" aria-hidden="true"></i> Hardware Transcoding (Intel Quick Sync)</h2>
                     <p><strong>Hardware:</strong> Intel i5-12500 with Intel UHD Graphics 770</p>
 
-                    <h3>Transcoding Capabilities</h3>
-                    <ul class="specs-list">
-                        <li><strong>4K Support:</strong> Yes - handles 4K to 1080p transcoding with ease</li>
-                        <li><strong>Multiple Streams:</strong> Can transcode multiple simultaneous streams without performance degradation</li>
-                        <li><strong>Speed:</strong> "Crazy fast" - near-instantaneous start times, no buffering</li>
-                        <li><strong>CPU Usage:</strong> Minimal - Quick Sync offloads work to integrated GPU</li>
-                        <li><strong>Quality:</strong> Excellent transcoding quality with hardware acceleration</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Transcoding Capabilities</h3>
+                        <ul class="specs-list">
+                            <li><strong>4K Support:</strong> Yes - handles 4K to 1080p transcoding with ease</li>
+                            <li><strong>Multiple Streams:</strong> Can transcode multiple simultaneous streams without performance degradation</li>
+                            <li><strong>Speed:</strong> "Crazy fast" - near-instantaneous start times, no buffering</li>
+                            <li><strong>CPU Usage:</strong> Minimal - Quick Sync offloads work to integrated GPU</li>
+                            <li><strong>Quality:</strong> Excellent transcoding quality with hardware acceleration</li>
+                        </ul>
+                    </div>
 
-                    <h3>Migration Win</h3>
-                    <p><strong>Before (Synology DS124):</strong> No transcoding capability, 1GB RAM, extremely limited</p>
-                    <p><strong>After (TrueNAS i5-12500):</strong> Hardware transcoding, 32GB RAM, smooth 4K streaming to 6 users</p>
-                    <p><strong>Result:</strong> "Very smooth" migration, "no encoding issues," performance is night and day difference</p>
+                    <div class="subsection-spacer">
+                        <h3>Migration Win</h3>
+                        <p><strong>Before (Synology DS124):</strong> No transcoding capability, 1GB RAM, extremely limited</p>
+                        <p><strong>After (TrueNAS i5-12500):</strong> Hardware transcoding, 32GB RAM, smooth 4K streaming to 6 users</p>
+                        <p><strong>Result:</strong> "Very smooth" migration, "no encoding issues," performance is night and day difference</p>
+                    </div>
                 </section>
 
                 <!-- Remote Access -->
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-globe" aria-hidden="true"></i> Remote Access</h2>
 
-                    <h3>Plex Pass</h3>
-                    <ul class="specs-list">
-                        <li><strong>Subscription:</strong> Active Plex Pass for remote streaming</li>
-                        <li><strong>Remote Quality:</strong> Adaptive streaming based on bandwidth</li>
-                        <li><strong>User Management:</strong> Managed users for family and friends</li>
-                        <li><strong>Features:</strong> Downloads for offline viewing, skip intro/credits, live TV & DVR support</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:plex" style="color: #e5a00d;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Plex Pass</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Subscription:</strong> Active Plex Pass for remote streaming</li>
+                            <li><strong>Remote Quality:</strong> Adaptive streaming based on bandwidth</li>
+                            <li><strong>User Management:</strong> Managed users for family and friends</li>
+                            <li><strong>Features:</strong> Downloads for offline viewing, skip intro/credits, live TV & DVR support</li>
+                        </ul>
+                    </div>
 
-                    <h3>Tailscale VPN</h3>
-                    <ul class="specs-list">
-                        <li><strong>Purpose:</strong> Secure remote access to entire TrueNAS server (not just Plex)</li>
-                        <li><strong>Use Case:</strong> Manage Sonarr, Radarr, Prowlarr, Transmission remotely</li>
-                        <li><strong>Benefit:</strong> Full admin access without exposing services to public internet</li>
-                        <li><strong>Security:</strong> Zero-trust mesh network with automatic encryption</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <div class="app-header">
+                            <span class="iconify app-icon" data-icon="simple-icons:tailscale" style="color: #242424;" aria-hidden="true"></span>
+                            <h3 style="margin: 0;">Tailscale VPN</h3>
+                        </div>
+                        <ul class="specs-list">
+                            <li><strong>Purpose:</strong> Secure remote access to entire TrueNAS server (not just Plex)</li>
+                            <li><strong>Use Case:</strong> Manage Sonarr, Radarr, Prowlarr, Transmission remotely</li>
+                            <li><strong>Benefit:</strong> Full admin access without exposing services to public internet</li>
+                            <li><strong>Security:</strong> Zero-trust mesh network with automatic encryption</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <!-- Discord Notifications -->
                 <section class="specs-section">
-                    <h2><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord Webhooks & Notifications</h2>
+                    <div class="app-header">
+                        <span class="iconify app-icon" data-icon="simple-icons:discord" style="color: #5865F2;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord Webhooks & Notifications</h2>
+                    </div>
 
-                    <h3>Current Setup</h3>
-                    <ul class="specs-list">
-                        <li><strong>Grab Notifications:</strong> Webhook fires when Sonarr/Radarr grabs a download</li>
-                        <li><strong>Import Notifications:</strong> Webhook fires when content successfully imports to Plex</li>
-                        <li><strong>Private Channel:</strong> Notifications go to personal Discord server</li>
-                        <li><strong>Format:</strong> Shows title, quality, size, indexer used</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Current Setup</h3>
+                        <ul class="specs-list">
+                            <li><strong>Grab Notifications:</strong> Webhook fires when Sonarr/Radarr grabs a download</li>
+                            <li><strong>Import Notifications:</strong> Webhook fires when content successfully imports to Plex</li>
+                            <li><strong>Private Channel:</strong> Notifications go to personal Discord server</li>
+                            <li><strong>Format:</strong> Shows title, quality, size, indexer used</li>
+                        </ul>
+                    </div>
 
-                    <h3>Future Migration Plan</h3>
-                    <ul class="specs-list">
-                        <li><strong>Target:</strong> Migrate from Discord webhooks to RSS feed</li>
-                        <li><strong>Benefit:</strong> RSS provides cleaner feed format and can be consumed by multiple apps</li>
-                        <li><strong>Use Case:</strong> Could feed homepage "Recently Added" section or integrate with other automation</li>
-                    </ul>
+                    <div class="subsection-spacer">
+                        <h3>Future Migration Plan</h3>
+                        <ul class="specs-list">
+                            <li><strong>Target:</strong> Migrate from Discord webhooks to RSS feed</li>
+                            <li><strong>Benefit:</strong> RSS provides cleaner feed format and can be consumed by multiple apps</li>
+                            <li><strong>Use Case:</strong> Could feed homepage "Recently Added" section or integrate with other automation</li>
+                        </ul>
+                    </div>
                 </section>
 
                 <!-- User Management -->
@@ -377,5 +486,73 @@
     </footer>
 
     <script src="../script.js?v=20250104001"></script>
+
+    <!-- Live Plex Stats from Home Assistant -->
+    <script>
+        // Configuration - Connected to Home Assistant via non-admin 'github' user
+        const HA_URL = 'http://nbn.ddns.net:8123';
+        const HA_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYmM4ZDdhNzFiNTY0MTljOWM4NWU3NTVmOGU0YWY3YiIsImlhdCI6MTc2MzQ4MDg2OCwiZXhwIjoyMDc4ODQwODY4fQ.r1QQVpb9-v2jqto5lDD65nIL5SrJCEExKbjZ8ZvC6C0';
+
+        // Sensor entity IDs
+        const MOVIE_SENSOR = 'sensor.nbn_plex_library_movies';
+        const TV_SENSOR = 'sensor.nbn_plex_library_tv_shows';
+
+        // Fallback values (shown if HA is unreachable)
+        const FALLBACK_MOVIES = '8 (growing rapidly post-upgrade)';
+        const FALLBACK_TV = '105 (expanding with new server capacity)';
+
+        async function fetchPlexStats() {
+            const movieElement = document.getElementById('movie-count');
+            const tvElement = document.getElementById('tv-count');
+
+            try {
+                // Fetch movie count
+                const movieResponse = await fetch(`${HA_URL}/api/states/${MOVIE_SENSOR}`, {
+                    headers: {
+                        'Authorization': `Bearer ${HA_TOKEN}`,
+                        'Content-Type': 'application/json',
+                    },
+                    timeout: 5000
+                });
+
+                // Fetch TV show count
+                const tvResponse = await fetch(`${HA_URL}/api/states/${TV_SENSOR}`, {
+                    headers: {
+                        'Authorization': `Bearer ${HA_TOKEN}`,
+                        'Content-Type': 'application/json',
+                    },
+                    timeout: 5000
+                });
+
+                if (movieResponse.ok && tvResponse.ok) {
+                    const movieData = await movieResponse.json();
+                    const tvData = await tvResponse.json();
+
+                    // Update with live data
+                    movieElement.textContent = `${movieData.state} (growing rapidly post-upgrade)`;
+                    tvElement.textContent = `${tvData.state} (expanding with new server capacity)`;
+
+                    // Remove loading class
+                    movieElement.classList.remove('stat-loading');
+                    tvElement.classList.remove('stat-loading');
+                } else {
+                    throw new Error('HA API request failed');
+                }
+            } catch (error) {
+                // Show fallback values if HA is unreachable (not on local network or token issue)
+                console.log('Home Assistant unavailable, using fallback values');
+                movieElement.textContent = FALLBACK_MOVIES;
+                tvElement.textContent = FALLBACK_TV;
+                movieElement.classList.remove('stat-loading');
+                tvElement.classList.remove('stat-loading');
+            }
+        }
+
+        // Fetch stats on page load
+        window.addEventListener('DOMContentLoaded', fetchPlexStats);
+
+        // Refresh every 5 minutes (if you want live updates)
+        setInterval(fetchPlexStats, 5 * 60 * 1000);
+    </script>
 </body>
 </html>
