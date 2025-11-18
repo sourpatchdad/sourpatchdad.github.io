@@ -43,6 +43,101 @@
       gtag('js', new Date());
       gtag('config', 'G-8Z268T69R9');
     </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Projects by Nathan Nicholas",
+      "description": "Collection of tech projects including Home Assistant automation, BitAxe Bitcoin mining, TrueNAS server infrastructure, Plex media automation, and Python automation tools.",
+      "url": "https://nbnstack.com/projects.html",
+      "author": {
+        "@type": "Person",
+        "name": "Nathan Nicholas",
+        "jobTitle": "Senior Data Analyst",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Aspen Integrity"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "University of North Texas"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Denton",
+          "addressRegion": "TX"
+        },
+        "url": "https://nbnstack.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TechArticle",
+              "name": "TrueNAS Server Build",
+              "url": "https://nbnstack.com/projects/server-build.html",
+              "description": "Custom-built homelab server with i5-12500, 32GB RAM, and ZFS mirrored storage"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TechArticle",
+              "name": "TrueNAS Migration",
+              "url": "https://nbnstack.com/projects/truenas-migration.html",
+              "description": "Migrating from Synology DS124 to custom TrueNAS server for 4K Plex transcoding"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Bitty 2.0",
+              "url": "https://nbnstack.com/projects/bitty-2.html",
+              "description": "Python Bitcoin price notifications bot on GitHub Actions"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TechArticle",
+              "name": "BitAxe",
+              "url": "https://nbnstack.com/projects/bitaxe.html",
+              "description": "Solo Bitcoin miner integrated with Home Assistant"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "TechArticle",
+              "name": "Plex Media Server",
+              "url": "https://nbnstack.com/projects/plex.html",
+              "description": "Self-hosted 4K media streaming with full automation pipeline"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "TechArticle",
+              "name": "Home Assistant",
+              "url": "https://nbnstack.com/projects/home-assistant.html",
+              "description": "Custom smart home automation with financial tracking and Tesla integration"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->

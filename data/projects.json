@@ -70,17 +70,5 @@
     "icon": "fa-solid fa-house-signal",
     "iconType": "home-automation",
     "externalLink": null
-  },
-  {
-    "id": "tessie",
-    "title": "Tessie Integration",
-    "shortDescription": "Advanced Tesla control and monitoring integrated with Home Assistant. Remote climate control, charging management, location tracking, and smart automations based on vehicle state.",
-    "tags": ["Tesla", "Tessie", "Home Assistant", "Vehicle Integration", "Smart Automations"],
-    "date": "2023",
-    "detailPage": "projects/tessie.html",
-    "headerImage": "images/custom-icons/tessie.png",
-    "icon": "fa-solid fa-car",
-    "iconType": "vehicle",
-    "externalLink": null
   }
 ]
