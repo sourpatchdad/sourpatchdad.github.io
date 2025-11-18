@@ -192,15 +192,11 @@
 
                 const projects = await response.json();
 
-                // Sort projects by date (newest first)
+                // Sort projects by position (lowest first)
                 projects.sort((a, b) => {
-                    // Extract the most recent year from date strings like "2024" or "2024-2025"
-                    const getLatestYear = (dateStr) => {
-                        const years = dateStr.match(/\d{4}/g);
-                        return years ? Math.max(...years.map(y => parseInt(y))) : 0;
-                    };
-
-                    return getLatestYear(b.date) - getLatestYear(a.date);
+                    const posA = a.position || 999; // Default to end if no position
+                    const posB = b.position || 999;
+                    return posA - posB;
                 });
 
                 // Clear loading state
