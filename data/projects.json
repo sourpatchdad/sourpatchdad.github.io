@@ -1,5 +1,17 @@
 [
   {
+    "id": "plex",
+    "title": "Plex Media Server",
+    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission.",
+    "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
+    "date": "2024",
+    "detailPage": "projects/plex.html",
+    "headerImage": "images/custom-icons/plex.png",
+    "icon": "fa-solid fa-film",
+    "iconType": "media",
+    "externalLink": null
+  },
+  {
     "id": "server-build",
     "title": "TrueNAS Server Build",
     "shortDescription": "Custom-built homelab server with i5-12500, 32GB RAM, and ZFS mirrored storage. Complete infrastructure running media automation, Bitcoin full node, Immich photo management, and Home Assistant integrations.",
@@ -45,18 +57,6 @@
     "headerImage": "images/custom-icons/bitaxe.svg",
     "icon": "fab fa-bitcoin",
     "iconType": "bitcoin",
-    "externalLink": null
-  },
-  {
-    "id": "plex",
-    "title": "Plex Media Server",
-    "shortDescription": "Self-hosted 4K media streaming solution with full automation pipeline using Sonarr, Radarr, Prowlarr, and Transmission.",
-    "tags": ["Plex", "Sonarr", "Radarr", "Prowlarr", "Media Automation", "TrueNAS"],
-    "date": "2024",
-    "detailPage": "projects/plex.html",
-    "headerImage": "images/custom-icons/plex.png",
-    "icon": "fa-solid fa-film",
-    "iconType": "media",
     "externalLink": null
   },
   {
