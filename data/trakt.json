@@ -1,5 +1,42 @@
 [
   {
+    "id": 11662127846,
+    "watched_at": "2025-11-19T05:18:20.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 5,
+      "title": "The Book of Resurrection",
+      "ids": {
+        "trakt": 13457486,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488393,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11661878851,
     "watched_at": "2025-11-19T04:25:36.000Z",
     "action": "checkin",
@@ -382,43 +419,6 @@
     "ratings": {
       "imdb": "7.8",
       "imdbVotes": "2,142",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11625283745,
-    "watched_at": "2025-11-12T05:42:35.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 2,
-      "title": "Pirate Lady",
-      "ids": {
-        "trakt": 12800266,
-        "tvdb": 11260075,
-        "imdb": "tt32767308",
-        "tmdb": 5964848,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": null,
-      "imdbVotes": null,
       "rottenTomatoes": null,
       "metacritic": null
     }
