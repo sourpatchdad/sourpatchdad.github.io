@@ -1,5 +1,42 @@
 [
   {
+    "id": 11661878851,
+    "watched_at": "2025-11-19T04:25:36.000Z",
+    "action": "checkin",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 4,
+      "title": "The Book of Deceit",
+      "ids": {
+        "trakt": 13457485,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488392,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11659278416,
     "watched_at": "2025-11-18T06:18:57.000Z",
     "action": "watch",
@@ -81,7 +118,7 @@
     "episode": {
       "season": 1,
       "number": 6,
-      "title": "Happy Birthday, A Friend.",
+      "title": "Happy Birthday, a friend.",
       "ids": {
         "trakt": 13495855,
         "tvdb": 11327952,
@@ -363,43 +400,6 @@
         "tvdb": 11260075,
         "imdb": "tt32767308",
         "tmdb": 5964848,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": null,
-      "imdbVotes": null,
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11623744182,
-    "watched_at": "2025-11-11T18:29:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 1,
-      "title": "We Is Us",
-      "ids": {
-        "trakt": 11516846,
-        "tvdb": 9860610,
-        "imdb": "tt30759782",
-        "tmdb": 5154192,
         "tvrage": null
       }
     },
