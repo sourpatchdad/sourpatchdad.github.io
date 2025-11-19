@@ -172,6 +172,18 @@
             opacity: 0.6;
         }
 
+        /* Light mode - make text darker/more visible */
+        @media (prefers-color-scheme: light) {
+            .btc-metric-label,
+            .btc-metric-value,
+            .btc-metric-subtext,
+            .btc-last-updated,
+            .btc-loading {
+                color: #1a1a1a;
+                opacity: 1;
+            }
+        }
+
         @media (max-width: 768px) {
             .btc-price-header {
                 flex-direction: column;
