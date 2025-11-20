@@ -252,8 +252,8 @@
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
     "ratings": {
-      "imdb": null,
-      "imdbVotes": null,
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
