@@ -1,5 +1,42 @@
 [
   {
+    "id": 11675839899,
+    "watched_at": "2025-11-22T05:56:42.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 6,
+      "title": "The Book of Confrontation",
+      "ids": {
+        "trakt": 13457487,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488394,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11662127846,
     "watched_at": "2025-11-19T05:18:20.000Z",
     "action": "watch",
@@ -382,43 +419,6 @@
     "ratings": {
       "imdb": "5.5",
       "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11628226671,
-    "watched_at": "2025-11-13T05:10:01.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 5,
-      "title": "I won. Zoom in.",
-      "ids": {
-        "trakt": 13495854,
-        "tvdb": 11327951,
-        "imdb": "tt37356771",
-        "tmdb": 6515883,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Chair Company",
-      "year": 2025,
-      "ids": {
-        "trakt": 255718,
-        "slug": "the-chair-company",
-        "tvdb": 454397,
-        "imdb": "tt31987295",
-        "tmdb": 271267,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
-    "ratings": {
-      "imdb": "7.8",
-      "imdbVotes": "2,142",
       "rottenTomatoes": null,
       "metacritic": null
     }
