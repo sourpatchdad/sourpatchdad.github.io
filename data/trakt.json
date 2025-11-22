@@ -1,5 +1,42 @@
 [
   {
+    "id": 11675938933,
+    "watched_at": "2025-11-22T06:45:35.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 7,
+      "title": "The Book of Broken Hearts",
+      "ids": {
+        "trakt": 13457488,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488395,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11675839899,
     "watched_at": "2025-11-22T05:56:42.000Z",
     "action": "watch",
@@ -382,43 +419,6 @@
     "ratings": {
       "imdb": "5.6",
       "imdbVotes": "77",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11630016309,
-    "watched_at": "2025-11-13T06:06:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 1,
-      "title": "The Book of Doubt",
-      "ids": {
-        "trakt": 13457482,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488389,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
       "rottenTomatoes": null,
       "metacritic": null
     }
