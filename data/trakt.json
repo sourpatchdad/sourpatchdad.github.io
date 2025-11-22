@@ -1,5 +1,42 @@
 [
   {
+    "id": 11677102976,
+    "watched_at": "2025-11-22T17:40:50.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 8,
+      "title": "The Book of Awakening",
+      "ids": {
+        "trakt": 13457489,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488396,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11675938933,
     "watched_at": "2025-11-22T06:45:35.000Z",
     "action": "watch",
@@ -363,43 +400,6 @@
         "tvdb": null,
         "imdb": null,
         "tmdb": 6654716,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "99 to Beat",
-      "year": 2025,
-      "ids": {
-        "trakt": 295132,
-        "slug": "99-to-beat-2025-295132",
-        "tvdb": 463593,
-        "imdb": "tt36933520",
-        "tmdb": 298469,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
-    "ratings": {
-      "imdb": "5.6",
-      "imdbVotes": "77",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11632013689,
-    "watched_at": "2025-11-14T03:39:52.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 6,
-      "title": "Love Is In The Air",
-      "ids": {
-        "trakt": 13644879,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6620569,
         "tvrage": null
       }
     },
