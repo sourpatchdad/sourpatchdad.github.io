@@ -337,6 +337,106 @@
                     </ul>
                 </section>
 
+                <!-- Data Protection & Backup Strategy -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Data Protection & Backup Strategy</h2>
+
+                    <h3 style="margin-top: 20px;"><i class="fa-solid fa-camera" aria-hidden="true"></i> ZFS Snapshots</h3>
+                    <p>Automated ZFS snapshot strategy provides multiple recovery points with varying retention periods:</p>
+
+                    <div class="comparison-table">
+                        <table>
+                            <caption class="sr-only">ZFS snapshot schedule and retention</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Schedule</th>
+                                    <th scope="col">Retention</th>
+                                    <th scope="col">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hourly</strong></td>
+                                    <td>Every hour</td>
+                                    <td>24 hours</td>
+                                    <td>Short-term recovery from accidental changes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daily (Short)</strong></td>
+                                    <td>1:00 AM</td>
+                                    <td>1 week</td>
+                                    <td>Recent daily restore points</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daily (Long)</strong></td>
+                                    <td>2:00 AM</td>
+                                    <td>4 weeks</td>
+                                    <td>Monthly recovery window</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Cloud Backup</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Provider</span>
+                            <span class="spec-value">Backblaze B2</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Schedule</span>
+                            <span class="spec-value">Daily at 3:00 AM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Scope</span>
+                            <span class="spec-value">All server data (excluding torrents)</span>
+                        </div>
+                    </div>
+
+                    <div class="note-card">
+                        <br><span><i class="fa-solid fa-info-circle" aria-hidden="true"></i>
+                        <strong> Off-Site Redundancy:</strong> Backblaze B2 provides geographic redundancy for critical data. Torrent downloads excluded as they can be re-acquired if needed, optimizing backup costs.</span>
+                    </div>
+                </section>
+
+                <!-- UPS Power Protection -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i> UPS Power Protection & Monitoring</h2>
+
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Model</span>
+                            <span class="spec-value">CyberPower CP1500PFCLCD</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Capacity</span>
+                            <span class="spec-value">1500VA / 1000W</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Wave Type</span>
+                            <span class="spec-value">Pure Sine Wave (PFC)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Outlets</span>
+                            <span class="spec-value">12 Total (Battery + Surge)</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Monitoring & Integration</h3>
+                    <ul class="use-cases">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Prometheus:</strong> UPS metrics collection for performance monitoring and alerting</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Home Assistant:</strong> Real-time UPS status visualization in custom dashboards</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Metrics Tracked:</strong> Battery level, load percentage, input/output voltage, runtime estimates</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> <strong>Automated Alerts:</strong> Notifications for power events, low battery, and overload conditions</li>
+                    </ul>
+
+                    <div class="note-card">
+                        <br><span><i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        <strong> Power Continuity:</strong> Provides clean, regulated power to server during outages and voltage fluctuations. Pure sine wave output ensures compatibility with server PSU and prevents hardware stress.</span>
+                    </div>
+                </section>
+
                 <!-- Performance & Usage
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Storage Usage & Performance</h2>
