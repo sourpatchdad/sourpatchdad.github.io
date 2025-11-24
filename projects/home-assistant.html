@@ -690,7 +690,7 @@
                     <br>
                     <p><strong>Data Quirk:</strong> Tire pressure readings report from when the car last went to sleep, not real-time.</p>
                     <br>
-                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation opens vents if interior temperature exceeds x °F and exterior exceeds x °F.</p>
+                    <p><strong>Additional Features:</strong> Transit time estimates for regular drives, odometer tracking, lock/unlock status, Sentry mode on/off toggle. Climate automation cracks windows if interior temperature exceeds x °F and exterior exceeds x °F.</p>
 
                     <div class="device-showcase">
                         <div class="device-frame desktop">
@@ -795,7 +795,7 @@
                         </li>
                         <li>
                             <span class="iconify" data-icon="cbi:tesla-defrost"></span>
-                            <strong>Tesla Climate:</strong> Opens vents if interior >110°F and exterior >95°F
+                            <strong>Tesla Climate:</strong> Cracks windows if interior >110°F and exterior >95°F
                         </li>
                         <li>
                             <i class="fas fa-calendar"></i>
@@ -870,11 +870,10 @@
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Excel VBA Integration:</strong> Automated financial data feed from Excel to HA using VBA scripts</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Real-time Data:</strong> Live updates from 20+ APIs (CoinGecko, Yahoo Finance, Redfin, OpenWeatherMap, Trakt)</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Complex Visualizations:</strong> Sankey diagrams, ApexCharts, mini-graph cards with color-coded thresholds</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>Desktop/Mobile Views:</strong> Responsive layouts tested for desktop/tablet (primary interaction) and mobile (wife's primary method)</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Custom Sensors:</strong> Template sensors for budget run-rate %, days since watered, Bitcoin cold wallet USD value</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>Multiple-Entity-Row Discovery:</strong> Cleaned up entity display drastically for better mobile experience</li>
                         <li><i class="fa-solid fa-check-circle"></i> <strong>State-Based Visibility:</strong> Conditional card display (e.g., package cameras only show when deliveries present)</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>HACS Custom Cards:</strong> Mushroom Cards, Mini Graph, Bar Card, ApexCharts, Sankey, Waterfall History, Fold Entity Row, Bubble Card</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>HACS Custom Cards:</strong> Mushroom, Mini Graph, Bar, ApexCharts, Sankey, Waterfall History, Fold Entity Row</li>
                     </ul>
                 </section>
 
@@ -905,15 +904,11 @@
                     <ul class="automation-list">
                         <li>
                             <span class="iconify" data-icon="material-symbols:mfg-nest-yale-lock"></span>
-                            <strong>Nest x Yale Lock:</strong> Doesn't integrate with HA. Works on text-to-speech command via Google Assistant SDK to instruct door to lock when "leaving home" script runs.
+                            <strong>Nest x Yale:</strong> Doesn't integrate with HA. Works on text-to-speech command via Google Assistant SDK to instruct door to lock when "leaving home" script runs.
                         </li>
                         <li>
                             <i class="fas fa-dog"></i>
-                            <strong>Dog Location Tracking:</strong> AirTag workaround functional but complex (iPhone automation → screenshot Find My → parse text → send to HA). Still refining reliability.
-                        </li>
-                        <li>
-                            <i class="fas fa-chart-line"></i>
-                            <strong>Historical Financial Charts:</strong> Limited to sensor creation dates. Waiting for more data accumulation rather than manually loading historical values.
+                            <strong>Dog Tracking:</strong> AirTag workaround functional but complex (iPhone automation → screenshot Find My → parse text → send to HA). Still refining reliability.
                         </li>
                         <li>
                             <i class="fas fa-cloud"></i>
