@@ -289,6 +289,69 @@
                     </ul>
                 </section>
 
+                <!-- Data Protection & Backup Strategy -->
+                <section class="specs-section">
+                    <h2><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Data Protection & Backup Strategy</h2>
+
+                    <h3 style="margin-top: 20px;"><i class="fa-solid fa-camera" aria-hidden="true"></i> ZFS Snapshots</h3>
+                    <p>Automated ZFS snapshot strategy provides multiple recovery points with varying retention periods:</p>
+
+                    <div class="comparison-table">
+                        <table>
+                            <caption class="sr-only">ZFS snapshot schedule and retention</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Schedule</th>
+                                    <th scope="col">Retention</th>
+                                    <th scope="col">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hourly</strong></td>
+                                    <td>Every hour</td>
+                                    <td>24 hours</td>
+                                    <td>Short-term recovery from accidental changes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daily (Short)</strong></td>
+                                    <td>1:00 AM</td>
+                                    <td>1 week</td>
+                                    <td>Recent daily restore points</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daily (Long)</strong></td>
+                                    <td>2:00 AM</td>
+                                    <td>4 weeks</td>
+                                    <td>Monthly recovery window</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="margin-top: 24px;"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Cloud Backup</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Provider</span>
+                            <span class="spec-value">Backblaze B2</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Schedule</span>
+                            <span class="spec-value">Daily at 3:00 AM</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Scope</span>
+                            <span class="spec-value">All server data (excluding torrents)</span>
+                        </div>
+                    </div>
+
+                    <div class="note-card" style="margin-top: 20px;">
+                        <br><span><i class="fa-solid fa-info-circle" aria-hidden="true"></i>
+                        <strong> Multi-Layered Protection:</strong> ZFS snapshots provide instant local recovery, while Backblaze B2 ensures off-site redundancy. Torrent downloads excluded from cloud backup as they can be re-acquired if needed.</span>
+                    </div>
+                </section>
+
                 <!-- Back Button -->
                 <div class="back-button-container">
                     <a href="../projects.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>

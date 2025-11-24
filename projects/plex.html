@@ -129,7 +129,7 @@
         ]
       },
       "datePublished": "2024-09-15",
-      "dateModified": "2025-11-18",
+      "dateModified": "2025-11-24",
       "image": "https://nbnstack.com/images/branding/NN-light.svg",
       "keywords": "Plex, media server, Sonarr, Radarr, Prowlarr, Transmission, Trakt, 4K streaming",
       "articleSection": "Media Server Projects",
@@ -209,7 +209,7 @@
                         <li><strong>Transmission →</strong> Downloads content via TrueNAS app</li>
                         <li><strong>Hard Links →</strong> Used for efficient library organization (same file, multiple locations)</li>
                         <li><strong>Plex →</strong> Auto-scans and adds to library</li>
-                        <li><strong>Discord Webhook →</strong> Notifications on grab and import (planning RSS feed migration)</li>
+                        <li><strong>Miniflux RSS → NetNewsWire →</strong> Self-hosted RSS notifications for grab and import</li>
                         <li><strong>Trakt Scrobble →</strong> Auto-tracks what's watched from Plex and streaming services</li>
                     </ol>
                 </section>
@@ -357,29 +357,32 @@
                         </ul>
                     </div>
                 </section>
-                <!-- Discord Notifications -->
+                <!-- Miniflux RSS Notifications -->
                 <section class="specs-section">
                     <div class="app-header">
-                        <span class="iconify app-icon" data-icon="simple-icons:discord" style="color: #5865F2;" aria-hidden="true"></span>
-                        <h2 style="margin: 0;">Discord Webhooks & Notifications</h2>
+                        <span class="iconify app-icon" data-icon="simple-icons:miniflux" style="color: #0066CC;" aria-hidden="true"></span>
+                        <h2 style="margin: 0;">Miniflux & RSS Notifications</h2>
                     </div>
 
                     <div class="subsection-spacer">
                         <h3>Current Setup</h3>
                         <ul class="specs-list">
-                            <li><strong>Grab Notifications:</strong> Webhook fires when Sonarr/Radarr grabs a download</li>
-                            <li><strong>Import Notifications:</strong> Webhook fires when content successfully imports to Plex</li>
-                            <li><strong>Private Channel:</strong> Notifications go to personal Discord server</li>
-                            <li><strong>Format:</strong> Shows title, quality, size, indexer used</li>
+                            <li><strong>Self-Hosted RSS:</strong> Miniflux generates RSS feeds from Sonarr/Radarr events</li>
+                            <li><strong>Grab Notifications:</strong> RSS feed updates when Sonarr/Radarr grabs a download</li>
+                            <li><strong>Import Notifications:</strong> RSS feed updates when content successfully imports to Plex</li>
+                            <li><strong>NetNewsWire Integration:</strong> Native iOS/Mac RSS reader consumes Miniflux feeds</li>
+                            <li><strong>Format:</strong> Clean RSS format showing title, quality, size, indexer used</li>
                         </ul>
                     </div>
 
                     <div class="subsection-spacer">
-                        <h3>Future Migration Plan</h3>
+                        <h3>Benefits Over Discord Webhooks</h3>
                         <ul class="specs-list">
-                            <li><strong>Target:</strong> Migrate from Discord webhooks to RSS feed</li>
-                            <li><strong>Benefit:</strong> RSS provides cleaner feed format and can be consumed by multiple apps</li>
-                            <li><strong>Use Case:</strong> Could feed homepage "Recently Added" section or integrate with other automation</li>
+                            <li><strong>Self-Hosted:</strong> Complete control over notification infrastructure</li>
+                            <li><strong>Cleaner Format:</strong> RSS provides standardized, clean feed format</li>
+                            <li><strong>Multiple Consumers:</strong> One feed can be consumed by multiple apps and services</li>
+                            <li><strong>Integration Options:</strong> Can feed homepage "Recently Added" section or other automation</li>
+                            <li><strong>No Third-Party Dependency:</strong> No reliance on Discord's infrastructure or API limits</li>
                         </ul>
                     </div>
                 </section>
@@ -388,7 +391,6 @@
                 <section class="specs-section">
                     <h2><i class="fa-solid fa-road" aria-hidden="true"></i> Future Enhancements</h2>
                     <ul class="specs-list">
-                        <li>Migrate Discord webhooks to RSS feed for cleaner notification format</li>
                         <li>Expand user base as server capacity allows</li>
                         <li>Implement automated cleanup of old/unwatched content to manage storage</li>
                         <li>Add Tautulli for detailed viewing statistics and user analytics</li>
