@@ -1,5 +1,79 @@
 [
   {
+    "id": 11685330877,
+    "watched_at": "2025-11-24T05:10:59.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "I said to my dog, \"How do you like my hippie shirt?\"",
+      "ids": {
+        "trakt": 13495856,
+        "tvdb": 11327953,
+        "imdb": "tt37852179",
+        "tmdb": 6515885,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11685238827,
+    "watched_at": "2025-11-24T04:38:17.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Please, Carol",
+      "ids": {
+        "trakt": 12800269,
+        "tvdb": 11260077,
+        "imdb": "tt32767327",
+        "tmdb": 5964850,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11677420120,
     "watched_at": "2025-11-22T19:26:32.000Z",
     "action": "watch",
@@ -365,80 +439,6 @@
     "ratings": {
       "imdb": "7.8",
       "imdbVotes": "2,142",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11656543036,
-    "watched_at": "2025-11-17T14:09:39.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 28,
-      "number": 3,
-      "title": "Sora Not Sorry",
-      "ids": {
-        "trakt": 13352067,
-        "tvdb": 11256177,
-        "imdb": "tt38043392",
-        "tmdb": 6606755,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "South Park",
-      "year": 1997,
-      "ids": {
-        "trakt": 2177,
-        "slug": "south-park",
-        "tvdb": 75897,
-        "imdb": "tt0121955",
-        "tmdb": 2190,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
-    "ratings": {
-      "imdb": "8.7",
-      "imdbVotes": "434,985",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11652472929,
-    "watched_at": "2025-11-17T04:32:50.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 3,
-      "title": "Grenade",
-      "ids": {
-        "trakt": 12800268,
-        "tvdb": 11260076,
-        "imdb": "tt32767323",
-        "tmdb": 5964849,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
