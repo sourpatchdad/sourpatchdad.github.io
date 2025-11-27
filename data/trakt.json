@@ -1,8 +1,82 @@
 [
   {
+    "id": 11730547632,
+    "watched_at": "2025-11-27T06:53:32.000Z",
+    "action": "scrobble",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 3,
+      "title": "Chapter Three: The Turnbow Trap",
+      "ids": {
+        "trakt": 12291592,
+        "tvdb": 10788049,
+        "imdb": "tt21912360",
+        "tmdb": 5607046,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11730388846,
     "watched_at": "2025-11-27T05:47:52.000Z",
     "action": "scrobble",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 2,
+      "title": "Chapter Two: The Vanishing of ...",
+      "ids": {
+        "trakt": 12291590,
+        "tvdb": 10788048,
+        "imdb": "tt21914626",
+        "tmdb": 5607045,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11730526688,
+    "watched_at": "2025-11-27T05:47:51.000Z",
+    "action": "watch",
     "type": "episode",
     "episode": {
       "season": 5,
@@ -74,9 +148,83 @@
     }
   },
   {
+    "id": 11730526687,
+    "watched_at": "2025-11-27T04:43:17.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 1,
+      "title": "Chapter One: The Crawl",
+      "ids": {
+        "trakt": 12116371,
+        "tvdb": 9443528,
+        "imdb": "tt18268644",
+        "tmdb": 5477828,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11728594324,
     "watched_at": "2025-11-27T02:44:26.000Z",
     "action": "scrobble",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 5,
+      "title": "Got Milk",
+      "ids": {
+        "trakt": 12800271,
+        "tvdb": 11260078,
+        "imdb": "tt32777418",
+        "tmdb": 5964851,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11730526686,
+    "watched_at": "2025-11-27T02:44:25.000Z",
+    "action": "watch",
     "type": "episode",
     "episode": {
       "season": 1,
@@ -272,154 +420,6 @@
         "tvdb": null,
         "imdb": null,
         "tmdb": 6488396,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11675938933,
-    "watched_at": "2025-11-22T06:45:35.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 7,
-      "title": "The Book of Broken Hearts",
-      "ids": {
-        "trakt": 13457488,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488395,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11675839899,
-    "watched_at": "2025-11-22T05:56:42.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 6,
-      "title": "The Book of Confrontation",
-      "ids": {
-        "trakt": 13457487,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488394,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11662127846,
-    "watched_at": "2025-11-19T05:18:20.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 5,
-      "title": "The Book of Resurrection",
-      "ids": {
-        "trakt": 13457486,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488393,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11661878851,
-    "watched_at": "2025-11-19T04:25:36.000Z",
-    "action": "checkin",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 4,
-      "title": "The Book of Deceit",
-      "ids": {
-        "trakt": 13457485,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488392,
         "tvrage": null
       }
     },
