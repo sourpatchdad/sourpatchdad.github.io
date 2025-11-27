@@ -37,9 +37,83 @@
     }
   },
   {
+    "id": 11731692217,
+    "watched_at": "2025-11-27T08:12:01.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 4,
+      "title": "Chapter Four: Sorcerer",
+      "ids": {
+        "trakt": 12291593,
+        "tvdb": 10788050,
+        "imdb": "tt21914648",
+        "tmdb": 5607047,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11730547632,
     "watched_at": "2025-11-27T06:53:32.000Z",
     "action": "scrobble",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 3,
+      "title": "Chapter Three: The Turnbow Trap",
+      "ids": {
+        "trakt": 12291592,
+        "tvdb": 10788049,
+        "imdb": "tt21912360",
+        "tmdb": 5607046,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11731692216,
+    "watched_at": "2025-11-27T06:53:31.000Z",
+    "action": "watch",
     "type": "episode",
     "episode": {
       "season": 5,
@@ -365,80 +439,6 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "26,348",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11677420120,
-    "watched_at": "2025-11-22T19:26:32.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 10,
-      "title": "The Book of Enlightenment",
-      "ids": {
-        "trakt": 13457491,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488398,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11677267789,
-    "watched_at": "2025-11-22T18:30:58.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 9,
-      "title": "The Book of Judgement",
-      "ids": {
-        "trakt": 13457490,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488397,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
       "rottenTomatoes": null,
       "metacritic": null
     }
