@@ -1,5 +1,28 @@
 [
   {
+    "id": 11736875854,
+    "watched_at": "2025-11-28T01:59:47.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Zootopia 2",
+      "year": 2025,
+      "ids": {
+        "trakt": 871499,
+        "slug": "zootopia-2-2025",
+        "imdb": "tt26443597",
+        "tmdb": 1084242
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11730707374,
     "watched_at": "2025-11-27T08:12:01.000Z",
     "action": "scrobble",
@@ -155,7 +178,7 @@
     "episode": {
       "season": 5,
       "number": 2,
-      "title": "Chapter Two: The Vanishing of ...",
+      "title": "Chapter Two: The Vanishing of...",
       "ids": {
         "trakt": 12291590,
         "tvdb": 10788048,
@@ -192,7 +215,7 @@
     "episode": {
       "season": 5,
       "number": 2,
-      "title": "Chapter Two: The Vanishing of ...",
+      "title": "Chapter Two: The Vanishing of...",
       "ids": {
         "trakt": 12291590,
         "tvdb": 10788048,
@@ -402,43 +425,6 @@
     "ratings": {
       "imdb": "7.8",
       "imdbVotes": "2,142",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11720611182,
-    "watched_at": "2025-11-24T04:35:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 4,
-      "title": "Please, Carol",
-      "ids": {
-        "trakt": 12800269,
-        "tvdb": 11260077,
-        "imdb": "tt32767327",
-        "tmdb": 5964850,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
