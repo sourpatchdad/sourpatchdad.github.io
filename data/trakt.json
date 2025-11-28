@@ -1,5 +1,79 @@
 [
   {
+    "id": 11738989916,
+    "watched_at": "2025-11-28T05:39:45.000Z",
+    "action": "scrobble",
+    "type": "episode",
+    "episode": {
+      "season": 28,
+      "number": 4,
+      "title": "Turkey Trot",
+      "ids": {
+        "trakt": 13352068,
+        "tvdb": 11256178,
+        "imdb": "tt38043393",
+        "tmdb": 6606756,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "South Park",
+      "year": 1997,
+      "ids": {
+        "trakt": 2177,
+        "slug": "south-park",
+        "tvdb": 75897,
+        "imdb": "tt0121955",
+        "tmdb": 2190,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
+    "ratings": {
+      "imdb": "8.7",
+      "imdbVotes": "434,985",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11739007674,
+    "watched_at": "2025-11-28T05:39:45.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 28,
+      "number": 4,
+      "title": "Turkey Trot",
+      "ids": {
+        "trakt": 13352068,
+        "tvdb": 11256178,
+        "imdb": "tt38043393",
+        "tmdb": 6606756,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "South Park",
+      "year": 1997,
+      "ids": {
+        "trakt": 2177,
+        "slug": "south-park",
+        "tvdb": 75897,
+        "imdb": "tt0121955",
+        "tmdb": 2190,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
+    "ratings": {
+      "imdb": "8.7",
+      "imdbVotes": "434,985",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11736875854,
     "watched_at": "2025-11-28T01:59:47.000Z",
     "action": "watch",
@@ -351,80 +425,6 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "26,348",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11730526686,
-    "watched_at": "2025-11-27T02:44:25.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 5,
-      "title": "Got Milk",
-      "ids": {
-        "trakt": 12800271,
-        "tvdb": 11260078,
-        "imdb": "tt32777418",
-        "tmdb": 5964851,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11720611181,
-    "watched_at": "2025-11-24T05:08:32.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 7,
-      "title": "I said to my dog, \"How do you like my hippie shirt?\"",
-      "ids": {
-        "trakt": 13495856,
-        "tvdb": 11327953,
-        "imdb": "tt37852179",
-        "tmdb": 6515885,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Chair Company",
-      "year": 2025,
-      "ids": {
-        "trakt": 255718,
-        "slug": "the-chair-company",
-        "tvdb": 454397,
-        "imdb": "tt31987295",
-        "tmdb": 271267,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
-    "ratings": {
-      "imdb": "7.8",
-      "imdbVotes": "2,142",
       "rottenTomatoes": null,
       "metacritic": null
     }
