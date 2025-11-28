@@ -37,43 +37,6 @@
     }
   },
   {
-    "id": 11739007674,
-    "watched_at": "2025-11-28T05:39:45.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 28,
-      "number": 4,
-      "title": "Turkey Trot",
-      "ids": {
-        "trakt": 13352068,
-        "tvdb": 11256178,
-        "imdb": "tt38043393",
-        "tmdb": 6606756,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "South Park",
-      "year": 1997,
-      "ids": {
-        "trakt": 2177,
-        "slug": "south-park",
-        "tvdb": 75897,
-        "imdb": "tt0121955",
-        "tmdb": 2190,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
-    "ratings": {
-      "imdb": "8.7",
-      "imdbVotes": "434,985",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
     "id": 11736875854,
     "watched_at": "2025-11-28T01:59:47.000Z",
     "action": "watch",
@@ -97,43 +60,6 @@
     }
   },
   {
-    "id": 11730707374,
-    "watched_at": "2025-11-27T08:12:01.000Z",
-    "action": "scrobble",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 4,
-      "title": "Chapter Four: Sorcerer",
-      "ids": {
-        "trakt": 12291593,
-        "tvdb": 10788050,
-        "imdb": "tt21914648",
-        "tmdb": 5607047,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
     "id": 11731692217,
     "watched_at": "2025-11-27T08:12:01.000Z",
     "action": "watch",
@@ -147,43 +73,6 @@
         "tvdb": 10788050,
         "imdb": "tt21914648",
         "tmdb": 5607047,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11730547632,
-    "watched_at": "2025-11-27T06:53:32.000Z",
-    "action": "scrobble",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 3,
-      "title": "Chapter Three: The Turnbow Trap",
-      "ids": {
-        "trakt": 12291592,
-        "tvdb": 10788049,
-        "imdb": "tt21912360",
-        "tmdb": 5607046,
         "tvrage": null
       }
     },
@@ -245,43 +134,6 @@
     }
   },
   {
-    "id": 11730388846,
-    "watched_at": "2025-11-27T05:47:52.000Z",
-    "action": "scrobble",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 2,
-      "title": "Chapter Two: The Vanishing of...",
-      "ids": {
-        "trakt": 12291590,
-        "tvdb": 10788048,
-        "imdb": "tt21914626",
-        "tmdb": 5607045,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
     "id": 11730526688,
     "watched_at": "2025-11-27T05:47:51.000Z",
     "action": "watch",
@@ -295,43 +147,6 @@
         "tvdb": 10788048,
         "imdb": "tt21914626",
         "tmdb": 5607045,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11730226121,
-    "watched_at": "2025-11-27T04:43:17.000Z",
-    "action": "scrobble",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 1,
-      "title": "Chapter One: The Crawl",
-      "ids": {
-        "trakt": 12116371,
-        "tvdb": 9443528,
-        "imdb": "tt18268644",
-        "tmdb": 5477828,
         "tvrage": null
       }
     },
@@ -393,9 +208,9 @@
     }
   },
   {
-    "id": 11728594324,
-    "watched_at": "2025-11-27T02:44:26.000Z",
-    "action": "scrobble",
+    "id": 11730526686,
+    "watched_at": "2025-11-27T02:44:25.000Z",
+    "action": "watch",
     "type": "episode",
     "episode": {
       "season": 1,
@@ -425,6 +240,191 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11720611181,
+    "watched_at": "2025-11-24T05:08:32.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "I said to my dog, \"How do you like my hippie shirt?\"",
+      "ids": {
+        "trakt": 13495856,
+        "tvdb": 11327953,
+        "imdb": "tt37852179",
+        "tmdb": 6515885,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.8",
+      "imdbVotes": "2,142",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11720611182,
+    "watched_at": "2025-11-24T04:35:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Please, Carol",
+      "ids": {
+        "trakt": 12800269,
+        "tvdb": 11260077,
+        "imdb": "tt32767327",
+        "tmdb": 5964850,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11677420120,
+    "watched_at": "2025-11-22T19:26:32.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 10,
+      "title": "The Book of Enlightenment",
+      "ids": {
+        "trakt": 13457491,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488398,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11677267789,
+    "watched_at": "2025-11-22T18:30:58.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 9,
+      "title": "The Book of Judgement",
+      "ids": {
+        "trakt": 13457490,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488397,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11677102976,
+    "watched_at": "2025-11-22T17:40:50.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 8,
+      "title": "The Book of Awakening",
+      "ids": {
+        "trakt": 13457489,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6488396,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
       "rottenTomatoes": null,
       "metacritic": null
     }
