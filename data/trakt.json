@@ -1,5 +1,28 @@
 [
   {
+    "id": 11742456993,
+    "watched_at": "2025-11-29T05:13:16.000Z",
+    "action": "scrobble",
+    "type": "movie",
+    "movie": {
+      "title": "If I Had Legs I'd Kick You",
+      "year": 2025,
+      "ids": {
+        "trakt": 935050,
+        "slug": "if-i-had-legs-i-d-kick-you-2025",
+        "imdb": "tt18382850",
+        "tmdb": 1160360
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gkIFK1HzqfgQg4v4ifeNKogHtPG.jpg",
+    "ratings": {
+      "imdb": "7.3",
+      "imdbVotes": "2,333",
+      "rottenTomatoes": "94%",
+      "metacritic": "77/100"
+    }
+  },
+  {
     "id": 11738989916,
     "watched_at": "2025-11-28T05:39:45.000Z",
     "action": "scrobble",
@@ -369,43 +392,6 @@
         "tvdb": null,
         "imdb": null,
         "tmdb": 6488397,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11677102976,
-    "watched_at": "2025-11-22T17:40:50.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 8,
-      "title": "The Book of Awakening",
-      "ids": {
-        "trakt": 13457489,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488396,
         "tvrage": null
       }
     },
