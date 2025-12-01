@@ -1,5 +1,28 @@
 [
   {
+    "id": 11752402522,
+    "watched_at": "2025-12-01T07:27:39.000Z",
+    "action": "checkin",
+    "type": "movie",
+    "movie": {
+      "title": "Ready Player One",
+      "year": 2018,
+      "ids": {
+        "trakt": 214279,
+        "slug": "ready-player-one-2018",
+        "imdb": "tt1677720",
+        "tmdb": 333339
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+    "ratings": {
+      "imdb": "7.4",
+      "imdbVotes": "527,706",
+      "rottenTomatoes": "71%",
+      "metacritic": "64/100"
+    }
+  },
+  {
     "id": 11742464648,
     "watched_at": "2025-11-29T05:13:15.000Z",
     "action": "watch",
@@ -355,43 +378,6 @@
         "tvdb": null,
         "imdb": null,
         "tmdb": 6488398,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Secret Lives of Mormon Wives",
-      "year": 2024,
-      "ids": {
-        "trakt": 251301,
-        "slug": "the-secret-lives-of-mormon-wives",
-        "tvdb": 452714,
-        "imdb": "tt31091039",
-        "tmdb": 261102,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
-    "ratings": {
-      "imdb": "5.5",
-      "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11677267789,
-    "watched_at": "2025-11-22T18:30:58.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 3,
-      "number": 9,
-      "title": "The Book of Judgement",
-      "ids": {
-        "trakt": 13457490,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6488397,
         "tvrage": null
       }
     },
