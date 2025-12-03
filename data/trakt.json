@@ -23,29 +23,6 @@
     }
   },
   {
-    "id": 11752402522,
-    "watched_at": "2025-12-01T07:27:39.000Z",
-    "action": "checkin",
-    "type": "movie",
-    "movie": {
-      "title": "Ready Player One",
-      "year": 2018,
-      "ids": {
-        "trakt": 214279,
-        "slug": "ready-player-one-2018",
-        "imdb": "tt1677720",
-        "tmdb": 333339
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
-    "ratings": {
-      "imdb": "7.4",
-      "imdbVotes": "527,706",
-      "rottenTomatoes": "71%",
-      "metacritic": "64/100"
-    }
-  },
-  {
     "id": 11763479351,
     "watched_at": "2025-12-01T04:43:25.000Z",
     "action": "watch",
@@ -383,6 +360,43 @@
     "ratings": {
       "imdb": "7.6",
       "imdbVotes": "6,283",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11720611182,
+    "watched_at": "2025-11-24T04:35:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Please, Carol",
+      "ids": {
+        "trakt": 12800269,
+        "tvdb": 11260077,
+        "imdb": "tt32767327",
+        "tmdb": 5964850,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
