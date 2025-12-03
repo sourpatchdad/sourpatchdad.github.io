@@ -1,28 +1,5 @@
 [
   {
-    "id": 11764447985,
-    "watched_at": "2025-12-03T19:58:45.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "No Other Choice",
-      "year": 2025,
-      "ids": {
-        "trakt": 478406,
-        "slug": "no-other-choice-2025",
-        "imdb": "tt1527793",
-        "tmdb": 639988
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vc2S0dvgpsM0XfSiXZDMVkRCSSU.jpg",
-    "ratings": {
-      "imdb": "7.9",
-      "imdbVotes": "3,144",
-      "rottenTomatoes": "100%",
-      "metacritic": "86/100"
-    }
-  },
-  {
     "id": 11763479349,
     "watched_at": "2025-12-03T05:43:09.000Z",
     "action": "watch",
@@ -369,6 +346,43 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11720611181,
+    "watched_at": "2025-11-24T05:08:32.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "I said to my dog, \"How do you like my hippie shirt?\"",
+      "ids": {
+        "trakt": 13495856,
+        "tvdb": 11327953,
+        "imdb": "tt37852179",
+        "tmdb": 6515885,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Chair Company",
+      "year": 2025,
+      "ids": {
+        "trakt": 255718,
+        "slug": "the-chair-company",
+        "tvdb": 454397,
+        "imdb": "tt31987295",
+        "tmdb": 271267,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZgftEXZXTM47k2rZlXo8kr8HZF.jpg",
+    "ratings": {
+      "imdb": "7.6",
+      "imdbVotes": "6,283",
       "rottenTomatoes": null,
       "metacritic": null
     }
