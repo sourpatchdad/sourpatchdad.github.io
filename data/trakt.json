@@ -1,5 +1,28 @@
 [
   {
+    "id": 11767310386,
+    "watched_at": "2025-12-04T05:17:04.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Sinners",
+      "year": 2025,
+      "ids": {
+        "trakt": 997581,
+        "slug": "sinners-2025",
+        "imdb": "tt31193180",
+        "tmdb": 1233413
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qTvFWCGeGXgBRaINLY1zqgTPSpn.jpg",
+    "ratings": {
+      "imdb": "7.6",
+      "imdbVotes": "312,879",
+      "rottenTomatoes": "97%",
+      "metacritic": "84/100"
+    }
+  },
+  {
     "id": 11763479349,
     "watched_at": "2025-12-03T05:43:09.000Z",
     "action": "watch",
@@ -360,43 +383,6 @@
     "ratings": {
       "imdb": "7.6",
       "imdbVotes": "6,283",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11720611182,
-    "watched_at": "2025-11-24T04:35:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 4,
-      "title": "Please, Carol",
-      "ids": {
-        "trakt": 12800269,
-        "tvdb": 11260077,
-        "imdb": "tt32767327",
-        "tmdb": 5964850,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
