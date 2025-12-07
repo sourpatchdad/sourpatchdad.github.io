@@ -1,5 +1,28 @@
 [
   {
+    "id": 11786126162,
+    "watched_at": "2025-12-07T08:13:47.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Paprika",
+      "year": 2006,
+      "ids": {
+        "trakt": 2909,
+        "slug": "paprika-2006",
+        "imdb": "tt0851578",
+        "tmdb": 4977
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bLUUr474Go1DfeN1HLjE3rnZXBq.jpg",
+    "ratings": {
+      "imdb": "7.7",
+      "imdbVotes": "108,129",
+      "rottenTomatoes": "87%",
+      "metacritic": "81/100"
+    }
+  },
+  {
     "id": 11785901671,
     "watched_at": "2025-12-07T06:19:51.000Z",
     "action": "watch",
@@ -313,43 +336,6 @@
         "tvdb": 10788050,
         "imdb": "tt21914648",
         "tmdb": 5607047,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11731692216,
-    "watched_at": "2025-11-27T06:53:31.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 3,
-      "title": "Chapter Three: The Turnbow Trap",
-      "ids": {
-        "trakt": 12291592,
-        "tvdb": 10788049,
-        "imdb": "tt21912360",
-        "tmdb": 5607046,
         "tvrage": null
       }
     },
