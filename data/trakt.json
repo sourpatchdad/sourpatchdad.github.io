@@ -1,5 +1,28 @@
 [
   {
+    "id": 11788500119,
+    "watched_at": "2025-12-07T20:45:45.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Sonic the Hedgehog",
+      "year": 2020,
+      "ids": {
+        "trakt": 301015,
+        "slug": "sonic-the-hedgehog-2020",
+        "imdb": "tt3794354",
+        "tmdb": 454626
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
+    "ratings": {
+      "imdb": "6.5",
+      "imdbVotes": "186,794",
+      "rottenTomatoes": "64%",
+      "metacritic": "47/100"
+    }
+  },
+  {
     "id": 11786126162,
     "watched_at": "2025-12-07T08:13:47.000Z",
     "action": "watch",
@@ -320,43 +343,6 @@
       "imdbVotes": "8,485",
       "rottenTomatoes": "92%",
       "metacritic": "73/100"
-    }
-  },
-  {
-    "id": 11731692217,
-    "watched_at": "2025-11-27T08:12:01.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 4,
-      "title": "Chapter Four: Sorcerer",
-      "ids": {
-        "trakt": 12291593,
-        "tvdb": 10788050,
-        "imdb": "tt21914648",
-        "tmdb": 5607047,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
     }
   }
 ]
