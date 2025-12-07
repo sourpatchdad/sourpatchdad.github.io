@@ -1,5 +1,28 @@
 [
   {
+    "id": 11785901671,
+    "watched_at": "2025-12-07T06:19:51.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "The Librarians",
+      "year": 2025,
+      "ids": {
+        "trakt": 1145513,
+        "slug": "the-librarians-2025",
+        "imdb": "tt34966678",
+        "tmdb": 1400379
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f2xA2e81wBiRxio32kRJe42P05M.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11785417232,
     "watched_at": "2025-12-07T04:29:19.000Z",
     "action": "checkin",
@@ -327,43 +350,6 @@
         "tvdb": 10788049,
         "imdb": "tt21912360",
         "tmdb": 5607046,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11730526688,
-    "watched_at": "2025-11-27T05:47:51.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 2,
-      "title": "Chapter Two: The Vanishing of...",
-      "ids": {
-        "trakt": 12291590,
-        "tvdb": 10788048,
-        "imdb": "tt21914626",
-        "tmdb": 5607045,
         "tvrage": null
       }
     },
