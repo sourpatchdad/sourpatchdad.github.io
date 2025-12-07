@@ -1,5 +1,42 @@
 [
   {
+    "id": 11785417232,
+    "watched_at": "2025-12-07T04:29:19.000Z",
+    "action": "checkin",
+    "type": "episode",
+    "episode": {
+      "season": 3,
+      "number": 11,
+      "title": "Season 3 Reunion Special",
+      "ids": {
+        "trakt": 13738058,
+        "tvdb": 11464669,
+        "imdb": "tt38979517",
+        "tmdb": 6698544,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Secret Lives of Mormon Wives",
+      "year": 2024,
+      "ids": {
+        "trakt": 251301,
+        "slug": "the-secret-lives-of-mormon-wives",
+        "tvdb": 452714,
+        "imdb": "tt31091039",
+        "tmdb": 261102,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aPGMZcStogqNo2tvU7PmNvpMK7y.jpg",
+    "ratings": {
+      "imdb": "5.5",
+      "imdbVotes": "2,637",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11778998341,
     "watched_at": "2025-12-05T17:00:07.000Z",
     "action": "watch",
@@ -327,43 +364,6 @@
         "tvdb": 10788048,
         "imdb": "tt21914626",
         "tmdb": 5607045,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11730526687,
-    "watched_at": "2025-11-27T04:43:17.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 1,
-      "title": "Chapter One: The Crawl",
-      "ids": {
-        "trakt": 12116371,
-        "tvdb": 9443528,
-        "imdb": "tt18268644",
-        "tmdb": 5477828,
         "tvrage": null
       }
     },
