@@ -1,5 +1,79 @@
 [
   {
+    "id": 11798640827,
+    "watched_at": "2025-12-09T04:59:36.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 9,
+      "title": "The Holidays Are Coming",
+      "ids": {
+        "trakt": 13746139,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6709126,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "99 to Beat",
+      "year": 2025,
+      "ids": {
+        "trakt": 295132,
+        "slug": "99-to-beat-2025-295132",
+        "tvdb": 463593,
+        "imdb": "tt36933520",
+        "tmdb": 298469,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
+    "ratings": {
+      "imdb": "5.6",
+      "imdbVotes": "77",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11798640826,
+    "watched_at": "2025-12-09T04:16:21.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 8,
+      "title": "Flipping Out!",
+      "ids": {
+        "trakt": 13739223,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6703910,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "99 to Beat",
+      "year": 2025,
+      "ids": {
+        "trakt": 295132,
+        "slug": "99-to-beat-2025-295132",
+        "tvdb": 463593,
+        "imdb": "tt36933520",
+        "tmdb": 298469,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
+    "ratings": {
+      "imdb": "5.6",
+      "imdbVotes": "77",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11785901671,
     "watched_at": "2025-12-07T06:19:51.000Z",
     "action": "watch",
@@ -297,80 +371,6 @@
       "imdbVotes": "8,485",
       "rottenTomatoes": "92%",
       "metacritic": "73/100"
-    }
-  },
-  {
-    "id": 11731692217,
-    "watched_at": "2025-11-27T08:12:01.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 4,
-      "title": "Chapter Four: Sorcerer",
-      "ids": {
-        "trakt": 12291593,
-        "tvdb": 10788050,
-        "imdb": "tt21914648",
-        "tmdb": 5607047,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11731692216,
-    "watched_at": "2025-11-27T06:53:31.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 3,
-      "title": "Chapter Three: The Turnbow Trap",
-      "ids": {
-        "trakt": 12291592,
-        "tvdb": 10788049,
-        "imdb": "tt21912360",
-        "tmdb": 5607046,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,506,403",
-      "rottenTomatoes": null,
-      "metacritic": null
     }
   }
 ]
