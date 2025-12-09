@@ -1,5 +1,51 @@
 [
   {
+    "id": 11801632948,
+    "watched_at": "2025-12-09T22:25:43.000Z",
+    "action": "checkin",
+    "type": "movie",
+    "movie": {
+      "title": "Sicario: Day of the Soldado",
+      "year": 2018,
+      "ids": {
+        "trakt": 256522,
+        "slug": "sicario-day-of-the-soldado-2018",
+        "imdb": "tt5052474",
+        "tmdb": 400535
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qcLYofEhNh51Sk1jUWjmKHLzkqw.jpg",
+    "ratings": {
+      "imdb": "7.1",
+      "imdbVotes": "183,382",
+      "rottenTomatoes": "62%",
+      "metacritic": "61/100"
+    }
+  },
+  {
+    "id": 11801781558,
+    "watched_at": "2025-12-09T20:11:27.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "One Battle After Another",
+      "year": 2025,
+      "ids": {
+        "trakt": 848797,
+        "slug": "one-battle-after-another-2025",
+        "imdb": "tt30144839",
+        "tmdb": 1054867
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/m1jFoahEbeQXtx4zArT2FKdbNIj.jpg",
+    "ratings": {
+      "imdb": "8.3",
+      "imdbVotes": "137,751",
+      "rottenTomatoes": "94%",
+      "metacritic": "95/100"
+    }
+  },
+  {
     "id": 11798640827,
     "watched_at": "2025-12-09T04:59:36.000Z",
     "action": "watch",
@@ -311,66 +357,6 @@
       "imdbVotes": "2,333",
       "rottenTomatoes": "94%",
       "metacritic": "77/100"
-    }
-  },
-  {
-    "id": 11738989916,
-    "watched_at": "2025-11-28T05:39:45.000Z",
-    "action": "scrobble",
-    "type": "episode",
-    "episode": {
-      "season": 28,
-      "number": 4,
-      "title": "Turkey Trot",
-      "ids": {
-        "trakt": 13352068,
-        "tvdb": 11256178,
-        "imdb": "tt38043393",
-        "tmdb": 6606756,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "South Park",
-      "year": 1997,
-      "ids": {
-        "trakt": 2177,
-        "slug": "south-park",
-        "tvdb": 75897,
-        "imdb": "tt0121955",
-        "tmdb": 2190,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
-    "ratings": {
-      "imdb": "8.7",
-      "imdbVotes": "434,985",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11736875854,
-    "watched_at": "2025-11-28T01:59:47.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Zootopia 2",
-      "year": 2025,
-      "ids": {
-        "trakt": 871499,
-        "slug": "zootopia-2-2025",
-        "imdb": "tt26443597",
-        "tmdb": 1084242
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-    "ratings": {
-      "imdb": "7.8",
-      "imdbVotes": "8,485",
-      "rottenTomatoes": "92%",
-      "metacritic": "73/100"
     }
   }
 ]
