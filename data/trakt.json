@@ -1,5 +1,42 @@
 [
   {
+    "id": 11812989491,
+    "watched_at": "2025-12-11T04:16:47.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "Fashion Faux Pas",
+      "ids": {
+        "trakt": 4625909,
+        "tvdb": 8075280,
+        "imdb": "tt13566888",
+        "tmdb": 2576867,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11812752278,
     "watched_at": "2025-12-11T03:12:57.000Z",
     "action": "watch",
@@ -360,43 +397,6 @@
     "ratings": {
       "imdb": "5.5",
       "imdbVotes": "2,637",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11778998341,
-    "watched_at": "2025-12-05T17:00:07.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 6,
-      "title": "HDP",
-      "ids": {
-        "trakt": 12800273,
-        "tvdb": 11260079,
-        "imdb": "tt32777420",
-        "tmdb": 5964852,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
