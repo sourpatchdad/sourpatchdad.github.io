@@ -97,6 +97,43 @@
     }
   },
   {
+    "id": 11817535052,
+    "watched_at": "2025-12-11T02:30:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 5,
+      "title": "Ladies Who Lunch",
+      "ids": {
+        "trakt": 4601844,
+        "tvdb": 8054595,
+        "imdb": "tt13492400",
+        "tmdb": 2551243,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11812238020,
     "watched_at": "2025-12-11T01:38:50.000Z",
     "action": "watch",
@@ -360,29 +397,6 @@
     "ratings": {
       "imdb": "5.6",
       "imdbVotes": "77",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11785901671,
-    "watched_at": "2025-12-07T06:19:51.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Librarians",
-      "year": 2025,
-      "ids": {
-        "trakt": 1145513,
-        "slug": "the-librarians-2025",
-        "imdb": "tt34966678",
-        "tmdb": 1400379
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/f2xA2e81wBiRxio32kRJe42P05M.jpg",
-    "ratings": {
-      "imdb": null,
-      "imdbVotes": null,
       "rottenTomatoes": null,
       "metacritic": null
     }
