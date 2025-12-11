@@ -1,5 +1,79 @@
 [
   {
+    "id": 11812752278,
+    "watched_at": "2025-12-11T03:12:57.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 6,
+      "title": "Sundance City",
+      "ids": {
+        "trakt": 4601845,
+        "tvdb": 8054596,
+        "imdb": "tt13492402",
+        "tmdb": 2556747,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11812238020,
+    "watched_at": "2025-12-11T01:38:50.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Roaring Emotions",
+      "ids": {
+        "trakt": 4567561,
+        "tvdb": 8023984,
+        "imdb": "tt13492398",
+        "tmdb": 2535379,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11806516114,
     "watched_at": "2025-12-10T06:26:56.000Z",
     "action": "watch",
@@ -325,66 +399,6 @@
       "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11773351217,
-    "watched_at": "2025-12-05T05:18:39.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 7,
-      "title": "Goofgirl",
-      "ids": {
-        "trakt": 13651643,
-        "tvdb": 11426491,
-        "imdb": "tt38090237",
-        "tmdb": 6625649,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Abbott Elementary",
-      "year": 2021,
-      "ids": {
-        "trakt": 180675,
-        "slug": "abbott-elementary",
-        "tvdb": 402910,
-        "imdb": "tt14218830",
-        "tmdb": 125935,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
-    "ratings": {
-      "imdb": "8.2",
-      "imdbVotes": "48,850",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11767310386,
-    "watched_at": "2025-12-04T05:17:04.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Sinners",
-      "year": 2025,
-      "ids": {
-        "trakt": 997581,
-        "slug": "sinners-2025",
-        "imdb": "tt31193180",
-        "tmdb": 1233413
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/qTvFWCGeGXgBRaINLY1zqgTPSpn.jpg",
-    "ratings": {
-      "imdb": "7.6",
-      "imdbVotes": "312,879",
-      "rottenTomatoes": "97%",
-      "metacritic": "84/100"
     }
   }
 ]
