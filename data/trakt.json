@@ -1,5 +1,42 @@
 [
   {
+    "id": 11818292403,
+    "watched_at": "2025-12-12T03:33:25.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 8,
+      "title": "Birthday",
+      "ids": {
+        "trakt": 13669927,
+        "tvdb": 11391212,
+        "imdb": "tt38090238",
+        "tmdb": 6638540,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Abbott Elementary",
+      "year": 2021,
+      "ids": {
+        "trakt": 180675,
+        "slug": "abbott-elementary",
+        "tvdb": 402910,
+        "imdb": "tt14218830",
+        "tmdb": 125935,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
+    "ratings": {
+      "imdb": "8.2",
+      "imdbVotes": "48,850",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11818163110,
     "watched_at": "2025-12-12T03:06:45.000Z",
     "action": "watch",
@@ -362,29 +399,6 @@
       "imdbVotes": "183,382",
       "rottenTomatoes": "62%",
       "metacritic": "61/100"
-    }
-  },
-  {
-    "id": 11801781558,
-    "watched_at": "2025-12-09T20:11:27.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "One Battle After Another",
-      "year": 2025,
-      "ids": {
-        "trakt": 848797,
-        "slug": "one-battle-after-another-2025",
-        "imdb": "tt30144839",
-        "tmdb": 1054867
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/m1jFoahEbeQXtx4zArT2FKdbNIj.jpg",
-    "ratings": {
-      "imdb": "8.3",
-      "imdbVotes": "137,751",
-      "rottenTomatoes": "94%",
-      "metacritic": "95/100"
     }
   }
 ]
