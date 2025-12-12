@@ -1,5 +1,79 @@
 [
   {
+    "id": 11818444708,
+    "watched_at": "2025-12-12T05:07:08.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 7,
+      "title": "The Gap",
+      "ids": {
+        "trakt": 12800274,
+        "tvdb": 11260080,
+        "imdb": "tt32777421",
+        "tmdb": 5964853,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11818444707,
+    "watched_at": "2025-12-12T04:18:40.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 10,
+      "title": "Million Dollar Winner",
+      "ids": {
+        "trakt": 13746140,
+        "tvdb": null,
+        "imdb": null,
+        "tmdb": 6709127,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "99 to Beat",
+      "year": 2025,
+      "ids": {
+        "trakt": 295132,
+        "slug": "99-to-beat-2025-295132",
+        "tvdb": 463593,
+        "imdb": "tt36933520",
+        "tmdb": 298469,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
+    "ratings": {
+      "imdb": "5.6",
+      "imdbVotes": "77",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11818292403,
     "watched_at": "2025-12-12T03:33:25.000Z",
     "action": "watch",
@@ -76,29 +150,6 @@
   {
     "id": 11818163109,
     "watched_at": "2025-12-12T02:28:01.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Summer Wars",
-      "year": 2009,
-      "ids": {
-        "trakt": 18089,
-        "slug": "summer-wars-2009",
-        "imdb": "tt1474276",
-        "tmdb": 28874
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/yHy8TrRLnuBZ4t2C0l0pSpRXVHO.jpg",
-    "ratings": {
-      "imdb": "7.4",
-      "imdbVotes": "33,538",
-      "rottenTomatoes": "81%",
-      "metacritic": "63/100"
-    }
-  },
-  {
-    "id": 11813834357,
-    "watched_at": "2025-12-11T06:58:35.000Z",
     "action": "watch",
     "type": "movie",
     "movie": {
@@ -376,29 +427,6 @@
       "imdbVotes": "1,652",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11801632948,
-    "watched_at": "2025-12-09T22:25:43.000Z",
-    "action": "checkin",
-    "type": "movie",
-    "movie": {
-      "title": "Sicario: Day of the Soldado",
-      "year": 2018,
-      "ids": {
-        "trakt": 256522,
-        "slug": "sicario-day-of-the-soldado-2018",
-        "imdb": "tt5052474",
-        "tmdb": 400535
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/qcLYofEhNh51Sk1jUWjmKHLzkqw.jpg",
-    "ratings": {
-      "imdb": "7.1",
-      "imdbVotes": "183,382",
-      "rottenTomatoes": "62%",
-      "metacritic": "61/100"
     }
   }
 ]
