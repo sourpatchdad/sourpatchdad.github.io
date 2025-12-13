@@ -1,5 +1,42 @@
 [
   {
+    "id": 11823434504,
+    "watched_at": "2025-12-13T03:42:32.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 9,
+      "title": "Hip Hop and Heartbreak",
+      "ids": {
+        "trakt": 4668770,
+        "tvdb": 8098455,
+        "imdb": "tt13659932",
+        "tmdb": 2606752,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11818444708,
     "watched_at": "2025-12-12T05:07:08.000Z",
     "action": "watch",
@@ -369,43 +406,6 @@
         "tvdb": 8023981,
         "imdb": "tt13441448",
         "tmdb": 2489635,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11806107656,
-    "watched_at": "2025-12-10T04:42:38.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 1,
-      "title": "Welcome to Salt Lake City!",
-      "ids": {
-        "trakt": 4109893,
-        "tvdb": 7452402,
-        "imdb": "tt13062054",
-        "tmdb": 2435430,
         "tvrage": null
       }
     },
