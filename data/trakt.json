@@ -1,5 +1,67 @@
 [
   {
+    "id": 11823742994,
+    "watched_at": "2025-12-13T06:07:52.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 2,
+      "title": "Magic in the Eras",
+      "ids": {
+        "trakt": 13622228,
+        "tvdb": 11394446,
+        "imdb": "tt38673499",
+        "tmdb": 6599485,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Taylor Swift | The Eras Tour | The End of an Era",
+      "year": 2025,
+      "ids": {
+        "trakt": 303399,
+        "slug": "taylor-swift-the-eras-tour-the-end-of-an-era",
+        "tvdb": 469202,
+        "imdb": "tt38673133",
+        "tmdb": 302919,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pt8bLDrrsK7kZEFMDqKlJtxrMAP.jpg"
+  },
+  {
+    "id": 11823742993,
+    "watched_at": "2025-12-13T05:24:32.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 1,
+      "title": "Welcome To The Eras Tour",
+      "ids": {
+        "trakt": 13622227,
+        "tvdb": 11394445,
+        "imdb": "tt38673501",
+        "tmdb": 6599481,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Taylor Swift | The Eras Tour | The End of an Era",
+      "year": 2025,
+      "ids": {
+        "trakt": 303399,
+        "slug": "taylor-swift-the-eras-tour-the-end-of-an-era",
+        "tvdb": 469202,
+        "imdb": "tt38673133",
+        "tmdb": 302919,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pt8bLDrrsK7kZEFMDqKlJtxrMAP.jpg"
+  },
+  {
     "id": 11823434504,
     "watched_at": "2025-12-13T03:42:32.000Z",
     "action": "watch",
@@ -332,80 +394,6 @@
         "tvdb": 8023984,
         "imdb": "tt13492398",
         "tmdb": 2535379,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11806516114,
-    "watched_at": "2025-12-10T06:26:56.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 3,
-      "title": "Everybody Needs a Switzerland",
-      "ids": {
-        "trakt": 4567560,
-        "tvdb": 8023983,
-        "imdb": "tt13441458",
-        "tmdb": 2514428,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11806336902,
-    "watched_at": "2025-12-10T05:25:47.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 2,
-      "title": "A Snow Mountain of Trouble",
-      "ids": {
-        "trakt": 4567558,
-        "tvdb": 8023981,
-        "imdb": "tt13441448",
-        "tmdb": 2489635,
         "tvrage": null
       }
     },
