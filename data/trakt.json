@@ -1,5 +1,28 @@
 [
   {
+    "id": 11834199559,
+    "watched_at": "2025-12-14T06:29:47.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "The Hunger Games",
+      "year": 2012,
+      "ids": {
+        "trakt": 51342,
+        "slug": "the-hunger-games-2012",
+        "imdb": "tt1392170",
+        "tmdb": 70160
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
+    "ratings": {
+      "imdb": "7.2",
+      "imdbVotes": "1,063,672",
+      "rottenTomatoes": "84%",
+      "metacritic": "68/100"
+    }
+  },
+  {
     "id": 11833539326,
     "watched_at": "2025-12-14T04:18:11.000Z",
     "action": "watch",
@@ -390,43 +413,6 @@
     "ratings": {
       "imdb": "8.2",
       "imdbVotes": "48,850",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11818163110,
-    "watched_at": "2025-12-12T03:06:45.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 28,
-      "number": 5,
-      "title": "The Crap Out",
-      "ids": {
-        "trakt": 13352069,
-        "tvdb": 11256179,
-        "imdb": "tt38043394",
-        "tmdb": 6606757,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "South Park",
-      "year": 1997,
-      "ids": {
-        "trakt": 2177,
-        "slug": "south-park",
-        "tvdb": 75897,
-        "imdb": "tt0121955",
-        "tmdb": 2190,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg",
-    "ratings": {
-      "imdb": "8.7",
-      "imdbVotes": "434,985",
       "rottenTomatoes": null,
       "metacritic": null
     }
