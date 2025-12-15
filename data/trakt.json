@@ -1,5 +1,28 @@
 [
   {
+    "id": 11843505112,
+    "watched_at": "2025-12-15T06:21:35.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "The Hunger Games: Catching Fire",
+      "year": 2013,
+      "ids": {
+        "trakt": 72719,
+        "slug": "the-hunger-games-catching-fire-2013",
+        "imdb": "tt1951264",
+        "tmdb": 101299
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
+    "ratings": {
+      "imdb": "7.5",
+      "imdbVotes": "761,638",
+      "rottenTomatoes": "90%",
+      "metacritic": "76/100"
+    }
+  },
+  {
     "id": 11834199559,
     "watched_at": "2025-12-14T06:29:47.000Z",
     "action": "watch",
@@ -376,43 +399,6 @@
     "ratings": {
       "imdb": "5.6",
       "imdbVotes": "77",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11818292403,
-    "watched_at": "2025-12-12T03:33:25.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 8,
-      "title": "Birthday",
-      "ids": {
-        "trakt": 13669927,
-        "tvdb": 11391212,
-        "imdb": "tt38090238",
-        "tmdb": 6638540,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Abbott Elementary",
-      "year": 2021,
-      "ids": {
-        "trakt": 180675,
-        "slug": "abbott-elementary",
-        "tvdb": 402910,
-        "imdb": "tt14218830",
-        "tmdb": 125935,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
-    "ratings": {
-      "imdb": "8.2",
-      "imdbVotes": "48,850",
       "rottenTomatoes": null,
       "metacritic": null
     }
