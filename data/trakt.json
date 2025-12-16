@@ -1,5 +1,28 @@
 [
   {
+    "id": 11853611321,
+    "watched_at": "2025-12-16T22:06:35.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "The Hunger Games: Mockingjay - Part 1",
+      "year": 2014,
+      "ids": {
+        "trakt": 89542,
+        "slug": "the-hunger-games-mockingjay-part-1-2014",
+        "imdb": "tt1951265",
+        "tmdb": 131631
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "535,389",
+      "rottenTomatoes": "70%",
+      "metacritic": "64/100"
+    }
+  },
+  {
     "id": 11843505112,
     "watched_at": "2025-12-15T06:21:35.000Z",
     "action": "watch",
@@ -362,43 +385,6 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "26,348",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11818444707,
-    "watched_at": "2025-12-12T04:18:40.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 10,
-      "title": "Million Dollar Winner",
-      "ids": {
-        "trakt": 13746140,
-        "tvdb": null,
-        "imdb": null,
-        "tmdb": 6709127,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "99 to Beat",
-      "year": 2025,
-      "ids": {
-        "trakt": 295132,
-        "slug": "99-to-beat-2025-295132",
-        "tvdb": 463593,
-        "imdb": "tt36933520",
-        "tmdb": 298469,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4PmwlsYlGQLszZHt07L1ZGOpuOC.jpg",
-    "ratings": {
-      "imdb": "5.6",
-      "imdbVotes": "77",
       "rottenTomatoes": null,
       "metacritic": null
     }
