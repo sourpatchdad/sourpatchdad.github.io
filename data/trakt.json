@@ -1,5 +1,79 @@
 [
   {
+    "id": 11856833200,
+    "watched_at": "2025-12-17T04:05:15.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 15,
+      "title": "Reunion (2)",
+      "ids": {
+        "trakt": 4763854,
+        "tvdb": 8166256,
+        "imdb": "tt13886106",
+        "tmdb": 2719993,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11856334757,
+    "watched_at": "2025-12-17T03:20:34.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 14,
+      "title": "Reunion (1)",
+      "ids": {
+        "trakt": 4738711,
+        "tvdb": 8144393,
+        "imdb": "tt13886104",
+        "tmdb": 2719992,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11853611321,
     "watched_at": "2025-12-16T22:06:35.000Z",
     "action": "watch",
@@ -311,80 +385,6 @@
     "ratings": {
       "imdb": "6.6",
       "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11832476716,
-    "watched_at": "2025-12-13T03:01:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 8,
-      "title": "Hot Tub Confessions",
-      "ids": {
-        "trakt": 4625910,
-        "tvdb": 8075281,
-        "imdb": "tt13566890",
-        "tmdb": 2589838,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11818444708,
-    "watched_at": "2025-12-12T05:07:08.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 7,
-      "title": "The Gap",
-      "ids": {
-        "trakt": 12800274,
-        "tvdb": 11260080,
-        "imdb": "tt32777421",
-        "tmdb": 5964853,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
     }
