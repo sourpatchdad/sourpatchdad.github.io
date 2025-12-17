@@ -1,5 +1,42 @@
 [
   {
+    "id": 11857129134,
+    "watched_at": "2025-12-17T05:09:57.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 2,
+      "number": 1,
+      "title": "Episode 1",
+      "ids": {
+        "trakt": 13118663,
+        "tvdb": 11296159,
+        "imdb": "tt32158505",
+        "tmdb": 6468112,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Fallout",
+      "year": 2024,
+      "ids": {
+        "trakt": 163965,
+        "slug": "fallout",
+        "tvdb": 416744,
+        "imdb": "tt12637874",
+        "tmdb": 106379,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/c15BtJxCXMrISLVmysdsnZUPQft.jpg",
+    "ratings": {
+      "imdb": "8.3",
+      "imdbVotes": "342,558",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11856833200,
     "watched_at": "2025-12-17T04:05:15.000Z",
     "action": "watch",
@@ -351,42 +388,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/2krDRnB4wabh4odG3mTEL4U0ybB.jpg"
-  },
-  {
-    "id": 11823434504,
-    "watched_at": "2025-12-13T03:42:32.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 9,
-      "title": "Hip Hop and Heartbreak",
-      "ids": {
-        "trakt": 4668770,
-        "tvdb": 8098455,
-        "imdb": "tt13659932",
-        "tmdb": 2606752,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
   }
 ]
