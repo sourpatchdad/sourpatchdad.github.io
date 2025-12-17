@@ -1,5 +1,28 @@
 [
   {
+    "id": 11857480350,
+    "watched_at": "2025-12-17T07:04:13.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "TRON: Ares",
+      "year": 2025,
+      "ids": {
+        "trakt": 385396,
+        "slug": "tron-ares-2025",
+        "imdb": "tt6604188",
+        "tmdb": 533533
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/chpWmskl3aKm1aTZqUHRCtviwPy.jpg",
+    "ratings": {
+      "imdb": "6.5",
+      "imdbVotes": "37,738",
+      "rottenTomatoes": "53%",
+      "metacritic": "48/100"
+    }
+  },
+  {
     "id": 11857129134,
     "watched_at": "2025-12-17T05:09:57.000Z",
     "action": "watch",
@@ -341,37 +364,6 @@
         "tvdb": 11394446,
         "imdb": "tt38673499",
         "tmdb": 6599485,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Taylor Swift | The Eras Tour | The End of an Era",
-      "year": 2025,
-      "ids": {
-        "trakt": 303399,
-        "slug": "taylor-swift-the-eras-tour-the-end-of-an-era",
-        "tvdb": 469202,
-        "imdb": "tt38673133",
-        "tmdb": 302919,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/2krDRnB4wabh4odG3mTEL4U0ybB.jpg"
-  },
-  {
-    "id": 11823742993,
-    "watched_at": "2025-12-13T05:24:32.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 1,
-      "title": "Welcome To The Eras Tour",
-      "ids": {
-        "trakt": 13622227,
-        "tvdb": 11394445,
-        "imdb": "tt38673501",
-        "tmdb": 6599481,
         "tvrage": null
       }
     },
