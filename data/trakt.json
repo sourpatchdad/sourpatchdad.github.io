@@ -1,5 +1,42 @@
 [
   {
+    "id": 11863817826,
+    "watched_at": "2025-12-18T02:40:18.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 16,
+      "title": "Reunion (3)",
+      "ids": {
+        "trakt": 4803755,
+        "tvdb": 8196791,
+        "imdb": "tt13984308",
+        "tmdb": 2719994,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11861952347,
     "watched_at": "2025-12-17T17:25:47.000Z",
     "action": "watch",
@@ -313,43 +350,6 @@
         "tvdb": 8112714,
         "imdb": "tt13773156",
         "tmdb": 2646739,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11832646118,
-    "watched_at": "2025-12-14T01:32:26.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 10,
-      "title": "In Hot Water",
-      "ids": {
-        "trakt": 4668771,
-        "tvdb": 8098456,
-        "imdb": "tt13696432",
-        "tmdb": 2622715,
         "tvrage": null
       }
     },
