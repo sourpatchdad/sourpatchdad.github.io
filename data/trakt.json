@@ -1,5 +1,67 @@
 [
   {
+    "id": 11876758493,
+    "watched_at": "2025-12-22T05:06:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Thank You for the Lovely Bouquet",
+      "ids": {
+        "trakt": 13622230,
+        "tvdb": 11394470,
+        "imdb": "tt38673502",
+        "tmdb": 6599554,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The End of an Era",
+      "year": 2025,
+      "ids": {
+        "trakt": 303399,
+        "slug": "the-end-of-an-era",
+        "tvdb": 469202,
+        "imdb": "tt38673133",
+        "tmdb": 302919,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
+  },
+  {
+    "id": 11876758492,
+    "watched_at": "2025-12-22T04:19:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 3,
+      "title": "Kismet",
+      "ids": {
+        "trakt": 13622229,
+        "tvdb": 11394469,
+        "imdb": "tt38673500",
+        "tmdb": 6599553,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The End of an Era",
+      "year": 2025,
+      "ids": {
+        "trakt": 303399,
+        "slug": "the-end-of-an-era",
+        "tvdb": 469202,
+        "imdb": "tt38673133",
+        "tmdb": 302919,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
+  },
+  {
     "id": 11876505480,
     "watched_at": "2025-12-22T01:29:00.000Z",
     "action": "watch",
@@ -325,52 +387,6 @@
       "imdbVotes": "1,652",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11853611321,
-    "watched_at": "2025-12-16T22:06:35.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Hunger Games: Mockingjay - Part 1",
-      "year": 2014,
-      "ids": {
-        "trakt": 89542,
-        "slug": "the-hunger-games-mockingjay-part-1-2014",
-        "imdb": "tt1951265",
-        "tmdb": 131631
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "535,389",
-      "rottenTomatoes": "70%",
-      "metacritic": "64/100"
-    }
-  },
-  {
-    "id": 11843505112,
-    "watched_at": "2025-12-15T06:21:35.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Hunger Games: Catching Fire",
-      "year": 2013,
-      "ids": {
-        "trakt": 72719,
-        "slug": "the-hunger-games-catching-fire-2013",
-        "imdb": "tt1951264",
-        "tmdb": 101299
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
-    "ratings": {
-      "imdb": "7.5",
-      "imdbVotes": "761,638",
-      "rottenTomatoes": "90%",
-      "metacritic": "76/100"
     }
   }
 ]
