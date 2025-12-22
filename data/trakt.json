@@ -1,5 +1,42 @@
 [
   {
+    "id": 11876505480,
+    "watched_at": "2025-12-22T01:29:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 8,
+      "title": "Charm Offensive",
+      "ids": {
+        "trakt": 12800276,
+        "tvdb": 11260081,
+        "imdb": "tt32777424",
+        "tmdb": 5964854,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "26,348",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11875722555,
     "watched_at": "2025-12-21T19:20:00.000Z",
     "action": "watch",
@@ -334,29 +371,6 @@
       "imdbVotes": "761,638",
       "rottenTomatoes": "90%",
       "metacritic": "76/100"
-    }
-  },
-  {
-    "id": 11834199559,
-    "watched_at": "2025-12-14T06:29:47.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Hunger Games",
-      "year": 2012,
-      "ids": {
-        "trakt": 51342,
-        "slug": "the-hunger-games-2012",
-        "imdb": "tt1392170",
-        "tmdb": 70160
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
-    "ratings": {
-      "imdb": "7.2",
-      "imdbVotes": "1,063,672",
-      "rottenTomatoes": "84%",
-      "metacritic": "68/100"
     }
   }
 ]
