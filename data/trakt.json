@@ -1,5 +1,28 @@
 [
   {
+    "id": 11877030098,
+    "watched_at": "2025-12-22T07:16:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Glass Onion: A Knives Out Mystery",
+      "year": 2022,
+      "ids": {
+        "trakt": 495668,
+        "slug": "glass-onion-a-knives-out-mystery-2022",
+        "imdb": "tt11564570",
+        "tmdb": 661374
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+    "ratings": {
+      "imdb": "7.1",
+      "imdbVotes": "488,499",
+      "rottenTomatoes": "91%",
+      "metacritic": "81/100"
+    }
+  },
+  {
     "id": 11876758493,
     "watched_at": "2025-12-22T05:06:00.000Z",
     "action": "watch",
@@ -329,43 +352,6 @@
         "tvdb": 8166256,
         "imdb": "tt13886106",
         "tmdb": 2719993,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11856334757,
-    "watched_at": "2025-12-17T03:20:34.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 14,
-      "title": "Reunion (1)",
-      "ids": {
-        "trakt": 4738711,
-        "tvdb": 8144393,
-        "imdb": "tt13886104",
-        "tmdb": 2719992,
         "tvrage": null
       }
     },
