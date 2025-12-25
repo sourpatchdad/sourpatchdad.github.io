@@ -1,5 +1,28 @@
 [
   {
+    "id": 11884020162,
+    "watched_at": "2025-12-23T14:33:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "The Post",
+      "year": 2017,
+      "ids": {
+        "trakt": 292956,
+        "slug": "the-post-2017",
+        "imdb": "tt6294822",
+        "tmdb": 446354
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+    "ratings": {
+      "imdb": "7.2",
+      "imdbVotes": "168,588",
+      "rottenTomatoes": "88%",
+      "metacritic": "83/100"
+    }
+  },
+  {
     "id": 11877030098,
     "watched_at": "2025-12-22T07:16:00.000Z",
     "action": "watch",
@@ -334,43 +357,6 @@
     "ratings": {
       "imdb": "8.3",
       "imdbVotes": "342,558",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11856833200,
-    "watched_at": "2025-12-17T04:05:15.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 15,
-      "title": "Reunion (2)",
-      "ids": {
-        "trakt": 4763854,
-        "tvdb": 8166256,
-        "imdb": "tt13886106",
-        "tmdb": 2719993,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
       "rottenTomatoes": null,
       "metacritic": null
     }
