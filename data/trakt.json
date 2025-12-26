@@ -37,6 +37,29 @@
     }
   },
   {
+    "id": 11885873991,
+    "watched_at": "2025-12-23T17:48:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Friendship",
+      "year": 2025,
+      "ids": {
+        "trakt": 1002828,
+        "slug": "friendship-2025",
+        "imdb": "tt30505698",
+        "tmdb": 1239655
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eikAu9gPJTQQmwFwa1zX5Hfz96P.jpg",
+    "ratings": {
+      "imdb": "6.7",
+      "imdbVotes": "31,232",
+      "rottenTomatoes": "87%",
+      "metacritic": "72/100"
+    }
+  },
+  {
     "id": 11884020162,
     "watched_at": "2025-12-23T14:33:00.000Z",
     "action": "watch",
@@ -336,29 +359,6 @@
       "imdbVotes": "837,747",
       "rottenTomatoes": "97%",
       "metacritic": "82/100"
-    }
-  },
-  {
-    "id": 11857480350,
-    "watched_at": "2025-12-17T07:04:13.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "TRON: Ares",
-      "year": 2025,
-      "ids": {
-        "trakt": 385396,
-        "slug": "tron-ares-2025",
-        "imdb": "tt6604188",
-        "tmdb": 533533
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/chpWmskl3aKm1aTZqUHRCtviwPy.jpg",
-    "ratings": {
-      "imdb": "6.5",
-      "imdbVotes": "37,738",
-      "rottenTomatoes": "53%",
-      "metacritic": "48/100"
     }
   }
 ]
