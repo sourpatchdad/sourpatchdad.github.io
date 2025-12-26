@@ -1,5 +1,42 @@
 [
   {
+    "id": 11885970410,
+    "watched_at": "2025-12-26T04:24:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 5,
+      "title": "Chapter Five: Shock Jock",
+      "ids": {
+        "trakt": 12291595,
+        "tvdb": 10788051,
+        "imdb": "tt21912384",
+        "tmdb": 5607048,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11884052655,
     "watched_at": "2025-12-25T04:27:00.000Z",
     "action": "watch",
@@ -336,29 +373,6 @@
       "imdbVotes": "1,652",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11861952347,
-    "watched_at": "2025-12-17T17:25:47.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Knives Out",
-      "year": 2019,
-      "ids": {
-        "trakt": 396788,
-        "slug": "knives-out-2019",
-        "imdb": "tt8946378",
-        "tmdb": 546554
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
-    "ratings": {
-      "imdb": "7.9",
-      "imdbVotes": "837,747",
-      "rottenTomatoes": "97%",
-      "metacritic": "82/100"
     }
   }
 ]
