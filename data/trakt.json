@@ -1,5 +1,42 @@
 [
   {
+    "id": 11886054891,
+    "watched_at": "2025-12-26T05:34:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 6,
+      "title": "Chapter Six: Escape from Camazotz",
+      "ids": {
+        "trakt": 12291596,
+        "tvdb": 10788052,
+        "imdb": "tt21912386",
+        "tmdb": 5607049,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11885970410,
     "watched_at": "2025-12-26T04:24:00.000Z",
     "action": "watch",
@@ -315,43 +352,6 @@
         "tvdb": 8611857,
         "imdb": "tt13994698",
         "tmdb": 3198693,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11863817826,
-    "watched_at": "2025-12-18T02:40:18.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 16,
-      "title": "Reunion (3)",
-      "ids": {
-        "trakt": 4803755,
-        "tvdb": 8196791,
-        "imdb": "tt13984308",
-        "tmdb": 2719994,
         "tvrage": null
       }
     },
