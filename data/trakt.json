@@ -1,5 +1,42 @@
 [
   {
+    "id": 11888903830,
+    "watched_at": "2025-12-27T04:45:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 7,
+      "title": "Chapter Seven: The Bridge",
+      "ids": {
+        "trakt": 12291597,
+        "tvdb": 10788053,
+        "imdb": "tt21912390",
+        "tmdb": 5607050,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,506,403",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11886054891,
     "watched_at": "2025-12-26T05:34:00.000Z",
     "action": "watch",
@@ -315,43 +352,6 @@
         "tvdb": 8656800,
         "imdb": "tt15343534",
         "tmdb": 3219057,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11863945095,
-    "watched_at": "2025-12-18T03:27:04.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 2,
-      "number": 1,
-      "title": "Best of Frenemies",
-      "ids": {
-        "trakt": 5450800,
-        "tvdb": 8611857,
-        "imdb": "tt13994698",
-        "tmdb": 3198693,
         "tvrage": null
       }
     },
