@@ -1,5 +1,36 @@
 [
   {
+    "id": 11894827623,
+    "watched_at": "2025-12-29T04:36:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 5,
+      "title": "Marjorie",
+      "ids": {
+        "trakt": 13622231,
+        "tvdb": 11394471,
+        "imdb": "tt38673503",
+        "tmdb": 6599556,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The End of an Era",
+      "year": 2025,
+      "ids": {
+        "trakt": 303399,
+        "slug": "the-end-of-an-era",
+        "tvdb": 469202,
+        "imdb": "tt38673133",
+        "tmdb": 302919,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
+  },
+  {
     "id": 11894737580,
     "watched_at": "2025-12-29T03:41:00.000Z",
     "action": "watch",
@@ -317,42 +348,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
-  },
-  {
-    "id": 11876505480,
-    "watched_at": "2025-12-22T01:29:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 8,
-      "title": "Charm Offensive",
-      "ids": {
-        "trakt": 12800276,
-        "tvdb": 11260081,
-        "imdb": "tt32777424",
-        "tmdb": 5964854,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Pluribus",
-      "year": 2025,
-      "ids": {
-        "trakt": 206790,
-        "slug": "pluribus",
-        "tvdb": 436457,
-        "imdb": "tt22202452",
-        "tmdb": 225171,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "26,348",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
   }
 ]
