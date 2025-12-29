@@ -1,5 +1,22 @@
 [
   {
+    "id": 11894737580,
+    "watched_at": "2025-12-29T03:41:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Americana",
+      "year": 2025,
+      "ids": {
+        "trakt": 1212118,
+        "slug": "americana-2025-06-12",
+        "imdb": null,
+        "tmdb": 1478754
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3R4RiIqQYZOfvvOm6b55AzrBEfi.jpg"
+  },
+  {
     "id": 11894681367,
     "watched_at": "2025-12-28T16:42:00.000Z",
     "action": "watch",
@@ -336,29 +353,6 @@
       "imdbVotes": "26,348",
       "rottenTomatoes": null,
       "metacritic": null
-    }
-  },
-  {
-    "id": 11875722555,
-    "watched_at": "2025-12-21T19:20:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Knives Out",
-      "year": 2019,
-      "ids": {
-        "trakt": 396788,
-        "slug": "knives-out-2019",
-        "imdb": "tt8946378",
-        "tmdb": 546554
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
-    "ratings": {
-      "imdb": "7.9",
-      "imdbVotes": "837,747",
-      "rottenTomatoes": "97%",
-      "metacritic": "82/100"
     }
   }
 ]
