@@ -1,5 +1,42 @@
 [
   {
+    "id": 11898434796,
+    "watched_at": "2025-12-30T03:48:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 2,
+      "number": 3,
+      "title": "Fishing for the Truth",
+      "ids": {
+        "trakt": 5495686,
+        "tvdb": 8692988,
+        "imdb": "tt15414836",
+        "tmdb": 3220774,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "The Real Housewives of Salt Lake City",
+      "year": 2020,
+      "ids": {
+        "trakt": 160492,
+        "slug": "the-real-housewives-of-salt-lake-city",
+        "tvdb": 372309,
+        "imdb": "tt11363282",
+        "tmdb": 110381,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
+    "ratings": {
+      "imdb": "6.6",
+      "imdbVotes": "1,652",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11894938529,
     "watched_at": "2025-12-29T05:25:00.000Z",
     "action": "watch",
@@ -323,36 +360,5 @@
       "rottenTomatoes": "91%",
       "metacritic": "81/100"
     }
-  },
-  {
-    "id": 11876758493,
-    "watched_at": "2025-12-22T05:06:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 1,
-      "number": 4,
-      "title": "Thank You for the Lovely Bouquet",
-      "ids": {
-        "trakt": 13622230,
-        "tvdb": 11394470,
-        "imdb": "tt38673502",
-        "tmdb": 6599554,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The End of an Era",
-      "year": 2025,
-      "ids": {
-        "trakt": 303399,
-        "slug": "the-end-of-an-era",
-        "tvdb": 469202,
-        "imdb": "tt38673133",
-        "tmdb": 302919,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
   }
 ]
