@@ -1,5 +1,28 @@
 [
   {
+    "id": 11901919577,
+    "watched_at": "2025-12-31T07:02:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Jimmy Neutron: Boy Genius",
+      "year": 2001,
+      "ids": {
+        "trakt": 7357,
+        "slug": "jimmy-neutron-boy-genius-2001",
+        "imdb": "tt0268397",
+        "tmdb": 12589
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pUwdquA6Bf3Gq8yT5iQL1Yq0jkl.jpg",
+    "ratings": {
+      "imdb": "6.1",
+      "imdbVotes": "40,025",
+      "rottenTomatoes": "74%",
+      "metacritic": "65/100"
+    }
+  },
+  {
     "id": 11898434796,
     "watched_at": "2025-12-30T03:48:00.000Z",
     "action": "watch",
@@ -336,29 +359,6 @@
       "imdbVotes": "168,588",
       "rottenTomatoes": "88%",
       "metacritic": "83/100"
-    }
-  },
-  {
-    "id": 11877030098,
-    "watched_at": "2025-12-22T07:16:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Glass Onion: A Knives Out Mystery",
-      "year": 2022,
-      "ids": {
-        "trakt": 495668,
-        "slug": "glass-onion-a-knives-out-mystery-2022",
-        "imdb": "tt11564570",
-        "tmdb": 661374
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
-    "ratings": {
-      "imdb": "7.1",
-      "imdbVotes": "488,499",
-      "rottenTomatoes": "91%",
-      "metacritic": "81/100"
     }
   }
 ]
