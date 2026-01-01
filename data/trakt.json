@@ -1,5 +1,42 @@
 [
   {
+    "id": 11905736896,
+    "watched_at": "2026-01-01T04:53:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 8,
+      "title": "Chapter Eight: The Rightside Up",
+      "ids": {
+        "trakt": 12291598,
+        "tvdb": 10788054,
+        "imdb": "tt21914684",
+        "tmdb": 5607051,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
+    "ratings": {
+      "imdb": "8.6",
+      "imdbVotes": "1,566,461",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11901919577,
     "watched_at": "2025-12-31T07:02:00.000Z",
     "action": "watch",
@@ -336,29 +373,6 @@
       "imdbVotes": "31,232",
       "rottenTomatoes": "87%",
       "metacritic": "72/100"
-    }
-  },
-  {
-    "id": 11884020162,
-    "watched_at": "2025-12-23T14:33:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Post",
-      "year": 2017,
-      "ids": {
-        "trakt": 292956,
-        "slug": "the-post-2017",
-        "imdb": "tt6294822",
-        "tmdb": 446354
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
-    "ratings": {
-      "imdb": "7.2",
-      "imdbVotes": "168,588",
-      "rottenTomatoes": "88%",
-      "metacritic": "83/100"
     }
   }
 ]
