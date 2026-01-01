@@ -270,13 +270,7 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg"
   },
   {
     "id": 11885970410,
@@ -307,13 +301,7 @@
         "tvrage": null
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cVxVGwHce6xnW8UaVUggaPXbmoE.jpg"
   },
   {
     "id": 11884052655,
@@ -367,12 +355,6 @@
         "tmdb": 1239655
       }
     },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/eikAu9gPJTQQmwFwa1zX5Hfz96P.jpg",
-    "ratings": {
-      "imdb": "6.7",
-      "imdbVotes": "31,232",
-      "rottenTomatoes": "87%",
-      "metacritic": "72/100"
-    }
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eikAu9gPJTQQmwFwa1zX5Hfz96P.jpg"
   }
 ]
