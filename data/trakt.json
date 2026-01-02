@@ -111,29 +111,6 @@
     }
   },
   {
-    "id": 11901919577,
-    "watched_at": "2025-12-31T07:02:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Jimmy Neutron: Boy Genius",
-      "year": 2001,
-      "ids": {
-        "trakt": 7357,
-        "slug": "jimmy-neutron-boy-genius-2001",
-        "imdb": "tt0268397",
-        "tmdb": 12589
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/pUwdquA6Bf3Gq8yT5iQL1Yq0jkl.jpg",
-    "ratings": {
-      "imdb": "6.1",
-      "imdbVotes": "40,025",
-      "rottenTomatoes": "74%",
-      "metacritic": "65/100"
-    }
-  },
-  {
     "id": 11898434796,
     "watched_at": "2025-12-30T03:48:00.000Z",
     "action": "watch",
@@ -385,6 +362,43 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "1,566,461",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
+    "id": 11884052655,
+    "watched_at": "2025-12-25T04:27:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 9,
+      "title": "La Chica o El Mundo",
+      "ids": {
+        "trakt": 12800278,
+        "tvdb": 11260082,
+        "imdb": "tt32777427",
+        "tmdb": 5964855,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Pluribus",
+      "year": 2025,
+      "ids": {
+        "trakt": 206790,
+        "slug": "pluribus",
+        "tvdb": 436457,
+        "imdb": "tt22202452",
+        "tmdb": 225171,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nrM2xFUfKJJEmZzd5d7kohT2G0C.jpg",
+    "ratings": {
+      "imdb": "8.1",
+      "imdbVotes": "76,652",
       "rottenTomatoes": null,
       "metacritic": null
     }
