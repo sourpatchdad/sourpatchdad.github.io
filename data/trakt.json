@@ -1,5 +1,42 @@
 [
   {
+    "id": 11912016838,
+    "watched_at": "2026-01-03T01:59:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Toe Up",
+      "ids": {
+        "trakt": 5424737,
+        "tvdb": 8647656,
+        "imdb": "tt15214112",
+        "tmdb": 3147784,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "LuLaRich",
+      "year": 2021,
+      "ids": {
+        "trakt": 186127,
+        "slug": "lularich",
+        "tvdb": 408854,
+        "imdb": "tt15213278",
+        "tmdb": 131295,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nbhM0W05yLRVXu3wyhtPNwVfTyF.jpg",
+    "ratings": {
+      "imdb": "7.4",
+      "imdbVotes": "4,287",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11911875762,
     "watched_at": "2026-01-03T00:58:00.000Z",
     "action": "watch",
@@ -178,8 +215,8 @@
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
     "ratings": {
-      "imdb": "6.6",
-      "imdbVotes": "1,652",
+      "imdb": "6.8",
+      "imdbVotes": "1,937",
       "rottenTomatoes": null,
       "metacritic": null
     }
@@ -343,43 +380,6 @@
         "tvdb": 10788052,
         "imdb": "tt21912386",
         "tmdb": 5607049,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11885970410,
-    "watched_at": "2025-12-26T04:24:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 5,
-      "title": "Chapter Five: Shock Jock",
-      "ids": {
-        "trakt": 12291595,
-        "tvdb": 10788051,
-        "imdb": "tt21912384",
-        "tmdb": 5607048,
         "tvrage": null
       }
     },
