@@ -1,5 +1,28 @@
 [
   {
+    "id": 11915714416,
+    "watched_at": "2026-01-04T05:39:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Fackham Hall",
+      "year": 2025,
+      "ids": {
+        "trakt": 947485,
+        "slug": "fackham-hall-2025",
+        "imdb": "tt29008225",
+        "tmdb": 1175174
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fwpdRe6WGmzqXFEJYJVepDQ6jrw.jpg",
+    "ratings": {
+      "imdb": "6.4",
+      "imdbVotes": "2,452",
+      "rottenTomatoes": null,
+      "metacritic": "54/100"
+    }
+  },
+  {
     "id": 11912016838,
     "watched_at": "2026-01-03T01:59:00.000Z",
     "action": "watch",
@@ -343,43 +366,6 @@
         "tvdb": 10788053,
         "imdb": "tt21912390",
         "tmdb": 5607050,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11886054891,
-    "watched_at": "2025-12-26T05:34:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 6,
-      "title": "Chapter Six: Escape from Camazotz",
-      "ids": {
-        "trakt": 12291596,
-        "tvdb": 10788052,
-        "imdb": "tt21912386",
-        "tmdb": 5607049,
         "tvrage": null
       }
     },
