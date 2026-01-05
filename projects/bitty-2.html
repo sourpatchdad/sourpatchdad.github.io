@@ -6,7 +6,7 @@
     <title>Bitty 2.0 Bitcoin Price Bot | Nathan Nicholas</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Bitty 2.0 - Serverless Bitcoin price notification bot by Nathan Nicholas. Python-based Discord bot running on GitHub Actions with tiered alerts, ATH tracking, and intelligent spam prevention. Zero infrastructure costs.">
+    <meta name="description" content="Bitty 2.0 - Self-hosted Bitcoin price notification bot by Nathan Nicholas. Python-based Discord bot running on TrueNAS server with tiered alerts, ATH tracking, and intelligent spam prevention. Zero infrastructure costs.">
     <meta name="keywords" content="Bitcoin bot, Discord notifications, GitHub Actions, serverless, Python bot, cryptocurrency alerts, price tracking, Nathan Nicholas, Denton TX, automation">
     <meta name="author" content="Nathan Nicholas">
     <link rel="canonical" href="https://nbnstack.com/projects/bitty-2.html">
@@ -118,7 +118,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Bitty 2.0",
       "headline": "Bitty 2.0 Bitcoin Price Bot",
-      "description": "Serverless Bitcoin price notification bot running on GitHub Actions with tiered alerts, ATH tracking, and intelligent spam prevention. Complete rewrite from Home Assistant integration to standalone Python bot.",
+      "description": "Self-hosted Bitcoin price notification bot with tiered alerts, ATH tracking, and intelligent spam prevention. Complete rewrite from Home Assistant integration to standalone Python bot.",
       "author": {
         "@type": "Person",
         "name": "Nathan Nicholas",
@@ -200,9 +200,9 @@
                          class="clickable-screenshot"
                          onclick="openImageModal(this.src)"
                          style="float: right; max-height: 250px; width: auto; margin-left: 20px; cursor: pointer;">
-                    <p>Bitty 2.0 is a complete rewrite of my Bitcoin price notification system, migrating from a Home Assistant integration to a standalone Python bot running serverless on GitHub Actions.</p>
+                    <p>Bitty 2.0 is a complete rewrite of my Bitcoin price notification system, migrating from a Home Assistant integration to a standalone Python bot <s>running serverless on GitHub Actions</s> running on my home server. (migrated from GitHub actions with their announcement of prices for GitHub actions)</p>
                     <p>The migration fixed critical timing issues, eliminated duplicate notifications, and resolved baseline logic problems that plagued the original implementation.</p>
-                    <p>The bot runs completely serverless, executing every five minutes via scheduled GitHub Actions workflows. It sends Discord notifications for significant Bitcoin price movements with configurable alert thresholds and automatic spam prevention.</p>
+                    <p>The bot executes every five minutes and sends Discord notifications for significant Bitcoin price movements with configurable alert thresholds and automatic spam prevention.</p>
                 </section>
 
                 <!-- Key Features -->
@@ -235,9 +235,9 @@
                             <p>Weekly and monthly performance summaries with price statistics and percentage changes</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            <h3>Serverless</h3>
-                            <p>Zero infrastructure costs - runs entirely on GitHub Actions free tier</p>
+                            <i class="fa-brands fa-truenas" aria-hidden="true"></i>
+                            <h3>Self-Hosted</h3>
+                            <p>Zero infrastructure costs</p>
                         </div>
                     </div>
                 </section>
@@ -251,10 +251,6 @@
                             <span class="tech-value">Python 3.11+</span>
                         </div>
                         <div class="tech-item">
-                            <span class="tech-label">Platform</span>
-                            <span class="tech-value">GitHub Actions (ubuntu-latest)</span>
-                        </div>
-                        <div class="tech-item">
                             <span class="tech-label">Schedule</span>
                             <span class="tech-value">Cron: */5 * * * * (Every five minutes)</span>
                         </div>
@@ -266,10 +262,6 @@
                             <span class="tech-label">Notifications</span>
                             <span class="tech-value">Discord Webhook API</span>
                         </div>
-                        <div class="tech-item">
-                            <span class="tech-label">State Storage</span>
-                            <span class="tech-value">GitHub Repository Secrets & Files</span>
-                        </div>
                     </div>
                 </section>
 
@@ -278,7 +270,7 @@
                     <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Problems Solved</h2>
                     <ul class="problem-list">
                         <li>
-                            <strong>Timing Issues:</strong> Home Assistant's automation timing was unreliable. Migration to GitHub Actions cron ensures consistent 5-minute intervals.
+                            <strong>Timing Issues:</strong> Home Assistant's automation timing was unreliable.
                         </li>
                         <li>
                             <strong>Duplicate Notifications:</strong> Fixed baseline reset logic to properly trigger at midnight CST/CDT, eliminating duplicate alerts.
@@ -303,14 +295,6 @@
                         <li>State management in Home Assistant was unreliable for financial data</li>
                         <li>Limited observability into what the bot was actually doing</li>
                     </ul>
-                    <p>Moving to standalone Python with GitHub Actions provided:</p>
-                    <ul class="reason-list">
-                        <li>Proper version control with Git</li>
-                        <li>Easy local testing and debugging</li>
-                        <li>Complete control over timing and execution</li>
-                        <li>GitHub Actions logs for full observability</li>
-                        <li>Zero hosting costs (GitHub Actions free tier)</li>
-                    </ul>
                 </section>
 
                 <!-- Back Button -->
@@ -331,7 +315,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Nathan Nicholas. All rights reserved.</p>
+            <p>&copy; 2026 Nathan Nicholas. All rights reserved.</p>
         </div>
     </footer>
 
