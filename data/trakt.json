@@ -1,5 +1,28 @@
 [
   {
+    "id": 11927067737,
+    "watched_at": "2026-01-08T04:01:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "Lost in Translation",
+      "year": 2003,
+      "ids": {
+        "trakt": 118,
+        "slug": "lost-in-translation-2003",
+        "imdb": "tt0335266",
+        "tmdb": 153
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg",
+    "ratings": {
+      "imdb": "7.7",
+      "imdbVotes": "521,320",
+      "rottenTomatoes": "95%",
+      "metacritic": "91/100"
+    }
+  },
+  {
     "id": 11915714416,
     "watched_at": "2026-01-04T05:39:00.000Z",
     "action": "watch",
@@ -350,43 +373,6 @@
       "imdbVotes": "68,874",
       "rottenTomatoes": "80%",
       "metacritic": "66/100"
-    }
-  },
-  {
-    "id": 11888903830,
-    "watched_at": "2025-12-27T04:45:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 7,
-      "title": "Chapter Seven: The Bridge",
-      "ids": {
-        "trakt": 12291597,
-        "tvdb": 10788053,
-        "imdb": "tt21912390",
-        "tmdb": 5607050,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
     }
   }
 ]
