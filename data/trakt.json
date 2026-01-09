@@ -1,5 +1,42 @@
 [
   {
+    "id": 11929246369,
+    "watched_at": "2026-01-09T03:00:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 5,
+      "number": 9,
+      "title": "Mall (1)",
+      "ids": {
+        "trakt": 13669928,
+        "tvdb": 11426492,
+        "imdb": "tt38090239",
+        "tmdb": 6638541,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "Abbott Elementary",
+      "year": 2021,
+      "ids": {
+        "trakt": 180675,
+        "slug": "abbott-elementary",
+        "tvdb": 402910,
+        "imdb": "tt14218830",
+        "tmdb": 125935,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nBe1e3JJEZ6veGrVXNF0fRoLu56.jpg",
+    "ratings": {
+      "imdb": "8.2",
+      "imdbVotes": "49,782",
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11927067737,
     "watched_at": "2026-01-08T04:01:00.000Z",
     "action": "watch",
@@ -350,29 +387,6 @@
       "imdbVotes": "5,676",
       "rottenTomatoes": "64%",
       "metacritic": "61/100"
-    }
-  },
-  {
-    "id": 11894681367,
-    "watched_at": "2025-12-28T16:42:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "The Informant!",
-      "year": 2009,
-      "ids": {
-        "trakt": 6421,
-        "slug": "the-informant-2009",
-        "imdb": "tt1130080",
-        "tmdb": 11323
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wT6uYA8RQ9tYvWUT91480LR0Dnn.jpg",
-    "ratings": {
-      "imdb": "6.5",
-      "imdbVotes": "68,874",
-      "rottenTomatoes": "80%",
-      "metacritic": "66/100"
     }
   }
 ]
