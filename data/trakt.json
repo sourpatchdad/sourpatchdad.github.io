@@ -1,5 +1,28 @@
 [
   {
+    "id": 11932016500,
+    "watched_at": "2026-01-10T06:08:00.000Z",
+    "action": "watch",
+    "type": "movie",
+    "movie": {
+      "title": "People We Meet on Vacation",
+      "year": 2026,
+      "ids": {
+        "trakt": 832181,
+        "slug": "people-we-meet-on-vacation-2026",
+        "imdb": "tt22740896",
+        "tmdb": 1034716
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xzZaU0MN6L9oc1pl0RUXSB7hWwD.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11929246369,
     "watched_at": "2026-01-09T03:00:00.000Z",
     "action": "watch",
@@ -365,28 +388,5 @@
       }
     },
     "posterUrl": "https://image.tmdb.org/t/p/w500/8qEyRXQMC3L77fjY924qcoxaaVs.jpg"
-  },
-  {
-    "id": 11894879642,
-    "watched_at": "2025-12-29T03:41:00.000Z",
-    "action": "watch",
-    "type": "movie",
-    "movie": {
-      "title": "Americana",
-      "year": 2025,
-      "ids": {
-        "trakt": 749719,
-        "slug": "americana-2025",
-        "imdb": "tt17676734",
-        "tmdb": 934456
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/83Gis9pOKCvAdaKXCNChey4IZyL.jpg",
-    "ratings": {
-      "imdb": "5.9",
-      "imdbVotes": "5,676",
-      "rottenTomatoes": "64%",
-      "metacritic": "61/100"
-    }
   }
 ]
