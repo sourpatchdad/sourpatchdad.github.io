@@ -1,5 +1,42 @@
 [
   {
+    "id": 11936978727,
+    "watched_at": "2026-01-11T21:41:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 4,
+      "title": "Episode 4",
+      "ids": {
+        "trakt": 13700176,
+        "tvdb": 10603731,
+        "imdb": "tt33382214",
+        "tmdb": 6665646,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "HIS & HERS",
+      "year": 2026,
+      "ids": {
+        "trakt": 249443,
+        "slug": "his-hers-2026",
+        "tvdb": 452521,
+        "imdb": "tt33035373",
+        "tmdb": 259731,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cDSXLVQLkCSBIpBx3UW04TsfZ5c.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11936730729,
     "watched_at": "2026-01-11T20:50:00.000Z",
     "action": "watch",
@@ -360,43 +397,6 @@
     "ratings": {
       "imdb": "7.4",
       "imdbVotes": "4,287",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11905736896,
-    "watched_at": "2026-01-01T04:53:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 5,
-      "number": 8,
-      "title": "Chapter Eight: The Rightside Up",
-      "ids": {
-        "trakt": 12291598,
-        "tvdb": 10788054,
-        "imdb": "tt21914684",
-        "tmdb": 5607051,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "Stranger Things",
-      "year": 2016,
-      "ids": {
-        "trakt": 104439,
-        "slug": "stranger-things",
-        "tvdb": 305288,
-        "imdb": "tt4574334",
-        "tmdb": 66732,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
-    "ratings": {
-      "imdb": "8.6",
-      "imdbVotes": "1,566,461",
       "rottenTomatoes": null,
       "metacritic": null
     }
