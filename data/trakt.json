@@ -1,5 +1,42 @@
 [
   {
+    "id": 11936730729,
+    "watched_at": "2026-01-11T20:50:00.000Z",
+    "action": "watch",
+    "type": "episode",
+    "episode": {
+      "season": 1,
+      "number": 3,
+      "title": "Episode 3",
+      "ids": {
+        "trakt": 13700175,
+        "tvdb": 10603730,
+        "imdb": "tt33382213",
+        "tmdb": 6665639,
+        "tvrage": null
+      }
+    },
+    "show": {
+      "title": "HIS & HERS",
+      "year": 2026,
+      "ids": {
+        "trakt": 249443,
+        "slug": "his-hers-2026",
+        "tvdb": 452521,
+        "imdb": "tt33035373",
+        "tmdb": 259731,
+        "tvrage": null
+      }
+    },
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cDSXLVQLkCSBIpBx3UW04TsfZ5c.jpg",
+    "ratings": {
+      "imdb": null,
+      "imdbVotes": null,
+      "rottenTomatoes": null,
+      "metacritic": null
+    }
+  },
+  {
     "id": 11934781824,
     "watched_at": "2026-01-11T04:30:00.000Z",
     "action": "watch",
@@ -360,43 +397,6 @@
     "ratings": {
       "imdb": "8.6",
       "imdbVotes": "1,566,461",
-      "rottenTomatoes": null,
-      "metacritic": null
-    }
-  },
-  {
-    "id": 11898434796,
-    "watched_at": "2025-12-30T03:48:00.000Z",
-    "action": "watch",
-    "type": "episode",
-    "episode": {
-      "season": 2,
-      "number": 3,
-      "title": "Fishing for the Truth",
-      "ids": {
-        "trakt": 5495686,
-        "tvdb": 8692988,
-        "imdb": "tt15414836",
-        "tmdb": 3220774,
-        "tvrage": null
-      }
-    },
-    "show": {
-      "title": "The Real Housewives of Salt Lake City",
-      "year": 2020,
-      "ids": {
-        "trakt": 160492,
-        "slug": "the-real-housewives-of-salt-lake-city",
-        "tvdb": 372309,
-        "imdb": "tt11363282",
-        "tmdb": 110381,
-        "tvrage": null
-      }
-    },
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1tQ2wVVKoma672CxE2kfl9oxHR8.jpg",
-    "ratings": {
-      "imdb": "6.8",
-      "imdbVotes": "1,937",
       "rottenTomatoes": null,
       "metacritic": null
     }
